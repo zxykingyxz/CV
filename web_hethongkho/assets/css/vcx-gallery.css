@@ -1,0 +1,210 @@
+@charset "UTF-8";
+.vcx-gallery,
+.vcx-gallery > .slides > .slide > .slide-content {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	-moz-backface-visibility: hidden;
+}
+.vcx-gallery > .slides > .slide > .slide-content {
+	margin: auto;
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+	opacity: 1;
+}
+.vcx-gallery {
+	position: fixed;
+	z-index: 999999;
+	overflow: hidden;
+	background: #000;
+	background: rgba(0, 0, 0, 0.9);
+	opacity: 0;
+	display: none;
+	direction: ltr;
+	-ms-touch-action: none;
+	touch-action: none;
+}
+.vcx-gallery-carousel {
+	position: relative;
+	z-index: auto;
+	margin: 1em auto;
+	padding-bottom: 56.25%;
+	box-shadow: 0 0 10px #000;
+	-ms-touch-action: pan-y;
+	touch-action: pan-y;
+}
+.vcx-gallery-display {
+	display: block;
+	opacity: 1;
+}
+.vcx-gallery > .slides {
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+}
+.vcx-gallery-carousel > .slides {
+	position: absolute;
+}
+.vcx-gallery > .slides > .slide {
+	position: relative;
+	float: left;
+	height: 100%;
+	text-align: center;
+	-webkit-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000); 
+		 -moz-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000); 
+			-ms-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000); 
+			 -o-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000); 
+					transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+.vcx-gallery,
+.vcx-gallery > .slides > .slide > .slide-content {
+	-webkit-transition: opacity 0.2s linear;
+		 -moz-transition: opacity 0.2s linear;
+			-ms-transition: opacity 0.2s linear;
+			 -o-transition: opacity 0.2s linear;
+					transition: opacity 0.2s linear;
+}
+.vcx-gallery > .slides > .slide-loading {
+	background: url(../images/loading.gif) center no-repeat;
+	background-size: 64px 64px;
+}
+.vcx-gallery > .slides > .slide-loading > .slide-content {
+	opacity: 0;
+}
+.vcx-gallery > .slides > .slide-error {
+	background: url(../images/error.png) center no-repeat;
+}
+.vcx-gallery > .slides > .slide-error > .slide-content {
+	display: none;
+}
+.vcx-gallery > .prev,
+.vcx-gallery > .next {
+	position: absolute;
+	top: 50%;
+	left: 15px;
+	width: 40px;
+	height: 40px;
+	margin-top: -23px;
+	font-weight: 100;
+	text-indent: -100000px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-box-sizing: content-box;
+		 -moz-box-sizing: content-box;
+					box-sizing: content-box;
+	opacity: 0.5;
+	cursor: pointer;
+	display: none;
+}
+.vcx-gallery > .prev {
+	background-image: url(../images/left.png);
+}
+.vcx-gallery > .next {
+	left: auto;
+	right: 15px;
+	background-image: url(../images/right.png);
+}
+.vcx-gallery > .close,
+.vcx-gallery > .title {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	margin: 0 40px 0 0;
+	font-size: 20px;
+	line-height: 30px;
+	color: #fff;
+	text-shadow: 0 0 2px #000;
+	opacity: 0.8;
+	display: none;
+}
+.vcx-gallery > .title {
+	font-size: 15px;
+	top: 10px;
+	font-weight: bold;
+}
+.vcx-gallery > .close {
+	top: 10px;
+	padding: 15px;
+	right: 15px;
+	left: auto;
+	margin: -15px;
+	font-size: 30px;
+	text-decoration: none;
+	cursor: pointer;
+}
+.vcx-gallery > .play-pause {
+	position: absolute;
+	right: 15px;
+	bottom: 15px;
+	width: 15px;
+	height: 15px;
+	background: url(../images/play-pause.png) 0 0 no-repeat;
+	cursor: pointer;
+	opacity: 0.5;
+	display: none;
+}
+.vcx-gallery-playing > .play-pause {
+	background-position: -15px 0;
+}
+.vcx-gallery > .prev:hover,
+.vcx-gallery > .next:hover,
+.vcx-gallery > .close:hover,
+.vcx-gallery > .title:hover,
+.vcx-gallery > .play-pause:hover {
+	color: #fff;
+	opacity: 1;
+}
+.vcx-gallery-controls > .prev,
+.vcx-gallery-controls > .next,
+.vcx-gallery-controls > .close,
+.vcx-gallery-controls > .title,
+.vcx-gallery-controls > .play-pause {
+	display: block;
+	/* Fix z-index issues (controls behind slide element) on Android: */
+	-webkit-transform: translateZ(0);
+		 -moz-transform: translateZ(0);
+			-ms-transform: translateZ(0);
+			 -o-transform: translateZ(0);
+					transform: translateZ(0);
+}
+.vcx-gallery-single > .prev,
+.vcx-gallery-left > .prev,
+.vcx-gallery-single > .next,
+.vcx-gallery-right > .next,
+.vcx-gallery-single > .play-pause {
+	display: none;
+}
+.vcx-gallery > .slides > .slide > .slide-content,
+.vcx-gallery > .prev,
+.vcx-gallery > .next,
+.vcx-gallery > .close,
+.vcx-gallery > .play-pause {
+	-webkit-user-select: none;
+	 -khtml-user-select: none;
+		 -moz-user-select: none;
+			-ms-user-select: none;
+					user-select: none;
+}
+
+body:last-child .vcx-gallery > .slides > .slide-error {
+	background-image: url(../images/error.svg);
+}
+body:last-child .vcx-gallery > .play-pause {
+	width: 20px;
+	height: 20px;
+	background-size: 40px 20px;
+	background-image: url(../images/play-pause.html);
+}
+body:last-child .vcx-gallery-playing > .play-pause {
+	background-position: -20px 0;
+}
+*+html .vcx-gallery > .slides > .slide {
+	min-height: 300px;
+}
+*+html .vcx-gallery > .slides > .slide > .slide-content {
+	position: relative;
+}

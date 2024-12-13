@@ -1,0 +1,2 @@
+=======Check tên dăng nhập là chũ số không dấu
+!preg_match('/(?=.{5})(?!.{11})^[a-z 0 -9]+$/', 'admin123')
