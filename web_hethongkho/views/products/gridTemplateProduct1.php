@@ -1,54 +1,60 @@
 <?php
-global $flash_sale;
-foreach ($data as $k => $v) {
-    $additional = (!empty($v['id']) && !empty($flash_sale['id_product']) && in_array($v['id'], explode(',', $flash_sale['id_product']))) ? 1 : 0;
-    $list_name_c2_sp = $cache->getCache("select  ten_$lang as ten  from #_baiviet_list where  type=? and id=?  order by stt asc", array('san-pham', $v['id_list']), 'fetch', _TIMECACHE);
+$title = "text-[#222] font-main-400 text-sm sm:text-base leading-[1.4] sm:leading-[1.4] h-[calc(14px*1.4*2)] sm:h-[calc(16px*1.4*2)] group-hover/templateProduct_One:text-[var(--html-bg-website)] line-clamp-2 transition-all duration-300 ";
+
+foreach ($data as $key => $value) {
 ?>
     <div class="h-full">
-        <div class="group/templateProduct_One h-full group overflow-hidden bg-white border border-transparent hover:border-main transition-all duration-500 rounded-lg  <?= $class ?> ">
+        <div class="group/templateProduct_One h-full overflow-hidden bg-white  transition-all duration-500  <?= $class ?> ">
             <div class='relative w-full aspect-[510/510] '>
-                <div class="absolute w-full aspect-[510/510] z-20 group-hover/templateProduct_One:z-10 transition-all duration-300 ">
+                <div class="absolute w-full aspect-[510/510] bg-white z-20 group-hover/templateProduct_One:z-10 transition-all duration-300 ">
                     <?= $func->addHrefImg([
                         'classfix' => 'w-full',
                         'addhref' => true,
-                        'href' =>  $func->getUrl($v),
+                        'href' =>  $func->getUrl($value),
                         'isLazy' => true,
                         'sizes' => "510x510x1",
                         'actual_width' => 800,
                         'upload' => _upload_baiviet_l,
-                        'image' => ((isset($v["photo_$lang"])) ? $v["photo_$lang"] : $v["photo"]),
-                        'alt' => (isset($v["ten_$lang"])) ? $v["ten_$lang"] : $v["ten"],
+                        'image' => ($value["photo"]),
+                        'alt' => (isset($value["ten_$lang"])) ? $value["ten_$lang"] : $value["ten"],
                     ]); ?>
                 </div>
-                <?php if (!empty($v["photo2"])) { ?>
-                    <div class="absolute  w-full aspect-[510/510] z-10 group-hover/templateProduct_One:z-20 transition-all duration-300">
+                <?php if (!empty($value["photo2"])) { ?>
+                    <div class="absolute  w-full aspect-[510/510] bg-white z-10 group-hover/templateProduct_One:z-20 transition-all duration-300">
                         <?= $func->addHrefImg([
                             'classfix' => 'w-full',
                             'addhref' => true,
-                            'href' =>  $func->getUrl($v),
+                            'href' =>  $func->getUrl($value),
                             'isLazy' => true,
                             'sizes' => "510x510x1",
                             'actual_width' => 800,
                             'upload' => _upload_baiviet_l,
-                            'image' => ((isset($v["photo2_$lang"])) ? $v["photo2_$lang"] : $v["photo2"]),
-                            'alt' => (isset($v["ten_$lang"])) ? $v["ten_$lang"] : $v["ten"],
+                            'image' => ($value["photo2"]),
+                            'alt' => (isset($value["ten_$lang"])) ? $value["ten_$lang"] : $value["ten"],
                         ]); ?>
                     </div>
                 <?php } ?>
             </div>
-            <div class='p-3'>
-                <?= $func->addHref([
-                    'class' => 'text-black font-main-600 text-[14px] transition-all duration-500 group-hover:color-main capitalize leading-normal line-clamp-2 h-[calc(14px*1.5*2)]',
-                    'href' => $func->getUrl($v),
-                    'title' => (isset($v["ten_$lang"])) ? $v["ten_$lang"] : $v["ten"],
-                    'seoHeading' => $seoHeading,
-                ]) ?>
+            <div class='p-2'>
+                <div class="mb-3 text-xs sm:text-sm font-light font-main-300 text-black">
+                    <span>
+                        <?= "Thương Hiệu: " . (!empty($value['slogan']) ? $value['slogan'] : "Đang cập nhật") ?>
+                    </span>
+                </div>
+                <div class="mb-3">
+                    <?= $func->addHref([
+                        'class' => $title,
+                        'href' => $func->getUrl($value),
+                        'title' => (isset($value["ten_$lang"])) ? $value["ten_$lang"] : $value["ten"],
+                        'seoHeading' => $seoHeading,
+                    ]) ?>
+                </div>
                 <div class='flex flex-wrap items-center flex-col sm:flex-row gap-2'>
-                    <div class='w-full md:w-auto text-red-500 font-main-600 text-[14px] font-semibold'>
-                        <?= ((($additional == 1) ? $v['giabansale'] : $v['giaban']) != 0) ? $func->changeMoney(($additional == 1) ? $v['giabansale'] : $v['giaban'], $lang) . ' <span class="underline">' . $v['donvitinh'] . '</span>' : 'Liên hệ' ?>
+                    <div class='w-full md:w-auto text-red-600 text-base sm:text-lg font-semibold font-main-600'>
+                        <?= (($value['giaban']) != 0) ? $func->changeMoney($value['giaban'], $lang) . ' <span class="underline">' . $value['donvitinh'] . '</span>' : 'Liên hệ' ?>
                     </div>
-                    <del class='w-full md:w-auto text-gray-300 font-main-600 text-[14px] font-semibold'>
-                        <?= $v["giacu"] > 0 ? $func->changeMoney($v["giacu"], '') .  ($v['donvitinh'] != '' ? ' <span class="underline">' . $v['donvitinh'] . '</span>' : '') : '' ?>
+                    <del class='w-full md:w-auto text-[#222020] text-xs sm:text-sm font-main-400 font-normal'>
+                        <?= $value["giacu"] > 0 ? $func->changeMoney($value["giacu"], '') .  ($value['donvitinh'] != '' ? ' <span class="underline">' . $value['donvitinh'] . '</span>' : '') : '' ?>
                     </del>
                 </div>
             </div>

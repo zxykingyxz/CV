@@ -10,7 +10,7 @@ foreach ($data as $k => $value) {
         $info_tacgia = $db->rawQueryOne("select ten_$lang as ten  from #_baiviet where id=? and type=? and hienthi=1 order by stt asc", array($value['id_tacgia'], 'tac-gia'));
     }
 ?>
-    <div class="group/templateNew_two  ">
+    <div class="group/templateNew_two load_website ">
         <div class=" overflow-hidden rounded mb-5 relative leading-[0]">
             <?= $func->addHrefImg([
                 'classfix' => 'w-full',

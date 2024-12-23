@@ -5,7 +5,7 @@ $content = "text-sm sm:text-base h-[calc(14px*2*4)] sm:h-[calc(16px*2*4)] leadin
 
 foreach ($data as $key => $value) {
 ?>
-    <div class="group/templateView_two relative bg-[var(--html-sc-website)] rounded-lg px-3 sm:px-5 pt-6 pb-9 mb-8 load_website <?= $class ?> ">
+    <div class="group/templateView_two load_website relative bg-[var(--html-sc-website)] rounded-lg px-3 sm:px-5 pt-6 pb-9 mb-8 <?= $class ?> ">
         <div class="flex items-center gap-4 sm:gap-6 mb-5 px-2">
             <div class=" flex-initial rounded-full w-[18%] border-4 border-[var(--html-bg-website)] border-solid">
                 <?= $func->addHrefImg([

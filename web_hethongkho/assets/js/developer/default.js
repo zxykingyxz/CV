@@ -49,3 +49,23 @@ $('body').on('click', '.btn_clientSupport_js', function() {
         _this.closest('.form_clientSupport').find('.error_clientSupport').text('Số Điện Thoại Không Hợp Lệ !');
     };
 });
+// load submit
+$('.submit_load').on('submit', function(e) {
+    // Check if the form is valid
+    if (this.checkValidity()) {
+        loadApplication(true);
+    }
+});
+// load khi thu phóng khung hình
+var resizeTimer;
+var currentWidth = $(window).width();
+$(window).on('resize', function() {
+    var newWidth = $(window).width();
+    if ((newWidth !== currentWidth) && (((currentWidth - newWidth) > 100) || ((newWidth - currentWidth) > 100))) {
+        currentWidth = newWidth;
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function() {
+            location.reload(); // Tự động load lại trang sau khi dừng resize
+        }, 300); // Thời gian chờ sau khi dừng resize (ms)
+    }
+});

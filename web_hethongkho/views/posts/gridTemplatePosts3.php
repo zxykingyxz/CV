@@ -9,7 +9,7 @@ foreach ($data as $key => $value) {
     }
 
 ?>
-    <div class="group/templatePost_three relative bg-white ">
+    <div class="group/templatePost_three load_website relative bg-white ">
         <div class=" overflow-hidden">
             <?= $func->addHrefImg([
                 'classfix' => 'w-full',

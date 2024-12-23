@@ -1,10 +1,10 @@
 <?php
 $title = "text-2xl leading-normal line-clamp-2 font-semibold font-main-600 text-[var(--html-cl-website)]  transition-all duration-300";
 
-$list_lvhd = $db->rawQuery("select photo,id,type, ten_$lang as ten , tenkhongdau_$lang as tenkhongdau ,mota_$lang as mota from #_baiviet where type=? and hienthi=1 order by stt asc", array('linh-vuc-hoat-dong'));
+$list_lvhd = $db->rawQuery("select id,ten_$lang as ten from #_baiviet where type=? and hienthi=1 order by stt asc", array('linh-vuc-hoat-dong'));
 
 ?>
-<form action="" method="POST" name="form_price_quote" class="form_price_quote w-full flex flex-wrap items-start gap-4 <?= (!empty($background)) ? $background : 'bg-white' ?> pb-4 pt-7 px-3" enctype="multipart/form-data">
+<form action="" method="POST" name="form_price_quote" class="form_price_quote submit_load w-full flex flex-wrap items-start gap-4 <?= (!empty($background)) ? $background : 'bg-white' ?> pb-4 pt-7 px-3" enctype="multipart/form-data">
     <div class="<?= $close_popup ?> absolute inline-flex justify-center items-center h-7 aspect-[1/1] top-3 right-3 rounded-md bg-inherit cursor-pointer hover:bg-red-600 hover:text-white transition-all text-base z-10 ">
         <span>
             <i class="fas fa-times"></i>

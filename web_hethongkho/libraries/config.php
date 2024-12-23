@@ -121,7 +121,7 @@ $config['cart'] = array(
 	'cart-advance' => true,
 	'cart-qty' => true,
 	'flash_sale' => false,
-	'combo-cart' => true,
+	'coupon_cart' => true,
 );
 $config['cart']['attribute'] = array(
 	'view_update' => true,

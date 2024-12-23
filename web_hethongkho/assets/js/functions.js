@@ -418,12 +418,6 @@ function searchEnter(t) {
     }
 };
 
-function loadScrollPage(url, type, width, height, ele) {
-    var a = !1;
-    $(window).scroll(function() {
-        $(window).scrollTop() > 10 && !a && ($('#' + ele).load('ajax/load_addons.php?url=' + url + '&width=' + width + '&height=' + height + '&type=' + type), a = !0)
-    });
-};
 
 function isEmail(b) {
     var a = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
@@ -460,4 +454,34 @@ function loadApplication(check = true) {
             $("body #loader").remove();
         }, 200)
     }
+}
+
+function getUrlParam(paramsToAdd = {}) {
+    const urlParams = new URLSearchParams(window.location.search);
+    let params = {};
+    // Lấy tất cả tham số từ URL hiện tại
+    urlParams.forEach((value, key) => {
+        if (key != 'page') {
+            params[key] = value;
+        }
+    });
+    // Nếu có tham số key và value, thêm hoặc thay đổi tham số
+    Object.keys(paramsToAdd).forEach(key => {
+        let value = paramsToAdd[key];
+        params[key] = value; // Thêm hoặc cập nhật tham số với giá trị mới
+    });
+    // Chuyển mảng params thành chuỗi truy vấn
+    params = Object.fromEntries(
+        Object.entries(params).filter(([key, value]) => value !== "" && value !== null && value !== undefined)
+    );
+    let queryString = $.param(params);
+    // Tạo URL mới
+    let url = '';
+    if (queryString === "") {
+        url = _URL; // Nếu không có tham số, chỉ trả về URL cơ bản
+    } else {
+        url = _URL + '?' + queryString; // Thêm tham số vào URL
+    }
+
+    return url;
 }

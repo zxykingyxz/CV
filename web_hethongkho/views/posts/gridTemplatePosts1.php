@@ -6,7 +6,7 @@ foreach ($data as $k => $v) {
     $seoDB = $seo->getSeoDB($v['id'], 'baiviet', 'man', $v["type"]);
     $desc = (isset($seoDB["description_$lang"])) ? $seoDB["description_$lang"] : $seoDB["description"];
 ?>
-    <div class="group/templatePost_one relative bg-[#FEF1F1] rounded-[12px] sm:rounded-[32px] pt-5 sm:pt-7 px-2 sm:px-4 pb-8 sm:pb-12 mb-7 ">
+    <div class="group/templatePost_one load_website relative bg-[#FEF1F1] rounded-[12px] sm:rounded-[32px] pt-5 sm:pt-7 px-2 sm:px-4 pb-8 sm:pb-12 mb-7 ">
         <div class="text-center mb-3 sm:mb-5">
             <?= $func->addHref([
                 'class' => $title,

@@ -28,14 +28,6 @@ $GLOBAL['bannerqc'][$nametype]['link'] = false;
 
 $GLOBAL['bannerqc'][$nametype]['img_type'] = '.png|.PNG|.Png';
 
-#===================Flash sale========================
-
-$nametype = 'flashsale';
-
-$GLOBAL['flashsale'][$nametype]['title_main'] = 'danh sách flashsale';
-
-$GLOBAL['flashsale'][$nametype]['title'] = 'Quản lý Flashsale';
-
 #==============Thuộc tính bộ lọc==============
 
 $nametype = 'muc-gia';

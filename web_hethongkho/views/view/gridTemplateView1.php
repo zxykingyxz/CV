@@ -4,7 +4,7 @@ $content = "text-sm leading-relaxed h-[calc(14px*1.625*4)] line-clamp-4 font-nor
 
 foreach ($data as $k => $v) {
 ?>
-    <div class="group/templateView_one bg-white relative overflow-hidden rounded-2xl sm:rounded-[32px]  p-3 sm:p-4 z-10" style="box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);">
+    <div class="group/templateView_one load_website bg-white relative overflow-hidden rounded-2xl sm:rounded-[32px]  p-3 sm:p-4 z-10" style="box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);">
         <div class="absolute top-0 left-0 w-full h-full opacity-0  group-hover/templateView_one:opacity-100  pointer-events-none z-[-1] transition-all duration-500" style="background: var(--color-linear-sc);"></div>
         <div class='overflow-hidden rounded-xl sm:rounded-2xl'>
             <?= $func->addHrefImg([

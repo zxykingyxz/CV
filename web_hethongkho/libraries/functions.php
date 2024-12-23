@@ -3680,7 +3680,7 @@ class functions
         $info['target'] = (!empty($info['target'])) ? "target='" . $info['target'] . "'" : "";
 
         /* Class */
-        $info['class'] = ($info['isLazy']) ? $info['class'] . ' lazy ' : $info['class'];
+        $info['class'] = ($info['isLazy']) ? $info['class'] . ' lazy load_website ' : $info['class'];
         $info['class'] = (!empty($info['class'])) ? "class='" . $info['class'] . "'" : "";
         $info['classfix'] = (!empty($info['classfix'])) ? "class='" . $info['classfix'] . "'" : "";
 
@@ -5891,7 +5891,7 @@ class functions
         $arr['seoTag'] = 'h' . $tagindex;
         return $arr;
     }
-    public function getSqlWhereKeywords($keywords = null, $name_column =  array())
+    public function getSqlWhereKeywords($keywords = null)
     {
         $sql = "";
         if (!empty($keywords)) {
@@ -5909,14 +5909,7 @@ class functions
                     $i_keywords++;
                 }
             }
-            if (!empty($name_column)) {
-            }
-            $sql .= "(";
-            foreach ($name_column as $key => $name) {
-                $sql .= ($key != 0) ? " or " : "";
-                $sql .= "($name REGEXP '$keywords_sql')";
-            }
-            $sql .= ")";
+            $sql = "((ten_vi REGEXP '$keywords_sql') or (masp REGEXP '$keywords_sql'))";
         }
         return $sql;
     }

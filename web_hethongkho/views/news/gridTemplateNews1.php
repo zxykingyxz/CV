@@ -7,7 +7,7 @@ foreach ($data as $k => $v) {
     $seoDB = $seo->getSeoDB($v['id'], 'baiviet', 'man', $v["type"]);
     $desc = (isset($seoDB["description_$lang"])) ? $seoDB["description_$lang"] : $seoDB["description"];
 ?>
-    <div class="group/templateNew_one  ">
+    <div class="group/templateNew_one load_website ">
         <div class=" overflow-hidden rounded-md sm:rounded-lg mb-5 sm:mb-7 relative leading-[0]">
             <?= $func->addHrefImg([
                 'classfix' => 'w-full',

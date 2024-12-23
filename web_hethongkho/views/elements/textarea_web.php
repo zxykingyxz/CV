@@ -1,12 +1,17 @@
+<?php
+$class_label = "text-sm font-semibold text-slate-600";
+$class_text = "text-xs font-normal font-main-400  ";
+$class_form_layouts = "px-3 py-2 border shadow-sm border-[var(--html-sc-website)] placeholder-slate-400 rounded-md";
+?>
 <?php if ($form !== false) { ?>
     <div class="<?= $class_form ?>">
         <label>
             <?php if ($no_lable !== true) { ?>
-                <div for="<?= $data ?>" class="block text-sm font-semibold text-slate-600 <?= ($required) ? " after:content-['*'] after:ml-0.5 after:text-red-500 " : "" ?>"><?= $lable ?></div>
+                <div for="<?= $data ?>" class=" <?= $class_label ?> block <?= ($required) ? " after:content-['*'] after:ml-0.5 after:text-red-500 " : "" ?>"><?= $lable ?></div>
                 <div class="mt-1">
                 <?php } ?>
             <?php } ?>
-            <textarea name="data[<?= $data ?>]" size="0" id="<?= $id ?>" rows="<?= $rows ?>" class="resize-none px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1  disabled:shadow-none" <?= ($required) ? "required" : "" ?> <?= ($readonly) ? "readonly" : "" ?> placeholder="<?= $placeholder ?>" <?= $function ?>><?= $value ?></textarea>
+            <textarea name="data[<?= $data ?>]" id="<?= $id ?>" rows="<?= $rows ?>" class="<?= $class . " " . $class_text . " " . $class_form_layouts ?> resize-none bg-white  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 focus:outline-none focus:border-[var(--html-cl-website)] focus:ring-[var(--html-cl-website)] block w-full focus:ring-1  disabled:shadow-none" <?= ($required) ? "required" : "" ?> <?= ($readonly) ? "readonly" : "" ?> placeholder="<?= $placeholder ?>" <?= $function ?>><?= $value ?></textarea>
             <?php if ($form !== false) { ?>
                 <?php if ($no_lable !== true) { ?>
                 </div>

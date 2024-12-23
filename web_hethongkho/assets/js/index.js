@@ -16,7 +16,7 @@ _FRAMEWORK = {
 
         _FRAMEWORK.validateForm();
 
-        _FRAMEWORK.ajaxHandle();
+        _FRAMEWORK.ajaxPaging();
 
         _FRAMEWORK.autocomplete();
 
@@ -24,15 +24,9 @@ _FRAMEWORK = {
 
         _FRAMEWORK.scrollIndicator();
 
-        _FRAMEWORK.fileterShow();
-
-        _FRAMEWORK.viewLoadIndex();
-
         _FRAMEWORK.zoomDetail();
 
         _FRAMEWORK.Menu();
-
-        _FRAMEWORK.autoResizeWeb();
 
         _FRAMEWORK.loadWesite();
 
@@ -58,7 +52,6 @@ _FRAMEWORK = {
     },
 
     product: function() {
-
         // like sản phẩm
         $('body').on('click', '.btn-link', function() {
             let _this = $(this);
@@ -84,6 +77,7 @@ _FRAMEWORK = {
             });
         });
     },
+
     advancedSearch: function() {
         // tìm kiếm nâng cao
         var typingTimer;
@@ -126,27 +120,14 @@ _FRAMEWORK = {
             $('body').find('.close_view_search').css('display', 'none');
         });
     },
-    autoResizeWeb: () => {
-        var resizeTimer;
-        var currentWidth = $(window).width();
-        $(window).on('resize', function() {
-            var newWidth = $(window).width();
-            if ((newWidth !== currentWidth) && (((currentWidth - newWidth) > 100) || ((newWidth - currentWidth) > 100))) {
-                currentWidth = newWidth;
-                clearTimeout(resizeTimer);
-                resizeTimer = setTimeout(function() {
-                    location.reload(); // Tự động load lại trang sau khi dừng resize
-                }, 300); // Thời gian chờ sau khi dừng resize (ms)
-            }
-        });
-    },
+
     loadWesite: () => {
         $('body').find('.load_website').each(function() {
             var load_website = $(this);
             load_website.find('*').on('load', function() {
                 setTimeout(function() {
                     load_website.removeClass('load_website');
-                }, 300);
+                }, 200);
             });
         });
     },
@@ -178,6 +159,7 @@ _FRAMEWORK = {
             }
         }
     },
+
     lightSliderPage: function() {
         var slide1 = $("#slide-light-detail .slider").lightSlider({
             gallery: true,
@@ -197,34 +179,6 @@ _FRAMEWORK = {
         });
     },
 
-    viewLoadIndex: function() {
-        $('body').on('click', '.js--load', function() {
-            let _this = $(this);
-            let linkParams = {..._this.data() };
-            let page = (linkParams.page || 1) + 1;
-            linkParams.page = page;
-            _this.attr('data-page', page);
-            $.ajax({
-                url: _ROOT + 'load.js',
-                type: 'GET',
-                data: {
-                    ...linkParams
-                },
-                dataType: 'JSON',
-                beforeSend: function() {
-                    $(`#js--render`).append(getSketon(PAGE_INDEX));
-                },
-                success: function(data) {
-                    $(`#js--render`).append(data.html);
-                    $(`#js--render--load`).html(data.paging);
-                    loadImageRender();
-                },
-                complete: function() {
-                    $('.move-loading').remove();
-                }
-            });
-        });
-    },
     zoomDetail: function() {
         $('body').on('click', '.zoom-detail img', function() {
             let _this = $(this);
@@ -250,50 +204,6 @@ _FRAMEWORK = {
         $('body').on('click', '.close-zoom', function() {
             $('body .popup-zoom').removeClass('show-zoom');
         });
-    },
-    fileterShow: function() {
-
-        $("body").on("click", ".check-list", function(e) {
-            var the_url = create_link();
-            fetch_filter(the_url);
-
-        });
-
-        $('#opensideBar-product').click(function() {
-
-            if (!$(this).hasClass('active')) {
-
-                $(this).addClass('active');
-
-                $('.opensideBar-product__text').html('Thu gọn');
-
-                $('body').append('<div class="bg-mask"></div>');
-
-                $('.sideBar-product').css({ 'transform': 'translateX(0%)', 'visibility': 'visible' });
-
-            } else {
-
-                $(this).removeClass('active');
-
-                $('.opensideBar-product__text').html('Bộ lọc');
-
-                $('.bg-mask').remove();
-
-                $('.sideBar-product').css({ 'transform': 'translateX(-105%)', 'visibility': 'hidden' });
-
-            }
-
-        });
-        $('body').on('click', '.bg-mask', function() {
-
-            $('.bg-mask').remove();
-
-            $('#opensideBar-product').removeClass('active');
-
-            $('.sideBar-product').css({ 'transform': 'translateX(-105%)', 'visibility': 'visible' });
-
-        });
-
     },
 
     scrollIndicator: function() {
@@ -416,329 +326,6 @@ _FRAMEWORK = {
         $('.reload-captcha').trigger('click');
     },
 
-    comment: function() {
-
-        $('.js-viewall-comment').click(function() {
-            let id = $(this).data('id');
-            let type = $(this).data('type');
-            let target = $(this).data('target');
-
-            $.ajax({
-
-                url: 'ajax/ajaxViewComment.php',
-
-                type: 'POST',
-
-                data: {
-
-                    id: id,
-
-                    type: type,
-
-                },
-
-                error: function(res) {
-                    console.log(res);
-                },
-
-                beforeSend: function() {
-                    $('.js-viewall-comment').addClass('loading');
-                },
-
-                success: function(res) {
-
-                    $(target).html(res);
-
-                    $('.js-viewall-comment').remove();
-
-                    _FRAMEWORK.ratioImage();
-
-                },
-
-                complete: function() {
-                    $('.js-viewall-comment').removeClass('loading');
-                },
-
-            });
-
-        });
-
-        $('.js-activeComment').click(function() {
-            $('.wrapper-formComment').addClass('active');
-        });
-        $('.closes').click(function() {
-            $('.wrapper-formComment').removeClass('active');
-        });
-
-        $('#submit_comment').click(function(e) {
-            e.preventDefault();
-            let rating = $('#rating').val();
-            let fullname = $('#fullname').val();
-            let captcha = $('#captcha').val();
-
-            if (isBlank(fullname)) {
-
-                $.confirm({
-
-                    title: 'Thông báo',
-
-                    content: 'Tên không được bỏ trống!!!',
-
-                    icon: 'fa-light fa-circle-check',
-
-                    theme: 'modern',
-
-                    closeIcon: true,
-
-                    animation: 'scale',
-
-                    type: 'green',
-
-                    buttons: {
-
-                        cancel: {
-
-                            text: 'Thoát',
-
-                            btnClass: 'btn-red',
-
-                        }
-
-                    }
-
-                });
-
-                return false;
-
-            } else if (rating <= 0) {
-
-                $.confirm({
-
-                    title: 'Thông báo',
-
-                    content: 'Bạn chưa chọn đánh giá sao!!!',
-
-                    icon: 'fa-light fa-circle-check',
-
-                    theme: 'modern',
-
-                    closeIcon: true,
-
-                    animation: 'scale',
-
-                    type: 'green',
-
-                    buttons: {
-
-                        cancel: {
-
-                            text: 'Thoát',
-
-                            btnClass: 'btn-red',
-
-                        }
-
-                    }
-
-                });
-
-                return false;
-
-            } else if (isBlank(captcha)) {
-
-                $.confirm({
-
-                    title: 'Thông báo',
-
-                    content: 'Mã captcha không được bỏ trống!!!',
-
-                    icon: 'fa-light fa-circle-check',
-
-                    theme: 'modern',
-
-                    closeIcon: true,
-
-                    animation: 'scale',
-
-                    type: 'green',
-
-                    buttons: {
-
-                        cancel: {
-
-                            text: 'Thoát',
-
-                            btnClass: 'btn-red',
-
-                        }
-
-                    }
-
-                });
-
-                return false;
-
-            } else {
-
-                let fileInput = $('#file')[0];
-                var file = fileInput.files[0];
-                var formData = new FormData($('#form-comment')[0]);
-                formData.append('file', file);
-
-                $.ajax({
-
-                    url: 'ajax/ajaxComment.php',
-
-                    type: 'POST',
-
-                    processData: false,
-
-                    contentType: false,
-
-                    data: formData,
-
-                    dataType: 'JSON',
-
-                    beforeSend: function() {
-
-                    },
-
-                    success: function(data) {
-
-                        setTimeout(function() {
-
-                            if (data.status == 200) {
-
-                                $.confirm({
-
-                                    title: 'Thông báo',
-
-                                    content: data.message,
-
-                                    icon: 'fa-light fa-circle-check',
-
-                                    theme: 'modern',
-
-                                    closeIcon: true,
-
-                                    animation: 'scale',
-
-                                    type: 'green',
-
-                                    buttons: {
-
-                                        success: {
-
-                                            text: 'Ok',
-
-                                            btnClass: 'btn-blue',
-
-                                        },
-
-                                    }
-
-                                });
-
-                                let html = '<div class="wrapper-comment__box-result-item">\
-										<div class="wrapper-comment__box-result-item-img" style="' + data.insert.randomColor + '">' + data.insert.firstName + '</div>\
-										<div class="wrapper-comment__box-result-item-info flex-cl-1">\
-											<div class="title d-flex align-items-center">\
-												<span class="mb10 mr15">@' + data.insert.hoten + '</span>\
-												<p>' + data.insert.ngaytao + '</p>\
-											</div>\
-											<div class="rating mb10">';
-                                for (let i = 1; i <= 5; i++) {
-                                    if (data.insert.rating >= i) {
-                                        html += '<span class="fa-solid cl-white fa-star active"></span>';
-                                    } else {
-                                        html += '<span class="fa-solid cl-white fa-star"></span>';
-                                    }
-                                }
-                                html += '</div>\
-											<div class="content mb15">' + data.insert.content + '</div>\
-											<div class="imgMultiple">\
-												<a data-fancybox href="upload/user/' + data.insert.photo + '" title="' + data.insert.hoten + '" class="d-block hover-left ratio-scale ratio-img" img-width="85" img-height="55">\
-													<img class="ratio-img__content" width="85" height="55" src="upload/user/' + data.insert.photo + '" alt="' + data.insert.hoten + '">\
-												</a>\
-											</div>\
-										</div>\
-									</div>';
-
-                                $("#comment-list").prepend(html);
-
-                                $('#rating').val('');
-                                $('#fullname').val('');
-                                $('#content').val('');
-                                $('#file').val('');
-                                $('#captcha').val('');
-                                $('.re--star').removeClass('active');
-                                $('.reload-captcha').trigger('click');
-                                $('.preview-img').remove();
-                                $('.wrapper-formComment').removeClass('active');
-
-                                _FRAMEWORK.ratioImage();
-
-                            } else {
-
-                                $.confirm({
-
-                                    title: 'Thông báo',
-
-                                    content: data.message,
-
-                                    icon: 'fa-light fa-circle-check',
-
-                                    theme: 'modern',
-
-                                    closeIcon: true,
-
-                                    animation: 'scale',
-
-                                    type: 'green',
-
-                                    buttons: {
-
-                                        cancel: {
-
-                                            text: 'Thoát',
-
-                                            btnClass: 'btn-red',
-
-                                        }
-
-                                    }
-
-                                });
-
-                                $('#rating').val('');
-                                $('#fullname').val('');
-                                $('#content').val('');
-                                $('#file').val('');
-                                $('#captcha').val('');
-                                $('.re--star').removeClass('active');
-                                $('.reload-captcha').trigger('click');
-                                $('.preview-img').remove();
-                                $('.wrapper-formComment').removeClass('active');
-
-                            }
-
-                        }, 1500);
-
-                    },
-
-                    complete: function() {
-
-                    }
-
-                });
-
-            }
-
-        })
-
-    },
-
-
     validateForm: function() {
         ValidationFormSelf('form-validate-warehouse-sign_up');
         ValidationFormSelf('form-validate-warehouse-login');
@@ -802,42 +389,6 @@ _FRAMEWORK = {
             }
         });
     },
-
-    scrollMouseRight: (ele) => {
-
-        let slider = document.querySelector(ele);
-
-        if ($(ele).length > 0) {
-
-            let mouseDown = false;
-            let startX, scrollLeft;
-
-            let startDragging = function(e) {
-                mouseDown = true;
-                startX = e.pageX - slider.offsetLeft;
-                scrollLeft = slider.scrollLeft;
-            };
-            let stopDragging = function(event) {
-                mouseDown = false;
-            };
-
-            slider.addEventListener('mousemove', (e) => {
-                e.preventDefault();
-                if (!mouseDown) { return; }
-                const x = e.pageX - slider.offsetLeft;
-                const scroll = x - startX;
-                slider.scrollLeft = scrollLeft - scroll;
-            });
-
-            // Add the event listeners
-            slider.addEventListener('mousedown', startDragging, false);
-            slider.addEventListener('mouseup', stopDragging, false);
-            slider.addEventListener('mouseleave', stopDragging, false);
-
-        }
-
-    },
-
 
     autocomplete: function() {
 
@@ -904,7 +455,7 @@ _FRAMEWORK = {
 
     },
 
-    ajaxHandle: function() {
+    ajaxPaging: function() {
         $('body').on('click', '.view__load', function() {
             let _this = $(this);
             let item = parseInt(_this.attr('data-item'));
@@ -941,13 +492,8 @@ _FRAMEWORK = {
                     }, 300);
 
                 },
-                error: function(data) {
-
-                },
-                complete: function() {
-
-
-                }
+                error: function(data) {},
+                complete: function() {}
             });
 
         });

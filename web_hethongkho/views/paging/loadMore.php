@@ -2,22 +2,14 @@
 if ($total > 0) {
     if (isset($options)) {
         $attr = '';
-        if (isset($options['idl'])) $attr .= " data-idl=" . $options['idl'];
-        if (isset($options['idc'])) $attr .= " data-idc=" . $options['idc'];
-        if (isset($options['idi'])) $attr .= " data-idi=" . $options['idi'];
-        if (isset($options['ids'])) $attr .= " data-ids=" . $options['ids'];
-        if (isset($options['type'])) $attr .= " data-type=" . $options['type'];
         if (isset($options['page'])) $attr .= " data-page=" . $options['page'];
-        if (isset($options['item'])) $attr .= " data-item=" . $options['item'];
-        if (isset($options['total'])) $attr .= " data-total=" . $options['total'];
     }
-
 ?>
     <div class="flex">
         <div class=" basis-full flex justify-center mt-[40px] mb-5">
-            <a <?= trim($attr) ?> class='px-[40px] py-4 rounded-[8px] border border-[var(--html-bg-webiste)] transition-all duration-300 text-[var(--html-bg-website)] font-main text-[12px] font-bold leading-none tracking-[1.8px] uppercase hover:bg-[var(--html-bg-website)] cursor-pointer hover:text-white flex justify-center items-center gap-2 view__load view__more__page ' title='Xem thêm'>
+            <a <?= trim($attr) ?> class='view__load view__more__page px-[40px] py-4 text-center  text-black font-main text-base font-bold font-main-700 leading-none tracking-[1.8px] capitalize hover:text-[var(--html-bg-website)] cursor-pointer  flex flex-wrap flex-col justify-center items-center gap-2  ransition-all duration-300 ' title='Xem thêm'>
                 <span>
-                    <?= "Hiển thị thêm" ?> <span><?= $total ?></span> <?= $title ?>
+                    <?= "Xem thêm" ?> <span><?= $total ?></span> <?= $title ?>
                 </span>
                 <div class="">
                     <i class='fa fa-chevrons-down mr-1 '></i>
@@ -37,6 +29,7 @@ if ($total > 0) {
             </div>
         </div>
     </div>
+
 <?php
 }
 ?>
