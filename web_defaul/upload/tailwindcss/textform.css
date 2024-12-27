@@ -1,0 +1,28 @@
+.twinkle-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.twinkle-img::after,
+.twinkle-img::before {
+    position: absolute;
+    content: "";
+    top: 0%;
+    transform: skew(145deg);
+    right: 150%;
+    width: 50%;
+    height: 100%;
+    z-index: 9;
+    pointer-events: none;
+    background-image: linear-gradient(to right, #ffffff00 0%, #ffffff7c 100%);
+}
+
+.twinkle-img:hover::after,
+.twinkle-img:hover::before {
+    right: -100%;
+    transition: all 1s ease;
+}
+
+.twinkle-img:hover::after {
+    transition: all 1s 0.1s ease !important;
+}

@@ -1,0 +1,5 @@
+Options -Indexes
+<Files ~ "\.(inc|php|phps|cgi|pl|php4|php5|asp|aspx|jsp|kid|cbg|nok|shtml)$">
+ order allow,deny
+ deny from all
+</Files>

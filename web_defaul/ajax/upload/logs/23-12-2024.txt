@@ -1,0 +1,6 @@
+127.0.0.1(admin)--insert--counters(169) (15:05:03 23/12/2024)
+127.0.0.1(admin)--query--tables(delete from table_online where time<1734940503) (15:05:03 23/12/2024)
+127.0.0.1(admin)--insert--online(94) (15:05:03 23/12/2024)
+127.0.0.1(admin)--query--tables(delete from table_online where time<1734940515) (15:05:15 23/12/2024)
+127.0.0.1(admin)--query--tables(delete from table_online where time<1734940555) (15:05:55 23/12/2024)
+127.0.0.1(admin)--query--tables(delete from table_online where time<1734940600) (15:06:40 23/12/2024)

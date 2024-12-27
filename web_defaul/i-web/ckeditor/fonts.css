@@ -1,0 +1,5 @@
+@font-face {
+    font-family: "OpenSansRegular";
+    src: url( font/OpenSansRegular/OpenSansRegular.eot ); /* IE */
+    src: local("OpenSansRegular"), url("font/OpenSansRegular/OpenSansRegular.ttf") format("truetype"); /*non-IE*/
+}
