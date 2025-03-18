@@ -1,0 +1,12 @@
+a:3:{s:8:"dataHash";s:32:"6fb0ee7aa655ca367696c1116e5d0522";s:9:"timestamp";i:1739871672;s:7:"content";s:850:"<div class="shadow shadow-gray-300 bg-white p-2 w-full rounded ">
+    <div class="flex flex-wrap gap-1 items-center">
+        <a href="index.php?com=baiviet&act=man&type=tac-gia" title="Thêm mới" class=" h-[30px] bg-blue-500 hover:brightness-90 transition-all duration-300 text-xs font-normal text-white text-center px-4 rounded-sm flex justify-center items-center gap-2 text-nowrap">
+            <i class="fas fa-plus"></i>
+            <span>Thêm mới</span>
+        </a>
+        <a href="" title="Xóa tất cả" class=" h-[30px] bg-red-500 hover:brightness-90 transition-all duration-300 text-xs font-normal text-white text-center px-4 rounded-sm flex justify-center items-center gap-2 text-nowrap">
+            <i class="fas fa-trash"></i>
+            <span>Xóa tất cả</span>
+        </a>
+        <div class="">
+            ";}

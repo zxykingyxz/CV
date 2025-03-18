@@ -1,0 +1,15 @@
+<div class="popup-zoom fixed top-0 left-0 bg-[#000000] z-50 w-full h-[100vh] flex flex-wrap flex-col opacity-0 scale-110 invisible [&.show-zoom]:scale-100 [&.show-zoom]:opacity-100 [&.show-zoom]:visible  transition-all duration-300">
+    <div class="w-full flex-initial min-h-6 <?= "close-zoom" ?>">
+    </div>
+    <span class="close-zoom absolute inline-flex justify-center items-center h-10 aspect-[1/1] top-5 right-5 rounded-full bg-slate-500 cursor-pointer hover:bg-slate-700 text-white transition-all text-3xl z-10">×</span>
+    <div class="w-full flex flex-1 max-h-full">
+        <div class="flex-1 min-w-[10px] <?= "close-zoom" ?>"></div>
+        <div class=" grid_s wide w-full relative <?= $class_form ?> flex flex-wrap items-center ">
+            <div class="wrap-img-zoom flex-initial"><img src="" class="img-zoom"></div>
+            <div class="wrap-caption-zoom flex-1"></div>
+        </div>
+        <div class="flex-1 min-w-[10px] <?= "close-zoom" ?>"></div>
+    </div>
+    <div class="w-full flex-initial min-h-6 <?= "close-zoom" ?>">
+    </div>
+</div>

@@ -1,0 +1,8 @@
+a:3:{s:8:"dataHash";s:32:"458016a90bbe661d8df8a3568c94bd0d";s:9:"timestamp";i:1739956136;s:7:"content";s:738:"<label class="flex items-center cursor-pointer group">
+    <input type="checkbox" name="check_items" id="check_items" class="hidden input_check_items">
+    <div class="w-4 h-4 flex items-center justify-center border border-gray-400 rounded-sm bg-gray-300 transition-all group-has-[input:checked]:bg-blue-500 group-has-[input:checked]:border-blue-500">
+        <svg class="w-[100%] h-[100%] text-white hidden group-has-[input:checked]:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-3-3a1 1 0 011.414-1.414L9 11.586l6.293-6.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+        </svg>
+    </div>
+</label>";}

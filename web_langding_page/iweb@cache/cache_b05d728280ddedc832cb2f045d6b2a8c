@@ -1,0 +1,10 @@
+a:3:{s:8:"dataHash";s:32:"53e7fc9125236a87c1367092183a088c";s:9:"timestamp";i:1739956136;s:7:"content";s:480:"<div class="bg-gray-300 h-[30px] px-3 w-full hidden md:flex items-center ">
+    <ul class="flex gap-[6px] text-xs font-normal text-[#666666] items-center" id="breadcrumbs">
+        <li>
+            <a href="index.php?com=baiviet&act=man&type=tac-gia" title="Danh sách tác giả" class="inline-flex items-center gap-2">
+                <i class="fas fa-home"></i>
+                <span>Danh sách tác giả</span>
+            </a>
+        </li>
+            </ul>
+</div>";}
