@@ -48,7 +48,7 @@ $ach_development_process = $cache->getCache("select mota_$lang as mota , ten_$la
             </div>
         </div>
         <div class="relative wow zoomIn" data-wow-duration="<?= $time_animation_wow ?>s" data-wow-delay="0.2s">
-            <div class="w-full  overflow-x-auto overflow-y-hidden scroll-x">
+            <div class="w-full  overflow-x-auto overflow-y-hidden scroll-design-one">
                 <div class="inline-block min-w-full pb-[65px] ">
                     <div class="relative w-full ">
                         <div class="absolute top-[59px] sm:top-[66px] left-0 w-full border-b-2 border-[#b4b4b484] pointer-events-none"></div>

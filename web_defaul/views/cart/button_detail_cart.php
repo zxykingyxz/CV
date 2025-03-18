@@ -1,0 +1,18 @@
+<div class="w-full flex flex-wrap justify-center items-center gap-2">
+    <div class="w-full  flex items-center gap-2">
+        <div class="flex items-center w-full">
+            <div class="mr-1"><?= _soluong ?>: </div>
+            <div class="mr-2">
+                <span>
+                    <div class="relative flex items-center">
+                        <span class="down inline-block h-7 w-7 border border-gray-200 bg-white text-xl cursor-pointer font-main text-black text-center ">-</span>
+                        <input type="number" class="input-text qty bg-white border-y border-gray-200 rounded-sm p-0 w-10 text-black h-7 text-center " name="quality" id="qty" value="1" title="Số lượng" maxlength="6" min="1">
+                        <span class="up inline-block h-7 w-7 border border-gray-200 bg-white text-xl cursor-pointer font-main text-black text-center">+</span>
+                    </div>
+                </span>
+            </div>
+        </div>
+    </div>
+    <button type="button" data-el="#product-detail-<?= $id ?>" class="btn-buynow w-full bg-[var(--html-bg-website)] px-3 text-sm h-10 font-bold font-main border-none text-white rounded  hover:brightness-110 transition-all duration-300 cursor-pointer "><?= _muangay ?></button>
+    <button type="button" data-el="#product-detail-<?= $id ?>" class="btn-addcart w-full bg-[var(--html-bg-website)] px-3 text-sm h-10 font-bold font-main border-none text-white rounded  hover:brightness-110 transition-all duration-300  cursor-pointer" data-qty="1" data-id="<?= $id ?>"><?= _themvaogio ?></button>
+</div>

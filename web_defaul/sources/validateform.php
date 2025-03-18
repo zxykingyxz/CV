@@ -1,82 +1,127 @@
 <?php
 
-if (isset($_POST['submit-resgister-client']) && !empty($_POST)) {
+if (!empty($_POST)) {
 
-    $folder_sendEmail = "newsletter";
+    $check_send_mail = false;
+    $name_captcha = '';
 
-    $respone = array();
-
-    $send = array();
-
-    $data = $_POST['data'];
-
-    $fullname = htmlspecialchars($func->sanitize($data['fullname']));
-
-    $phone = htmlspecialchars($func->sanitize($data['phone']));
-
-    $email = htmlspecialchars($func->sanitize($data['email']));
-
-    $service = htmlspecialchars($func->sanitize($data['service']));
-
-    $captcha = htmlspecialchars($func->sanitize($data['captcha']));
-
-    $notes = htmlspecialchars($func->sanitize($data['notes']));
-
-
-    if (empty($captcha) && isset($captcha)) {
-        $func->transfer('Captcha không được để trống!', $_SERVER['HTTP_REFERER']);
-    }
-    if ($_SESSION['captcha_price_quote'] != $captcha) {
-        $func->transfer('Captcha không đúng!', $_SERVER['HTTP_REFERER']);
-    }
-    if (empty($fullname && isset($fullname))) {
-        $func->transfer('Họ tên không được để trống!', $_SERVER['HTTP_REFERER']);
-    }
-    if (empty($phone)  && isset($phone)) {
-        $func->transfer('Số điện thoại không được để trống!', $_SERVER['HTTP_REFERER']);
-    }
-    if (!empty($phone) && !$func->isPhone($phone) && isset($phone)) {
-        $func->transfer('Số điện thoại không hợp lệ!', $_SERVER['HTTP_REFERER']);
-    }
-    if (empty($service) && isset($service)) {
-        $func->transfer('Dịch vụ không được để trống!', $_SERVER['HTTP_REFERER']);
-    }
-    if (empty($email)  && isset($email)) {
-        $func->transfer('Email không được để trống!', $_SERVER['HTTP_REFERER']);
-    }
-    if (!empty($email) && !$func->isEmail($email) && isset($email)) {
-        $func->transfer('Email không hợp lệ!', $_SERVER['HTTP_REFERER']);
+    // kiểm tra nút submit
+    if (isset($_POST['submit-resgister-client'])) {
+        $check_send_mail = true;
+        $type = 'client';
     }
 
-    if (isset($fullname)) {
-        $send['ten_vi'] = $fullname;
+    // kiểm tra dữ liệu
+    if (!empty($type)) {
+        $respone = array();
+        $send = array();
+
+        if (isset($_POST['data'])) {
+            $data = $_POST['data'];
+        } else {
+            $func->transfer('Dữ liệu không hợp lệ!', $_SERVER['HTTP_REFERER']);
+            exit;
+        }
+
+        $send['ngaytao'] = time();
+        $send['hienthi'] = 1;
+        $send['type'] = $type;
+
+        switch ($type) {
+            case 'client':
+                $folder_sendEmail = "newsletter";
+                break;
+            default:
+                $func->transfer('Loại form không được hỗ trợ!', $_SERVER['HTTP_REFERER']);
+                exit;
+        }
+
+        foreach ($data as $key => $value) {
+            $value_handled = htmlspecialchars($func->sanitize($value));
+            switch ($key) {
+                case 'captcha':
+                    if (empty($value_handled)) {
+                        $func->transfer('Captcha không được để trống!', $_SERVER['HTTP_REFERER']);
+                        exit;
+                    }
+                    if ($_SESSION[$name_captcha] != $value_handled) {
+                        $func->transfer('Captcha không đúng!', $_SERVER['HTTP_REFERER']);
+                        exit;
+                    }
+                    break;
+                case 'fullname':
+                    if (empty($value_handled)) {
+                        $func->transfer('Họ tên không được để trống!', $_SERVER['HTTP_REFERER']);
+                        exit;
+                    }
+                    $send['ten_vi'] = $value_handled;
+                    break;
+                case 'phone':
+                    if (empty($value_handled)) {
+                        $func->transfer('Số điện thoại không được để trống!', $_SERVER['HTTP_REFERER']);
+                        exit;
+                    }
+                    if (!empty($value_handled) && !$func->isPhone($value_handled)) {
+                        $func->transfer('Số điện thoại không hợp lệ!', $_SERVER['HTTP_REFERER']);
+                        exit;
+                    }
+                    $send['dienthoai'] = $value_handled;
+                    break;
+                case 'email':
+                    if (empty($value_handled)) {
+                        $func->transfer('Email không được để trống!', $_SERVER['HTTP_REFERER']);
+                        exit;
+                    }
+                    if (!empty($value_handled) && !$func->isEmail($value_handled)) {
+                        $func->transfer('Email không hợp lệ!', $_SERVER['HTTP_REFERER']);
+                        exit;
+                    }
+                    $send['email'] = $value_handled;
+                    break;
+                case 'address':
+                    if (empty($value_handled)) {
+                        $func->transfer('Địa chỉ không được để trống!', $_SERVER['HTTP_REFERER']);
+                        exit;
+                    }
+                    $send['diachi'] = $value_handled;
+                    break;
+                case 'service':
+                    if (empty($value_handled)) {
+                        $func->transfer('Dịch vụ không được để trống!', $_SERVER['HTTP_REFERER']);
+                        exit;
+                    }
+                    $send['id_dichvu'] = $value_handled;
+                    break;
+                case 'product':
+                    if (empty($value_handled)) {
+                        $func->transfer('Sản phẩm không được để trống!', $_SERVER['HTTP_REFERER']);
+                        exit;
+                    }
+                    $send['id_product'] = $value_handled;
+                    break;
+                case 'notes':
+                    $send['noidung'] = $value_handled;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        $insertId = $db->insert('booking', $send);
+        if (!$insertId) {
+            error_log("Failed to insert booking: " . json_encode($send));
+            $func->transfer('Lỗi hệ thống! Vui lòng thử lại.', $_SERVER['HTTP_REFERER']);
+            exit;
+        }
+
+        if ($check_send_mail) {
+            include _source . 'email.php';
+        } else {
+            $func->transfer('Đăng ký nhận tin thành công!', $_SERVER['HTTP_REFERER']);
+            exit;
+        }
+    } else {
+        $func->transfer('Form submit chưa được cấu hình!', $_SERVER['HTTP_REFERER']);
+        exit;
     }
-    if (isset($email)) {
-        $send['email'] = $email;
-    }
-    if (isset($phone)) {
-        $send['dienthoai'] = $phone;
-    }
-    if (isset($service)) {
-        $send['id_dichvu'] = $service;
-    }
-    if (isset($notes)) {
-        $send['noidung'] = $notes;
-    }
-
-    $send['ngaytao'] = time();
-
-    $send['type'] = 'client';
-
-    $send['hienthi'] = 1;
-
-    $insertId = $db->insert('booking', $send);
-
-    // if ($insertId) {
-    //     $func->transfer('Đăng ký nhận tin thành công', $_SERVER['HTTP_REFERER']);
-    // } else {
-    //     $func->transfer('Đăng ký nhận tin không thành công', $_SERVER['HTTP_REFERER']);
-    // }
-
-    include _source  . 'email.php';
 }

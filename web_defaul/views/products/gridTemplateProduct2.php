@@ -5,29 +5,29 @@ foreach ($data as $key => $value) {
 ?>
     <div class="h-full ">
         <div class="group/templateProduct_Two load_website h-full overflow-hidden bg-white border border-[#E1DEDE] hover:border-[var(--html-bg-website)] p-3 rounded-lg transition-all duration-500   <?= $class ?> ">
-            <div class='relative w-full aspect-[510/510] '>
-                <div class="absolute w-full aspect-[510/510] bg-white z-20 group-hover/templateProduct_Two:z-10 transition-all duration-300 ">
+            <div class='relative z-10 w-full aspect-[510/510] '>
+                <div class=" w-full absolute top-0 left-0 w-full h-full bg-white z-20 group-hover/templateProduct_Two:z-10 transition-all duration-300 ">
                     <?= $func->addHrefImg([
                         'classfix' => 'w-full',
                         'addhref' => true,
                         'href' =>  $func->getUrl($value),
                         'isLazy' => true,
                         'sizes' => "510x510x1",
-                        'actual_width' => 800,
+                        'actual_width' => 900,
                         'upload' => _upload_baiviet_l,
                         'image' => ($value["photo"]),
                         'alt' => (isset($value["ten_$lang"])) ? $value["ten_$lang"] : $value["ten"],
                     ]); ?>
                 </div>
                 <?php if (!empty($value["photo2"])) { ?>
-                    <div class="absolute  w-full aspect-[510/510] bg-white z-10 group-hover/templateProduct_Two:z-20 transition-all duration-300">
+                    <div class=" w-full absolute top-0 left-0 w-full h-full bg-white z-10 group-hover/templateProduct_Two:z-20 transition-all duration-300">
                         <?= $func->addHrefImg([
                             'classfix' => 'w-full',
                             'addhref' => true,
                             'href' =>  $func->getUrl($value),
                             'isLazy' => true,
                             'sizes' => "510x510x1",
-                            'actual_width' => 800,
+                            'actual_width' => 900,
                             'upload' => _upload_baiviet_l,
                             'image' => ($value["photo2"]),
                             'alt' => (isset($value["ten_$lang"])) ? $value["ten_$lang"] : $value["ten"],

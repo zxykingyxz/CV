@@ -1,35 +1,5 @@
 <?php
 
-#=================check per===============
-
-$GLOBAL_LANG = false;
-
-$GLOBAL_PERMISSION = false;
-
-#=================check user===============
-
-$GLOBAL_USER = false;
-
-$GLOBAL_USER_ADMIN = true;
-
-$GLOBAL_USER_CLIENT = true;
-
-#================check member================
-
-$COMMENT = false;
-
-$ORDER = false;
-
-$MEMBER = false;
-
-$CONTACT = true;
-
-$NEWSLETTER = false;
-
-$BOOKING = true;
-
-$WAREHOUSE = false;
-
 /** ARTICLE SETTING*/
 
 $SPECIAL = [];
@@ -40,9 +10,8 @@ $PRIVATE = [];
 
 $PHOTOS = [];
 
-$PHOTOS = [];
-
 $CART = [];
+
 // =======================seo page======================
 $array_option_setting = [
 	'dien-tu' => 'Điện tử',

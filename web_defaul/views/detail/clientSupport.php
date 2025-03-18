@@ -21,6 +21,6 @@ $mota_sb = $cache->getCache("select mota_$lang as mota from #_company where type
     </div>
     <div class="flex justify-between items-end mt-2">
         <a href="https://zalo.me/<?= str_replace(' ', '', str_replace('.', '', $row_setting["sozalo"])) ?>" target="_blank" title="Chat zalo" rel="nofollow" role="link" class="font-main font-medium text-[var(--html-bg-website)]">Chat zalo</a>
-        <a href="tel:<?= str_replace(' ', '', str_replace('.', '', $row_setting["hotline"])) ?>" class="text-base font-main font-bold text-[var(--html-bg-website)]" title="<?= $row_setting["hotline"] ?>" aria-lable="<?= $row_setting["hotline"] ?>" role="link" rel="nofollow"><?= $row_setting["hotline"] ?></a>
+        <a href="tel:<?= str_replace(' ', '', str_replace('.', '', $row_setting["hotline"])) ?>" class="text-base font-main font-bold text-[var(--html-bg-website)]" title="<?= $row_setting["hotline"] ?>" aria-label="<?= $row_setting["hotline"] ?>" role="link" rel="nofollow"><?= $row_setting["hotline"] ?></a>
     </div>
 </div>

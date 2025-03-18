@@ -1,0 +1,277 @@
+a:3:{s:8:"dataHash";s:32:"f7479e2ce3f17f1081fe4dc836946056";s:9:"timestamp";i:1742184349;s:7:"content";s:32468:"<script>
+    $('.form_filter_price').dynamicUrlBuilder({
+        button: 'button_filter_price',
+        ajax_data: function(value, _this) {
+            let time_out
+            clearTimeout(time_out);
+            time_out = setTimeout($.ajax({
+                url: value,
+                type: 'GET',
+                dataType: 'JSON',
+                beforeSend: function() {
+                    if (_COM != "index") {
+                        loadApplication(true);
+                    }
+                },
+                success: function(res) {
+                    _this.find('.text_filter_search').text("Xem " + res.data.total + " Kết Quả");
+                    if (_COM != "index") {
+                        loadApplication(false);
+                    }
+                },
+                error: function(data) {
+                    console.error("Error:", data);
+                },
+                complete: function() {}
+            }), 1000);
+        },
+    });
+</script>
+<div class=" form_filter_price" data-url="tu-lanh">
+    <div class="flex flex-wrap gap-2">
+        <div class="relative text-sm  h-9 transition-all duration-300 z-[35]">
+            <div class="fixed hidden top-0 left-0 w-full h-full bg-black opacity-40 z-[-10] pointer-events-none data_filter_price " data-nb="filter_idl5idcidiids"></div>
+            <div class="cursor-pointer px-2 rounded relative inline-flex h-full w-full justify-center items-center leading-[0] gap-2 border border-[#DFDDDD] bg-white hover:border-[var(--html-bg-website)] [&.on]:border-[var(--html-bg-website)] transition-all duration-300 btn_filter_price z-10" data-nb="filter_idl5idcidiids">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                    <g clip-path="url(#clip0_68_935)">
+                        <path d="M18.2841 2.77808H1.84644L8.4215 10.5531V15.9282L11.709 17.572V10.5531L18.2841 2.77808Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </g>
+                </svg>
+                <span class="leading-none">
+                    Lọc
+                </span>
+            </div>
+            <div class="absolute hidden top-full left-0 max-w-[calc(100vw-60px)] w-[900px] data_filter_price " data-nb="filter_idl5idcidiids">
+                <div class=" pl-4">
+                    <div class="bg-white h-[10px] w-[15px] " style="clip-path: polygon(50% 0%,100% 100%,0% 100%);"></div>
+                </div>
+                <div class="rounded-md pb-3 pt-1 px-3 overflow-hidden bg-white shadow-md shadow-gray-300 border border-gray-100  ">
+                    <div class="w-full ">
+                        <div class="w-full flex justify-end">
+                            <div class="cursor-pointer btn_filter_price inline-flex justify-center items-center leading-[0] w-6 aspect-[1/1]" data-nb="filter_idl5idcidiids">
+                                <span>
+                                    <i class="fas fa-times text-xl font-medium text-gray-600"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class=" flex flex-wrap max-h-[clamp(250px,40vw,400px)] scroll-y overflow-y-auto overflow-x-hidden ">
+                            <div class="w-full">
+                                <div class="text-sm font-bold font-main-700">
+                                    <span>Thương hiệu</span>
+                                </div>
+                            </div>
+                                                            <div class="mt-3 flex flex-wrap gap-3">
+                                                                            <label class="relative  border border-[#DFDDDD] bg-[#F3F3F3] rounded has-[:checked]:border-[var(--html-bg-website)]  overflow-hidden h-9 aspect-[83/35] transition-all duration-300">
+                                            <input type="checkbox" name="brand" id="" value="8" class="pointer-events-auto cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full" >
+                                            <div  class='load_website pointer-events-none' style='aspect-ratio:400/168.67469879518;max-width:400px;display: inline-flex;justify-items: center;align-items: center;line-height: 0;object-fit:contain ;' > <img width='400' height='168.67469879518' class=' lazy '  onerror="this.src=http://web_defaul_usually.test/thumbs/400x168x2/assets/images/noimage.png" data-src='http://web_defaul_usually.test/thumbs/400x168x2/upload/baiviet/group-5684-5441.png' alt='thương hiệu 6'/></div>                                        </label>
+                                                                            <label class="relative  border border-[#DFDDDD] bg-[#F3F3F3] rounded has-[:checked]:border-[var(--html-bg-website)]  overflow-hidden h-9 aspect-[83/35] transition-all duration-300">
+                                            <input type="checkbox" name="brand" id="" value="5" class="pointer-events-auto cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full" >
+                                            <div  class='load_website pointer-events-none' style='aspect-ratio:400/168.67469879518;max-width:400px;display: inline-flex;justify-items: center;align-items: center;line-height: 0;object-fit:contain ;' > <img width='400' height='168.67469879518' class=' lazy '  onerror="this.src=http://web_defaul_usually.test/thumbs/400x168x2/assets/images/noimage.png" data-src='http://web_defaul_usually.test/thumbs/400x168x2/upload/baiviet/group-5674-2773.png' alt='thương hiệu 3'/></div>                                        </label>
+                                                                            <label class="relative  border border-[#DFDDDD] bg-[#F3F3F3] rounded has-[:checked]:border-[var(--html-bg-website)]  overflow-hidden h-9 aspect-[83/35] transition-all duration-300">
+                                            <input type="checkbox" name="brand" id="" value="4" class="pointer-events-auto cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full" >
+                                            <div  class='load_website pointer-events-none' style='aspect-ratio:400/168.67469879518;max-width:400px;display: inline-flex;justify-items: center;align-items: center;line-height: 0;object-fit:contain ;' > <img width='400' height='168.67469879518' class=' lazy '  onerror="this.src=http://web_defaul_usually.test/thumbs/400x168x2/assets/images/noimage.png" data-src='http://web_defaul_usually.test/thumbs/400x168x2/upload/baiviet/group-5673-3655.png' alt='thương hiệu 2'/></div>                                        </label>
+                                                                            <label class="relative  border border-[#DFDDDD] bg-[#F3F3F3] rounded has-[:checked]:border-[var(--html-bg-website)]  overflow-hidden h-9 aspect-[83/35] transition-all duration-300">
+                                            <input type="checkbox" name="brand" id="" value="3" class="pointer-events-auto cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full" >
+                                            <div  class='load_website pointer-events-none' style='aspect-ratio:400/168.67469879518;max-width:400px;display: inline-flex;justify-items: center;align-items: center;line-height: 0;object-fit:contain ;' > <img width='400' height='168.67469879518' class=' lazy '  onerror="this.src=http://web_defaul_usually.test/thumbs/400x168x2/assets/images/noimage.png" data-src='http://web_defaul_usually.test/thumbs/400x168x2/upload/baiviet/group-5670-7085.png' alt='thương hiệu 1'/></div>                                        </label>
+                                                                    </div>
+                                                        <div class="w-full mt-3 border-t border-gray-200">
+                                <div class="mt-3 text-sm font-bold font-main-700">
+                                    <span>Khoảng Giá</span>
+                                </div>
+                            </div>
+                            <div class="form_price_range w-full mt-3 flex flex-wrap gap-3 pr-1 form">
+                                <div class="flex items-center gap-2">
+                                    <input type="text" name="min_price" value="" placeholder="Từ" class="input_price pointer-events-none border px-2 py-1 w-[120px]">
+                                    <div class="">
+                                        <span>-</span>
+                                    </div>
+                                    <input type="text" name="max_price" value="" placeholder="Đến" class="input_price  pointer-events-none border px-2 py-1 w-[120px]">
+                                </div>
+                                <div class="w-full">
+                                    <div class="price_range w-full max-w-[420px]"></div>
+                                </div>
+                            </div>
+                            <div class="w-full mt-3 border-t border-gray-200">
+                                <div class="mt-3 w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                                                                                                                                                                                                    <div class="w-full">
+                                                <div class="text-sm font-bold font-main-700">
+                                                    <span>
+                                                        Công Nghệ                                                    </span>
+                                                </div>
+                                                <div class="mt-3 w-full">
+                                                    <div class="flex flex-wrap gap-2">
+                                                                                                                    <label class="relative  border border-[#DFDDDD] bg-white rounded has-[:checked]:border-[var(--html-bg-website)] has-[:checked]:text-[var(--html-bg-website)] overflow-hidden  py-1 px-2 inline-flex justify-center items-center  transition-all duration-300">
+                                                                <input type="checkbox" name="technology" id="" value="Mới" class="pointer-events-auto cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full" >
+                                                                <span>
+                                                                    Mới                                                                </span>
+                                                            </label>
+                                                                                                                    <label class="relative  border border-[#DFDDDD] bg-white rounded has-[:checked]:border-[var(--html-bg-website)] has-[:checked]:text-[var(--html-bg-website)] overflow-hidden  py-1 px-2 inline-flex justify-center items-center  transition-all duration-300">
+                                                                <input type="checkbox" name="technology" id="" value="text" class="pointer-events-auto cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full" >
+                                                                <span>
+                                                                    text                                                                </span>
+                                                            </label>
+                                                                                                            </div>
+                                                </div>
+                                            </div>
+                                                                                                                                                                <div class="w-full">
+                                                <div class="text-sm font-bold font-main-700">
+                                                    <span>
+                                                        Trọng Lượng                                                    </span>
+                                                </div>
+                                                <div class="mt-3 w-full">
+                                                    <div class="flex flex-wrap gap-2">
+                                                                                                                    <label class="relative  border border-[#DFDDDD] bg-white rounded has-[:checked]:border-[var(--html-bg-website)] has-[:checked]:text-[var(--html-bg-website)] overflow-hidden  py-1 px-2 inline-flex justify-center items-center  transition-all duration-300">
+                                                                <input type="checkbox" name="weight" id="" value="50kg" class="pointer-events-auto cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full" >
+                                                                <span>
+                                                                    50kg                                                                </span>
+                                                            </label>
+                                                                                                                    <label class="relative  border border-[#DFDDDD] bg-white rounded has-[:checked]:border-[var(--html-bg-website)] has-[:checked]:text-[var(--html-bg-website)] overflow-hidden  py-1 px-2 inline-flex justify-center items-center  transition-all duration-300">
+                                                                <input type="checkbox" name="weight" id="" value="600kg" class="pointer-events-auto cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full" >
+                                                                <span>
+                                                                    600kg                                                                </span>
+                                                            </label>
+                                                                                                            </div>
+                                                </div>
+                                            </div>
+                                                                                                                                                                <div class="w-full">
+                                                <div class="text-sm font-bold font-main-700">
+                                                    <span>
+                                                        Kích Thước                                                    </span>
+                                                </div>
+                                                <div class="mt-3 w-full">
+                                                    <div class="flex flex-wrap gap-2">
+                                                                                                                    <label class="relative  border border-[#DFDDDD] bg-white rounded has-[:checked]:border-[var(--html-bg-website)] has-[:checked]:text-[var(--html-bg-website)] overflow-hidden  py-1 px-2 inline-flex justify-center items-center  transition-all duration-300">
+                                                                <input type="checkbox" name="size" id="" value="40x50" class="pointer-events-auto cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full" >
+                                                                <span>
+                                                                    40x50                                                                </span>
+                                                            </label>
+                                                                                                                    <label class="relative  border border-[#DFDDDD] bg-white rounded has-[:checked]:border-[var(--html-bg-website)] has-[:checked]:text-[var(--html-bg-website)] overflow-hidden  py-1 px-2 inline-flex justify-center items-center  transition-all duration-300">
+                                                                <input type="checkbox" name="size" id="" value="50x400" class="pointer-events-auto cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full" >
+                                                                <span>
+                                                                    50x400                                                                </span>
+                                                            </label>
+                                                                                                            </div>
+                                                </div>
+                                            </div>
+                                                                                                                                                                <div class="w-full">
+                                                <div class="text-sm font-bold font-main-700">
+                                                    <span>
+                                                        Dung tích                                                    </span>
+                                                </div>
+                                                <div class="mt-3 w-full">
+                                                    <div class="flex flex-wrap gap-2">
+                                                                                                                    <label class="relative  border border-[#DFDDDD] bg-white rounded has-[:checked]:border-[var(--html-bg-website)] has-[:checked]:text-[var(--html-bg-website)] overflow-hidden  py-1 px-2 inline-flex justify-center items-center  transition-all duration-300">
+                                                                <input type="checkbox" name="capacity" id="" value="500lm" class="pointer-events-auto cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full" >
+                                                                <span>
+                                                                    500lm                                                                </span>
+                                                            </label>
+                                                                                                                    <label class="relative  border border-[#DFDDDD] bg-white rounded has-[:checked]:border-[var(--html-bg-website)] has-[:checked]:text-[var(--html-bg-website)] overflow-hidden  py-1 px-2 inline-flex justify-center items-center  transition-all duration-300">
+                                                                <input type="checkbox" name="capacity" id="" value="600lm" class="pointer-events-auto cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full" >
+                                                                <span>
+                                                                    600lm                                                                </span>
+                                                            </label>
+                                                                                                            </div>
+                                                </div>
+                                            </div>
+                                                                                                                                                                <div class="w-full">
+                                                <div class="text-sm font-bold font-main-700">
+                                                    <span>
+                                                        Công suất                                                    </span>
+                                                </div>
+                                                <div class="mt-3 w-full">
+                                                    <div class="flex flex-wrap gap-2">
+                                                                                                                    <label class="relative  border border-[#DFDDDD] bg-white rounded has-[:checked]:border-[var(--html-bg-website)] has-[:checked]:text-[var(--html-bg-website)] overflow-hidden  py-1 px-2 inline-flex justify-center items-center  transition-all duration-300">
+                                                                <input type="checkbox" name="power" id="" value="50000W" class="pointer-events-auto cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full" >
+                                                                <span>
+                                                                    50000W                                                                </span>
+                                                            </label>
+                                                                                                                    <label class="relative  border border-[#DFDDDD] bg-white rounded has-[:checked]:border-[var(--html-bg-website)] has-[:checked]:text-[var(--html-bg-website)] overflow-hidden  py-1 px-2 inline-flex justify-center items-center  transition-all duration-300">
+                                                                <input type="checkbox" name="power" id="" value="5000w" class="pointer-events-auto cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full" >
+                                                                <span>
+                                                                    5000w                                                                </span>
+                                                            </label>
+                                                                                                            </div>
+                                                </div>
+                                            </div>
+                                                                                                                                                                <div class="w-full">
+                                                <div class="text-sm font-bold font-main-700">
+                                                    <span>
+                                                        Cửa                                                    </span>
+                                                </div>
+                                                <div class="mt-3 w-full">
+                                                    <div class="flex flex-wrap gap-2">
+                                                                                                                    <label class="relative  border border-[#DFDDDD] bg-white rounded has-[:checked]:border-[var(--html-bg-website)] has-[:checked]:text-[var(--html-bg-website)] overflow-hidden  py-1 px-2 inline-flex justify-center items-center  transition-all duration-300">
+                                                                <input type="checkbox" name="door" id="" value="text" class="pointer-events-auto cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full" >
+                                                                <span>
+                                                                    text                                                                </span>
+                                                            </label>
+                                                                                                                    <label class="relative  border border-[#DFDDDD] bg-white rounded has-[:checked]:border-[var(--html-bg-website)] has-[:checked]:text-[var(--html-bg-website)] overflow-hidden  py-1 px-2 inline-flex justify-center items-center  transition-all duration-300">
+                                                                <input type="checkbox" name="door" id="" value="text2" class="pointer-events-auto cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full" >
+                                                                <span>
+                                                                    text2                                                                </span>
+                                                            </label>
+                                                                                                            </div>
+                                                </div>
+                                            </div>
+                                                                                                            </div>
+                            </div>
+                            <div class="h-2 w-full"></div>
+                        </div>
+                        <div class="flex justify-center items-center pt-2">
+                            <div class="button_filter_price cursor-pointer h-10 px-6 rounded-md bg-[var(--html-bg-website)] text-base inline-flex justify-center items-center leading-none font-bold font-main-700 text-white hover:brightness-110 transition-all duration-300">
+                                <span class="text_filter_search">Xem Kết Quả</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                                    <div class="border border-[#DFDDDD] bg-[#F3F3F3] rounded hover:border-[var(--html-bg-website)] overflow-hidden h-9 aspect-[83/35] transition-all duration-300">
+                    <a href='http://web_defaul_usually.test/tu-lanh?brand=8' class='load_website '  role='link' rel='dofollow' title='thương hiệu 6'  style='aspect-ratio:400/168.67469879518;max-width:400px;display: inline-flex;justify-items: center;align-items: center;line-height: 0;object-fit:contain ;' > <img width='400' height='168.67469879518' class=' lazy '  onerror="this.src=http://web_defaul_usually.test/thumbs/400x168x2/assets/images/noimage.png" data-src='http://web_defaul_usually.test/thumbs/400x168x2/upload/baiviet/group-5684-5441.png' alt='thương hiệu 6'/></a>                </div>
+                            <div class="border border-[#DFDDDD] bg-[#F3F3F3] rounded hover:border-[var(--html-bg-website)] overflow-hidden h-9 aspect-[83/35] transition-all duration-300">
+                    <a href='http://web_defaul_usually.test/tu-lanh?brand=5' class='load_website '  role='link' rel='dofollow' title='thương hiệu 3'  style='aspect-ratio:400/168.67469879518;max-width:400px;display: inline-flex;justify-items: center;align-items: center;line-height: 0;object-fit:contain ;' > <img width='400' height='168.67469879518' class=' lazy '  onerror="this.src=http://web_defaul_usually.test/thumbs/400x168x2/assets/images/noimage.png" data-src='http://web_defaul_usually.test/thumbs/400x168x2/upload/baiviet/group-5674-2773.png' alt='thương hiệu 3'/></a>                </div>
+                            <div class="border border-[#DFDDDD] bg-[#F3F3F3] rounded hover:border-[var(--html-bg-website)] overflow-hidden h-9 aspect-[83/35] transition-all duration-300">
+                    <a href='http://web_defaul_usually.test/tu-lanh?brand=4' class='load_website '  role='link' rel='dofollow' title='thương hiệu 2'  style='aspect-ratio:400/168.67469879518;max-width:400px;display: inline-flex;justify-items: center;align-items: center;line-height: 0;object-fit:contain ;' > <img width='400' height='168.67469879518' class=' lazy '  onerror="this.src=http://web_defaul_usually.test/thumbs/400x168x2/assets/images/noimage.png" data-src='http://web_defaul_usually.test/thumbs/400x168x2/upload/baiviet/group-5673-3655.png' alt='thương hiệu 2'/></a>                </div>
+                            <div class="border border-[#DFDDDD] bg-[#F3F3F3] rounded hover:border-[var(--html-bg-website)] overflow-hidden h-9 aspect-[83/35] transition-all duration-300">
+                    <a href='http://web_defaul_usually.test/tu-lanh?brand=3' class='load_website '  role='link' rel='dofollow' title='thương hiệu 1'  style='aspect-ratio:400/168.67469879518;max-width:400px;display: inline-flex;justify-items: center;align-items: center;line-height: 0;object-fit:contain ;' > <img width='400' height='168.67469879518' class=' lazy '  onerror="this.src=http://web_defaul_usually.test/thumbs/400x168x2/assets/images/noimage.png" data-src='http://web_defaul_usually.test/thumbs/400x168x2/upload/baiviet/group-5670-7085.png' alt='thương hiệu 1'/></a>                </div>
+                        </div>
+    <div class="mt-4 sm:mt-6">
+        <div class="w-full text-nowrap flex flex-wrap items-start gap-4 sm:gap-6 text-sm sm:text-base leading-none font-medium font-main-500">
+            <div class="flex-initial basis-full sm:basis-auto">
+                <span>
+                    Sắp xếp theo:
+                </span>
+            </div>
+            <div class=" flex-1 flex flex-wrap items-center justify-start gap-3 sm:gap-7 ">
+                <a href="http://web_defaul_usually.test/tu-lanh?status=1" title="Nổi bật" class="  hover:text-[var(--html-bg-website)] [&.active]:text-[var(--html-bg-website)]  transition-all duration-300 inline-block">
+                    Nổi bật
+                </a>
+                <a href="http://web_defaul_usually.test/tu-lanh?status=2" title="Bán chạy" class="  hover:text-[var(--html-bg-website)] [&.active]:text-[var(--html-bg-website)] transition-all duration-300 inline-block">
+                    Bán chạy
+                </a>
+                <a href="http://web_defaul_usually.test/tu-lanh?status=3" title="Giảm giá" class="  hover:text-[var(--html-bg-website)] [&.active]:text-[var(--html-bg-website)] transition-all duration-300 inline-block">
+                    Giảm giá
+                </a>
+                <a href="http://web_defaul_usually.test/tu-lanh?status=4" title="Mới" class="  hover:text-[var(--html-bg-website)] [&.active]:text-[var(--html-bg-website)] transition-all duration-300 inline-block">
+                    Mới
+                </a>
+                <div class="relative  cursor-pointer inline-block z-30">
+                    <div class="inline-flex gap-1 items-center justify-center   hover:text-[var(--html-bg-website)] [&.active]:text-[var(--html-bg-website)] transition-all duration-300 btn_filter_price " data-nb="price_filter_idl5idcidiids">
+                        <span>Giá</span>
+                        <i class="fas fa-chevron-down font-medium text-xs"></i>
+                    </div>
+                    <div class="hidden absolute top-full right-0 px-3 py-2 rounded-md bg-white border border-gray-200 shadow shadow-gray-200 z-10 data_filter_price" data-nb="price_filter_idl5idcidiids">
+                        <div class="flex flex-wrap gap-3 text-nowrap">
+                            <a href="http://web_defaul_usually.test/tu-lanh?status=5" title="Giá giảm dần" class="w-full  hover:text-[var(--html-bg-website)] [&.active]:text-[var(--html-bg-website)] transition-all duration-300 inline-block">
+                                Giá giảm dần
+                            </a>
+                            <a href="http://web_defaul_usually.test/tu-lanh?status=6" title="Giá tăng dần" class="w-full  hover:text-[var(--html-bg-website)] [&.active]:text-[var(--html-bg-website)] transition-all duration-300 inline-block">
+                                Giá tăng dần
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>";}

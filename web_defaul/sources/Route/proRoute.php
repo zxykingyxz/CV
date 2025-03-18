@@ -186,9 +186,7 @@ switch ($rowc['type']) {
         }
 
         $subWhere .= ' and id<>' . $row_detail['id'];
-        if ($config['cart']['cart-qty'] && $com == 'san-pham') {
-            $subWhere .= " and qty > 0 ";
-        }
+
         $seoDB = $seo->getSeoDB($row_detail['id'], 'baiviet', 'man', $row_detail['type']);
 
         $str_breadcrumbs = $breadcrumbs->getUrl('trang chủ', $data['breadcrumbs']);
@@ -196,9 +194,9 @@ switch ($rowc['type']) {
         $json_code .= $json_schema->BreadcrumbList('trang chủ', $data['breadcrumbs']);
         $json_code .= $json_schema->NewsArticle($row_detail, $seoDB);
 
-        $tintuc_nb = $cache->getCache("select *,tenkhongdau_$lang as tenkhongdau from table_baiviet where noibat=1 and hienthi=1 and type=? order by stt asc, id desc limit 0,10", array($type), 'result', _TIMECACHE);
+        $tintuc_nb = $cache->getCache("select *,tenkhongdau_$lang as tenkhongdau from table_baiviet where noibat=1 and hienthi=1 and type=? order by stt asc, id desc limit 0,20", array($type), 'result', _TIMECACHE);
 
-        $tintuc = $cache->getCache("select *,tenkhongdau_$lang as tenkhongdau from table_baiviet where hienthi=1 and type=?{$subWhere} order by stt asc, id desc limit 0,7", array($type), 'result', _TIMECACHE);
+        $tintuc = $cache->getCache("select *,tenkhongdau_$lang as tenkhongdau from table_baiviet where hienthi=1 and type=?{$subWhere} order by stt asc, id desc limit 0,20", array($type), 'result', _TIMECACHE);
         break;
 }
 
@@ -226,13 +224,10 @@ $array_options = json_decode($rowc['data']['options'], true);
 $img_json_bar = (isset($array_options['p']) && !empty($array_options['p'])) ? $array_options['p'] : null;
 
 if ($img_json_bar == null || ($img_json_bar['p'] != $array_options['p'])) {
-
     $img_json_bar = $func->getImgSize($rowc['data']['photo'], $rowc['data']['folder'] . $rowc['data']['photo']);
-
     if (isset($array_options)) {
         $array_options = array_merge($array_options, $img_json_bar);
     }
-
     $seo->updateSeoDB(json_encode($array_options), $rowc['data']['table'], $rowc['data']['id']);
 }
 

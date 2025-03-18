@@ -16,6 +16,7 @@ $config['website'] = array(
 	'debug-responsive' => true,
 	'error-reporting' => false,
 	'robots' => 'index,follow',
+	'search' => 3,
 	'image' => array(
 		'hasWebp' => false
 	),
@@ -42,7 +43,7 @@ $config['database'] = array(
 	'charset' => 'utf8mb4'
 );
 if ((strpos($_SERVER['DOCUMENT_ROOT'], 'laragon')) || (strpos($_SERVER['DOCUMENT_ROOT'], 'xampp'))) {
-	$config['database']['dbname'] = "db_1_defaul";
+	$config['database']['dbname'] = "db_1_defaul_edit";
 	$config['database']['username'] = "root";
 	$config['database']['password'] = "";
 } else {
@@ -92,20 +93,17 @@ $config['lang'] = array(
 	'vi' => 'Vi',
 	// 'en' => 'En',
 );
-$config['seo-lang'] = array(
-	'vi' => 'Vi',
-	// 'en' => 'En',
-);
 #Chung
 $config['function'] = array(
 	'advancedSearch' => true,
+	'product_viewed' => true,
+	'product_liked' => true,
 );
-# Like sản phẩm
-$config['like_product'] = false;
+
 # Ngôn ngữ
 $config['lang_check'] = false;
 # GG Dịch
-$config['gg_lang'] = false;
+$config['gg_lang'] = true;
 # Tài Khoản
 $config['account']['action'] = array(
 	"action" => true,
@@ -114,9 +112,9 @@ $config['account']['action'] = array(
 $config['cart'] = array(
 	'turn_on' => true,
 	'flash_sale' => true,
-	'coupon_cart' => true,
-	'cart-advance' => false,
-	'cart-qty' => true,
+	'coupons' => true,
+	'cart_advance' => false,
+	'cart_qty' => true,
 );
 # Thay đổi đường link khi up web
 $config['change_img_contents'] = array(
@@ -137,6 +135,12 @@ $config['secret'] = '@287Rzx_^!*95&';
 $config['salt'] = '^29#_%z/@$';
 // -------- CSRF --------
 $config['csrf'] = true;
+// cài đặt admin
+$config['login_lock'] = array(
+	"login_attempts" => 5,
+	"lock_time" => 1 * 60 * 60 * 1000,
+);
+
 /* Error reporting */
 error_reporting(($config['website']['error-reporting']) ? E_ALL : 0);
 /* Cấu hình base */
@@ -152,5 +156,5 @@ define('_TOKEN', '0290324TG');
 define('_basename', str_replace(basename(__DIR__), '', __DIR__));
 define('_asset', $https_config);
 $loginMember = 'signin';
-// cấu hình upload
+// upload file
 require_once _lib . "constant.php";

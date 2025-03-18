@@ -1,10 +1,10 @@
 <section class="wrapper-detail mt-5 mb-5">
     <div class="grid_s wide">
-        <div class="flex flex-wrap gap-3">
-            <div class="flex-1 max-w-full bg_form_all">
+        <div class="w-full flex flex-wrap gap-3">
+            <div class="flex-initial w-full <?= (!empty($tintuc) ? "md:w-[70%]" : "") ?>  bg_form_all">
                 <div class=" ">
                     <div class="title_detail mb-3">
-                        <?= $func->getTemplateLayoutsFor([
+                        <?= $sample->getTemplateLayoutsFor([
                             'name_layouts' => 'titleSeo',
                             'title' => $titleContainer,
                             'class' => 'title_detail',
@@ -29,24 +29,26 @@
                                 </div>
                             </div>
                         <?php } else { ?>
-                            <?= $func->getTemplateLayoutsFor([
+                            <?= $sample->getTemplateLayoutsFor([
                                 'name_layouts' => 'form_nocontent',
                                 'class' => '',
                             ]) ?>
                         <?php } ?>
                     </div>
                 </div>
-                <?php include_once _layouts . 'shareLinks.php' ?>
-                <?= $func->getTemplateLayoutsFor([
+                <?= $sample->getTemplateLayoutsFor([
+                    'name_layouts' => 'shareLinks',
+                ]) ?>
+                <?= $sample->getTemplateLayoutsFor([
                     'name_layouts' => 'author',
                     'author' => $row_tacgia,
                     'class_form' => "",
                 ]) ?>
             </div>
-            <?= $func->getTemplateLayoutsFor([
+            <?= $sample->getTemplateLayoutsFor([
                 'name_layouts' => 'relatedPosts',
                 'data' => $tintuc,
-                'class_form' => "w-full sm:w-[25%] min-w-[230px]",
+                'class_form' => "flex-1",
             ]) ?>
         </div>
     </div>

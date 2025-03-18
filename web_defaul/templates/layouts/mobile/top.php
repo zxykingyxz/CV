@@ -3,21 +3,21 @@ global $logo_mobile;
 $text_top = $cache->getCache("select photo , ten_$lang as ten , mota_$lang as mota ,link from #_bannerqc where type=? and hienthi<>0", array('text_top'), 'fetch', _TIMECACHE);
 
 ?>
-<section class="section-topmobile w-full sticky top-0 left-0 z-40 shadow-md bg-white" mobile>
+<section class="section-topmobile  w-full sticky top-0 left-0 z-40 shadow-md bg-white" mobile>
     <div class="grid_s wide">
         <div class="row py-2">
             <div class="col basis-full">
                 <div class="flex items-center justify-between relative gap-2">
-                    <div class="btn_menuMb flex-1 inline-flex gap-2 items-center content-center ">
-                        <div class=" flex flex-wrap w-[30px] gap-1 cursor-pointer">
+                    <div class=" flex-1 inline-flex gap-2 items-center content-center ">
+                        <div class="btn_menuMb flex flex-wrap w-[30px] gap-1 cursor-pointer">
                             <div class="w-full h-1 rounded-full bg-[var(--html-bg-website)]"></div>
                             <div class="w-full h-1 rounded-full bg-[var(--html-bg-website)]"></div>
                             <div class="w-full h-1 rounded-full bg-[var(--html-bg-website)]"></div>
                         </div>
                     </div>
-                    <div class="">
+                    <div class="leading-[0] overflow-hidden inline-flex hover-left w-[200px]   ">
                         <?= $func->addHrefImg([
-                            'classfix' => 'overflow-hidden inline-flex hover-left w-[200px] aspect-[108/90]',
+                            'classfix' => '',
                             'addhref' => true,
                             'href' =>   '',
                             'sizes' => '330x95x2',

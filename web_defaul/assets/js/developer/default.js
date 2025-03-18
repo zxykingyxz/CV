@@ -1,43 +1,44 @@
-// ao.js
-AOS.init();
-// wow.js
-new WOW().init();
-// liên hệ gọi lại
+// ============ tool mobile =============
+$(".form_tool_mobile").btnNoneBlockPlugin({
+    button: 'btn_tool_mobile', // Thay thế class cho button
+    data: 'data_tool_mobile',
+    animation: false,
+    check_out: true,
+    close: true,
+});
+// ============= hotline ===============
+$(".form_hotline").btnNoneBlockPlugin({
+    button: 'btn_hotline', // Thay thế class cho button
+    data: 'data_hotline',
+    animation: true,
+    check_out: true,
+    close: true,
+});
+// ========= liên hệ gọi lại ==========
 $('body').on('click', '.btn_clientSupport_js', function() {
     var _this = $(this);
     var phone = _this.closest('.form_clientSupport').find('.phone_clientSupport_js').val();
     if (validatePhone(phone)) {
         $.ajax({
-            url: 'ajax/ajaxClientSupport.php',
+            url: 'ajax/default/ajaxClientSupport.php',
             type: 'POST',
             data: {
                 phone: phone,
             },
             dataType: 'JSON',
-
             beforeSend: function() {},
             success: function(data) {
-                if (typeof window.stackTopLeft === 'undefined') {
-                    window.stackTopLeft = new PNotify.Stack({
-                        dir1: 'down',
-                        dir2: 'left',
-                        firstpos1: 25,
-                        firstpos2: 25,
-                        push: 'top',
-                        maxStrategy: 'close'
-                    });
-                }
                 if (data.status == 200) {
-                    PNotify.success({
-                        title: 'Success!',
-                        text: data.message,
-                        stack: window.stackTopLeft
+                    _FRAMEWORK.showNotification({
+                        title: 'Yêu cầu hỗ trợ',
+                        message: data.message,
+                        status: 'success',
                     });
                 } else {
-                    PNotify.error({
-                        title: 'Oh No!',
-                        text: data.message,
-                        stack: window.stackTopLeft
+                    _FRAMEWORK.showNotification({
+                        title: 'Yêu cầu hỗ trợ',
+                        message: data.message,
+                        status: 'error',
                     });
                 };
                 _this.closest('.form_clientSupport').find('.phone_clientSupport_js').val('');
@@ -49,22 +50,48 @@ $('body').on('click', '.btn_clientSupport_js', function() {
         _this.closest('.form_clientSupport').find('.error_clientSupport').text('Số Điện Thoại Không Hợp Lệ !');
     };
 });
-// load submit
-$('.submit_load').on('submit', function(e) {
-    // Check if the form is valid
-    if (this.checkValidity()) {
-        loadApplication(true);
-    }
-});
-
-// slider
-var form_slider_main = $(".form_slider_main");
-form_slider_main.owlCarousel({
+// ========= slider trang chủ ========
+$(".form_slider_main").owlCarousel({
     dots: false,
     loop: false,
     center: false,
     nav: false,
     items: 1,
+    responsiveClass: true,
+    autoplay: true,
+    autoplayTimeout: time_slider,
+    autoplayHoverPause: true,
+    navText: [
+        "<i class='fas fa-angle-left'></i>",
+        "<i class='fas fa-angle-right'></i>",
+    ],
+});
+//  ====== slider trang chi tiết sản phẩm ========
+$(".form_product_detail").owlCarousel({
+    dots: true,
+    loop: false,
+    center: false,
+    nav: true,
+    rewind: true,
+    lazyLoad: true,
+    responsive: {
+        0: {
+            items: 2,
+            margin: 10,
+        },
+        500.5: {
+            items: 3,
+            margin: 10,
+        },
+        750.5: {
+            items: 4,
+            margin: 15,
+        },
+        1023.5: {
+            items: 5,
+            margin: 15,
+        },
+    },
     responsiveClass: true,
     autoplay: true,
     autoplayTimeout: 6000,
@@ -74,10 +101,52 @@ form_slider_main.owlCarousel({
         "<i class='fas fa-angle-right'></i>",
     ],
 });
-
-// gg dịch
-$('body').on('click', '.data_output_gglang', function() {
-    let value = $(this).data('lang');
-    doGoogleLanguageTranslator(value);
+// ============= load submit ===========
+$('.submit_load').on('submit', function(e) {
+    // Check if the form is valid
+    if (this.checkValidity()) {
+        loadApplication(true);
+    }
 });
-// ()
+
+// ==== auto load lại trang khi đổi khung hình ====
+var resizeTimer;
+var currentWidth = $(window).width();
+$(window).on('resize', function() {
+    var newWidth = $(window).width();
+    if ((newWidth !== currentWidth) && (((currentWidth - newWidth) > 100) || ((newWidth - currentWidth) > 100))) {
+        currentWidth = newWidth;
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function() {
+            location.reload(); // Tự động load lại trang sau khi dừng resize
+        }, 300); // Thời gian chờ sau khi dừng resize (ms)
+    }
+});
+// ======== tạo captcha liên hệ ==========
+$(".form_captcha_contact").captchaGenerator({
+    button: '.btn_captcha_contact',
+    codeCaptcha: '.code_captcha_contact',
+    ajax_data: function(value, _this) {
+        $.ajax({
+            url: 'ajax/default/buildCaptcha.php',
+            type: 'POST',
+            data: {
+                captcha: value,
+                name: 'captcha_code',
+            },
+            dataType: 'Json',
+            success: function(data) {}
+        });
+    },
+});
+
+// ========== Nội dung trang web ========
+$("body .content img").each(function() {
+    let $width_images = $(this).attr("width") || $(this).width();
+    let $height_images = $(this).attr("height") || $(this).height();
+
+    if ($width_images && $height_images) {
+        $(this).css("width", $width_images);
+        $(this).css("aspect-ratio", $width_images + '/' + $height_images);
+    }
+});

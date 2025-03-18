@@ -16,11 +16,6 @@ function GTranslateFireEvent(a, b) {
 }
 
 function doGoogleLanguageTranslator(a) {
-    if (a.value)
-        a = a.value;
-    if (a == '')
-        return;
-    var b = a.split('|')[1];
     var c;
     var d = document.getElementsByTagName('select');
     for (var i = 0; i < d.length; i++)
@@ -31,9 +26,9 @@ function doGoogleLanguageTranslator(a) {
             doGoogleLanguageTranslator(a)
         }, 100)
     } else {
-        c.value = b;
+        c.value = a;
         GTranslateFireEvent(c, 'change');
-        GTranslateFireEvent(c, 'change')
+        GTranslateFireEvent(c, 'change');
     }
 }
 
@@ -93,7 +88,6 @@ function ValidationFormSelfAgree(ele = '') {
         });
     }
 };
-
 
 function updateProgressBarWidth() {
     const scrolled = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
@@ -238,35 +232,33 @@ function loadApplication(check = true) {
     }
 }
 
-function getUrlParam(paramsToAdd = {}) {
+function getUrlParam(paramsToAdd = {}, dataParamClose = [], baseUrl = window.location.origin) {
     const urlParams = new URLSearchParams(window.location.search);
     let params = {};
-    // Lấy tất cả tham số từ URL hiện tại
+
+    // Lấy tất cả tham số từ URL hiện tại (trừ tham số cần đóng)
     urlParams.forEach((value, key) => {
-        if (key != 'page') {
-            params[key] = value;
+        if (!dataParamClose.includes(key)) {
+            params[key] = value.trim();
         }
     });
-    // Nếu có tham số key và value, thêm hoặc thay đổi tham số
-    Object.keys(paramsToAdd).forEach(key => {
-        let value = paramsToAdd[key];
-        params[key] = value; // Thêm hoặc cập nhật tham số với giá trị mới
+
+    // Thêm hoặc cập nhật tham số mới
+    Object.entries(paramsToAdd).forEach(([key, value]) => {
+        if (value !== "" && value !== null && value !== undefined) {
+            params[key] = String(value).trim();
+        }
     });
-    // Chuyển mảng params thành chuỗi truy vấn
-    params = Object.fromEntries(
-        Object.entries(params).filter(([key, value]) => value !== "" && value !== null && value !== undefined)
-    );
-    let queryString = $.param(params);
+
+    // Chuyển object thành chuỗi truy vấn
+    let queryString = new URLSearchParams(params).toString();
+
     // Tạo URL mới
-    let url = '';
-    if (queryString === "") {
-        url = _URL; // Nếu không có tham số, chỉ trả về URL cơ bản
-    } else {
-        url = _URL + '?' + queryString; // Thêm tham số vào URL
-    }
+    let url = queryString ? `${baseUrl}?${queryString}` : baseUrl;
 
     return url;
 }
+
 
 function debounce(func, wait) {
     let timeout;

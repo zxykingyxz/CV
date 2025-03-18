@@ -36,17 +36,9 @@ function renderMenuItems($options)
     echo $htmlContent;
 }
 ?>
-<div class=" form_menu_mobile_js fixed flex left-0 top-1/2 h-full w-full z-50 transition-all duration-300 translate-x-[-100%] translate-y-[-50%] pointer-events-none opacity-0 invisible [&.active]:translate-x-[0%] [&.active]:opacity-100 [&.active]:visible [&.active]:pointer-events-auto">
+<div class="form_menu_mobile_js fixed flex left-0 top-1/2 h-full w-full z-50 transition-all duration-300 translate-x-[-100%] translate-y-[-50%] pointer-events-none opacity-0 invisible [&.active]:translate-x-[0%] [&.active]:opacity-100 [&.active]:visible [&.active]:pointer-events-auto">
     <div class="bg-white max-w-[80%] w-[400px] h-full shadow-md flex-initial flex flex-col">
-        <div class="flex  justify-between items-center bg-[var(--html-bg-website)] shadow brightness-95 py-1 px-1">
-            <?php if ($config['gg_lang'] || $config['lang_check']) { ?>
-                <div class=" flex-initial flex justify-end gap-1 items-center pl-1 pr-2 leading-[0]">
-                    <div class=" f0">
-                        <?php include _layouts . 'langweb.php' ?>
-                    </div>
-                </div>
-            <?php } ?>
-
+        <div class="flex  justify-between items-center bg-[var(--html-bg-website)] shadow brightness-95 p-1 gap-1">
             <div class="flex-1 ">
                 <form method="get" class="form-search relative bg-white rounded pr-1 pl-3 transition-all duration-500  mx-auto w-full ">
                     <div class=" flex justify-center items-center max-w-full">
@@ -91,13 +83,12 @@ function renderMenuItems($options)
                 <?php } ?>
             </div>
             <div class="flex-initial">
-                <div class="btn_menuMb cursor-pointer text-white text-2xl h-9 w-9 inline-flex justify-center items-center">
+                <div class="btn_menuMb cursor-pointer text-white text-2xl h-[40px] aspect-[1/1] inline-flex justify-center items-center">
                     <i class="fas fa-times"></i>
                 </div>
             </div>
         </div>
-
-        <div class="flex-1 overflow-x-hidden overflow-y-auto max-h-[inherit] scroll-y">
+        <div class="flex-1 overflow-x-hidden overflow-y-auto max-h-[inherit] scroll-design-one">
             <!-- danh mục -->
             <?php
             foreach ($authArrs as $k => $v) {
@@ -159,18 +150,28 @@ function renderMenuItems($options)
                     ]);
                 }
             }
-            // //  danh mục cấp 3 
-            // foreach ($list_all_c3 as $k_c3 => $v_c3) {
-            //     renderMenuItems([
-            //         'type' => $v_c3['type'],
-            //         'level' => 3,
-            //         'name' => $v_c3['ten'],
-            //         'before' => $v_c3['type'] . $v_c3['id_cat'],
-            //         'after' => $v_c3['type'] . $v_c3['id'],
-            //         'link' => $func->getUrl($v_c3),
-            //     ]);
-            // } 
+            //  danh mục cấp 3 
+            foreach ($list_all_c3 as $k_c3 => $v_c3) {
+                renderMenuItems([
+                    'type' => $v_c3['type'],
+                    'level' => 3,
+                    'name' => $v_c3['ten'],
+                    'before' => $v_c3['type'] . $v_c3['id_cat'],
+                    'after' => $v_c3['type'] . $v_c3['id'],
+                    'link' => $func->getUrl($v_c3),
+                ]);
+            }
             ?>
+        </div>
+        <div class="w-full bg-[var(--html-bg-website)] px-1 py-3 flex items-center">
+            <?php if ($config['gg_lang'] || $config['lang_check']) { ?>
+                <div class=" flex-initial flex justify-end gap-1 items-center leading-[0]">
+                    <?= $this->getTemplateLayoutsFor([
+                        'name_layouts' => 'ggLangWeb',
+                        'form' => '',
+                    ]) ?>
+                </div>
+            <?php } ?>
         </div>
     </div>
     <div class="btn_menuMb cursor-pointer opacity-0 bg-[#000000a8] flex-1 h-full [&.active]:opacity-100 [&.active]:transition-[opacity] [&.active]:delay-300 [&.active]:duration-300"></div>

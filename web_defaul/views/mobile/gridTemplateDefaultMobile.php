@@ -13,14 +13,15 @@ foreach ($data as $k => $v) {
 ?>
 
     <div class="template-default o-hidden load_website flex gap-3 <?= $class ?> ">
-        <div class='img-template w-3/12 min-w-[100px] zoom'>
+        <div class='img-template w-3/12 aspect-[1/1] min-w-[100px] overflow-hidden'>
             <?= $func->addHrefImg([
                 'addhref' => true,
+                'class-fix' =>  "",
                 'href' =>  $func->getUrl($v),
                 'sizes' => '400x400x1',
                 'isLazy' => true,
                 'upload' => _upload_baiviet_l,
-                'image' => ((isset($v["photo_$lang"])) ? $v["photo_$lang"] : $v["photo"]),
+                'image' => ($v["photo"]),
                 'alt' => (isset($v["ten_$lang"])) ? $v["ten_$lang"] : $v["ten"],
             ]); ?>
         </div>

@@ -26,16 +26,22 @@ if ($config['lang_check']) {
 	$router->map('GET|POST', 'carts.js', 'carts', '');
 	$router->map('GET|POST', 'load.js', 'load', 'load');
 }
+
+// hình ảnh thường
 $router->map('GET', _thumbs . '/[i:w]x[i:h]x[i:z]/[**:src]', function ($w, $h, $z, $src) {
 	global $func;
 	$func->createThumb($w, $h, $z, $src, null, _thumbs);
 }, 'thumb');
+
+// Đóng dấu logo
+$data_watermark = $cache->getCache("select hienthi,photo,options from #_bannerqc where type=? ", array('watermark'), 'fetch', _TIMECACHE);
 $router->map('GET', _watermark . '/product/[i:w]x[i:h]x[i:z]/[**:src]', function ($w, $h, $z, $src) {
-	global $func, $cache;
-	$wtm = $cache->getCache("select hienthi,photo,options from #_bannerqc where type=? limit 0,1", array('watermark'), 'fetch', _TIMECACHE);
-	$func->createThumb($w, $h, $z, $src, $wtm, "product");
+	global $func, $data_watermark;
+	$func->createThumb($w, $h, $z, $src, $data_watermark, "product");
 }, 'watermark');
+
 $match = $router->match();
+
 if (is_array($match)) {
 	if (is_callable($match['target'])) {
 		call_user_func_array($match['target'], $match['params']);
@@ -112,10 +118,12 @@ $attr_com = array(
 
 	array("tbl" => "contact", "field" => "id", "source" => "contact", "com" => "lien-he", "type" => "lien-he", 'sitemap' => true),
 
+	array("tbl" => "photo", "field" => "id", "source" => "products", "com" => "bo-suu-tap", "type" => "bo-suu-tap", 'sitemap' => false),
+
 );
 if (!empty($com)) {
 	foreach ($attr_com as $key => $val) {
-		if (!in_array($val['com'], ['lien-he'])) {
+		if (!in_array($val['com'], ['lien-he', "bo-suu-tap"])) {
 			$urltbl = (!empty($val['tbl'])) ? $val['tbl'] : '';
 			$urlfield = (!empty($val['field'])) ? $val['field'] : '';
 			$urltype = (!empty($val['type'])) ? $val['type'] : '';
@@ -138,13 +146,14 @@ include_once _source . "langWeb/lang_$lang.php";
 
 include_once _source  . "defaults.php";
 
-include_once _source  . "validateform.php";
+include_once _source  . "validateForm.php";
 // routers
 include_once _source  . "auth.php";
+
 switch ($com) {
 	case 'lien-he':
 
-		$title_seo = "Liên hệ";
+		$title_seo = $authArrs[$com]['title'];
 
 		$type = "lien-he";
 
@@ -158,7 +167,7 @@ switch ($com) {
 
 	case 'gioi-thieu':
 
-		$title_seo = "Giới Thiệu";
+		$title_seo = $authArrs[$com]['title'];
 
 		$type = "gioi-thieu";
 
@@ -171,7 +180,7 @@ switch ($com) {
 		break;
 	case 'thuong-hieu':
 
-		$title_seo = "Thương Hiệu";
+		$title_seo = $authArrs[$com]['title'];
 
 		$type = "thuong-hieu";
 
@@ -186,7 +195,7 @@ switch ($com) {
 		break;
 	case 'dien-tu':
 
-		$title_seo = "Điện tử";
+		$title_seo = $authArrs[$com]['title'];
 
 		$type = "dien-tu";
 
@@ -199,7 +208,7 @@ switch ($com) {
 		break;
 	case 'dien-lanh':
 
-		$title_seo = "Điện lạnh";
+		$title_seo = $authArrs[$com]['title'];
 
 		$type = "dien-lanh";
 
@@ -212,7 +221,7 @@ switch ($com) {
 		break;
 	case 'do-gia-dung':
 
-		$title_seo = "Đồ Gia Dụng";
+		$title_seo = $authArrs[$com]['title'];
 
 		$type = "do-gia-dung";
 
@@ -225,7 +234,7 @@ switch ($com) {
 		break;
 	case 'hang-trung-bay':
 
-		$title_seo = "Hàng trưng bày";
+		$title_seo = $authArrs[$com]['title'];
 
 		$type = "hang-trung-bay";
 
@@ -239,7 +248,7 @@ switch ($com) {
 
 	case 'tin-tuc':
 
-		$title_seo = "Tin Tức";
+		$title_seo = $authArrs[$com]['title'];
 
 		$type = "tin-tuc";
 
@@ -252,7 +261,7 @@ switch ($com) {
 		break;
 	case 'chinh-sach':
 
-		$title_seo = "Chính sách";
+		$title_seo = $authArrs[$com]['title'];
 
 		$type = "chinh-sach";
 
@@ -279,7 +288,7 @@ switch ($com) {
 		break;
 	case 'tim-kiem':
 
-		$title_seo = _timkiem;
+		$title_seo = $authArrs[$com]['title'];
 
 		$type = ['san-pham', 'dien-tu', 'dien-lanh', 'do-gia-dung', 'hang-trung-bay'];
 
@@ -385,6 +394,6 @@ switch ($com) {
 		break;
 }
 
-if ($source != "") include_once _source  . $source . ".php";
+if (!empty($source)) include_once _source  . $source . ".php";
+
 include_once _source  . "changeLink.php";
-include_once _source  . "postFile.php";

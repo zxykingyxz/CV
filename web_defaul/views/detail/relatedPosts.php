@@ -17,13 +17,13 @@ switch ($com) {
                     <span><?= $title_relatedposts ?></span>
                 </span>
             </div>
-            <ul class="scroll-y overflow-x-hidden overflow-y-auto max-h-[385px] grid grid-cols-1 gap-2">
+            <ul class="scroll-design-one overflow-x-hidden overflow-y-auto max-h-[385px] grid grid-cols-1 gap-2">
                 <?php foreach ($data as $key => $value) { ?>
                     <li class=" group leading-[0]">
                         <a href="<?= $func->getUrl($value) ?>" aria-label="<?= $value["ten_$lang"] ?>" title="<?= $value["ten_$lang"] ?>" class="inline-flex gap-2 leading-[0]" role="link" rel="dofollow">
-                            <div class="bg-white">
+                            <div class="bg-white  w-[90px]">
                                 <?= $func->addHrefImg([
-                                    'classfix' => 'overflow-hidden hover-left  w-[90px]  aspect-[236/236]',
+                                    'classfix' => 'overflow-hidden hover-left  ',
                                     'class' => 'object-cover',
                                     'isLazy' => true,
                                     'sizes' => '600x550x1',

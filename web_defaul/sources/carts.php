@@ -5,18 +5,26 @@ if ($func->isAjax()) {
 	switch ($src) {
 		case 'addCart':
 			$pid = isset($_POST['pid']) ? addslashes($_POST['pid']) : '';
-			$qty = isset($_POST['quality']) ? addslashes($_POST['quality']) : '';
-			$check = isset($_POST['check']) ? addslashes($_POST['check']) : '';
-			$attribute = isset($_POST['attribute']) ? $_POST['attribute'] : '';
-			$cart->addToCart($pid, $attribute, $qty);
-			$result['cart'] = $_SESSION['cart'];
-			$result['count-cart'] = count($_SESSION['cart']);
-			$result = $cart->getPrice_All($result);
-			if (filter_var($check, FILTER_VALIDATE_BOOLEAN) == true) {
-				$result['url'] = 'carts?src=thanh-toan';
+			$chech_add = $db->rawQueryOne("select id from #_baiviet where id=? AND (id_loai=2)", array($pid));
+			if (empty($chech_add)) {
+				$qty = isset($_POST['quality']) ? addslashes($_POST['quality']) : '';
+				$check = isset($_POST['check']) ? addslashes($_POST['check']) : '';
+				$attribute = isset($_POST['attribute']) ? $_POST['attribute'] : '';
+				$cart->addToCart($pid, $attribute, $qty);
+				$result['cart'] = $_SESSION['cart'];
+				$result['count-cart'] = count($_SESSION['cart']);
+				$result = $cart->getPrice_All($result);
+				if (filter_var($check, FILTER_VALIDATE_BOOLEAN) == true) {
+					$result['url'] = 'carts?src=thanh-toan';
+				} else {
+					$result['url'] = 'carts?src=gio-hang';
+				}
+				$result['status'] = 200;
 			} else {
-				$result['url'] = 'carts?src=gio-hang';
+				$result['status'] = 201;
+				$result['message'] = 'Sản phẩm đã hết hàng!';
 			}
+
 			echo json_encode($result);
 			break;
 		case 'checkCart':
@@ -66,7 +74,7 @@ if ($func->isAjax()) {
 				$result['items-price'] = $cart->numbMoney(($cart->getPrice($pid, $attribute['session']) * 1), ' ₫');
 				$result['total-items-price'] = $cart->numbMoney(($cart->getPrice($pid, $attribute['session']) * $qty), ' ₫');
 			}
-			$result['html'] = $func->getTemplateLayoutsFor([
+			$result['html'] = $cart->getTemplateLayoutsFor([
 				'name_layouts' => 'getTemplateNameCart',
 				'options' => $attribute['options'],
 				'name' => $name,

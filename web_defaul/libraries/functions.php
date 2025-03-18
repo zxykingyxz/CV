@@ -232,21 +232,6 @@ class functions
     {
         return $this->addDivContentTable(htmlspecialchars_decode($content ?: ''));
     }
-    public function getLoadMore($total, $per_page, $page, $text)
-    {
-        $html = '';
-
-        $xemthem = _xemthem;
-
-        if ($total > 0) {
-
-            $html .= "<a class='box_see-more see_more_product_text view__load view__more__page btn-view-index' data-item='{$per_page}' data-page='{$page}' data-total = '{$total}'>
-                        {$xemthem} ({$total}) {$text}  <i class='fa-light fa-chevrons-down ml5'></i>
-                    </a>";
-        }
-
-        return $html;
-    }
     public function getInfoDetail($cols = '', $table = '', $id = 0)
     {
         $row = array();
@@ -751,7 +736,7 @@ class functions
             $listCategory = $db->rawQuery("SELECT id,ten_$lang as ten,tenkhongdau_$lang as tenkhongdau from $tableList where type=? and hienthi=1 order by stt asc, id desc", array($type));
         }
         $str = '<div class="' . $isClass . '">';
-        $str .= '<div class="max-h-[500px] overflow-y-auto scroll-y w-full">';
+        $str .= '<div class="max-h-[500px] overflow-y-auto scroll-design-one w-full">';
         if (count($listCategory) > 0) {
             $str       .= '<ul class=" pb-8 w-full md:px-2.5 lg:px-[40px] mx-auto columns-5">';
             foreach ($listCategory as $v) {
@@ -2779,44 +2764,6 @@ class functions
         }
     }
 
-    public function getClientIpServer()
-    {
-
-        $ipaddress = '';
-
-        if ($_SERVER['HTTP_CLIENT_IP'])
-
-            $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
-
-        else if ($_SERVER['HTTP_X_FORWARDED_FOR'])
-
-            $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
-
-        else if ($_SERVER['HTTP_X_FORWARDED'])
-
-            $ipaddress = $_SERVER['HTTP_X_FORWARDED'];
-
-        else if ($_SERVER['HTTP_FORWARDED_FOR'])
-
-            $ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
-
-        else if ($_SERVER['HTTP_FORWARDED'])
-
-            $ipaddress = $_SERVER['HTTP_FORWARDED'];
-
-        else if ($_SERVER['REMOTE_ADDR'])
-
-            $ipaddress = $_SERVER['REMOTE_ADDR'];
-
-        else
-
-            $ipaddress = 'UNKNOWN';
-
-
-
-        return $ipaddress;
-    }
-
     public function isAjax()
     {
 
@@ -2923,45 +2870,6 @@ class functions
             }
         }
     }
-
-
-    public function checkTwoAccess()
-    {
-
-        global $config, $func, $login_name, $notice_admin;
-
-        if (isset($_SESSION[$login_name]) || $_SESSION[$login_name] == true) {
-
-            $id_user = (int)$_SESSION['login']['id'];
-
-            $timenow = time();
-
-            $row = $this->_d->rawQueryOne("select username,password,lastlogin,user_token from #_user WHERE id ='$id_user'");
-
-            $cookiehash = md5(sha1($row['password'] . $row['username']));
-
-            if (!empty($_SESSION['login_session'])) {
-                if ($_SESSION['login_session'] != $cookiehash || ($timenow - $row['lastlogin']) > 3600) {
-                    session_destroy();
-
-                    $func->redirect("index.html?com=user&act=login");
-                }
-
-                if ($_SESSION['login_token'] !== $row['user_token']) $notice_admin = 'Có người đang đăng nhập tài khoản của bạn !';
-
-                else $notice_admin = '';
-
-                $token = md5(time());
-
-                $_SESSION['login_token'] = $token;
-
-                $sql = "update #_user set lastlogin = '$timenow',user_token = '$token' where id='$id_user'";
-
-                $this->_d->rawQuery($sql);
-            }
-        }
-    }
-
     public function getBrowser()
     {
 
@@ -3660,22 +3568,21 @@ class functions
         }
 
         /* Path origin */
-        $info['pathOrigin'] = $info['upload'] . $info['image'];
+        $urlImagesTmp = $info['upload'] . $info['image'];
 
         /* Path src */
         if (!empty($info['url'])) {
-            $info['pathSrc'] = $info['url'];
+            $urlImages = $info['url'];
         } else {
             if (!empty($info['size-src']) && $info['create_thumbs']) {
                 $info['pathSize'] = $info['size-src'] . "/" . $info['upload'] . $info['image'];
-                $info['pathSrc'] = (!empty($info['isWatermark']) && !empty($info['prefix'])) ? $https_config . $info['watermark'] . "/" . $info['prefix'] . "/" . $info['pathSize'] : $https_config . $info['thumbs'] . "/" . $info['pathSize'];
+                $urlImages = (!empty($info['isWatermark']) && !empty($info['prefix'])) ? $https_config . $info['watermark'] . "/" . $info['prefix'] . "/" . $info['pathSize'] : $https_config . $info['thumbs'] . "/" . $info['pathSize'];
             } else {
-                $info['pathSrc'] = $https_config . $info['pathOrigin'];
+                $urlImages = $https_config . $urlImagesTmp;
             }
         }
-
         /* Path error */
-        $info['pathError'] = $https_config . $info['thumbs'] . "/" . $info['size-error'] . "/" . $info['upload-error'] . $info['image-error'];
+        $urlImagesError =  $info['upload-error'] . $info['image-error'];
 
         /* target */
         $info['target'] = (!empty($info['target'])) ? "target='" . $info['target'] . "'" : "";
@@ -3683,7 +3590,7 @@ class functions
         /* Class */
         $info['class'] = ($info['isLazy']) ? $info['class'] . ' lazy ' : $info['class'];
         $info['class'] = (!empty($info['class'])) ? "class='" . $info['class'] . "'" : "";
-        $info['classfix'] = (!empty($info['classfix'])) ? "class='" . $info['classfix'] . "'" : "";
+        $info['classfix'] =  "class='load_website " . $info['classfix'] . "'";
 
         /* Id */
         $info['id'] = (!empty($info['id'])) ? "id='" . $info['id'] . "'" : "";
@@ -3691,40 +3598,37 @@ class functions
         /* Check to convert Webp */
         $info['hasURL'] = false;
 
-        if (filter_var(str_replace($https_config, "", $info['pathSrc']), FILTER_VALIDATE_URL)) {
+        if (filter_var(str_replace($https_config, "", $urlImages), FILTER_VALIDATE_URL)) {
             $info['hasURL'] = true;
         }
 
         if ($config['website']['image']['hasWebp']) {
-
             if (!$info['sizes']) {
                 if (!$info['hasURL']) {
-                    $this->converWebp($info['pathSrc']);
+                    $this->converWebp($urlImages);
                 }
             }
-
             if (!$info['hasURL']) {
-                $info['pathSrc'] .= '.webp';
+                $urlImages .= '.webp';
             }
         }
-
-        /* Src */
-        $info['src'] = (!empty($info['isLazy']) && strpos($info['class'], 'lazy') !== false) ? "data-src='" . $info['pathSrc'] . "'" : "src='" . $info['pathSrc'] . "'";
-
+        if (file_exists($_SERVER['DOCUMENT_ROOT'] . "/" . $urlImagesTmp)) {
+            $info['src'] = (!empty($info['isLazy']) && strpos($info['class'], 'lazy') !== false) ? "data-src='" . $urlImages . "'" : "src='" . $urlImages . "'";
+        } else {
+            $info['src'] = (!empty($info['isLazy']) && strpos($info['class'], 'lazy') !== false) ? "data-src='" . $urlImagesError . "'" : "src='" . $urlImagesError . "'";
+        }
         /* add ahref */
         if ($info['addhref']) {
 
-            $startHref = "<a href='" . $info['href'] . "' " . $info['classfix'] . " " . $info['target'] . " role='" . $info['role'] . "' rel='" . $info['rel'] . "' title='" . $info['alt'] . "' " . $info['data'] . " style='aspect-ratio:$width/$height;max-width:" . $width . "px;display: inline-flex;justify-items: center;align-items: center;line-height: 0;$style' > ";
-
+            $startHref = "<a href='" . $info['href'] . "' " . $info['classfix'] . " " . $info['target'] . " role='" . $info['role'] . "' rel='" . $info['rel'] . "' title='" . $info['alt'] . "' " . $info['data'] . " style='width: " . $width . "px;aspect-ratio:$width/$height;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > ";
             $endHref = "</a>";
         } else {
-            $startHref = "<div  " . $info['classfix'] . " style='aspect-ratio:$width/$height;max-width:" . $width . "px;display: inline-flex;justify-items: center;align-items: center;line-height: 0;$style' > " . $info['data'] . "";
-
+            $startHref = "<div  " . $info['classfix'] . " style='width: " . $width . "px;aspect-ratio:$width/$height;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > " . $info['data'] . "";
             $endHref = "</div>";
         }
 
         /* Image */
-        $result = "{$startHref}<img width='{$width}' height='{$height}' " . $info['class'] . " " . $info['id'] . " onerror=\"this.src=" . $info['pathError'] . "\" " . $info['src'] . " alt='" . $info['alt'] . "'/>{$endHref}";
+        $result = "{$startHref}<img width='{$width}' height='{$height}' " . $info['class'] . " " . $info['id'] . " onerror=\"this.src=" . $urlImagesError . "\" " . $info['src'] . " alt='" . $info['alt'] . "' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;$style'/>{$endHref}";
 
         return $result;
     }
@@ -4445,18 +4349,15 @@ class functions
         // $folder_old = str_replace($image_name, '', $image_url);
         $folder_old = dirname($image_url) . '/';
 
-        if (isset($watermark['hienthi']) && $watermark['hienthi'] > 0) {
+        if ((isset($watermark['hienthi']) && $watermark['hienthi'] > 0) && ($watermark != null)) {
             $upload_dir = _watermark . '/' . $path . '/' . $width_thumb . 'x' . $height_thumb . 'x' . $zoom_crop . '/' . $folder_old;
         } else {
-            if ($watermark != null) $upload_dir = _watermark . '/' . $path . '/' . $width_thumb . 'x' . $height_thumb . 'x' . $zoom_crop . '/' . $folder_old;
-            else $upload_dir = $path . '/' . $width_thumb . 'x' . $height_thumb . 'x' . $zoom_crop . '/' . $folder_old;
+            $upload_dir = $path . '/' . $width_thumb . 'x' . $height_thumb . 'x' . $zoom_crop . '/' . $folder_old;
         }
 
         if (!file_exists($upload_dir)) if (!mkdir($upload_dir, 0777, true)) die('Failed to create folders...');
 
         if (isset($watermark['hienthi']) && $watermark['hienthi'] > 0) {
-
-
 
             $options = (isset($options)) ? $options : json_decode($watermark['options'], true)['watermark'];
             $per_scale = $options['per'];
@@ -4600,13 +4501,10 @@ class functions
             imagesavealpha($canvas, true);
         }
 
-
         if ($preview) {
             $upload_dir = '';
             $this->RemoveEmptySubFolders(_watermark . '/' . $path . "/");
         }
-
-
 
         if ($upload_dir) {
             if ($func == 'imagejpeg') $func($canvas, $upload_dir . $image_name, 100);
@@ -4964,9 +4862,7 @@ class functions
 
     public function redirect($url = '')
     {
-
         echo '<script language="javascript">window.location = "' . $url . '" </script>';
-
         exit();
     }
 
@@ -5648,29 +5544,7 @@ class functions
 
         return $global_data;
     }
-    public function getTemplateLayoutsFor($data = array())
-    {
-        global $sample, $config;
-        $defaults = [
-            'name_layouts' => '',
-            'data' => '',
-            'save_cache' => true,
-        ];
-        /* Data */
-        $info = array_merge($defaults, $data);
 
-        if (!empty($info['global'])) {
-            $global_data = $this->importGlobals($info['global']);
-            $info = array_merge($info, $global_data);
-        }
-        $info['name_layouts'] = trim($info['name_layouts'], ' ');
-        $layouts_tmp = $this->getCheckInfile($info['name_layouts'], _views);
-
-        $html = $sample->getTemplateContent($layouts_tmp['url'], $info, (($config['cache']['save_cache_temple']) == true) ? $info['save_cache'] : false);
-
-        // html
-        return $html;
-    }
 
     private function addFilesToZip($zip, $folderPath, $basePath = '')
     {
@@ -5863,93 +5737,80 @@ class functions
         // Trả về số điện thoại không được định dạng nếu độ dài không đủ
         return $phoneNumber;
     }
-    // Hiển thị danh mục chi tiết sản phẩm
-    public function getCatalog($list, $cat, $item, $sub)
-    {
-        $html = "";
-        if ($list || $cat || $item || $sub) {
-            $html .= "<a href='{$this->getUrl($list)}' title='{$list['ten']}'>{$list['ten']}</a>";
-            if ($cat || $item || $sub) {
-                $html .= "<a href='{$this->getUrl($cat)}' title='{$cat['ten']}'>{$cat['ten']}</a>";
-                if ($item || $sub) {
-                    $html .= "<a href='{$this->getUrl($item)}' title='{$item['ten']}'>{$item['ten']}</a>";
-                    if ($sub) {
-                        $html .= "<a href='{$this->getUrl($sub)}' title='{$sub['ten']}'>{$sub['ten']}</a>";
-                    }
-                }
-            }
-        }
-        return $html;
-    }
-    // lấy tag theo danh mục
-    public function getTag($list, $cat, $item)
-    {
-        $tagindex = 3;
-        $arr = [];
-        if ($list || $cat || $item) {
-            $arr['h2'] = $list;
-            $tagindex++;
-            if ($cat || $item) {
-                $arr['h3'] = $cat;
-                $tagindex++;
-                if ($item) {
-                    $arr['h4'] = $item;
-                    $tagindex++;
-                }
-            }
-        }
-        $arr['seoTag'] = 'h' . $tagindex;
-        return $arr;
-    }
-    // Hiển thị tag theo danh mục
-    public function generateSeotag($arr)
-    {
-        if (isset($arr['h2'])) {
-            foreach ($arr['h2'] as $key => $value) {
-                echo "<h2 class='d-none'>{$value['ten']}</h2>";
-            }
-            if (isset($arr['h3'])) {
-                foreach ($arr['h3'] as $key => $value) {
-                    echo "<h3 class='d-none'>{$value['ten']}</h3>";
-                }
-                if (isset($arr['h4'])) {
-                    foreach ($arr['h4'] as $key => $value) {
-                        echo "<h4 class='d-none'>{$value['ten']}</h4>";
-                    }
-                }
-            }
-        }
-    }
+
     public function getSqlWhereKeywords($keywords = null, $list = array())
     {
+        global $config;
         $sql = "";
         if (!empty($keywords)) {
             $specialChars = ['=', '+', '@', '#', '$', '^', '&', '*', '(', ')', ';', '\'', '"', '\\', ',', '.', '<', '>', '?', '/'];
             $keywords = str_replace($specialChars, ' ', $keywords);
-            $array_kw = explode(' ', $keywords);
-            $keywords_sql = '';
-            $i_keywords = 0;
-            foreach ($array_kw as $k_keywords => $v_keywords) {
-                if (!empty($v_keywords)) {
-                    if ($i_keywords != 0) {
-                        $keywords_sql .= '|';
+            switch ($config['website']['search']) {
+                case 2:
+                    $array_kw = explode(' ', $keywords);
+                    $keywords_sql = '';
+                    $i_keywords = 0;
+                    foreach ($array_kw as $k_keywords => $v_keywords) {
+                        if (!empty($v_keywords)) {
+                            if ($i_keywords != 0) {
+                                $keywords_sql .= '|';
+                            }
+                            $keywords_sql .= $v_keywords;
+                            $i_keywords++;
+                        }
                     }
-                    $keywords_sql .= $v_keywords;
-                    $i_keywords++;
-                }
-            }
-            if (!empty($list)) {
-                $sql .= "(";
-                foreach ($list as $key => $value) {
-                    if ($key != 0) {
-                        $sql .= " or ";
+                    if (!empty($list)) {
+                        $sql .= "(";
+                        foreach ($list as $key => $value) {
+                            if ($key != 0) {
+                                $sql .= " or ";
+                            }
+                            $sql .= "($value REGEXP '$keywords_sql')";
+                        }
+                        $sql .= ")";
                     }
-                    $sql .= "($value REGEXP '$keywords_sql')";
-                }
-                $sql .= ")";
+                    break;
+                case 3:
+                    $array_kw = explode(' ', $keywords);
+                    $i_keywords = 0;
+                    if (!empty($list)) {
+                        $sql .= "(";
+                        foreach ($list as $key => $value) {
+                            if ($i_keywords != 0) {
+                                $sql .= " or ";
+                            }
+                            foreach ($array_kw as $k_keywords => $v_keywords) {
+                                if ($k_keywords != 0) {
+                                    $sql .= " and ";
+                                }
+                                $sql .= "($value LIKE '%$v_keywords%')";
+                                $i_keywords++;
+                            }
+                        }
+                        $sql .= ")";
+                    }
+                    break;
+                default:
+                    if (!empty($list)) {
+                        $sql .= "(";
+                        foreach ($list as $key => $value) {
+                            if ($key != 0) {
+                                $sql .= " or ";
+                            }
+                            $sql .= "($value LIKE '%$keywords%')";
+                        }
+                        $sql .= ")";
+                    }
+                    break;
             }
         }
         return $sql;
+    }
+    public function handlePhoneNumberUrl($phone)
+    {
+        global $config;
+        $phone = preg_replace("/[^0-9]/", "", $phone);
+        return $phone;
     }
     public function getProductsFlashsale($id_product = null, $id_check = null)
     {
@@ -6063,42 +5924,54 @@ class functions
 
         return $list_param;
     }
-    public function postFile($file_from = null, $file_to = null)
+    public function handleBackupData($name_table_backup, $name_table_destination, $array_column_destination = array())
     {
-        global $lang;
-        // Đường dẫn tới hai file CSS
-        $file1 = $file_from;
-        $file2 = $file_to;
+        if (!empty($name_table_backup) && !empty($name_table_destination) && !empty($array_column_destination)) {
+            $array_name_column_backup = [];
+            $array_name_column_destination = [];
+            $array_value_destination = [];
+            $array_sql_backup = [];
 
-        // Kiểm tra nếu các tệp tồn tại
-        if (file_exists($file1) && file_exists($file2)) {
-            $extension1 = pathinfo($file1, PATHINFO_EXTENSION);
-            $extension2 = pathinfo($file2, PATHINFO_EXTENSION);
-            // Kiểm tra xem phần mở rộng có giống nhau không
-
-            if (strcasecmp($extension1, $extension2) === 0) { // So sánh không phân biệt hoa thường
-
-                // Đọc nội dung của từng tệp
-                $css1 = file_get_contents($file1);
-                $css2 = file_get_contents($file2);
-                var_dump(explode("\n", $css1));
-                // Tách nội dung thành từng dòng (hoặc khối) để so sánh
-                $lines1 = array_filter(array_map('trim', explode("\n", $css1))); // Loại bỏ dòng trống
-                $lines2 = array_filter(array_map('trim', explode("\n", $css2))); // Loại bỏ dòng trống
-                die;
-                // Loại bỏ các dòng trùng lặp
-                $uniqueLines = array_unique(array_merge($lines1, $lines2));
-
-                // Gộp lại thành chuỗi CSS
-                $combinedCSS = implode("\n", $uniqueLines);
-
-                // Ghi nội dung vào file mới
-                file_put_contents($file2, $combinedCSS);
-            } else {
-                echo "Hai tệp có phần mở rộng khác nhau: .$extension1 và .$extension2";
-                return false;
+            foreach ($array_column_destination as $data_column) {
+                if ((stripos($data_column, "|") !== false)) {
+                    list($backup, $destination, $value) = explode("|", $data_column);
+                    $array_name_column_backup[] = $backup;
+                    $array_name_column_destination[] = $destination;
+                    $array_value_destination[$backup] = $value;
+                } else {
+                    var_dump($data_column . " không đúng định dạng!");
+                    var_dump("(Khai báo phải theo kiểu column|type không khoản cách không viết dấu)");
+                    die;
+                }
             }
+            $array_value_backup = $this->_d->rawQuery("select " . implode(",", $array_name_column_backup) . " from $name_table_backup ");
+
+            foreach ($array_value_backup as $key_data => $value_data) {
+                $sql_value = [];
+
+                foreach ($array_name_column_backup as $value_column_backup) {
+                    if (!is_null($array_value_destination[$value_column_backup])) {
+                        $sql_value[] = htmlspecialchars($array_value_destination[$value_column_backup]);
+                    } else {
+                        $sql_value[] = !empty($value_data[$value_column_backup]) ? htmlspecialchars($value_data[$value_column_backup]) : '';
+                    }
+                }
+
+                $array_sql_backup[] = "('" . implode("','", $sql_value) . "')";
+            }
+
+            if (!empty($array_sql_backup)) {
+                // Gộp các giá trị thành một câu lệnh duy nhất
+                $sql_table = "INSERT IGNORE INTO $name_table_destination (" . implode(",", $array_name_column_destination) . ") VALUES ";
+                $sql_table .= implode(",", $array_sql_backup) . ";";
+                // Thực thi truy vấn
+                $this->_d->rawQueryOne($sql_table, []);
+            }
+        } else {
+            var_dump("dữ liệu backup chưa được khai báo đủ");
+            die;
         }
+
         return true;
     }
 }

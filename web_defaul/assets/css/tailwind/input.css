@@ -2,47 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 @layer base {
-    .scroll-y::-webkit-scrollbar {
+    .scroll-design-one::-webkit-scrollbar {
         width: 5px;
-    }
-    .scroll-y::-webkit-scrollbar-thumb {
-        background-color: #999999;
-        border-radius: 10px;
-    }
-    .scroll-y::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
-        background: #e6e6e6;
-        border-radius: 10px;
-    }
-    .scroll-y::-webkit-scrollbar-thumb:hover {
-        background-color: rgb(0, 157, 255);
-    }
-    .scroll-x::-webkit-scrollbar {
         height: 5px;
     }
-    .scroll-x::-webkit-scrollbar-thumb {
+    .scroll-design-one::-webkit-scrollbar-thumb {
         background-color: #999999;
         border-radius: 10px;
     }
-    .scroll-x::-webkit-scrollbar-track {
+    .scroll-design-one::-webkit-scrollbar-track {
         -webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
         background: #e6e6e6;
         border-radius: 10px;
     }
-    .scroll-x::-webkit-scrollbar-thumb:hover {
+    .scroll-design-one::-webkit-scrollbar-thumb:hover {
         background-color: rgb(0, 157, 255);
     }
-    .scroll-bar-y-5::-webkit-scrollbar {
+    .scroll-design-two::-webkit-scrollbar {
         width: 5px;
+        height: 5px;
     }
-    .scroll-bar-y-5::-webkit-scrollbar-thumb {
+    .scroll-design-two::-webkit-scrollbar-thumb {
         background-color: #999999;
         border-radius: 10px;
     }
-    .scroll-bar-y-5::-webkit-scrollbar-track {
+    .scroll-design-two::-webkit-scrollbar-track {
         background: #e6e6e6;
     }
-    .scroll-bar-y-5::-webkit-scrollbar-thumb:hover {
+    .scroll-design-two::-webkit-scrollbar-thumb:hover {
         background-color: rgb(0, 157, 255);
     }
     img,
@@ -208,7 +195,7 @@
         }
     }
     .opacity_animaiton {
-        animation: opacity_animaiton 0.5s ease-in-out;
+        animation: opacity_animaiton 1s ease-in-out;
     }
     @keyframes opacity_animaiton {
         0% {
@@ -216,6 +203,22 @@
         }
         100% {
             opacity: 1;
+        }
+    }
+    @keyframes radius {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(-360deg);
+        }
+    }
+    @keyframes radius-reverse {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
         }
     }
     @media (min-width: 640px) {
@@ -264,14 +267,6 @@
         .col {
             padding-left: 10px;
             padding-right: 10px;
-        }
-    }
-    @keyframes radius {
-        0% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(-360deg);
         }
     }
 }

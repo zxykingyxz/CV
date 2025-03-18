@@ -42,10 +42,31 @@ $list_blogs = $cache->getCache("select id,type,ten_$lang as ten,tenkhongdau_$lan
 $list_c2 = $cache->getCache("select id,type,ten_$lang as ten,tenkhongdau_$lang as tenkhongdau from #_baiviet_cat where type in ('dien-tu','dien-lanh','do-gia-dung','hang-trung-bay') and hienthi=1 order by stt asc", array(), 'result', _TIMECACHE);
 
 ?>
-
+<div class="flex justify-center items-center ">
+    <div class="form_circle opacity_animaiton rounded-full overflow-hidden h-[620px] text-center w-[620px] text-white" data-items="12">
+        <?php for ($i = 1; $i <= 12; $i++) { ?>
+            <div class="items_circle relative z-10 ">
+                <div class="relative">
+                    <div class="  px-7 pt-[60px] absolute bottom-0 left-1/2 -translate-x-1/2 h-[200px] w-[200px] text-green-500 bg-gray-200 z-[-1] " style="clip-path: polygon(0 0,100% 0,50% 100%);">
+                        <div class="swivel_part w-[90px]">
+                            <span class=" line-clamp-3">
+                                is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+                            </span>
+                        </div>
+                    </div>
+                    <div class="  bg-green-500 rounded-full border-[10px] border-gray-200  h-[60px] flex justify-center items-center aspect-[1/1]">
+                        <span class="swivel_part ">
+                            text
+                        </span>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+</div>
 <!-- banner dưới menu -->
 <?php if (!empty($banner_under_menu)) { ?>
-    <section class="section-banner py-3 sm:py-6">
+    <section class="section-banner py-3 sm:py-6 ">
         <div class="grid_s_news wide form_nb">
             <div class="w-full relative data_nb" data-nb="banner_under_menu">
                 <div class="absolute top-1 right-1 cursor-pointer  z-10 btn_nb on" data-nb="banner_under_menu">
@@ -55,7 +76,7 @@ $list_c2 = $cache->getCache("select id,type,ten_$lang as ten,tenkhongdau_$lang a
                         <path d="M9 9L15 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
-                <div class="w-full">
+                <div class="w-full overflow-hidden aspect-[1360/250]">
                     <?= $func->addHrefImg([
                         'addhref' => true,
                         'href' => !empty($banner_under_menu["link"]) ? $banner_under_menu["link"] : $jv0,
@@ -186,7 +207,7 @@ $list_c2 = $cache->getCache("select id,type,ten_$lang as ten,tenkhongdau_$lang a
                             </div>
                         <?php } ?>
                     </div>
-                    <div class="mt-4 sm:mt-7 flex items-center overflow-x-auto overflow-y-hidden scroll-x">
+                    <div class="mt-4 sm:mt-7 flex items-center overflow-x-auto overflow-y-hidden scroll-design-one">
                         <?php foreach ($list_flashsale as $key_dm => $value_dm) { ?>
                             <div class="w-2/12 min-w-[120px] aspect-[200/100] overflow-hidden bg-white border-b-2 border-[#EBE0E0] hover:border-[var(--html-bg-website)] hover:bg-[#FFFCD5] [&.on]:border-[var(--html-bg-website)] [&.on]:bg-[#FFFCD5] transition-all duration-300 btn_flashsale <?= ($key_dm == 0) ? "on" : "" ?>" data-nb="flashsale_<?= $key_dm ?>">
                                 <?= $func->addHrefImg([
@@ -207,7 +228,7 @@ $list_c2 = $cache->getCache("select id,type,ten_$lang as ten,tenkhongdau_$lang a
                         ?>
                             <div class="w-full opacity_animaiton  <?= ($key_dm == 0) ? "" : "hidden" ?>  data_flashsale" data-nb="flashsale_<?= $key_dm ?>">
                                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-3 gap-y-4 sm:gap-y-9">
-                                    <?= $func->getTemplateLayoutsFor([
+                                    <?= $this->getTemplateLayoutsFor([
                                         'name_layouts' => 'gridTemplateProduct2',
                                         'seoHeading' => 'span',
                                         'data' => array_slice($list_product_sale, 0, 12),
@@ -265,8 +286,8 @@ $list_c2 = $cache->getCache("select id,type,ten_$lang as ten,tenkhongdau_$lang a
         $list_product = $cache->getCache("select id,type,ten_$lang as ten,slogan,tenkhongdau_$lang as tenkhongdau,giaban,giacu,photo,photo2,text_new,installment,id_product_list  from #_baiviet where noibat=1 and type in ('dien-tu','dien-lanh','do-gia-dung','hang-trung-bay') and id_list=? and hienthi=1 order by stt asc", array($value_dm_c1['id']), 'result', _TIMECACHE);
         if (!empty($list_product)) {
     ?>
-            <section class="section-product pb-8 sm:pb-14  ">
-                <div class="grid_s_news wide form_nb">
+            <section class="section-product pb-8 sm:pb-14   ">
+                <div class="grid_s_news wide form_nb overflow-hidden">
                     <div class="form_flashsale w-full bg-white pt-6 pb-5 px-3 rounded-xl sm:rounded-[32px] overflow-hidden ">
                         <div class="grid_s wide ">
                             <div class="wow fadeInDown " data-wow-duration="<?= $time_animation_wow ?>s" data-wow-delay="0.2s">
@@ -277,15 +298,15 @@ $list_c2 = $cache->getCache("select id,type,ten_$lang as ten,tenkhongdau_$lang a
                                 </a>
                             </div>
                             <div class="mt-4 sm:mt-6">
-                                <?= $func->getTemplateLayoutsFor([
+                                <?= $this->getTemplateLayoutsFor([
                                     'name_layouts' => 'form_fillter_search_one',
                                     'type' => $value_dm_c1['type'],
                                     'idl' => $value_dm_c1['id'],
                                 ]) ?>
                             </div>
                             <div class="mt-5">
-                                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-3 gap-y-4 sm:gap-y-9">
-                                    <?= $func->getTemplateLayoutsFor([
+                                <div class=" grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-3 gap-y-4 sm:gap-y-9">
+                                    <?= $this->getTemplateLayoutsFor([
                                         'name_layouts' => 'gridTemplateProduct3',
                                         'seoHeading' => 'h3',
                                         'data' => array_slice($list_product, 0, 6),
@@ -369,7 +390,7 @@ $list_c2 = $cache->getCache("select id,type,ten_$lang as ten,tenkhongdau_$lang a
                         </a>
                     </div>
                     <div class="mt-5 sm:mt-8 owl-carousel form_blogs owl-theme">
-                        <?= $func->getTemplateLayoutsFor([
+                        <?= $this->getTemplateLayoutsFor([
                             'name_layouts' => 'gridTemplateNews4',
                             'seoHeading' => 'h3',
                             'data' => $list_blogs,

@@ -69,6 +69,10 @@ $authArrs = array(
   ],
   'chinh-sach' => [
     'title' => _chinhsach,
+    'type' => 'POST',
+    'class_form_new' => 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2',
+    'layouts' => "gridTemplateNews4",
+    'textButton' => "bài viết",
   ],
   'tim-kiem' => [
     'title' => _timkiem,

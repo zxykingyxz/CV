@@ -11,11 +11,11 @@
     */ ?>
     <div class="w-full flex max-h-[calc(100%-60px)]">
         <div class="flex-1 min-w-[10px] <?= $class_close_form_js ?>"></div>
-        <div class="w-full relative <?= $class_form ?> max-h-full overflow-x-hidden overflow-y-auto scroll-y shadow-md shadow-gray-300 border border-gray-100 rounded-lg ">
+        <div class="w-full relative <?= $class_form ?> max-h-full overflow-x-hidden overflow-y-auto scroll-design-one shadow-md shadow-gray-300 border border-gray-100 rounded-lg ">
             <?php
             switch ($check_form) {
                 case 'view_info_product':
-                    echo $func->getTemplateLayoutsFor([
+                    echo $sample->getTemplateLayoutsFor([
                         'name_layouts' => 'form_view_info_product',
                         'close_popup' => $class_close_form_js,
                         'data' => $data,
@@ -23,7 +23,7 @@
                     ]);
                     break;
                 case 'view_info_pay':
-                    echo $func->getTemplateLayoutsFor([
+                    echo $sample->getTemplateLayoutsFor([
                         'name_layouts' => 'form_view_info_pay',
                         'close_popup' => $class_close_form_js,
                         'data' => $data,
@@ -31,7 +31,7 @@
                     ]);
                     break;
                 case 'view_product_detail':
-                    echo $func->getTemplateLayoutsFor([
+                    echo $sample->getTemplateLayoutsFor([
                         'name_layouts' => 'form_view_product_detail',
                         'close_popup' => $class_close_form_js,
                         'data' => $data,

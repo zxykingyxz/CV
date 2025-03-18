@@ -36,7 +36,7 @@ class sitemap
 	{
 		global $lang, $config;
 		if (empty($tbl)) return false;
-		$items = $this->_db->rawQuery("SELECT tenkhongdau_$lang as alias,ngaytao,type from #_$tbl where hienthi=1 and type=? order by id desc", array($type));
+		$items = $this->_db->rawQuery("select tenkhongdau_$lang as alias,ngaytao,type from #_$tbl where hienthi=1 and type=? order by id desc", array($type));
 		foreach ($items as $item) {
 			self::urlElement($item['alias'], $priority, $item['ngaytao']);
 		}

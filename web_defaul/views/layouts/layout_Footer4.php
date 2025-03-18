@@ -19,7 +19,7 @@ $margin_top = " mt-6 ";
     $('body').on('click', '.views_pay_info', function() {
         let value = $(this).data('value');
         $.ajax({
-            url: 'ajax/ajaxViewInfo.php',
+            url: 'ajax/functions/ajaxViewInfo.php',
             type: 'POST',
             data: {
                 value: value,
@@ -70,32 +70,32 @@ $margin_top = " mt-6 ";
                         </div>
                         <div class="<?= $margin_top ?>">
                             <ul class="grid grid-cols-1 gap-3">
-                                <li class="group transition-all duration-500 hover:translate-x-4">
-                                    <a href="<?= $func->getType('gioi-thieu') ?>" title="<?= "Giới thiệu" ?>" class="flex items-center gap-2 ">
-                                        <div class="<?= $footer_class_content ?>  flex-1   transition-all duration-500 group-hover:text-[var(--html-bg-website)] ">
+                                <li class="group transition-all duration-300 ">
+                                    <a href="<?= $func->getType('gioi-thieu') ?>" title="<?= "Giới thiệu" ?>" class="flex items-center gap-2 group-hover:translate-x-3 transition-all duration-300">
+                                        <div class="<?= $footer_class_content ?>  flex-1   transition-all duration-300 group-hover:text-[var(--html-bg-website)] ">
                                             <?= "Giới thiệu " . $row_setting["name_$lang"] ?>
                                         </div>
                                     </a>
                                 </li>
-                                <li class="group transition-all duration-500 hover:translate-x-4">
-                                    <a href="<?= $func->getType('tin-tuc') ?>" title="<?= "Tin tức" ?>" class="flex items-center gap-2 ">
-                                        <div class="<?= $footer_class_content ?>  flex-1   transition-all duration-500 group-hover:text-[var(--html-bg-website)] ">
+                                <li class="group transition-all duration-300 ">
+                                    <a href="<?= $func->getType('tin-tuc') ?>" title="<?= "Tin tức" ?>" class="flex items-center gap-2 group-hover:translate-x-3 transition-all duration-300">
+                                        <div class="<?= $footer_class_content ?>  flex-1   transition-all duration-300 group-hover:text-[var(--html-bg-website)] ">
                                             <?= "Tin tức " . $row_setting["name_$lang"] ?>
                                         </div>
                                     </a>
                                 </li>
-                                <li class="group transition-all duration-500 hover:translate-x-4">
-                                    <a href="<?= $func->getType('lien-he') ?>" title="<?= "Liên hệ" ?>" class="flex items-center gap-2 ">
-                                        <div class="<?= $footer_class_content ?>  flex-1   transition-all duration-500 group-hover:text-[var(--html-bg-website)] ">
+                                <li class="group transition-all duration-300 ">
+                                    <a href="<?= $func->getType('lien-he') ?>" title="<?= "Liên hệ" ?>" class="flex items-center gap-2 group-hover:translate-x-3 transition-all duration-300">
+                                        <div class="<?= $footer_class_content ?>  flex-1   transition-all duration-300 group-hover:text-[var(--html-bg-website)] ">
                                             <?= "Liên hệ " . $row_setting["name_$lang"] ?>
                                         </div>
                                     </a>
                                 </li>
                                 <?php foreach ($chinhsach as $key => $value) {
                                 ?>
-                                    <li class="group transition-all duration-500 hover:translate-x-4">
-                                        <a href="<?= $func->getUrl($value) ?>" title="<?= $value['ten'] ?>" class="flex items-center gap-2 ">
-                                            <div class="<?= $footer_class_content ?>  flex-1   transition-all duration-500 group-hover:text-[var(--html-bg-website)] ">
+                                    <li class="group transition-all duration-300 ">
+                                        <a href="<?= $func->getUrl($value) ?>" title="<?= $value['ten'] ?>" class="flex items-center gap-2 group-hover:translate-x-3 transition-all duration-300">
+                                            <div class="<?= $footer_class_content ?>  flex-1   transition-all duration-300 group-hover:text-[var(--html-bg-website)] ">
                                                 <?= $value['ten'] ?>
                                             </div>
                                         </a>
@@ -177,10 +177,10 @@ $margin_top = " mt-6 ";
                         <div class="<?= $margin_top  ?> w-[80%]">
                             <form action="" method="POST" name="form_client" class="form_client submit_load w-full flex flex-wrap items-start gap-3 " enctype="multipart/form-data">
                                 <div class=" flex-1  grid grid-cols-1 gap-3  ">
-                                    <?= $func->getTemplateLayoutsFor([
+                                    <?= $sample->getTemplateLayoutsFor([
                                         'name_layouts' => 'input_web',
                                         'class_form' => 'w-full',
-                                        'lable' => "Họ Và Tên",
+                                        'label' => "Họ Và Tên",
                                         'placeholder' => "Họ Và Tên*",
                                         'id' => 'fullname',
                                         'data' => 'fullname',
@@ -192,10 +192,10 @@ $margin_top = " mt-6 ";
                                         'function' => '',
                                         'form' => false,
                                     ]); ?>
-                                    <?= $func->getTemplateLayoutsFor([
+                                    <?= $sample->getTemplateLayoutsFor([
                                         'name_layouts' => 'input_web',
                                         'class_form' => 'w-full',
-                                        'lable' => "Số Điện Thoại",
+                                        'label' => "Số Điện Thoại",
                                         'placeholder' => "Số Điện Thoại*",
                                         'id' => 'phone',
                                         'data' => 'phone',

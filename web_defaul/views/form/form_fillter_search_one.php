@@ -34,6 +34,33 @@ $array_param = [
     ],
 ];
 ?>
+<script>
+    $('.form_filter_price').updateUrlParams({
+        button: 'button_filter_price',
+        callback: function(value, _this) {
+            $.ajax({
+                url: value,
+                type: 'GET',
+                dataType: 'JSON',
+                beforeSend: function() {
+                    if (_COM != "index") {
+                        loadApplication(true);
+                    }
+                },
+                success: function(res) {
+                    _this.find('.text_filter_search').text("Xem " + res.data.total + " Kết Quả");
+                    if (_COM != "index") {
+                        loadApplication(false);
+                    }
+                },
+                error: function(data) {
+                    console.error("Error:", data);
+                },
+                complete: function() {}
+            });
+        },
+    });
+</script>
 <div class=" form_filter_price" data-url="<?= $param->url ?>">
     <div class="flex flex-wrap gap-2">
         <div class="relative text-sm  h-9 transition-all duration-300 z-[35]">
@@ -61,7 +88,7 @@ $array_param = [
                                 </span>
                             </div>
                         </div>
-                        <div class=" flex flex-wrap max-h-[clamp(250px,40vw,400px)] scroll-y overflow-y-auto overflow-x-hidden ">
+                        <div class=" flex flex-wrap max-h-[clamp(250px,40vw,400px)] scroll-design-one overflow-y-auto overflow-x-hidden ">
                             <div class="w-full">
                                 <div class="text-sm font-bold font-main-700">
                                     <span>Thương hiệu</span>

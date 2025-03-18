@@ -11,14 +11,10 @@
     ]) ?>
     <?= $json_schema->SearchAction() . $json_schema->Organization() . $json_schema->Person() . $json_schema->Library() . ($json_code ?? '') ?>
 
-    <?php $sample->getTemplate(_layouts . "css", [
+    <?php $sample->getTemplate(_layouts . "assets/css", [
         'css' => $css
     ]) ?>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="./assets/js/all.js"></script>
+    <script type="text/javascript" src="./assets/js/jquery.min.js"></script>
 </head>
 
 <body id="body_main" itemscope itemtype="https://schema.org/WebPage" class="bg-gray-100 <?= ($config['layouts']['load_all']) ? 'body_load' : '' ?> ">
@@ -34,7 +30,6 @@
     <?php if (!$func->isGoogleSpeed()) { ?>
         <?= $row_setting["code_body"] ?>
     <?php } ?>
-    <?php $sample->getTemplate(_layouts . "seo", ['com' => $com, 'seo' => $seo]) ?>
     <div id="wrapper" class="relative ">
         <?php if (($deviceType  == 'computer' || $config['website']['debug-responsive'] == false)) { ?>
             <?php
@@ -43,11 +38,9 @@
         <?php } else { ?>
             <?php $sample->getTemplate(_layouts . "mobile/top", [
                 'logo' => $logo,
-                'bg_top' => $bg_top,
             ]) ?>
             <?php $sample->getTemplate(_layouts . "mobile/menu_ds2", [
                 'authArrs' => $authArrs,
-                'bg_top' => $bg_top,
                 'logo' => $logo,
                 'notShowMenu' => $notShowMenu,
             ]) ?>
@@ -58,12 +51,10 @@
                 'time_slider' => $time_slider,
             ])  ?>
             <?php $sample->getTemplate(_layouts . "main", [
-                'deviceType' => $deviceType,
                 'seo' => $seo,
                 'time_slider' => $time_slider,
-                'about' => $about,
-                'jv0' => $jv0,
                 'flash_sale' => $flash_sale,
+                'time_animation_wow' => $time_animation_wow,
             ]) ?>
         <?php } ?>
         <?php if ($source != 'index' && !in_array($com, ['account']) && !in_array($template, ['error/404'])) {
@@ -81,16 +72,11 @@
         ?>
         <?php
         $sample->getTemplate(_layouts . "footer", [
-            'deviceType' => $deviceType,
             'chinhsach' => $chinhsach,
             'hotro' => $hotro,
             'socical' => $socical,
-            'row_setting' => $row_setting,
-            'jv0' => $jv0,
-            'com' => $com,
             'bct' => $bct,
             'dmca' => $dmca,
-            'source' => $source,
             'template' => $template,
             'time_animation_wow' => $time_animation_wow,
         ]) ?>
@@ -101,26 +87,18 @@
         ]) ?>
         <div class="scroll-indicator "></div>
     </div>
-    <?= $func->getTemplateLayoutsFor([
+    <?php
+    echo $sample->getTemplateLayoutsFor([
         'name_layouts' => 'searchBlock',
-    ]) ?>
-    <?= $func->getTemplateLayoutsFor([
+    ]);
+    echo $sample->getTemplateLayoutsFor([
         'name_layouts' => 'searchOrder',
-    ]) ?>
-    <?php $sample->getTemplate(_layouts . "zoomImage") ?>
-
-    <?php if (!empty($flash_sale) && $config['cart']['flash_sale'] === true) { ?>
-        <input type="hidden" name="flash_web" value="<?= date('Y-m-d H:i:s', $flash_sale['time_end']) ?>">
-    <?php } ?>
-    <?php
-    $array_js_developer =  $func->getNameFileinFolder(_assets . 'js/developer');
-    if (!empty($array_js_developer)) {
+    ]);
+    echo $sample->getTemplateLayoutsFor([
+        'name_layouts' => 'zoomImage',
+    ]);
     ?>
-        <input type="hidden" name="array_js_developer" value="<?= implode(",", array_column($array_js_developer, 'name')) ?>">
-    <?php } ?>
-    <?php
-    include_once _layouts . "js.php";
-    ?>
+    <?php include_once _layouts . "assets/js.php"; ?>
 </body>
 
 </html>

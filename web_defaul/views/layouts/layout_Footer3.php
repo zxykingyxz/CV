@@ -96,14 +96,14 @@ $list_service = $db->rawQuery("select id,ten_$lang as ten from #_baiviet where t
                             <ul class="grid grid-cols-1 gap-4">
                                 <?php foreach ($chinhsach as $key => $value) {
                                 ?>
-                                    <li class="group transition-all duration-500 hover:translate-x-4">
-                                        <a href="<?= $func->getUrl($value) ?>" title="<?= $value['ten'] ?>" class="flex items-center gap-2 ">
-                                            <div class="flex-initial">
+                                    <li class="group transition-all duration-300 ">
+                                        <a href="<?= $func->getUrl($value) ?>" title="<?= $value['ten'] ?>" class="flex items-center gap-2 group-hover:translate-x-3 transition-all duration-300">
+                                            <div class="flex-initial leading-none aspect-[1/1] w-[7px] flex items-center justify-center">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="6" height="7" viewBox="0 0 6 7" fill="none">
                                                     <circle cx="3" cy="3.06592" r="3" fill="var(--html-bg-website)" />
                                                 </svg>
                                             </div>
-                                            <div class="<?= $footer_class_content ?>  flex-1   transition-all duration-500 group-hover:text-[var(--html-bg-website)] ">
+                                            <div class="<?= $footer_class_content ?>  flex-1   transition-all duration-300 group-hover:text-[var(--html-bg-website)] ">
                                                 <?= $value['ten'] ?>
                                             </div>
                                         </a>
@@ -135,13 +135,13 @@ $list_service = $db->rawQuery("select id,ten_$lang as ten from #_baiviet where t
                         <form action="" method="POST" name="form_client" class="form_client w-full flex flex-wrap items-start gap-3 " enctype="multipart/form-data">
                             <div class=" flex-1  grid grid-cols-1 gap-3  ">
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                    <?= $func->getTemplateLayoutsFor([
+                                    <?= $sample->getTemplateLayoutsFor([
                                         'name_layouts' => 'input_web',
                                         'class_form' => 'w-full',
-                                        'lable' => "Họ Và Tên",
+                                        'label' => "Họ Và Tên",
                                         'placeholder' => "Họ Và Tên",
                                         'id' => 'fullname',
-                                        'data' => 'fullname',
+                                        'data' => 'data[fullname]',
                                         'value' => '',
                                         'type' => 'text',
                                         'save_cache' => false,
@@ -150,13 +150,13 @@ $list_service = $db->rawQuery("select id,ten_$lang as ten from #_baiviet where t
                                         'function' => '',
                                         'form' => false,
                                     ]); ?>
-                                    <?= $func->getTemplateLayoutsFor([
+                                    <?= $sample->getTemplateLayoutsFor([
                                         'name_layouts' => 'input_web',
                                         'class_form' => 'w-full',
-                                        'lable' => "Số Điện Thoại",
+                                        'label' => "Số Điện Thoại",
                                         'placeholder' => "Số Điện Thoại",
                                         'id' => 'phone',
-                                        'data' => 'phone',
+                                        'data' => 'data[phone]',
                                         'value' => '',
                                         'type' => 'number',
                                         'save_cache' => false,
@@ -165,13 +165,13 @@ $list_service = $db->rawQuery("select id,ten_$lang as ten from #_baiviet where t
                                         'function' => '',
                                         'form' => false,
                                     ]); ?>
-                                    <?= $func->getTemplateLayoutsFor([
+                                    <?= $sample->getTemplateLayoutsFor([
                                         'name_layouts' => 'select_web',
                                         'class_form' => 'w-full',
-                                        'lable' => "Dịch Vụ",
+                                        'label' => "Dịch Vụ",
                                         'placeholder' => "Dịch Vụ",
                                         'id' => 'service',
-                                        'data' => 'service',
+                                        'data' => 'data[service]',
                                         'value' => '',
                                         'data_option' => $list_service,
                                         'name_col_view' => 'ten',
@@ -181,14 +181,14 @@ $list_service = $db->rawQuery("select id,ten_$lang as ten from #_baiviet where t
                                         'function' => '',
                                         'form' => false,
                                     ]); ?>
-                                    <?= $func->getTemplateLayoutsFor([
+                                    <?= $sample->getTemplateLayoutsFor([
                                         'name_layouts' => 'input_web',
                                         'class_form' => 'w-full ',
                                         'class' => 'input_date',
-                                        'lable' => "Thời gian ",
+                                        'label' => "Thời gian ",
                                         'placeholder' => "Thời gian",
                                         'id' => 'time',
-                                        'data' => 'time',
+                                        'data' => 'data[time]',
                                         'value' => '',
                                         'type' => 'time',
                                         'save_cache' => false,
@@ -197,12 +197,12 @@ $list_service = $db->rawQuery("select id,ten_$lang as ten from #_baiviet where t
                                         'function' => '',
                                         'form' => false,
                                     ]); ?>
-                                    <?= $func->getTemplateLayoutsFor([
+                                    <?= $sample->getTemplateLayoutsFor([
                                         'name_layouts' => 'input_web',
                                         'class_form' => 'w-full',
                                         'placeholder' => 'Nhập Mã Xác Nhận',
                                         'id' => 'captcha',
-                                        'data' => 'captcha',
+                                        'data' => 'data[captcha]',
                                         'value' => '',
                                         'type' => 'text',
                                         'save_cache' => false,
@@ -223,14 +223,14 @@ $list_service = $db->rawQuery("select id,ten_$lang as ten from #_baiviet where t
                                         </div>
                                     </div>
                                 </div>
-                                <?= $func->getTemplateLayoutsFor([
+                                <?= $sample->getTemplateLayoutsFor([
                                     'name_layouts' => 'textarea_web',
                                     'class_form' => 'w-full',
                                     'class' => "",
-                                    'lable' => "Nội Dung",
+                                    'label' => "Nội Dung",
                                     'placeholder' => "Nội Dung",
                                     'id' => "notes",
-                                    'data' => "notes",
+                                    'data' => "data[notes]",
                                     'rows' => 4,
                                     'value' => '',
                                     'save_cache' => false,

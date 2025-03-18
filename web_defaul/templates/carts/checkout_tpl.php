@@ -33,7 +33,7 @@ if (!empty($id_city)) {
                 <?= $flash->getMessages("frontend") ?>
             </div>
             <div class="flex flex-wrap gap-y-3">
-                <div class=" w-full mb-2 ">
+                <div class=" w-full mb-5 ">
                     <?php if ($deviceType == 'computer') { ?>
                         <?= $cart->getTemplateLayoutsFor([
                             'name_layouts' => 'getTemplateCart',
@@ -203,7 +203,7 @@ if (!empty($id_city)) {
                                                 <?php foreach ($rows_httt as $key => $value) { ?>
                                                     <div class="opacity_animaiton w-full bg-white px-2 py-2 rounded content data_payment  <?= ($key == 0) ? "on" : "hidden" ?>" data-nb="payment_<?= $key ?>">
                                                         <span>
-                                                            <?= htmlspecialchars_decode($value['noidung']) ?>
+                                                            <?= (!empty($value['noidung'])) ? htmlspecialchars_decode($value['noidung']) : "Nội dung đang cập nhật..." ?>
                                                         </span>
                                                     </div>
                                                 <?php } ?>
@@ -238,7 +238,7 @@ if (!empty($id_city)) {
                                                 <?php foreach ($rows_htgh as $key => $value) { ?>
                                                     <div class="opacity_animaiton w-full bg-white px-2 py-2 rounded content data_payship  <?= ($key == 0) ? "on" : "hidden" ?>" data-nb="payship_<?= $key ?>">
                                                         <span>
-                                                            <?= htmlspecialchars_decode($value['noidung']) ?>
+                                                            <?= (!empty($value['noidung'])) ? htmlspecialchars_decode($value['noidung']) : "Nội dung đang cập nhật..." ?>
                                                         </span>
                                                     </div>
                                                 <?php } ?>

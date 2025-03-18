@@ -181,12 +181,12 @@ class email
 
 
 		if ($owner == 'admin') {
-			$mail->AddAddress($this->setting['email'], $this->setting['name_' . $lang]);
-			$mail->addCC($this->opt['email_host'], $this->setting['name_' . $lang]);
+			$mail->AddAddress(trim($this->setting['email']), $this->setting['name_' . $lang]);
+			$mail->addCC(trim($this->opt['email_host']), $this->setting['name_' . $lang]);
 		} else if ($owner == 'customer') {
 			if ($arrayEmail && count($arrayEmail) > 0) {
 				foreach ($arrayEmail as $vEmail) {
-					$mail->AddAddress($vEmail['email'], $vEmail['name']);
+					$mail->AddAddress(trim($vEmail['email']), $vEmail['name']);
 				}
 			}
 		}

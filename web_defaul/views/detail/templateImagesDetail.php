@@ -22,7 +22,7 @@ if ($watermark) {
 <!-- Slider chính -->
 <div class="swiper view_images_thumbs_gallery">
     <div class="swiper-wrapper">
-        <div class="swiper-slide bg-gray-100 overflow-hidden aspect-[1/1] leading-[0]" data-caption="<?= $name ?>" data-thumb="<?= $href ?>">
+        <div class="swiper-slide bg-gray-100 overflow-hidden w-full aspect-[1/1] leading-[0]" data-caption="<?= $name ?>" data-thumb="<?= $href ?>">
             <?= $func->addHrefImg([
                 'addhref' => true,
                 'href' => $href,
@@ -39,7 +39,7 @@ if ($watermark) {
             ]); ?>
         </div>
         <?php if (!empty($data["video"])) { ?>
-            <div class="swiper-slide bg-gray-100 overflow-hidden aspect-[1/1] leading-[0]  ">
+            <div class="swiper-slide bg-gray-100 overflow-hidden  w-full aspect-[1/1] leading-[0]  ">
                 <div class='w-full flex items-center aspect-[1/1]' data-fancybox="images_detail" href="<?= _upload_baiviet_l . $data["video"] ?>" data-caption="<?= $name ?>" data-thumb="assets/images/icon/film.svg">
                     <video width='100%' height='' autoplay="" muted="" loop="" controls="" style="max-width:100%;object-fit: cover;aspect-ratio: 16/9;">
                         <source src="<?= _upload_baiviet_l . $data["video"] ?>" type="video/mp4">
@@ -48,7 +48,7 @@ if ($watermark) {
             </div>
         <?php } ?>
         <?php if (!empty($data["link"])) { ?>
-            <div class="swiper-slide bg-gray-100 overflow-hidden aspect-[1/1] leading-[0]" data-fancybox="images_detail" href="<?= $data["link"] ?>" data-caption="<?= $name ?>" data-thumb="assets/images/icon/video.svg">
+            <div class="swiper-slide bg-gray-100 overflow-hidden  w-full aspect-[1/1] leading-[0]" data-fancybox="images_detail" href="<?= $data["link"] ?>" data-caption="<?= $name ?>" data-thumb="assets/images/icon/video.svg">
                 <div class='w-full flex items-center aspect-[1/1]'>
                     <iframe width='100%' height='' style='aspect-ratio:16/9;max-width:100%;' allowfullscreen src='https://www.youtube.com/embed/<?= $func->getYoutube($data["link"]) ?>'>
                     </iframe>
@@ -62,7 +62,7 @@ if ($watermark) {
                 $href_photos = _upload_baiviet_l . $v['photo'];
             }
         ?>
-            <div class="swiper-slide bg-gray-100 overflow-hidden aspect-[1/1] leading-[0]" data-caption="<?= $name ?>" data-thumb="<?= $href_photos ?>">
+            <div class="swiper-slide bg-gray-100 overflow-hidden  w-full aspect-[1/1] leading-[0]" data-caption="<?= $name ?>" data-thumb="<?= $href_photos ?>">
                 <?= $func->addHrefImg([
                     'addhref' => true,
                     'href' => $href_photos,
@@ -91,7 +91,7 @@ if ($watermark) {
 <!-- Thumbnails slider -->
 <div class="swiper button_images_thumbs_gallery mt-2">
     <div class="swiper-wrapper">
-        <div class="swiper-slide bg-gray-100 overflow-hidden aspect-[1/1]  leading-[0]">
+        <div class="swiper-slide bg-gray-100 overflow-hidden  w-full aspect-[1/1]  leading-[0]">
             <?= $func->addHrefImg([
                 'addhref' => false,
                 'classfix' => '',
@@ -105,18 +105,18 @@ if ($watermark) {
             ]); ?>
         </div>
         <?php if (!empty($data["video"])) { ?>
-            <div class="swiper-slide bg-gray-100 overflow-hidden aspect-[1/1] leading-[0] ">
+            <div class="swiper-slide bg-gray-100 overflow-hidden  w-full aspect-[1/1] leading-[0] ">
                 <img src="assets/images/icon/film.svg" alt="">
             </div>
         <?php } ?>
 
         <?php if (!empty($data["link"])) { ?>
-            <div class="swiper-slide bg-gray-100 overflow-hidden aspect-[1/1] leading-[0]">
+            <div class="swiper-slide bg-gray-100 overflow-hidden  w-full aspect-[1/1] leading-[0]">
                 <img src="assets/images/icon/video.svg" alt="">
             </div>
         <?php } ?>
         <?php foreach ($photos as $k => $v) { ?>
-            <div class="swiper-slide bg-gray-100 overflow-hidden aspect-[1/1] leading-[0]">
+            <div class="swiper-slide bg-gray-100 overflow-hidden  w-full aspect-[1/1] leading-[0]">
                 <?= $func->addHrefImg([
                     'addhref' => true,
                     'href' => $jv0,

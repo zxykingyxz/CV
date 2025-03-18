@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# Chặn hiển thị danh sách thư mục
+Options -Indexes
+
+# Chỉ định trang mặc định khi vào thư mục
+DirectoryIndex change.php

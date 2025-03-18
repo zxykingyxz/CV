@@ -15,15 +15,21 @@ module.exports = {
         "./libraries/cartFrontEnd.php",
     ],
     // --------- Admin ---------
-    // npx tailwindcss -i ./i-web/css/admin_input.css -o ./i-web/css/admin_output.css --watch
+    // npx tailwindcss -i ./i-web/assets/css/tailwind/input.css -o ./i-web/assets/css/tailwind/output.css --watch
 
     // content: [
-    //     "./i-web/index.{html,js,php}",
+    //     "./i-web/templates/layouts/**/*.{html,js,php}",
+    //     "./i-web/templates/**/*.{html,js,php}",
+    //     "./i-web/ajax/*.{html,js,php}",
+    //     "./i-web/views/**/*.{html,js,php}",
+    //     "./i-web/sources/*.{html,js,php}",
     // ],
+
     theme: {
         extend: {
             animation: {
                 'load-captcha': 'radius 1s linear infinite',
+                'load-captcha-reverse': 'radius-reverse 1s linear infinite',
             }
         },
     },

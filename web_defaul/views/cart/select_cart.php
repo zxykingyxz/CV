@@ -6,8 +6,8 @@ $class_form_layouts = "px-3 h-[36px] border shadow-sm border-slate-300 placehold
 ?>
 <?php if ($form !== false) { ?>
     <label class=" <?= $class_form ?>">
-        <?php if ($no_lable !== true) { ?>
-            <div for="<?= $data ?>" class="<?= $class_labe ?> block <?= ($required) ? " after:content-['*'] after:ml-0.5 after:text-red-500 " : "" ?>"><?= $lable ?></div>
+        <?php if ($no_label !== true) { ?>
+            <div for="<?= $data ?>" class="<?= $class_labe ?> block <?= ($required) ? " after:content-['*'] after:ml-0.5 after:text-red-500 " : "" ?>"><?= $label ?></div>
             <div class="mt-1">
             <?php } ?>
         <?php } ?>
@@ -18,7 +18,7 @@ $class_form_layouts = "px-3 h-[36px] border shadow-sm border-slate-300 placehold
             <?php } ?>
         </select>
         <?php if ($form !== false) { ?>
-            <?php if ($no_lable !== true) { ?>
+            <?php if ($no_label !== true) { ?>
             </div>
         <?php } ?>
     </label>

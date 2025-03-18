@@ -29,7 +29,7 @@ if ($level) {
 <?php if ($full == false) { ?>
     <li class="group/list <?= (!empty($class_form)) ? $class_form : '' ?> <?= $check_active ?> relative ">
         <div class="  ">
-            <?php if ($source == 'index') { ?>
+            <?php if (($source == 'index') && !($noSeo == true)) { ?>
                 <h<?= $heading[0] ?>>
                 <?php } ?>
                 <a href="<?= $url ?>" rel="dofollow" role="link" aria-label="<?= $title ?>" title="<?= $title ?>" class="capitalize <?= $text_size_title . " " . $text_color ?>  group-hover/list:text-[var(--html-cl-website)] group-[&.active]/list:text-[var(--html-cl-website)]  inline-flex flex-wrap items-center justify-center transition-all duration-300 gap-[7px] px-2 py-1">
@@ -40,7 +40,7 @@ if ($level) {
                         <i class="fas fa-chevron-down text-[11px] block h-1 font-medium leading-[0.5]"></i>
                     <?php } ?>
                 </a>
-                <?php if ($source == 'index') { ?>
+                <?php if (($source == 'index') && !($noSeo == true)) { ?>
                 </h<?= $heading[0] ?>>
             <?php } ?>
             <?php if (!empty($level_1)) { ?>
@@ -49,7 +49,7 @@ if ($level) {
                         $name = (isset($value_c1["ten_$lang"])) ? $value_c1["ten_$lang"] : $value_c1["ten"];
                     ?>
                         <div class="group/cat w-full relative  last:border-none border-b  border-gray-200 ">
-                            <?php if ($source == 'index') { ?>
+                            <?php if (($source == 'index') && !($noSeo == true)) { ?>
                                 <h<?= $heading[1] ?>>
                                 <?php } ?>
                                 <a href="<?= $func->getUrl($value_c1) ?>" rel="dofollow" role="link" aria-label="<?= $name ?>" title="<?= $name ?>" class=" <?= $text_color_level . " " . $text_size_form  ?> bg-white hover:text-white group-hover/cat:bg-[var(--html-cl-website)] group-hover/cat:text-white w-full inline-flex items-center gap-2 <?= $padding_title ?> transition-all duration-300">
@@ -57,7 +57,7 @@ if ($level) {
                                         <?= $name ?>
                                     </span>
                                 </a>
-                                <?php if ($source == 'index') { ?>
+                                <?php if (($source == 'index') && !($noSeo == true)) { ?>
                                 </h<?= $heading[1] ?>>
                             <?php } ?>
                             <?php
@@ -70,7 +70,7 @@ if ($level) {
                                         $name = (isset($value_c2["ten_$lang"])) ? $value_c2["ten_$lang"] : $value_c2["ten"];
                                     ?>
                                         <div class="w-full group/item relative last:border-none border-b  border-gray-200 ">
-                                            <?php if ($source == 'index') { ?>
+                                            <?php if (($source == 'index') && !($noSeo == true)) { ?>
                                                 <h<?= $heading[2] ?>>
                                                 <?php } ?>
                                                 <a href="<?= $func->getUrl($value_c2) ?>" rel="dofollow" role="link" aria-label="<?= $name ?>" title="<?= $name ?>" class=" <?= $text_color_level . " " . $text_size_form  ?> bg-white hover:text-white hover:bg-[var(--html-cl-website)] group-hover/item:text-white group-hover/item:bg-[var(--html-cl-website)] w-full inline-flex items-center gap-2 <?= $padding_title ?> transition-all duration-300">
@@ -78,7 +78,7 @@ if ($level) {
                                                         <?= $name ?>
                                                     </span>
                                                 </a>
-                                                <?php if ($source == 'index') { ?>
+                                                <?php if (($source == 'index') && !($noSeo == true)) { ?>
                                                 </h<?= $heading[2] ?>>
                                             <?php } ?>
                                             <?php
@@ -91,7 +91,7 @@ if ($level) {
                                                         $name = (isset($value_c3["ten_$lang"])) ? $value_c3["ten_$lang"] : $value_c3["ten"];
                                                     ?>
                                                         <div class="w-full relative last:border-none border-b  border-gray-200 ">
-                                                            <?php if ($source == 'index') { ?>
+                                                            <?php if (($source == 'index') && !($noSeo == true)) { ?>
                                                                 <h<?= $heading[3] ?>>
                                                                 <?php } ?>
                                                                 <a href="<?= $func->getUrl($value_c3) ?>" rel="dofollow" role="link" aria-label="<?= $name ?>" title="<?= $name ?>" class=" <?= $text_color_level . " " . $text_size_form  ?> bg-white  hover:text-white hover:bg-[var(--html-cl-website)]  w-full inline-flex items-center gap-2 <?= $padding_title ?> transition-all duration-300">
@@ -99,7 +99,7 @@ if ($level) {
                                                                         <?= $name ?>
                                                                     </span>
                                                                 </a>
-                                                                <?php if ($source == 'index') { ?>
+                                                                <?php if (($source == 'index') && !($noSeo == true)) { ?>
                                                                 </h<?= $heading[3] ?>>
                                                             <?php } ?>
                                                         </div>
@@ -120,7 +120,7 @@ if ($level) {
     <li class="<?= (!empty($class_form)) ? $class_form : '' ?> <?= $check_active ?>">
         <div class="group/list peer/list ">
             <div class="relative">
-                <?php if ($source == 'index') { ?>
+                <?php if (($source == 'index') && !($noSeo == true)) { ?>
                     <h<?= $heading[0] ?>>
                     <?php } ?>
                     <a href="<?= $url ?>" rel="dofollow" role="link" aria-label="<?= $title ?>" title="<?= $title ?>" class=" <?= $text_color . " " . $text_size_title  ?> group-hover/list:text-[var(--html-cl-website)]  inline-flex flex-wrap items-center justify-center transition-all duration-300 gap-3 px-2 py-1">
@@ -128,7 +128,7 @@ if ($level) {
                             <?= $title ?>
                         </span>
                     </a>
-                    <?php if ($source == 'index') { ?>
+                    <?php if (($source == 'index') && !($noSeo == true)) { ?>
                     </h<?= $heading[0] ?>>
                 <?php } ?>
                 <div class="absolute top-full left-0 w-full h-[100px] opacity-0 invisible group-hover/list:visible z-20"></div>
@@ -161,7 +161,7 @@ if ($level) {
                         break;
                 }
             ?>
-                <div class=" opacity-0 invisible scale-95 group-hover/list:opacity-100 group-hover/list:visible group-hover/list:scale-100 top-full left-0 w-full min-w-[200px] rounded shadow-lg shadow-gray-400 bg-white absolute inline-flex flex-wrap items-center transition-all duration-300 z-20 py-2 px-2 scroll-y  max-h-[400px] overflow-x-hidden overflow-y-auto">
+                <div class=" opacity-0 invisible scale-95 group-hover/list:opacity-100 group-hover/list:visible group-hover/list:scale-100 top-full left-0 w-full min-w-[200px] rounded shadow-lg shadow-gray-400 bg-white absolute inline-flex flex-wrap items-center transition-all duration-300 z-20 py-2 px-2 scroll-design-one  max-h-[400px] overflow-x-hidden overflow-y-auto">
                     <div class="flex-1 grid <?= $class_list ?> gap-6">
                         <?php
                         for ($i = 0; $i < $number_colum; $i++) {
@@ -174,7 +174,7 @@ if ($level) {
                                     if (!empty($value_c1)) {
                                 ?>
                                         <div>
-                                            <?php if ($source == 'index') { ?>
+                                            <?php if (($source == 'index') && !($noSeo == true)) { ?>
                                                 <h<?= $heading[1] ?>>
                                                 <?php } ?>
                                                 <a href="<?= $func->getUrl($value_c1) ?>" rel="dofollow" role="link" aria-label="<?= $name ?>" title="<?= $name ?>" class=" group/item <?= $text_color_level . " " . $text_size_form  ?> bg-white hover:text-white w-full inline-flex items-center gap-2 <?= $padding_title_full ?> transition-all duration-300 relative z-10 ">
@@ -183,7 +183,7 @@ if ($level) {
                                                         <?= $name ?>
                                                     </span>
                                                 </a>
-                                                <?php if ($source == 'index') { ?>
+                                                <?php if (($source == 'index') && !($noSeo == true)) { ?>
                                                 </h<?= $heading[1] ?>>
                                             <?php } ?>
                                         </div>
@@ -194,7 +194,7 @@ if ($level) {
                                                 $name = (isset($value_c2["ten_$lang"])) ? $value_c2["ten_$lang"] : $value_c2["ten"];
                                             ?>
                                                 <div>
-                                                    <?php if ($source == 'index') { ?>
+                                                    <?php if (($source == 'index') && !($noSeo == true)) { ?>
                                                         <h<?= $heading[2] ?>>
                                                         <?php } ?>
                                                         <a href="<?= $func->getUrl($value_c2) ?>" rel="dofollow" role="link" aria-label="<?= $name ?>" title="<?= $name ?>" class=" group/item  <?= $text_color_level . " " . $text_size_form  ?> bg-white  hover:text-white w-full inline-flex items-center gap-2 <?= $padding_title_full ?> transition-all duration-300 relative z-10 ml-2">
@@ -203,7 +203,7 @@ if ($level) {
                                                                 <?= $name ?>
                                                             </span>
                                                         </a>
-                                                        <?php if ($source == 'index') { ?>
+                                                        <?php if (($source == 'index') && !($noSeo == true)) { ?>
                                                         </h<?= $heading[2] ?>>
                                                     <?php } ?>
                                                 </div>
@@ -214,7 +214,7 @@ if ($level) {
                                                         $name = (isset($value_c3["ten_$lang"])) ? $value_c3["ten_$lang"] : $value_c3["ten"];
                                                     ?>
                                                         <div>
-                                                            <?php if ($source == 'index') { ?>
+                                                            <?php if (($source == 'index') && !($noSeo == true)) { ?>
                                                                 <h<?= $heading[3] ?>>
                                                                 <?php } ?>
                                                                 <a href="<?= $func->getUrl($value_c3) ?>" rel="dofollow" role="link" aria-label="<?= $name ?>" title="<?= $name ?>" class=" group/item <?= $text_color_level . " " . $text_size_form ?> bg-white hover:text-white w-full inline-flex items-center gap-2 <?= $padding_title_full ?> transition-all duration-300 relative z-10 ml-3">
@@ -223,7 +223,7 @@ if ($level) {
                                                                         <?= $name ?>
                                                                     </span>
                                                                 </a>
-                                                                <?php if ($source == 'index') { ?>
+                                                                <?php if (($source == 'index') && !($noSeo == true)) { ?>
                                                                 </h<?= $heading[3] ?>>
                                                             <?php } ?>
                                                         </div>

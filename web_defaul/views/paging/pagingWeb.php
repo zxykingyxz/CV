@@ -11,7 +11,7 @@ if ($total_page > 1) {
             $list_button[$i] = $i + 1;
         }
     } else {
-        for ($i = 1; $i <= $distance_page; $i++) {
+        for ($i = $distance_page; $i > 0; $i--) {
             if (($page - $i) > 0) {
                 $list_button[] = $page - $i;
             }

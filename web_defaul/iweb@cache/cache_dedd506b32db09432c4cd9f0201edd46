@@ -1,4 +1,4 @@
-a:3:{s:8:"dataHash";s:32:"8b9629a86cfd89dea5d4a44f2c2fa841";s:9:"timestamp";i:1735183954;s:7:"content";s:1537:"<div class="form_clientSupport  bg_form_all">
+a:3:{s:8:"dataHash";s:32:"2e818686d5921496cc70265c38974589";s:9:"timestamp";i:1742183707;s:7:"content";s:1537:"<div class="form_clientSupport  bg_form_all">
     <div class="text-[var(--html-bg-website)] font-bold font-main text-base sm:text-lg lg:text-xl capitalize text-center mt-2">
         <span>Hỗ trợ khách hàng</span>
     </div>
@@ -15,6 +15,6 @@ a:3:{s:8:"dataHash";s:32:"8b9629a86cfd89dea5d4a44f2c2fa841";s:9:"timestamp";i:17
     </div>
     <div class="flex justify-between items-end mt-2">
         <a href="https://zalo.me/0967495099" target="_blank" title="Chat zalo" rel="nofollow" role="link" class="font-main font-medium text-[var(--html-bg-website)]">Chat zalo</a>
-        <a href="tel:0933553879" class="text-base font-main font-bold text-[var(--html-bg-website)]" title="0933.553.879" aria-lable="0933.553.879" role="link" rel="nofollow">0933.553.879</a>
+        <a href="tel:0933553879" class="text-base font-main font-bold text-[var(--html-bg-website)]" title="0933.553.879" aria-label="0933.553.879" role="link" rel="nofollow">0933.553.879</a>
     </div>
 </div>";}

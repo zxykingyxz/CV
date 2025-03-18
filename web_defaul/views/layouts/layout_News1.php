@@ -45,7 +45,7 @@ $list_tintuc = $cache->getCache("select photo,id,type, ten_$lang as ten , tenkho
                     </div>
                     <div class="w-full">
                         <div class="owl-carousel form_blogs_main owl-theme">
-                            <?= $func->getTemplateLayoutsFor([
+                            <?= $sample->getTemplateLayoutsFor([
                                 'name_layouts' => 'gridTemplateNews1',
                                 'seoHeading' => 'h3',
                                 'data' => $list_blogs,
@@ -59,8 +59,8 @@ $list_tintuc = $cache->getCache("select photo,id,type, ten_$lang as ten , tenkho
                             <?= "TIN TỨC" ?>
                         </a>
                     </div>
-                    <div class="w-full max-h-[clamp(355px,40vw,530px)] overflow-x-hidden overflow-y-auto scroll-y grid grid-cols-1 gap-3">
-                        <?= $func->getTemplateLayoutsFor([
+                    <div class="w-full max-h-[clamp(355px,40vw,530px)] overflow-x-hidden overflow-y-auto scroll-design-one grid grid-cols-1 gap-3">
+                        <?= $sample->getTemplateLayoutsFor([
                             'name_layouts' => 'gridTemplateNews2',
                             'seoHeading' => 'h3',
                             'data' => $list_tintuc,

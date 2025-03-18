@@ -4,9 +4,9 @@
 
 $nametype = 'tac-gia';
 
-$GLOBAL['baiviet'][$nametype]['title_main'] = 'Tác giả';
+$GLOBAL['baiviet'][$nametype]['title_main'] = 'Quản lý Tác giả';
 
-$GLOBAL['baiviet'][$nametype]['title'] = 'danh sách tác giả';
+$GLOBAL['baiviet'][$nametype]['title'] = 'Danh sách tác giả';
 
 $GLOBAL['baiviet'][$nametype]['full'] = false;
 
@@ -169,7 +169,7 @@ $GLOBAL['bannerqc'][$nametype]['link'] = false;
 
 $GLOBAL['bannerqc'][$nametype]['img_type'] = '.swf|.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF|.webp';
 
-// #====================HotLine============================
+#====================HotLine============================
 
 // $nametype = "hotline";
 // $GLOBAL['map'][$nametype]['title_main'] = 'Hotline';
@@ -180,7 +180,7 @@ $GLOBAL['bannerqc'][$nametype]['img_type'] = '.swf|.jpg|.gif|.png|.jpeg|.gif|.JP
 // $GLOBAL['map'][$nametype]['mota'] = false;
 // $GLOBAL['map'][$nametype]['email'] = false;
 // $GLOBAL['map'][$nametype]['iframe_map'] = true;
-// $GLOBAL['map'][$nametype]['img_type']='.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF|.webp';
+// $GLOBAL['map'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF|.webp';
 
 #==============Company==============
 
@@ -490,3 +490,31 @@ $GLOBAL['photo'][$nametype]['check'] = array(
 
     "noibat" => "Nổi bật",
 );
+
+#====================watermark============================
+
+$nametype = 'watermark';
+
+$GLOBAL['bannerqc'][$nametype]['title_main'] = 'Hình đóng dấu logo';
+
+$GLOBAL['bannerqc'][$nametype]['title'] = 'Quản lý Hình đóng dấu logo';
+
+$GLOBAL['bannerqc'][$nametype]['full'] = false;
+
+$GLOBAL['bannerqc'][$nametype]['watermark'] = true;
+
+$GLOBAL['bannerqc'][$nametype]['watermark-advanced'] = true;
+
+$GLOBAL['bannerqc'][$nametype]['img'] = true;
+
+$GLOBAL['bannerqc'][$nametype]['img-width'] = 620;
+
+$GLOBAL['bannerqc'][$nametype]['img-height'] = 620;
+
+$GLOBAL['bannerqc'][$nametype]['thumb'] = '620x620x1';
+
+$GLOBAL['bannerqc'][$nametype]['img-ratio'] = 1;
+
+$GLOBAL['bannerqc'][$nametype]['link'] = false;
+
+$GLOBAL['bannerqc'][$nametype]['img_type'] = '.png|.PNG|.Png';

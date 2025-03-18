@@ -16,13 +16,13 @@ $list_lvhd = $db->rawQuery("select id,ten_$lang as ten from #_baiviet where type
         </span>
     </div>
     <div class=" flex-1  grid grid-cols-1 gap-2  ">
-        <?= $func->getTemplateLayoutsFor([
+        <?= $sample->getTemplateLayoutsFor([
             'name_layouts' => 'input_web',
             'class_form' => 'w-full',
-            'lable' => "Họ Và Tên",
+            'label' => "Họ Và Tên",
             'placeholder' => "Nhập Họ Và Tên",
             'id' => 'fullname',
-            'data' => 'fullname',
+            'data' => 'data[fullname]',
             'value' => '',
             'type' => 'text',
             'save_cache' => false,
@@ -30,13 +30,13 @@ $list_lvhd = $db->rawQuery("select id,ten_$lang as ten from #_baiviet where type
             'readonly' => false,
             'function' => '',
         ]); ?>
-        <?= $func->getTemplateLayoutsFor([
+        <?= $sample->getTemplateLayoutsFor([
             'name_layouts' => 'input_web',
             'class_form' => 'w-full',
-            'lable' => "Số Điện Thoại",
+            'label' => "Số Điện Thoại",
             'placeholder' => "Nhập Số Điện Thoại",
             'id' => 'phone',
-            'data' => 'phone',
+            'data' => 'data[phone]',
             'value' => '',
             'type' => 'number',
             'save_cache' => false,
@@ -44,13 +44,13 @@ $list_lvhd = $db->rawQuery("select id,ten_$lang as ten from #_baiviet where type
             'readonly' => false,
             'function' => '',
         ]); ?>
-        <?= $func->getTemplateLayoutsFor([
+        <?= $sample->getTemplateLayoutsFor([
             'name_layouts' => 'input_web',
             'class_form' => 'w-full',
-            'lable' => "Email",
+            'label' => "Email",
             'placeholder' => "Nhập Email",
             'id' => 'email',
-            'data' => 'email',
+            'data' => 'data[email]',
             'value' => '',
             'type' => 'email',
             'save_cache' => false,
@@ -58,13 +58,13 @@ $list_lvhd = $db->rawQuery("select id,ten_$lang as ten from #_baiviet where type
             'readonly' => false,
             'function' => '',
         ]); ?>
-        <?= $func->getTemplateLayoutsFor([
+        <?= $sample->getTemplateLayoutsFor([
             'name_layouts' => 'select_web',
             'class_form' => 'w-full',
-            'lable' => "Dịch Vụ Báo Giá",
+            'label' => "Dịch Vụ Báo Giá",
             'placeholder' => "Chọn Dịch Vụ Báo Giá",
             'id' => 'service',
-            'data' => 'service',
+            'data' => 'data[service]',
             'value' => '',
             'data_option' => $list_lvhd,
             'name_col_view' => 'ten',
@@ -89,12 +89,12 @@ $list_lvhd = $db->rawQuery("select id,ten_$lang as ten from #_baiviet where type
                     </div>
                 </div>
                 <div class="flex-1">
-                    <?= $func->getTemplateLayoutsFor([
+                    <?= $sample->getTemplateLayoutsFor([
                         'name_layouts' => 'input_web',
                         'class_form' => 'w-full',
                         'placeholder' => 'Nhập Mã Xác Nhận',
                         'id' => 'captcha',
-                        'data' => 'captcha',
+                        'data' => 'data[captcha]',
                         'value' => '',
                         'type' => 'text',
                         'save_cache' => false,
@@ -106,14 +106,14 @@ $list_lvhd = $db->rawQuery("select id,ten_$lang as ten from #_baiviet where type
                 </div>
             </div>
         </div>
-        <?= $func->getTemplateLayoutsFor([
+        <?= $sample->getTemplateLayoutsFor([
             'name_layouts' => 'textarea_web',
             'class_form' => 'w-full',
             'class' => "",
-            'lable' => "Ghi Chú",
+            'label' => "Ghi Chú",
             'placeholder' => "Nhập Ghi Chú",
             'id' => "notes",
-            'data' => "notes",
+            'data' => "data[notes]",
             'rows' => 4,
             'value' => '',
             'save_cache' => false,

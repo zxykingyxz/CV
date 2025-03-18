@@ -1,0 +1,20 @@
+a:3:{s:8:"dataHash";s:32:"2e818686d5921496cc70265c38974589";s:9:"timestamp";i:1742184402;s:7:"content";s:1537:"<div class="form_clientSupport  bg_form_all">
+    <div class="text-[var(--html-bg-website)] font-bold font-main text-base sm:text-lg lg:text-xl capitalize text-center mt-2">
+        <span>Hỗ trợ khách hàng</span>
+    </div>
+    <div class="text-gray-400 text-xs sm:text-sm capitalize font-main font-medium text-center mt-1">
+        <span>
+            Yêu cầu gọi lại        </span>
+    </div>
+    <div class="content">
+            </div>
+    <div class=" mt-2">
+        <input type="number" autocomplete="off" class="phone_clientSupport_js w-full p-2 h-10 bg-white text-gray-600 placeholder:text-gray-400 rounded text-sm font-main border border-gray-200  " placeholder="Nhập số điện thoại" />
+        <span class="error_clientSupport text-[10px] text-red-600"></span>
+        <div class="btn_clientSupport_js flex justify-center items-center px-3 h-10 rounded bg-[var(--html-bg-website)] text-white font-main capitalize text-base border-none font-semibold cursor-pointer transition-all duration-300 mt-2 ">Liên hệ với chúng tôi</div>
+    </div>
+    <div class="flex justify-between items-end mt-2">
+        <a href="https://zalo.me/0967495099" target="_blank" title="Chat zalo" rel="nofollow" role="link" class="font-main font-medium text-[var(--html-bg-website)]">Chat zalo</a>
+        <a href="tel:0933553879" class="text-base font-main font-bold text-[var(--html-bg-website)]" title="0933.553.879" aria-lable="0933.553.879" role="link" rel="nofollow">0933.553.879</a>
+    </div>
+</div>";}
