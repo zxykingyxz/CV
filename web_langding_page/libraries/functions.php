@@ -5974,4 +5974,77 @@ class functions
 
         return true;
     }
+    public function checkTwoAccess()
+    {
+
+        global $config, $func, $login_name, $notice_admin;
+
+        if (isset($_SESSION[$login_name]) || $_SESSION[$login_name] == true) {
+
+            $id_user = (int)$_SESSION['login']['id'];
+
+            $timenow = time();
+
+            $row = $this->_d->rawQueryOne("select username,password,lastlogin,user_token from #_user WHERE id ='$id_user'");
+
+            $cookiehash = md5(sha1($row['password'] . $row['username']));
+
+            if (!empty($_SESSION['login_session'])) {
+                if ($_SESSION['login_session'] != $cookiehash || ($timenow - $row['lastlogin']) > 3600) {
+                    session_destroy();
+
+                    $func->redirect("index.html?com=user&act=login");
+                }
+
+                if ($_SESSION['login_token'] !== $row['user_token']) $notice_admin = 'Có người đang đăng nhập tài khoản của bạn !';
+
+                else $notice_admin = '';
+
+                $token = md5(time());
+
+                $_SESSION['login_token'] = $token;
+
+                $sql = "update #_user set lastlogin = '$timenow',user_token = '$token' where id='$id_user'";
+
+                $this->_d->rawQuery($sql);
+            }
+        }
+    }
+    public function getClientIpServer()
+    {
+
+        $ipaddress = '';
+
+        if ($_SERVER['HTTP_CLIENT_IP'])
+
+            $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
+
+        else if ($_SERVER['HTTP_X_FORWARDED_FOR'])
+
+            $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
+
+        else if ($_SERVER['HTTP_X_FORWARDED'])
+
+            $ipaddress = $_SERVER['HTTP_X_FORWARDED'];
+
+        else if ($_SERVER['HTTP_FORWARDED_FOR'])
+
+            $ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
+
+        else if ($_SERVER['HTTP_FORWARDED'])
+
+            $ipaddress = $_SERVER['HTTP_FORWARDED'];
+
+        else if ($_SERVER['REMOTE_ADDR'])
+
+            $ipaddress = $_SERVER['REMOTE_ADDR'];
+
+        else
+
+            $ipaddress = 'UNKNOWN';
+
+
+
+        return $ipaddress;
+    }
 }

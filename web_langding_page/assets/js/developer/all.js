@@ -25,7 +25,7 @@ $(document).ready(function() {
         locationStart: 0, // Vị trí xuất phát
         directionClick: 'right', // Hướng khi click
         locationClick: 1, // Vị trí khi click
-        animation: false // Hiệu ứng chuyển động (ms)
+        animationAction: 0 // Hiệu ứng chuyển động (ms)
     });
     $(".form_menu").btnNoneBlockPlugin({
         button: 'btn_menu', // Thay thế class cho button

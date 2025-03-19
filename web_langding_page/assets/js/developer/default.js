@@ -14,42 +14,6 @@ $(".form_hotline").btnNoneBlockPlugin({
     check_out: true,
     close: true,
 });
-// ========= liên hệ gọi lại ==========
-$('body').on('click', '.btn_clientSupport_js', function() {
-    var _this = $(this);
-    var phone = _this.closest('.form_clientSupport').find('.phone_clientSupport_js').val();
-    if (validatePhone(phone)) {
-        $.ajax({
-            url: 'ajax/default/ajaxClientSupport.php',
-            type: 'POST',
-            data: {
-                phone: phone,
-            },
-            dataType: 'JSON',
-            beforeSend: function() {},
-            success: function(data) {
-                if (data.status == 200) {
-                    _FRAMEWORK.showNotification({
-                        title: 'Yêu cầu hỗ trợ',
-                        message: data.message,
-                        status: 'success',
-                    });
-                } else {
-                    _FRAMEWORK.showNotification({
-                        title: 'Yêu cầu hỗ trợ',
-                        message: data.message,
-                        status: 'error',
-                    });
-                };
-                _this.closest('.form_clientSupport').find('.phone_clientSupport_js').val('');
-                _this.closest('.form_clientSupport').find('.error_clientSupport').text('');
-            },
-            complete: function() {}
-        });
-    } else {
-        _this.closest('.form_clientSupport').find('.error_clientSupport').text('Số Điện Thoại Không Hợp Lệ !');
-    };
-});
 // ========= slider trang chủ ========
 $(".form_slider_main").owlCarousel({
     dots: false,
@@ -66,41 +30,7 @@ $(".form_slider_main").owlCarousel({
         "<i class='fas fa-angle-right'></i>",
     ],
 });
-//  ====== slider trang chi tiết sản phẩm ========
-$(".form_product_detail").owlCarousel({
-    dots: true,
-    loop: false,
-    center: false,
-    nav: true,
-    rewind: true,
-    lazyLoad: true,
-    responsive: {
-        0: {
-            items: 2,
-            margin: 10,
-        },
-        500.5: {
-            items: 3,
-            margin: 10,
-        },
-        750.5: {
-            items: 4,
-            margin: 15,
-        },
-        1023.5: {
-            items: 5,
-            margin: 15,
-        },
-    },
-    responsiveClass: true,
-    autoplay: true,
-    autoplayTimeout: 6000,
-    autoplayHoverPause: true,
-    navText: [
-        "<i class='fas fa-angle-left'></i>",
-        "<i class='fas fa-angle-right'></i>",
-    ],
-});
+
 // ============= load submit ===========
 $('.submit_load').on('submit', function(e) {
     // Check if the form is valid
@@ -121,23 +51,6 @@ $(window).on('resize', function() {
             location.reload(); // Tự động load lại trang sau khi dừng resize
         }, 300); // Thời gian chờ sau khi dừng resize (ms)
     }
-});
-// ======== tạo captcha liên hệ ==========
-$(".form_captcha_contact").captchaGenerator({
-    button: '.btn_captcha_contact',
-    codeCaptcha: '.code_captcha_contact',
-    ajax_data: function(value, _this) {
-        $.ajax({
-            url: 'ajax/default/buildCaptcha.php',
-            type: 'POST',
-            data: {
-                captcha: value,
-                name: 'captcha_code',
-            },
-            dataType: 'Json',
-            success: function(data) {}
-        });
-    },
 });
 
 // ========== Nội dung trang web ========

@@ -28,10 +28,6 @@ $config['website'] = array(
 // -------- giao diện -----------
 $config['layouts'] = array(
 	'load_all' => false,
-	'paging' => false,
-	'tap_list' => true,
-	'allow_search' => true,
-	'filter_search' => false,
 );
 // ------- cơ sở dữ liệu -----
 $config['database'] = array(
@@ -43,7 +39,7 @@ $config['database'] = array(
 	'charset' => 'utf8mb4'
 );
 if ((strpos($_SERVER['DOCUMENT_ROOT'], 'laragon')) || (strpos($_SERVER['DOCUMENT_ROOT'], 'xampp'))) {
-	$config['database']['dbname'] = "db_1_defaul_edit";
+	$config['database']['dbname'] = "db_1_defaul";
 	$config['database']['username'] = "root";
 	$config['database']['password'] = "";
 } else {
@@ -93,29 +89,12 @@ $config['lang'] = array(
 	'vi' => 'Vi',
 	// 'en' => 'En',
 );
-#Chung
-$config['function'] = array(
-	'advancedSearch' => true,
-	'product_viewed' => true,
-	'product_liked' => true,
-);
 
 # Ngôn ngữ
 $config['lang_check'] = false;
 # GG Dịch
 $config['gg_lang'] = true;
-# Tài Khoản
-$config['account']['action'] = array(
-	"action" => true,
-);
-# Giỏ Hàng
-$config['cart'] = array(
-	'turn_on' => true,
-	'flash_sale' => true,
-	'coupons' => true,
-	'cart_advance' => false,
-	'cart_qty' => true,
-);
+
 # Thay đổi đường link khi up web
 $config['change_img_contents'] = array(
 	'change' => true,

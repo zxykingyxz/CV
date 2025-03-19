@@ -19,14 +19,6 @@ include_once _lib . "config.php";
 include_once _lib . 'translate.php';
 include_once _source . 'autoRobotsTxt.php';
 include_once _source . 'dataDefault.php';
-include_once _source . 'dataTable.php';
 include_once _lib . 'controller.php';
 
-switch ($com) {
-    case 'quan-ly-kho':
-        include_once _template . "warehouse/desktop.php";
-        break;
-    default:
-        include_once _template . "desktop.php";
-        break;
-}
+include_once _template . "desktop.php";
