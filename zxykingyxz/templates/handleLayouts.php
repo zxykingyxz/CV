@@ -24,6 +24,7 @@
     <link href="assets/plugins/Notiflix/notiflix.css" type="text/css" rel="stylesheet" />
     <link href="assets/plugins/flatpickr/flatpickr.min.css" type="text/css" rel="stylesheet" />
     <link href="assets/plugins/sumoselect/sumoselect.css" type="text/css" rel="stylesheet" />
+    <link href="assets/plugins/rangeSlider/ion.rangeSlider.css" type="text/css" rel="stylesheet" />
 
     <script>
         var FRAMEWORK = FRAMEWORK || {};
@@ -51,6 +52,7 @@
     <script src="assets/plugins/custom/updateUrlParams.js" type="text/javascript"></script>
     <script src="assets/plugins/custom/formatInputPlugin.js" type="text/javascript"></script>
     <script src="assets/plugins/custom/btnNoneBlockPlugin.js" type="text/javascript"></script>
+    <script src="assets/plugins/rangeSlider/ion.rangeSlider.js" type="text/javascript"></script>
     <script src="assets/js/index.js" type="text/javascript"></script>
     <?php if (!empty($_GET['message']) && $_GET['message'] != NULL) {
         $notice = json_decode(base64_decode($_GET['message']), true);

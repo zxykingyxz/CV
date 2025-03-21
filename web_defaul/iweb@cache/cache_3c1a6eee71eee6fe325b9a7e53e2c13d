@@ -1,4 +1,4 @@
-a:3:{s:8:"dataHash";s:32:"c7371be07ddc65a0260aad910ed38080";s:9:"timestamp";i:1742261518;s:7:"content";s:4682:"<div class="block-search z-50 fixed top-0 left-0 w-full h-full bg-[#000000c7] hidden transition-all">
+a:3:{s:8:"dataHash";s:32:"c7371be07ddc65a0260aad910ed38080";s:9:"timestamp";i:1742519617;s:7:"content";s:4682:"<div class="block-search z-50 fixed top-0 left-0 w-full h-full bg-[#000000c7] hidden transition-all">
     <div class="h-full w-full flex justify-center items-center">
         <div class="relative grid_s wide h-full max-h-[800px]">
             <a class="close-form-search absolute top-4 right-4 h-8 aspect-[1/1] inline-flex justify-center items-center text-2xl text-white z-50 hover:text-red-600  cursor-pointer transition-all duration-300"><i class="fas fa-times"></i></a>

@@ -43,8 +43,8 @@ $list_c2 = $cache->getCache("select id,type,ten_$lang as ten,tenkhongdau_$lang a
 
 ?>
 <div class="flex justify-center items-center ">
-    <div class="form_circle opacity_animaiton rounded-full overflow-hidden h-[620px] text-center w-[620px] text-white" data-items="12">
-        <?php for ($i = 1; $i <= 12; $i++) { ?>
+    <div class="form_circle opacity_animaiton rounded-full overflow-hidden h-[620px] text-center w-[620px] text-white" data-items="10">
+        <?php for ($i = 1; $i <= 10; $i++) { ?>
             <div class="items_circle relative z-10 ">
                 <div class="relative">
                     <div class="  px-7 pt-[60px] absolute bottom-0 left-1/2 -translate-x-1/2 h-[200px] w-[200px] text-green-500 bg-gray-200 z-[-1] " style="clip-path: polygon(0 0,100% 0,50% 100%);">

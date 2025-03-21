@@ -2058,6 +2058,10 @@ html {
   max-width: 500px;
 }
 
+.max-w-\[600px\] {
+  max-width: 600px;
+}
+
 .max-w-\[60px\] {
   max-width: 60px;
 }

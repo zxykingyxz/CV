@@ -3612,7 +3612,7 @@ class functions
                 $urlImages .= '.webp';
             }
         }
-        if (file_exists($_SERVER['DOCUMENT_ROOT'] . "/" . $urlImagesTmp)) {
+        if (file_exists($_SERVER['DOCUMENT_ROOT'] . $config['website']["url"] . $urlImagesTmp)) {
             $info['src'] = (!empty($info['isLazy']) && strpos($info['class'], 'lazy') !== false) ? "data-src='" . $urlImages . "'" : "src='" . $urlImages . "'";
         } else {
             $info['src'] = (!empty($info['isLazy']) && strpos($info['class'], 'lazy') !== false) ? "data-src='" . $urlImagesError . "'" : "src='" . $urlImagesError . "'";

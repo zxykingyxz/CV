@@ -1,4 +1,4 @@
-a:3:{s:8:"dataHash";s:32:"f7479e2ce3f17f1081fe4dc836946056";s:9:"timestamp";i:1742261518;s:7:"content";s:34937:"<script>
+a:3:{s:8:"dataHash";s:32:"f7479e2ce3f17f1081fe4dc836946056";s:9:"timestamp";i:1742519617;s:7:"content";s:34951:"<script>
     $('.form_filter_price').updateUrlParams({
         button: 'button_filter_price',
         callback: function(value, _this) {
@@ -88,7 +88,7 @@ a:3:{s:8:"dataHash";s:32:"f7479e2ce3f17f1081fe4dc836946056";s:9:"timestamp";i:17
                                     </div>
                                     <input type="text" name="max_price" value="" placeholder="Đến" class="input_price  pointer-events-none border px-2 py-1 w-[120px]">
                                 </div>
-                                <div class="w-full">
+                                <div class="w-full max-w-[600px]">
                                     <div class="price_range w-full max-w-[420px]"></div>
                                 </div>
                             </div>

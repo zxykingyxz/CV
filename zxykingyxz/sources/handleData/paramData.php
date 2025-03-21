@@ -3,7 +3,7 @@ $_SRC = (isset($_GET['src'])) ? htmlspecialchars($_GET['src']) : "";
 $_ACT = (isset($_GET['act'])) ? htmlspecialchars($_GET['act']) : "";
 $_TYPE = (isset($_GET['type'])) ? htmlspecialchars($_GET['type']) : "";
 
-$array_param_data = ["keywords", "status", "loai", "month", "year", "page"];
+$array_param_data = ["keywords", "status", "loai", "min_price", "max_price", "month", "year", "page"];
 
 $array_param_value = [];
 if (!empty($array_param_data)) {

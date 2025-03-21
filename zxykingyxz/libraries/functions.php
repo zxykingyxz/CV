@@ -548,16 +548,15 @@ class functions
         global $_SRC;
         global $_ACT;
         global $array_param_value;
-
         // param
         $i_param = 0;
         $param_sql = '';
         if (!empty($array_param_value)) {
             foreach ($array_param_value as $key_param => $value_param) {
-                if (!empty($value_param)) {
-                    if (in_array($key_param, ['keywords', 'status'])) {
-                        $param_sql .= ($i_param != 0) ? ' and ' : '';
-                    }
+                if (!empty($value_param) && (in_array($key_param, ['keywords', 'status', 'loai', 'min_price', 'max_price']))) {
+
+                    $param_sql .= ($i_param != 0) ? ' and ' : '';
+
                     switch ($key_param) {
                         case 'keywords':
                             $param_sql .= $this->getSqlWhereKeywords($value_param, ["title"]);
@@ -573,8 +572,28 @@ class functions
                                     break;
                             }
                             break;
+                        case 'min_price':
+                            switch ($this->getUrlParam(["com" => $_COM, "act" => $_ACT, "src" => $_SRC])) {
+                                case $this->getUrlParam(["com" => 'ngansach', "act" => "man", "src" => "ngansach"]):
+                                    $param_sql .= "price>=$value_param";
+                                    $i_param++;
+                                    break;
+                                default:
+                                    break;
+                            }
+                            break;
+                        case 'max_price':
+                            switch ($this->getUrlParam(["com" => $_COM, "act" => $_ACT, "src" => $_SRC])) {
+                                case $this->getUrlParam(["com" => 'ngansach', "act" => "man", "src" => "ngansach"]):
+                                    $param_sql .= "price<=$value_param";
+                                    $i_param++;
+                                    break;
+                                default:
+                                    break;
+                            }
+                            break;
                         case 'loai':
-                            $param_sql .= "loai=$value_param";
+                            $param_sql .= "$key_param=$value_param";
                             $i_param++;
                             break;
                         default:
@@ -744,7 +763,6 @@ class functions
         if (!empty($sql_param_default)) {
             $array_option_param[] =  $sql_param_default;
         }
-
         // end
         if (!empty($array_option_param)) {
             $where .= ' and (';

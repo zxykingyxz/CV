@@ -156,7 +156,32 @@ FRAMEWORK = {
         $('.input_price').formatInputPlugin({});
     },
     handleTable: function() {
+        $(".price_range").ionRangeSlider({
+            skin: "big",
+            type: "double",
+            min: 0,
+            max: 10000000,
+            from: 0,
+            to: 10000000,
+            step: 10000,
+            prettify: function(num) {
+                if (num >= 1000 && num < 1000000) {
+                    return (num / 1000) + "k";
+                } else if (num >= 1000000) {
+                    return (num / 1000000) + "M";
+                }
+                return num;
+            },
+            onStart: function(data) {},
+            onChange: function(data) {
+                // Cập nhật giá trị khi thay đổi
+                var $minInput = $("body").find("input[name='min_price']");
+                var $maxInput = $("body").find("input[name='max_price']");
 
+                $minInput.val(data.from).trigger('input');
+                $maxInput.val(data.to).trigger('input');
+            }
+        });
         //======= tìm kiếm ==========
         $('.form_table_detal').updateUrlParams({
             classItems: 'param_table_detail',

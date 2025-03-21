@@ -15,6 +15,8 @@
             <input type="hidden" name="src" class="param_table_detail" value="<?= $_SRC ?>">
             <input type="hidden" name="act" class="param_table_detail" value="<?= $_ACT ?>">
             <input type="hidden" name="type" class="param_table_detail" value="<?= $_TYPE ?>">
+            <input type="hidden" name="min_price" class="param_table_detail" value="">
+            <input type="hidden" name="max_price" class="param_table_detail" value="">
             <div class="w-full py-2 px-3">
                 <div class="w-full flex items-center">
                     <div>
@@ -94,6 +96,9 @@
                             'no_label' => true,
                             'form' => true,
                         ]); ?>
+                    </div>
+                    <div class="w-full max-w-[600px] ">
+                        <div class="price_range"></div>
                     </div>
                 </div>
             </div>

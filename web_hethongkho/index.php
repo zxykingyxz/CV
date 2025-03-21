@@ -25,7 +25,6 @@ $injection = new AntiSQLInjection();
 $db = new PDODb($config['database']);
 $sample = new ReWorkedTemplate();
 $func = new functions($db);
-$handleTable = new handleTable($db);
 $addons = new AddonsOnline();
 $cart = new cartFrontEnd($db);
 $detect = new MobileDetect;
@@ -42,12 +41,6 @@ $seo = new seos($db);
 $css = new CssMinify($config['website']['debug-css'], $func);
 $js = new JsMinify($config['website']['debug-js'], $func);
 
-$handleTable->setCreateTableSql("table_aaa", ["name|var", "email|textxxx", "ema2il|text", "ema23il|var",  "password|var"]);
-$handleTable->setInsertTableSql("table_aaa", array(
-    ["text", "54222", "3123213"]
-));
-
-$handleTable->autoHandleTable();
 
 if (file_exists(_lib . "warehouse/warehouse_function.php")) {
     include_once _lib . "warehouse/warehouse_function.php";

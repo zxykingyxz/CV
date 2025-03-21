@@ -125,7 +125,7 @@ $array_param = [
                                     </div>
                                     <input type="text" name="max_price" value="<?= $array_param_value['max_price'] ?>" placeholder="Đến" class="input_price  pointer-events-none border px-2 py-1 w-[120px]">
                                 </div>
-                                <div class="w-full">
+                                <div class="w-full max-w-[600px]">
                                     <div class="price_range w-full max-w-[420px]"></div>
                                 </div>
                             </div>

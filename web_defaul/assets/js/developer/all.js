@@ -16,7 +16,6 @@ function actionPopup(class_form = null, class_close_form = null, class_view_form
 
 
 $(document).ready(function() {
-
     $('.form_circle').animationCircle({
         numberOfItems: $('.form_circle').data('items'), // Tổng số items (phần tử)
         items: "items_circle",

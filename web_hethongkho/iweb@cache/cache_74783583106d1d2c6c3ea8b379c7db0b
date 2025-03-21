@@ -1,0 +1,50 @@
+a:3:{s:8:"dataHash";s:32:"9e2d9bb847846e7e48162a40602ae9a4";s:9:"timestamp";i:1742262918;s:7:"content";s:2848:"
+    <div class="sticky bottom-0 py-1 bg-[var(--html-bg-website)] text-white text-xs sm:text-sm w-full z-40 shadow shadow-[var(--html-bg-website)]  block lg:hidden">
+        <ul class="flex content-end items-end">
+            <li class="flex-1">
+                <a id="goidien" class="flex justify-center items-center flex-col " title="Điện thoại" aria-label="Điện thoại" href="tel:0933553879 ">
+                    <div>
+                        <img width="35" height="28" src="assets/images/tool/icon-phone2.png" class=" brightness-0 invert lazy" loading="lazy" alt="Icon phone">
+                    </div>
+                    <span class="mt-[4px]">
+                        Điện thoại                    </span>
+                </a>
+            </li>
+            <li class="flex-1">
+                <a id="chatzalo" class="flex justify-center items-center flex-col " title="Chat zalo" aria-label="Chat zalo" href="https://zalo.me/0933553879">
+                    <div>
+                        <img width="35" height="28" class="brightness-0 invert lazy" loading="lazy" src="assets/images/tool/icon-zalo2.png" alt="Icon zalo">
+                    </div>
+                    <span class="mt-[4px]">Chat zalo
+                    </span>
+                </a>
+            </li>
+                            <li class="flex-1">
+                    <a id="nhantin" class="flex justify-center items-center flex-col " title="Nhắn tin" aria-label="Nhắn tin" href="sms:0933553879">
+                        <div>
+                            <img width="35" height="28" class="brightness-0 invert lazy" loading="lazy" src="assets/images/tool/icon-sms2.png" alt="Icon chat">
+                        </div>
+                        <span class="mt-[4px]">Nhắn tin</span>
+                    </a>
+                </li>
+            
+            <li class="flex-1">
+                <a id="chatfb" class="flex justify-center items-center flex-col " href="https://m.me/https://www.youtube.com/watch?v=_33Z_QiKzmY" title="Facebook" aria-label="Facebook">
+                    <div>
+                        <img width="35" height="28" class="brightness-0 invert lazy" loading="lazy" src="assets/images/tool/icon-mesenger2.png" alt="Icon message">
+                    </div>
+                    <span class="mt-[4px]">Facebook</span>
+                </a>
+            </li>
+            <li class="flex-1">
+                <a id="map" class="flex justify-center items-center flex-col " href="https://maps.app.goo.gl/ryhiFPpi15UjHXGZ7" title="Chỉ đường" aria-label="Chỉ đường">
+                    <div class="text-lg">
+                        <i class="fa-thin fa-map-location-dot"></i>
+                    </div>
+                    <span>Chỉ đường</span>
+                </a>
+            </li>
+                    </ul>
+    </div>
+
+";}
