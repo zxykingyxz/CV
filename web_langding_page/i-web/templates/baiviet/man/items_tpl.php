@@ -398,20 +398,7 @@
 
                                         <a href="index.html?com=baiviet&act=edit<?php if ($_GET['id_list'] != '') echo '&id_list=' . $_GET['id_list']; ?><?php if ($_GET['id_cat'] != '') echo '&id_cat=' . $_GET['id_cat']; ?><?php if ($_GET['id_item'] != '') echo '&id_item=' . $_GET['id_item']; ?><?php if ($_GET['id_sub'] != '') echo '&id_sub=' . $_GET['id_sub']; ?><?php if ($_GET['id_product'] != '') echo '&id_product=' . $_GET['id_product']; ?>&id=<?= $items[$i]['id'] ?><?php if ($_GET['type'] != '') echo '&type=' . $_GET['type']; ?><?php if ($_GET['page'] != '') echo '&page=' . $_GET['page']; ?>" class="tipS SC_bold"><?= $items[$i]['ten_vi'] ?></a>
 
-                                        <div class="add-attr mt10">
-
-                                            <?php if (!in_array($type, $viewArray)) { ?>
-
-                                                <a style="color:#37a000;font-size:12px" title="Thuộc tính xem ngay" href="<?= ($config['alias']) ? $https_config . $items[$i]['type'] . '/' . $items[$i]['tenkhongdau_' . $lang] : $https_config . $items[$i]['tenkhongdau_' . $lang]; ?>" target="_blank" class="tipS SC_bold">
-
-                                                    <i class="fa fa-eye"></i>
-
-                                                    Xem ngay
-
-                                                </a>
-
-                                            <?php } ?>
-
+                                        <div class="add-attr " style="margin-top: 10px;">
 
                                             <?php /*
                                         <a style="color:#37a000;font-size:12px" title="Thuộc tính chỉnh sửa"
@@ -425,7 +412,7 @@
                                         Chỉnh sửa
 
                                         </a> */ ?>
-                                            <a style="color:#37a000;font-size:12px ;margin: 0px 5px 5px;" title="Thuộc tính copy" href="index.html?com=baiviet&act=copy&id_copy=<?= $items[$i]['id'] ?><?php if ($_GET['type'] != '') echo '&type=' . $_GET['type']; ?><?php if ($_GET['page'] != '') echo '&page=' . $_GET['page']; ?>" class="tipS SC_bold">
+                                            <a style="color:#37a000;font-size:12px ;margin: 0px ;" title="Thuộc tính copy" href="index.html?com=baiviet&act=copy&id_copy=<?= $items[$i]['id'] ?><?php if ($_GET['type'] != '') echo '&type=' . $_GET['type']; ?><?php if ($_GET['page'] != '') echo '&page=' . $_GET['page']; ?>" class="tipS SC_bold">
 
                                                 <i class="fa fa-copy"></i>
 
@@ -433,26 +420,14 @@
 
                                             </a>
 
-                                            <?php if ($GLOBAL[$com][$type]['comment']) { ?>
-                                                <?php $count_comment = $db->rawQueryOne("select COUNT(*) as `num` from #_comment where hienthi=1 and pid=? and type=? order by id desc", array($items[$i]['id'], $_GET['type'])); ?>
-
-                                                <a style="color:#37a000;font-size:12px ;margin: 0px 5px 5px;" title="Thuộc tính comment" href="index.html?com=comment&act=man&pid=<?= $items[$i]['id'] ?><?php if ($_GET['type'] != '') echo '&type=' . $_GET['type']; ?><?php if ($_GET['page'] != '') echo '&page=' . $_GET['page']; ?>" class="tipS SC_bold">
-
-                                                    <i class="fas fa-comment"></i>
-
-                                                    Comment (<?= $count_comment['num'] ?>)
-
-                                                </a>
-                                            <?php } ?>
-
 
                                         </div>
 
 
 
                                     </td>
-
-                                    <?php if ($GLOBAL[$com][$type]['list'] == true) { ?>
+                                    <?php
+                                    if ($GLOBAL[$com][$type]['list'] == true) { ?>
                                         <td align="center" class="title_name_data">
 
                                             <?php

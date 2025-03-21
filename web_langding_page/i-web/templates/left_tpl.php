@@ -16,20 +16,7 @@
                 <i class="nav-icon text-sm fal fa-home"></i>Trang Chủ
             </a>
         </li>
-        <?php if (($kiemtra == 1 & $func->checkPermissions('baiviet', 'man', 'tac-gia')) || $kiemtra != 1) { ?>
-            <li class="<?= ($com == 'baiviet' && $_GET['type'] == 'tac-gia') ? "active" : "" ?>">
-                <a class="has-arrow" href="#" aria-expanded="<?= ($com == 'baiviet' && $_GET['type'] == 'tac-gia') ? "true" : "false" ?>">
-                    <span>
-                        <i class="nav-icon text-sm fal fa-boxes"></i>Quản lý tác giả
-                    </span>
-                </a>
-                <ul aria-expanded="<?= ($com == 'baiviet' && 'tac-gia' == $_GET['type']) ? "true" : "false" ?>" class="collapse <?= ($com == 'baiviet' && 'tac-gia' == $_GET['type']) ? "in" : "" ?>" <?= ($com == 'baiviet' && 'tac-gia' == $_GET['type']) ? "" : "style='height: 0px;'" ?>>
-                    <li class="<?= ($com == 'baiviet' && $act == 'man' && 'tac-gia' == $_GET['type']) ? "this" : "" ?>">
-                        <a href="index.php?com=baiviet&act=man&type=<?= 'tac-gia' ?>&page=1">Danh sách tác giả</a>
-                    </li>
-                </ul>
-            </li>
-        <?php } ?>
+
         <?php if (($kiemtra == 1 & $func->checkPerStatic('info', 'capnhat', $GLOBAL['info'])) || $kiemtra != 1) { ?>
             <li <?= ($com == 'info' && in_array($_GET['type'], array_keys($GLOBAL['info']))) ? ' class="active"' : '' ?>>
                 <a class="has-arrow" href="#" aria-expanded="<?= ($com == 'info' && in_array($_GET['type'], array_keys($GLOBAL['info']))) ? 'true' : 'false' ?>">
@@ -365,9 +352,11 @@
             </a>
 
             <ul aria-expanded="<?= (($com == 'contact' || $com == 'booking' || $com == 'newsletter') && $act == 'man') ? "true" : "false" ?>" class="collapse <?= (($com == 'contact' || $com == 'booking' || $com == 'newsletter') && $act == 'man') ? "in" : "" ?>">
-                <li <?php if ($com == 'contact' && $act == 'man' && $_GET["type"] ==  'contact') echo ' class="this"' ?>>
+                <?php /*
+            <li <?php if ($com == 'contact' && $act == 'man' && $_GET["type"] ==  'contact') echo ' class="this"' ?>>
                     <a href="index.php?com=contact&act=man&type=contact" title="">Danh sách liên hệ</a>
                 </li>
+                */ ?>
 
                 <?php foreach ($GLOBAL['booking'] as $k => $v) { ?>
 

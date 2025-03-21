@@ -8,7 +8,7 @@ $classEmail = new email($db, $config, $row_setting);
 // value
 $page_index = ($deviceType == 'phone') ? 20 : 20;
 $time_slider = $row_setting["time_slider"];
-$time_animation_wow = 1.5;
+$time_animation_wow = 1;
 
 // value data
 $bct = $cache->getCache("select photo,link,hienthi from #_bannerqc where hienthi=1 and type=? limit 0,1", array('bocongthuong'), 'fetch', _TIMECACHE);
@@ -21,7 +21,7 @@ $seoPage = $cache->getCache("select photo,options from #_bannerqc where hienthi=
 
 $socical = $cache->getCache("select id,photo as photo,ten_$lang as ten,mota_$lang as mota,link from #_photo where hienthi=1 and type=?", array('mangxahoi'), 'result', _TIMECACHE);
 
-$chinhsach = $cache->getCache("select type,ten_$lang as ten,tenkhongdau_$lang as tenkhongdau from #_baiviet where type=? and hienthi=1 order by stt asc,id desc", array('chinh-sach'), 'result', _TIMECACHE);
+$chinhsach = $cache->getCache("select id, type,ten_$lang as ten,tenkhongdau_$lang as tenkhongdau from #_baiviet where type=? and hienthi=1 order by stt asc,id desc", array('chinh-sach'), 'result', _TIMECACHE);
 
 $hotro = $cache->getCache("select type,ten_$lang as ten,tenkhongdau_$lang as tenkhongdau from #_baiviet where type=? and hienthi=1 order by stt asc,id desc", array('ho-tro-khach-hang'), 'result', _TIMECACHE);
 

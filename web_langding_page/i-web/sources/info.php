@@ -18,13 +18,15 @@ switch ($act) {
 function getInfo()
 {
 
-	global $db, $func, $com, $type, $url_path, $item, $GLOBAL, $table;
+	global $db, $func, $com, $type, $url_path, $item, $GLOBAL, $table, $dsInfo;
 
 	$table = $GLOBAL[$com][$type];
 
 	$sql = "select * from #_{$com} where type='" . $type . "' limit 0,1";
 
 	$item = $db->rawQueryOne($sql);
+
+	$dsInfo = $db->rawQuery("select * from #_baiviet_photo where id_baiviet=? and type=? order by stt asc, id desc ", array($item['id'], $type));
 }
 function saveInfo()
 {
@@ -107,7 +109,27 @@ function saveInfo()
 		$updateData = $db->update($com, $send);
 
 		if ($updateData) {
-
+			if (!empty($_FILES['files']) && count($_FILES['files']) > 0) {
+				if (isset($_FILES['files'])) {
+					for ($i = 0; $i < count($_FILES['files']['name']); $i++) {
+						if ($_FILES['files']['name'][$i] != '') {
+							$file['name'] = $_FILES['files']['name'][$i];
+							$file['type'] = $_FILES['files']['type'][$i];
+							$file['tmp_name'] = $_FILES['files']['tmp_name'][$i];
+							$file['error'] = $_FILES['files']['error'][$i];
+							$file['size'] = $_FILES['files']['size'][$i];
+							$file_name = $func->imagesName($_FILES['files']['name'][$i]);
+							$photo = $func->uploadPhoto($file, $table['multi-gallery-arr'][$type]['img_type_photo'], $folder, $file_name);
+							$sendx['photo'] = $photo;
+							$sendx['stt'] = (int)$_POST['stthinh'][$i];
+							$sendx['type'] = $type;
+							$sendx['id_baiviet'] = $updateData;
+							$sendx['hienthi'] = 1;
+							$db->insert("baiviet_photo", $sendx);
+						}
+					}
+				}
+			}
 			$db->rawQuery("delete from #_seo where idmuc = ? and com = ? and act = ? and type = ?", array(0, $com, 'capnhat', $type));
 
 			$dataSeo['idmuc'] = 0;
@@ -146,6 +168,27 @@ function saveInfo()
 		$insertID = $db->insert($com, $send);
 
 		if ($insertID) {
+			if (!empty($_FILES['files']) && count($_FILES['files']) > 0) {
+				if (isset($_FILES['files'])) {
+					for ($i = 0; $i < count($_FILES['files']['name']); $i++) {
+						if ($_FILES['files']['name'][$i] != '') {
+							$file['name'] = $_FILES['files']['name'][$i];
+							$file['type'] = $_FILES['files']['type'][$i];
+							$file['tmp_name'] = $_FILES['files']['tmp_name'][$i];
+							$file['error'] = $_FILES['files']['error'][$i];
+							$file['size'] = $_FILES['files']['size'][$i];
+							$file_name = $func->imagesName($_FILES['files']['name'][$i]);
+							$photo = $func->uploadPhoto($file, $table['multi-gallery-arr'][$type]['img_type_photo'], $folder, $file_name);
+							$sendx['photo'] = $photo;
+							$sendx['stt'] = (int)$_POST['stthinh'][$i];
+							$sendx['type'] = $type;
+							$sendx['id_baiviet'] = $insertID;
+							$sendx['hienthi'] = 1;
+							$db->insert("baiviet_photo", $sendx);
+						}
+					}
+				}
+			}
 
 			$db->rawQuery("delete from #_seo where idmuc = ? and com = ? and act = ? and type = ?", array(0, $com, 'capnhat', $type));
 

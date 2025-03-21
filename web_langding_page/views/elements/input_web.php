@@ -1,7 +1,7 @@
 <?php
 $class_label = "text-sm font-semibold text-slate-600";
-$class_text = "text-xs font-normal font-main-400 ";
-$class_form_layouts = "px-3 h-[40px] border shadow-sm border-[#D9D9D9] placeholder-slate-400 rounded";
+$class_text = "text-sm font-normal font-main-400 ";
+$class_form_layouts = "px-3 h-[50px] border shadow-sm border-[var(--html-bg-website)] placeholder-slate-400 rounded";
 
 ?>
 <?php if ($form !== false) { ?>

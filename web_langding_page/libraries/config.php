@@ -39,7 +39,7 @@ $config['database'] = array(
 	'charset' => 'utf8mb4'
 );
 if ((strpos($_SERVER['DOCUMENT_ROOT'], 'laragon')) || (strpos($_SERVER['DOCUMENT_ROOT'], 'xampp'))) {
-	$config['database']['dbname'] = "db_1_defaul";
+	$config['database']['dbname'] = "db_nhuhanh_020325w";
 	$config['database']['username'] = "root";
 	$config['database']['password'] = "";
 } else {
@@ -89,7 +89,7 @@ $config['lang'] = array(
 	'vi' => 'Vi',
 	// 'en' => 'En',
 );
-
+$config['seo-lang'] = $config['lang'];
 # Ngôn ngữ
 $config['lang_check'] = false;
 # GG Dịch

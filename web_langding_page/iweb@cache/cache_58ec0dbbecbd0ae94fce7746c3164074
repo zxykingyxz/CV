@@ -1,1 +1,159 @@
-a:3:{s:8:"dataHash";s:32:"092dc3e38996afc443c7da173c1b029d";s:9:"timestamp";i:1742346061;s:7:"content";b:0;}
+a:3:{s:8:"dataHash";s:32:"72349ecfe8ba18ecf1ee30f594aa8945";s:9:"timestamp";i:1742520284;s:7:"content";s:17058:"
+
+<footer class="section-footer  footer overflow-hidden relative bg-white" >
+    <div class="grid_s wide">
+        <div class=" pt-8 sm:pt-[45px] pb-8 relative z-30">
+            <div class="row justify-between gap-5 sm:gap-2">
+                <!-- thông tin liên hệ -->
+                <div class="col flex-1 relative overflow-hidden">
+                    <div class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0s">
+                        <div class=" font-main-600 font-semibold text-base text-[#343434] capitalize ">
+                            <span>Thông tin công ty</span>
+                        </div>
+                        <div class=" mb-4  mt-[10px] text-[#343434] text-[13px] font-normal font-main-400 leading-normal ">
+                            <p><span style="white-space-collapse: preserve;">Địa chỉ trụ sở: 97C Bưng Ông Thoàn, KDC Villa Park Căn Q2, P. Phú Hữu, Tp.Thủ Đức</span></p>
+
+<p><span style="white-space-collapse: preserve;">Hotline:  0925 639 979</span></p>
+
+<p><span style="white-space-collapse: preserve;">Website: witika.com</span></p>
+
+<p><span style="white-space-collapse: preserve;">Website: rausachtuoiteen.vn  </span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col overflow-hidden basis-full  md:basis-6/12 lg:basis-[18%] flex justify-start lg:justify-center">
+                    <div class=" wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
+                        <div class=" font-main-600 font-semibold text-base text-[#343434] capitalize ">
+                            <span>Thời gian làm việc</span>
+                        </div>
+                        <div class=" mt-[10px] text-[#343434] text-[13px] font-normal font-main-400 leading-normal  content">
+                            <span>
+                                <p><span style="white-space-collapse: preserve;">Từ Thứ 2 đến Thứ 7 ( nghỉ CN, Ngày Lễ )</span></p>
+
+<p><span style="white-space-collapse: preserve;">Sáng: 8:00 - 11h30 </span></p>
+
+<p><span style="white-space-collapse: preserve;">Chiều: 13:30 - 20:00 </span></p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col overflow-hidden basis-full  md:basis-6/12 lg:basis-[22%] flex justify-start lg:justify-center">
+                    <div class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.4s">
+                        <div class=" font-main-600 font-semibold text-base text-[#343434] capitalize ">
+                            <span>quy định & chính sách</span>
+                        </div>
+                        <div class=" mt-[10px] ">
+                            <ul class="grid grid-cols-1 gap-4">
+                                                                    <li class="group transition-all duration-300 views_introduce_info " data-value="29" data-form="view_baiviet">
+                                        <a href="javascript:void(0)" title="Chính sách và bảo mật thông tin" class="flex items-center gap-2 group-hover:translate-x-3 transition-all duration-300">
+                                            <div class="flex-initial leading-none aspect-[1/1] w-[7px] flex items-center justify-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="7" viewBox="0 0 6 7" fill="none">
+                                                    <circle cx="3" cy="3.06592" r="3" fill="var(--html-bg-website)" />
+                                                </svg>
+                                            </div>
+                                            <div class="text-[#343434] text-[13px] font-normal font-main-400 leading-normal   flex-1   transition-all duration-300 group-hover:text-[var(--html-bg-website)] ">
+                                                Chính sách và bảo mật thông tin                                            </div>
+                                        </a>
+                                    </li>
+                                                                    <li class="group transition-all duration-300 views_introduce_info " data-value="28" data-form="view_baiviet">
+                                        <a href="javascript:void(0)" title="Quy định về thanh toán" class="flex items-center gap-2 group-hover:translate-x-3 transition-all duration-300">
+                                            <div class="flex-initial leading-none aspect-[1/1] w-[7px] flex items-center justify-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="7" viewBox="0 0 6 7" fill="none">
+                                                    <circle cx="3" cy="3.06592" r="3" fill="var(--html-bg-website)" />
+                                                </svg>
+                                            </div>
+                                            <div class="text-[#343434] text-[13px] font-normal font-main-400 leading-normal   flex-1   transition-all duration-300 group-hover:text-[var(--html-bg-website)] ">
+                                                Quy định về thanh toán                                            </div>
+                                        </a>
+                                    </li>
+                                                                    <li class="group transition-all duration-300 views_introduce_info " data-value="27" data-form="view_baiviet">
+                                        <a href="javascript:void(0)" title="Hướng dẫn hỗ trợ dịch vụ" class="flex items-center gap-2 group-hover:translate-x-3 transition-all duration-300">
+                                            <div class="flex-initial leading-none aspect-[1/1] w-[7px] flex items-center justify-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="7" viewBox="0 0 6 7" fill="none">
+                                                    <circle cx="3" cy="3.06592" r="3" fill="var(--html-bg-website)" />
+                                                </svg>
+                                            </div>
+                                            <div class="text-[#343434] text-[13px] font-normal font-main-400 leading-normal   flex-1   transition-all duration-300 group-hover:text-[var(--html-bg-website)] ">
+                                                Hướng dẫn hỗ trợ dịch vụ                                            </div>
+                                        </a>
+                                    </li>
+                                                                    <li class="group transition-all duration-300 views_introduce_info " data-value="26" data-form="view_baiviet">
+                                        <a href="javascript:void(0)" title="Hướng dẫn gia hạn dịch vụ" class="flex items-center gap-2 group-hover:translate-x-3 transition-all duration-300">
+                                            <div class="flex-initial leading-none aspect-[1/1] w-[7px] flex items-center justify-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="7" viewBox="0 0 6 7" fill="none">
+                                                    <circle cx="3" cy="3.06592" r="3" fill="var(--html-bg-website)" />
+                                                </svg>
+                                            </div>
+                                            <div class="text-[#343434] text-[13px] font-normal font-main-400 leading-normal   flex-1   transition-all duration-300 group-hover:text-[var(--html-bg-website)] ">
+                                                Hướng dẫn gia hạn dịch vụ                                            </div>
+                                        </a>
+                                    </li>
+                                                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- mạng xã hội -->
+                <div class="col overflow-hidden flex-1 flex justify-start lg:justify-center">
+                    <div class=" w-full wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.6s">
+                        <div class=" font-main-600 font-semibold text-base text-[#343434] capitalize ">
+                            <span>Kết Nối Nhanh</span>
+                        </div>
+                        <div class=" mt-[10px] "></div>
+                        <div class="grid grid-cols-2 gap-3 mb-4 ">
+                                                            <a href="javascript:void(0)" title="facebook" target="_top" class="group/mxh py-3 px-5 text-[13px] font-medium font-main-500 flex justify-center items-center gap-2 bg-white hover:bg-[var(--html-bg-website)] hover:text-white shadow-[3px_4px_10px_0px_rgba(0,_0,_0,_0.15)] border border-gray-100 hover:border-[var(--html-bg-website)] rounded-lg transition-all duration-300 ">
+                                    <div class="w-5 aspect-[1/1] overflow-hidden group-hover/mxh:brightness-0  group-hover/mxh:invert transition-all duration-300 leading-[0]">
+                                        <div  class='load_website ' style='width: 500px;aspect-ratio:500/500;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='500' height='500' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://web_langding_page.test/thumbs/500x500x2/upload/hinhanh/z-2-4-2880.png' alt='facebook' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                    </div>
+                                    <div class="flex-1">
+                                        <span>
+                                            facebook                                        </span>
+                                    </div>
+                                </a>
+                                                            <a href="javascript:void(0)" title="tiktok" target="_top" class="group/mxh py-3 px-5 text-[13px] font-medium font-main-500 flex justify-center items-center gap-2 bg-white hover:bg-[var(--html-bg-website)] hover:text-white shadow-[3px_4px_10px_0px_rgba(0,_0,_0,_0.15)] border border-gray-100 hover:border-[var(--html-bg-website)] rounded-lg transition-all duration-300 ">
+                                    <div class="w-5 aspect-[1/1] overflow-hidden group-hover/mxh:brightness-0  group-hover/mxh:invert transition-all duration-300 leading-[0]">
+                                        <div  class='load_website ' style='width: 500px;aspect-ratio:500/500;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='500' height='500' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://web_langding_page.test/thumbs/500x500x2/upload/hinhanh/z-2-1-7767.png' alt='tiktok' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                    </div>
+                                    <div class="flex-1">
+                                        <span>
+                                            tiktok                                        </span>
+                                    </div>
+                                </a>
+                                                            <a href="javascript:void(0)" title="youtube" target="_top" class="group/mxh py-3 px-5 text-[13px] font-medium font-main-500 flex justify-center items-center gap-2 bg-white hover:bg-[var(--html-bg-website)] hover:text-white shadow-[3px_4px_10px_0px_rgba(0,_0,_0,_0.15)] border border-gray-100 hover:border-[var(--html-bg-website)] rounded-lg transition-all duration-300 ">
+                                    <div class="w-5 aspect-[1/1] overflow-hidden group-hover/mxh:brightness-0  group-hover/mxh:invert transition-all duration-300 leading-[0]">
+                                        <div  class='load_website ' style='width: 500px;aspect-ratio:500/500;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='500' height='500' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://web_langding_page.test/thumbs/500x500x2/upload/hinhanh/z-2-2-8255.png' alt='youtube' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                    </div>
+                                    <div class="flex-1">
+                                        <span>
+                                            youtube                                        </span>
+                                    </div>
+                                </a>
+                                                            <a href="javascript:void(0)" title="email" target="_top" class="group/mxh py-3 px-5 text-[13px] font-medium font-main-500 flex justify-center items-center gap-2 bg-white hover:bg-[var(--html-bg-website)] hover:text-white shadow-[3px_4px_10px_0px_rgba(0,_0,_0,_0.15)] border border-gray-100 hover:border-[var(--html-bg-website)] rounded-lg transition-all duration-300 ">
+                                    <div class="w-5 aspect-[1/1] overflow-hidden group-hover/mxh:brightness-0  group-hover/mxh:invert transition-all duration-300 leading-[0]">
+                                        <div  class='load_website ' style='width: 500px;aspect-ratio:500/500;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='500' height='500' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://web_langding_page.test/thumbs/500x500x2/upload/hinhanh/z-2-3-192.png' alt='email' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                    </div>
+                                    <div class="flex-1">
+                                        <span>
+                                            email                                        </span>
+                                    </div>
+                                </a>
+                                                            <a href="javascript:void(0)" title="map" target="_top" class="group/mxh py-3 px-5 text-[13px] font-medium font-main-500 flex justify-center items-center gap-2 bg-white hover:bg-[var(--html-bg-website)] hover:text-white shadow-[3px_4px_10px_0px_rgba(0,_0,_0,_0.15)] border border-gray-100 hover:border-[var(--html-bg-website)] rounded-lg transition-all duration-300 ">
+                                    <div class="w-5 aspect-[1/1] overflow-hidden group-hover/mxh:brightness-0  group-hover/mxh:invert transition-all duration-300 leading-[0]">
+                                        <div  class='load_website ' style='width: 500px;aspect-ratio:500/500;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='500' height='500' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://web_langding_page.test/thumbs/500x500x2/upload/hinhanh/z-2-6-6659.png' alt='map' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                    </div>
+                                    <div class="flex-1">
+                                        <span>
+                                            map                                        </span>
+                                    </div>
+                                </a>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="section-copy bg-white border-t border-[#C7C7C7] ">
+    <div class="grid_s wide ">
+        <div class="py-3 flex flex-wrap items-center justify-center">
+            <div class="text-[#343434] text-[13px] font-medium font-main-500 leading-relaxed tracking-[0.101px] text-center">Copyright &copy; 2024 - <span class="uppercase">RAU SẠCH TUỔI TEEN</span>
+                . All rights reserved. <a href="https://i-web.vn/" class="" target="_blank" title="">Design by i-web.vn</a>
+            </div>
+        </div>
+    </div>
+</div>";}

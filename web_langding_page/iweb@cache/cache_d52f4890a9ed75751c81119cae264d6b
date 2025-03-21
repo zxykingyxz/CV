@@ -1,0 +1,25 @@
+a:3:{s:8:"dataHash";s:32:"359828d3e2243baaa3b73d1907e9ad5d";s:9:"timestamp";i:1742481588;s:7:"content";s:1396:"<div class="form_popup fixed top-0 left-0 bg-[#00000087] z-50 w-full h-[100vh] flex flex-wrap flex-col opacity-0 scale-110 invisible [&.active]:scale-100 [&.active]:opacity-100 [&.active]:visible  transition-all duration-300">
+    <div class="w-full flex-1 min-h-6 close_form_popup">
+    </div>
+        <div class="w-full flex max-h-[calc(100%-60px)]">
+        <div class="flex-1 min-w-[10px] close_form_popup"></div>
+        <div class="w-full relative  max-w-[1000px]  max-h-full overflow-x-hidden overflow-y-auto scroll-design-one shadow-md shadow-gray-300 border border-gray-100 rounded-lg ">
+            <div class=" w-full bg-white py-4 px-3">
+    <div class="close_form_popup absolute inline-flex justify-center items-center h-7 aspect-[1/1] top-3 right-3 rounded-full bg-inherit cursor-pointer hover:bg-red-600 hover:text-white transition-all text-base z-10 ">
+        <span>
+            <i class="fas fa-times"></i>
+        </span>
+    </div>
+    <div class="h-5"></div>
+    <div class="text-xl font-main-700 font-bold leading-relaxed">
+        <span>
+            Hướng dẫn gia hạn dịch vụ        </span>
+    </div>
+    <div class="text-base w-full content mt-5">
+        <p>
+                    </p>
+        <p>
+            <p><span style="white-space-collapse: preserve;">Hướng dẫn gia hạn dịch vụ</span></p>
+        </p>
+    </div>
+</div>";}

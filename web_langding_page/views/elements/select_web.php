@@ -1,7 +1,7 @@
 <?php
 $class_label = "text-sm font-semibold text-slate-600";
 $class_form_seclect = "w-full rounded-md pr-4";
-$class_text = " px-3 h-[40px] text-xs font-normal font-main-400 ";
+$class_text = " px-3 h-[50px] text-sm font-normal font-main-400 ";
 
 ?>
 <?php if ($form !== false) { ?>
@@ -11,7 +11,7 @@ $class_text = " px-3 h-[40px] text-xs font-normal font-main-400 ";
             <div class="mt-1">
             <?php } ?>
         <?php } ?>
-        <div class="bg-white border shadow-sm border-slate-300 placeholder-slate-400 has-[:disabled]:bg-slate-50 has-[:disabled]:text-slate-500 has-[:disabled]:border-slate-200 has-[:focus]:outline-none has-[:focus]:border-[var(--html-cl-website)] has-[:focus]:ring-[var(--html-cl-website)] block  has-[:focus]:ring-1  has-[:disabled]:shadow-none overflow-hidden  <?= $class_form_seclect ?>">
+        <div class="bg-white border shadow-sm border-[var(--html-bg-website)] placeholder-slate-400 has-[:disabled]:bg-slate-50 has-[:disabled]:text-slate-500 has-[:disabled]:border-slate-200 has-[:focus]:outline-none has-[:focus]:border-[var(--html-cl-website)] has-[:focus]:ring-[var(--html-cl-website)] block  has-[:focus]:ring-1  has-[:disabled]:shadow-none overflow-hidden  <?= $class_form_seclect ?>">
             <select name="<?= $data ?>" id="<?= $id ?>" class=" w-full  <?= $class . " " . $class_text ?> " <?= ($required) ? "required" : "" ?> <?= $function ?>>
                 <option value="">-- <?= $placeholder ?> --</option>
                 <?php foreach ($data_option as $k_select => $v_select) { ?>

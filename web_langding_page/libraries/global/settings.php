@@ -15,8 +15,6 @@ $GLOBAL['setting']['slogan'] = false;
 
 $GLOBAL['setting']['subject'] = false;
 
-$GLOBAL['setting']['timework'] = false;
-
 $GLOBAL['setting']['email'] = true;
 
 $GLOBAL['setting']['hotline'] = true;

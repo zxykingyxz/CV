@@ -25,113 +25,154 @@ $(document).ready(function() {
         locationStart: 0, // Vị trí xuất phát
         directionClick: 'right', // Hướng khi click
         locationClick: 1, // Vị trí khi click
-        animationAction: 0 // Hiệu ứng chuyển động (ms)
-    });
-    $(".form_menu").btnNoneBlockPlugin({
-        button: 'btn_menu', // Thay thế class cho button
-        data: 'data_menu',
-        animation: false,
-        check_out: false,
-        close: false,
-        event_hover: true,
-    });
-    $(".form_nb").btnNoneBlockPlugin({
-        button: 'btn_nb', // Thay thế class cho button
-        data: 'data_nb',
-        animation: false,
-        check_out: false,
-        close: true,
-    });
-    $(".form_contents_product").btnNoneBlockPlugin({
-        button: 'btn_contents_product', // Thay thế class cho button
-        data: 'data_contents_product',
-        animation: false,
-        check_out: false,
-        close: false,
-    });
-    $(".form_filter_price").btnNoneBlockPlugin({
-        button: 'btn_filter_price', // Thay thế class cho button
-        data: 'data_filter_price',
-        animation: false,
-        check_out: true,
-        close: true,
-        scroll_top: true,
-        scroll_hiden: true,
-    });
-    $(".form_flashsale").btnNoneBlockPlugin({
-        button: 'btn_flashsale', // Thay thế class cho button
-        data: 'data_flashsale',
-        animation: false,
-        check_out: false,
-        close: false,
-    });
-    // Khoảng giá
-    // $(".price_range").ionRangeSlider({
-    //     skin: "big",
-    //     type: "double",
-    //     min: 0,
-    //     max: 200000000,
-    //     from: 20000000,
-    //     to: 180000000,
-    //     step: 100,
-    //     onStart: function(data) {},
-    //     onChange: function(data) {
-    //         // Cập nhật giá trị khi thay đổi
-    //         var $minInput = $(data.input).closest(".form_price_range").find(" .input_price[name='min_price']");
-    //         var $maxInput = $(data.input).closest(".form_price_range").find(" .input_price[name='max_price']");
-
-    //         $minInput.val(data.from).trigger('input');
-    //         $maxInput.val(data.to).trigger('input');
-    //     }
-    // });
-    $('.input_price').formatInputPlugin({
-        max: 200000000,
-        min: 0,
-        unit: "đ",
-    });
-    $('.form_filter_price').updateUrlParams({
-        button: 'button_filter_price',
-        ajax_data: function(value, _this) {
-            let time_out
-            clearTimeout(time_out);
-            time_out = setTimeout($.ajax({
-                url: value,
-                type: 'GET',
-                dataType: 'JSON',
-                beforeSend: function() {
-                    if (_COM != "index") {
-                        loadApplication(true);
-                    }
-                },
-                success: function(res) {
-                    _this.find('.text_filter_search').text("Xem " + res.data.total + " Kết Quả");
-                    if (_COM != "index") {
-                        loadApplication(false);
-                    }
-                },
-                error: function(data) {
-                    console.error("Error:", data);
-                },
-                complete: function() {}
-            }), 1000);
-        },
-    });
-    $('.content_js').showHideContents({
-        class_sub: 'class_show_content',
-        textShowMore: 'Xem Thêm',
-        textShowLess: 'Thu Gọn',
-        iconShowMore: '<i class="fas fa-angle-double-down"></i>',
-        iconShowLess: '<i class="fas fa-angle-double-up"></i>',
-        colorHover: 'var(--html-bg-website)',
+        animationAction: 0, // Hiệu ứng chuyển động (ms)
+        rotationSpeed: 1,
     });
 
-    if ($('input.input_date').length > 0) {
-        flatpickr("input.input_date", {
-            enableTime: false,
-            dateFormat: "d/m/Y",
-            locale: "vn",
-            maxDate: new Date(),
-            shorthandCurrentMonth: true,
+    $('.btn_scroll').scrollToTarget({
+        scrollSpeed: 600, // Tốc độ cuộn chậm hơn
+    });
+
+    gsap.registerPlugin(ScrollTrigger, TextPlugin);
+
+    for (i = 1; i <= 10; i++) {
+        gsap.from(".title_gsap_" + i, {
+            scrollTrigger: {
+                trigger: ".title_gsap_" + i,
+                scrub: 0.5, // Mượt hơn khi cuộn
+                start: "top 80%", // Kích hoạt sớm hơn một chút
+                end: "top 50%", // Kéo dài hiệu ứng
+            },
+            x: 0,
+            y: -80, // Giảm khoảng cách rơi xuống
+            opacity: 0,
+            duration: 1.2,
+            ease: "power2.out" // Làm chậm dần khi kết thúc
+        });
+        let $element = $('.gsap_text_' + i);
+        if ($element.length) {
+            let value = $element.text().trim();
+            gsap.to(".gsap_text_" + i, {
+                scrollTrigger: {
+                    trigger: ".gsap_text_" + i,
+                    start: "top 90%",
+                    end: "top 60%",
+                    scrub: 5,
+                },
+                duration: 2,
+                text: {
+                    value: value,
+                    delimiter: ""
+                },
+                ease: "power1.out",
+            });
+        }
+        gsap.from(".image_fade_scale_" + i, {
+            scrollTrigger: {
+                trigger: ".image_fade_scale_" + i,
+                start: "top 80%",
+                end: "top 50%",
+                scrub: 2,
+            },
+            opacity: 0,
+            scale: 0.8,
+            duration: 2,
+            ease: "power2.out",
+        });
+        gsap.from(".form_opacity_" + i, {
+            scrollTrigger: {
+                trigger: ".form_opacity_" + i,
+                start: "top 80%",
+                end: "top 40%",
+                scrub: 2,
+            },
+            opacity: 0,
+            duration: 2,
+            ease: "power2.out",
+        });
+        gsap.from(".form_left_" + i, {
+            scrollTrigger: {
+                trigger: ".form_left_" + i,
+                start: "top 90%",
+                end: "top 70%",
+                scrub: 3,
+            },
+            opacity: 0,
+            x: -100,
+            duration: 5,
+            ease: "power2.out",
+        });
+        gsap.from(".form_right_" + i, {
+            scrollTrigger: {
+                trigger: ".form_right_" + i,
+                start: "top 90%",
+                end: "top 70%",
+                scrub: 3,
+            },
+            opacity: 0,
+            x: 100,
+            duration: 5,
+            ease: "power2.out",
+        });
+        gsap.from(".form_product_" + i, {
+            scrollTrigger: {
+                trigger: ".form_product_" + i,
+                start: "top 90%",
+                end: "top 50%",
+                scrub: 5,
+            },
+            opacity: 0,
+            y: -100,
+            duration: 10,
+            ease: "power2.out",
         });
     }
+    gsap.from(".form_left_client", {
+        scrollTrigger: {
+            trigger: ".form_left_client",
+            start: "top 90%",
+            end: "top 10%",
+            scrub: 3,
+        },
+        opacity: 0,
+        x: -100,
+        duration: 5,
+        ease: "power2.out",
+    });
+    gsap.from(".form_right_client", {
+        scrollTrigger: {
+            trigger: ".form_right_client",
+            start: "top 90%",
+            end: "top 40%",
+            scrub: 3,
+        },
+        opacity: 0,
+        scale: 0.6,
+        duration: 5,
+        ease: "power2.out",
+    });
+    gsap.from(".form_left_dk", {
+        scrollTrigger: {
+            trigger: ".form_left_dk",
+            start: "top 90%",
+            end: "top 50%",
+            scrub: 3,
+        },
+        opacity: 0,
+        scale: 0.6,
+        duration: 5,
+        ease: "power2.out",
+    });
+    gsap.from(".form_right_dk", {
+        scrollTrigger: {
+            trigger: ".form_right_dk",
+            start: "top 90%",
+            end: "top 50%",
+            scrub: 3,
+        },
+        opacity: 0,
+        x: 100,
+        duration: 5,
+        ease: "power2.out",
+    });
 })

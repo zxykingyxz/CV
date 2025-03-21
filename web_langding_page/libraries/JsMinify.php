@@ -67,6 +67,7 @@ class JsMinify
                 $parts = pathinfo($path['server']);
                 $extension = strtolower($parts['extension']);
                 if ($extension != 'js') die("Invalid file");
+
                 $myfile = fopen($path['server'], "r") or die("Unable to open file");
                 $sizefile = filesize($path['server']);
                 if ($sizefile) $strJs .= $this->compress(fread($myfile, $sizefile));
@@ -74,6 +75,7 @@ class JsMinify
             }
 
             if ($strJs) {
+
                 $file = fopen($this->cacheFile, "w") or die("Unable to open file");
                 fwrite($file, $strJs);
                 fclose($file);

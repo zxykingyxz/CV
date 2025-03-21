@@ -2,6 +2,7 @@
     <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 <?php } ?>
 <?php
 $css->setCache("cached");
@@ -73,7 +74,7 @@ echo $css->getCss();
         --html-sc-website: <?= $colorSetting['second-color'] ?>;
         --value-top-fixed: 30px;
         --color-star: #ffbf00;
-        --color-linear-sc: linear-gradient(90deg, #FFC300 0%, #997500 100%);
+        --color-linear-sc: linear-gradient(180deg, var(--html-sc-website) 0%, var(--html-bg-website) 100%);
         --font-main: var(--font-main-500);
         /* font thường */
         <?php if (is_dir($folder_fonts) && is_readable($folder_fonts)) {
@@ -85,7 +86,7 @@ echo $css->getCss();
                     $font_variant = str_replace($file_name_t . '-', '', $font_variant);
                     if (!empty($font_weights[$font_variant])) {
                         $font_weight =  $font_weights[$font_variant];
-        ?>--font-main-<?= $font_weight ?>: '<?= $file_info['filename'] ?>', sans-serif;
+        ?>--font-main-<?= $font_weight ?>: "Inter", sans-serif;
         <?php
                     }
                 }

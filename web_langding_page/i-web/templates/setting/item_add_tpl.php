@@ -22,7 +22,6 @@
         }
 
     }
-
     $(document).ready(function() {
 
         text_count_changed("#description", "#des_char");
@@ -1388,9 +1387,7 @@ $decode_ext = json_decode($item['options'], true);
         <?php } ?>
 
         <?php if (isset($GLOBAL['setting']['seo']) && $GLOBAL['setting']['seo'] == true) {
-
             $seoDB = $seo->getSeoDB(0, 'setting', 'capnhat', '');
-
         ?>
 
             <div class="widget mtop10">
@@ -1462,25 +1459,6 @@ $decode_ext = json_decode($item['options'], true);
                         <div class="clear"></div>
 
                     </div>
-
-
-
-                    <div class="formRow lang_hidden lang_<?= $k ?> <?= ($k == 'vi') ? 'active' : '' ?>">
-
-                        <label>Keywords [ <?= $v ?> ]: </label>
-
-                        <div class="formRight">
-
-                            <input type="text" value="<?= @$seoDB['keywords_' . $k] ?>" id="keywords"
-                                name="dataseo[keywords_<?= $k ?>]" title="Từ khóa chính cho danh mục" class="tipS input100" />
-
-                        </div>
-
-                        <div class="clear"></div>
-
-                    </div>
-
-
 
                     <div class="formRow lang_hidden lang_<?= $k ?> <?= ($k == 'vi') ? 'active' : '' ?>">
 

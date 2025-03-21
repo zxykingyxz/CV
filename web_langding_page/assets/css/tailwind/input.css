@@ -157,6 +157,14 @@
         margin-top: 0;
         margin-bottom: 0;
     }
+    .body_load {
+        opacity: 0;
+    }
+    .bg_form_all {
+        border-radius: clamp(10px, 3vw, 32px);
+        padding: clamp(20px, 2vw, 30px) clamp(10px, 2vw, 34px);
+        background: #fff;
+    }
     .f0 {
         flex: 0 0 auto;
     }

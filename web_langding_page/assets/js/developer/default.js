@@ -15,21 +15,17 @@ $(".form_hotline").btnNoneBlockPlugin({
     close: true,
 });
 // ========= slider trang chủ ========
-$(".form_slider_main").owlCarousel({
-    dots: false,
-    loop: false,
-    center: false,
-    nav: false,
-    items: 1,
-    responsiveClass: true,
-    autoplay: true,
-    autoplayTimeout: time_slider,
-    autoplayHoverPause: true,
-    navText: [
-        "<i class='fas fa-angle-left'></i>",
-        "<i class='fas fa-angle-right'></i>",
-    ],
+const effects = ["slide", "fade", "coverflow", "flip"];
+new Swiper(".form_slider_main", {
+    effect: "fade",
+    slidesPerView: "auto",
+    loop: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
 });
+
 
 // ============= load submit ===========
 $('.submit_load').on('submit', function(e) {

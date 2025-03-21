@@ -95,25 +95,20 @@ if (!empty($GLOBAL['booking'])) {
                                     </div>
                                 <?php } ?>
 
-                                <?php if ($BOOKING == true) { ?>
 
-                                    <?php
-                                    foreach ($GLOBAL['booking'] as $key_booking_show => $item_booking_show) {
-                                        $sqlBooking = "SELECT COUNT(*) as numb FROM #_booking where type='" . $key_booking_show . "' and view=0";
-                                        $row_booking_show = $db->rawQueryOne($sqlBooking);
-                                    ?>
-                                        <div>
-                                            <a href="index.html?com=booking&act=man&type=<?= $key_booking_show ?>" title=""><span><?= $item_booking_show['title_main'] ?></span>
-                                                <span>(<?= ($row_booking_show['numb'] == 0) ? 0 : $row_booking_show['numb'] ?>)</span>
-                                            </a>
-                                        </div>
-                                    <?php
-                                    }
-                                    ?>
-
-                                <?php }  ?>
-
-
+                                <?php
+                                foreach ($GLOBAL['booking'] as $key_booking_show => $item_booking_show) {
+                                    $sqlBooking = "SELECT COUNT(*) as numb FROM #_booking where type='" . $key_booking_show . "' and view=0";
+                                    $row_booking_show = $db->rawQueryOne($sqlBooking);
+                                ?>
+                                    <div>
+                                        <a href="index.html?com=booking&act=man&type=<?= $key_booking_show ?>" title=""><span><?= $item_booking_show['title_main'] ?></span>
+                                            <span>(<?= ($row_booking_show['numb'] == 0) ? 0 : $row_booking_show['numb'] ?>)</span>
+                                        </a>
+                                    </div>
+                                <?php
+                                }
+                                ?>
                             </div>
                         </div>
                     </li>

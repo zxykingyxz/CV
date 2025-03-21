@@ -241,88 +241,96 @@
                         <div class="clear"></div>
                     </div>
                 <?php } ?>
-            </div>
 
-
-
-            <?php if ($GLOBAL[$com][$type]['video'] == true) { ?>
-                <div class="formRow">
-                    <label>Upload video :</label>
-                    <div class="formRight">
-                        <input type="file" id="file" name="file1" />
-                        <img src="./images/question-button.png" alt="Upload hình" class="icon_question tipS" original-title="Tải hình ảnh (ảnh JPEG, GIF , JPG , PNG)">
-                        <br />
-                        <br />
-                        <span style="display: inline-block; line-height: 30px;color:#CCC;">
-                            Width: <?= $GLOBAL[$com][$type]['img-width'] * $GLOBAL[$com][$type]['img-ratio'] ?>px - Height:
-                            <?= $GLOBAL[$com][$type]['img-height'] * $GLOBAL[$com][$type]['img-ratio'] ?>px
-                        </span>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-                <div class="formRow">
-                    <label>Tệp video hiện tại</label>
-                    <div class="formRight">
-                        <div class="mt10">
-                            <?php $pathImg = _upload_hinhanh . $item["video"]; ?>
-
-                            <video width="300" height="300" autoplay muted loop controls style="width: 300px;object-fit: cover;height: 300px;aspect-ratio: 16/9;">
-
-                                <source src="<?= $pathImg ?>" type="video/mp4">
-
-                            </video>
-
-                            <span style="color:blue;display:block;font-size:16px;" class="mt20"><span style="color:#000;">Tên
-                                    tệp video: </span> <?= @$item["video"] ?></span>
+                <?php if ($GLOBAL[$com][$type]['video'] == true) { ?>
+                    <div class="formRow">
+                        <label>Upload video :</label>
+                        <div class="formRight">
+                            <input type="file" id="file" name="file1" />
+                            <img src="./images/question-button.png" alt="Upload hình" class="icon_question tipS" original-title="Tải hình ảnh (ảnh JPEG, GIF , JPG , PNG)">
+                            <br />
+                            <br />
+                            <span style="display: inline-block; line-height: 30px;color:#CCC;">
+                                Width: <?= $GLOBAL[$com][$type]['img-width'] * $GLOBAL[$com][$type]['img-ratio'] ?>px - Height:
+                                <?= $GLOBAL[$com][$type]['img-height'] * $GLOBAL[$com][$type]['img-ratio'] ?>px
+                            </span>
                         </div>
+                        <div class="clear"></div>
                     </div>
-                    <div class="clear"></div>
-                </div>
-            <?php } ?>
+                    <div class="formRow">
+                        <label>Tệp video hiện tại</label>
+                        <div class="formRight">
+                            <div class="mt10">
+                                <?php $pathImg = _upload_hinhanh . $item["video"]; ?>
 
-            <?php if ($GLOBAL[$com][$type]['img-gallery'] == true) { ?>
-                <div class="formRow">
-                    <label>Hình đính kèm:
-                        <span>[Width:<?= $table['multi-gallery-arr'][$type]['width_photo'] * $table['multi-gallery-arr'][$type]['thumb_ratio_photo'] ?>px
-                            -
-                            Height:
-                            <?= $table['multi-gallery-arr'][$type]['thumb_height_photo'] * $table['multi-gallery-arr'][$type]['thumb_ratio_photo'] ?>px]</span>
-                    </label>
-                    <div class="formRight">
-                        <a class="file_input" data-jfiler-name="files" data-jfiler-extensions="jpg, jpeg, png, gif">
-                            <div class="jFiler jFiler-theme-dragdropbox">
-                                <div class="jFiler-input-dragDrop">
-                                    <div class="jFiler-input-inner">
-                                        <div class="jFiler-input-icon"><i class="icon-jfi-cloud-up-o"></i></div>
-                                        <div class="jFiler-input-text">
-                                            <h3>Upload files here</h3>
+                                <video width="300" height="300" autoplay muted loop controls style="width: 300px;object-fit: cover;height: 300px;aspect-ratio: 16/9;">
+
+                                    <source src="<?= $pathImg ?>" type="video/mp4">
+
+                                </video>
+
+                                <span style="color:blue;display:block;font-size:16px;" class="mt20"><span style="color:#000;">Tên
+                                        tệp video: </span> <?= @$item["video"] ?></span>
+                            </div>
+                        </div>
+
+                        <div class="clear"></div>
+                    </div>
+                <?php } ?>
+                <?php if ($GLOBAL[$com][$type]['img-gallery'] == true) { ?>
+                    <div class="formRow">
+                        <label>Hình đính kèm:
+                            <span>[Width:<?= $table['multi-gallery-arr'][$type]['width_photo'] * $table['multi-gallery-arr'][$type]['thumb_ratio_photo'] ?>px
+                                -
+                                Height:
+                                <?= $table['multi-gallery-arr'][$type]['thumb_height_photo'] * $table['multi-gallery-arr'][$type]['thumb_ratio_photo'] ?>px]</span>
+                        </label>
+                        <div class="formRight">
+                            <a class="file_input" data-jfiler-name="files" data-jfiler-extensions="jpg, jpeg, png, gif">
+                                <div class="jFiler jFiler-theme-dragdropbox">
+                                    <div class="jFiler-input-dragDrop">
+                                        <div class="jFiler-input-inner">
+                                            <div class="jFiler-input-icon"><i class="icon-jfi-cloud-up-o"></i></div>
+                                            <div class="jFiler-input-text">
+                                                <h3>Upload files here</h3>
+                                            </div>
+                                            <span class="jFiler-input-choose-btn btn-custom blue-light">Browse Files</span>
                                         </div>
-                                        <span class="jFiler-input-choose-btn btn-custom blue-light">Browse Files</span>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
-                        <?php if ($act == 'capnhat') { ?>
-                            <?php if (count($dsInfo) != 0) { ?>
-                                <?php for ($i = 0; $i < count($dsInfo); $i++) { ?>
-                                    <div class="item_trich">
-                                        <img class="img_trich" src="<?= $folder . $dsInfo[$i]['photo'] ?>" />
-                                        <input type="text" rel="<?= $dsInfo[$i]['id'] ?>" value="<?= $dsInfo[$i]['stt'] ?>" class="update_stt tipS" />
-                                        <a class="delete_images icon-jfi-trash jFiler-item-trash-action" title="<?= $dsInfo[$i]['id'] ?>" style="color:#FF0000"></a>
-                                    </div>
+                            </a>
+                            <?php if ($act == 'capnhat') { ?>
+                                <?php if (count($dsInfo) != 0) { ?>
+                                    <?php for ($i = 0; $i < count($dsInfo); $i++) { ?>
+                                        <div class="item_trich">
+                                            <img class="img_trich" src="<?= $folder . $dsInfo[$i]['photo'] ?>" />
+                                            <input type="text" rel="<?= $dsInfo[$i]['id'] ?>" value="<?= $dsInfo[$i]['stt'] ?>" class="update_stt tipS" />
+                                            <a class="delete_images icon-jfi-trash jFiler-item-trash-action" title="<?= $dsInfo[$i]['id'] ?>" style="color:#FF0000"></a>
+                                        </div>
+                                    <?php } ?>
                                 <?php } ?>
                             <?php } ?>
-                        <?php } ?>
+                        </div>
+                        <div class="clear"></div>
                     </div>
-                    <div class="clear"></div>
+                <?php } ?>
+                <div class="formRow">
+                    <div class="formRight">
+                        <label class="stardust-checkbox">
+                            Hiển thị
+                            <input class="stardust-checkbox__input" <?= (!isset($item['hienthi']) || $item['hienthi'] == 1) ? 'checked="checked"' : '' ?> name="hienthi" type="checkbox" value="1" style="display:none">
+                            <div class="stardust-checkbox__box"></div>
+                        </label>
+                    </div>
                 </div>
-            <?php } ?>
+            </div>
         <?php } ?>
         <?php if ($GLOBAL[$com][$type]['seo']) { ?>
             <?php if (isset($GLOBAL[$com][$type]['seo']) && $GLOBAL[$com][$type]['seo'] == true) {
                 $seoDB = $seo->getSeoDB(0, $com, $act, $type);
             ?>
                 <div class="widget mtop10">
+
                     <div class="formRow">
                         <div class="formRight">
                             <?php foreach ($config['seo-lang'] as $k => $v) { ?>
@@ -380,15 +388,7 @@
                         </div>
                     <?php } ?>
                 <?php } ?>
-                <div class="formRow">
-                    <div class="formRight">
-                        <label class="stardust-checkbox">
-                            Hiển thị
-                            <input class="stardust-checkbox__input" <?= (!isset($item['hienthi']) || $item['hienthi'] == 1) ? 'checked="checked"' : '' ?> name="hienthi" type="checkbox" value="1" style="display:none">
-                            <div class="stardust-checkbox__box"></div>
-                        </label>
-                    </div>
-                </div>
+
                 </div>
             <?php } ?>
     </div>

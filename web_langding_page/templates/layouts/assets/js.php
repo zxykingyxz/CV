@@ -4,10 +4,10 @@
     var _URL = "<?= $func->getCurrentPageURL() ?>";
     var _COM = "<?= $com ?>";
     var _LANG = <?= $config['lang_check'] ? 'true' : 'false' ?>;
-    var _TOC = "<?= $rowc['data']['toc'] ?>";
+    var _TOC = "<?= (!empty($rowc)) ? $rowc['data']['toc'] : "" ?>";
     var _PID = "<?= (!empty($row_detail['id'])) ? $row_detail['id'] : '' ?>";
     var _LIST_TOC = <?= (!empty($row_toc)) ? $row_toc : 0 ?>;
-    var _KEYWORD = "<?= $_GET["keywords"] ?>";
+    var _KEYWORD = "<?= isset($_GET["keywords"]) ? $_GET["keywords"] : "" ?>";
     var _PLACEHOLDER = ["Nhập Sản Phẩm Bạn Cần Tìm...."];
     var PAGE_INDEX = "<?= $func->getPagingByComFor('index') ?>";
     var NAME_COMPANY = "<?= $row_setting["name_$lang"] ?>";
@@ -41,7 +41,6 @@
 $js->setJs("assets/js/lazyload.min.js");
 $js->setJs("assets/plugins/PNotify/PNotify.js");
 $js->setJs("assets/plugins/jssocials/jssocials.js");
-$js->setJs("assets/plugins/jquery-confirm/jquery-confirm.js");
 $js->setJs("assets/plugins/swiper/swiper-bundle.js");
 $js->setJs("assets/js/lang/$lang.js");
 $js->setJs("assets/js/scrollAnimation.js");
@@ -50,19 +49,16 @@ $js->setJs("assets/plugins/Fancybox/Fancybox.js");
 $js->setJs("assets/plugins/owlcarousel/owl.carousel.min.js");
 $js->setJs("assets/js/functions.js");
 $js->setJs("assets/js/index.js");
-$js->setJs("assets/js/carts.js");
 // có thể chỉnh sửa
 $js->setJs("assets/plugins/aos/aos.js");
 $js->setJs("assets/plugins/flatpickr/flatpickr.min.js");
 $js->setJs("assets/plugins/flatpickr/vn.js");
 $js->setJs('assets/plugins/wow/wow.min.js');
-$js->setJs("assets/plugins/jquery-ui/jquery-ui.js");
 $js->setJs("assets/plugins/Custom/btnNoneBlockPlugin.js");
-$js->setJs("assets/plugins/Custom/formatInputPlugin.js");
-$js->setJs("assets/plugins/Custom/updateUrlParams.js");
-$js->setJs("assets/plugins/Custom/showHideContents.js");
 $js->setJs("assets/plugins/Custom/captchaGenerator.js");
 $js->setJs("assets/plugins/Custom/animationCircle.js");
+$js->setJs("assets/plugins/Custom/scrollToTarget.js");
+$js->setJs("assets/plugins/gsap/all.js");
 
 $js->setJs("assets/js/social-login.js");
 

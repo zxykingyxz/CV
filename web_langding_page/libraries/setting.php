@@ -10,36 +10,6 @@ $PRIVATE = [];
 
 $PHOTOS = [];
 
-$CART = [];
-
-// =======================seo page======================
-$array_option_setting = [
-	'dien-tu' => 'Điện tử',
-	'dien-lanh' => 'Điện Lạnh',
-	'do-gia-dung' => 'Đồ Gia Dụng',
-	'hang-trung-bay' => 'Hàng Trưng Bày',
-	'tin-tuc' => 'Tin Tức',
-	'tim-kiem' => 'Tìm Kiếm',
-];
-foreach ($array_option_setting as $key_option_setting => $value_option_setting) {
-	if (!in_array($key_option_setting, ['tim-kiem'])) {
-		$setting['seopage']['page'][$key_option_setting] = $value_option_setting;
-	}
-	$setting['paging'][$key_option_setting] = "Phân Trang " . $value_option_setting;
-}
-
-$setting['seopage']['mota'] = true;
-$setting['seopage']['mota-ckeditor'] = true;
-$setting['seopage']['noidung'] = true;
-$setting['seopage']['noidung-ckeditor'] = true;
-$setting['seopage']['img-width'] = 300;
-$setting['seopage']['img-height'] = 200;
-$setting['seopage']['img-ratio'] = 1;
-$setting['seopage']['img-b'] = 200;
-$setting['seopage']['thumb'] = '300x200x1';
-$setting['seopage']['img_type'] = '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF';
-$viewArray = array('htgh', 'pttt');
-
 $setting['color'] = array(
 	'background-primary' => 'Màu chính',
 	'primary-color' => 'Màu chữ text',
@@ -65,7 +35,5 @@ foreach ($GLOBAL['baiviet'] as $key => $value) {
 		array_push($PRIVATE, $key);
 	} else if ($value['special']) {
 		array_push($SPECIAL, $key);
-	} else if ($value['cart']) {
-		array_push($CART, $key);
 	}
 }

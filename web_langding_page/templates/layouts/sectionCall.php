@@ -127,7 +127,7 @@ $tool = $cache->getCache("select photo,ten_$lang as ten,link from #_photo where 
 <div class="sticky bottom-0 py-1 bg-[var(--html-bg-website)] text-white text-xs sm:text-sm w-full z-40 shadow shadow-[var(--html-bg-website)]  block lg:hidden border-t border-gray-200">
     <ul class="flex content-end items-end">
         <li class="flex-1">
-            <a id="goidien" class="flex justify-center items-center flex-col " title="Điện thoại" aria-label="Điện thoại" href="tel:<?= $func->handlePhoneNumberUrl($row_setting["dienthoai"]) ?> ">
+            <a id="goidien" class="flex justify-center items-center flex-col " title="Điện thoại" aria-label="Điện thoại" href="tel:<?= $func->handlePhoneNumberUrl($row_setting["dienthoai"]) ?>">
                 <div>
                     <img width="35" height="28" src="assets/images/tool/icon-phone2.png" class=" brightness-0 invert lazy" loading="lazy" alt="Icon phone">
                 </div>

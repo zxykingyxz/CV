@@ -17,7 +17,7 @@
     <script type="text/javascript" src="./assets/js/jquery.min.js"></script>
 </head>
 
-<body id="body_main" itemscope itemtype="https://schema.org/WebPage" class="bg-gray-100 <?= ($config['layouts']['load_all']) ? 'body_load' : '' ?> ">
+<body id="body_main" itemscope itemtype="https://schema.org/WebPage" class="bg-[#F7F3F3] <?= ($config['layouts']['load_all']) ? 'body_load' : '' ?> ">
     <?php if (in_array($com, ['index', " ", "lien-he", "contact"])) { ?>
         <div class="title_seo hidden">
             <h1>
@@ -57,19 +57,6 @@
                 'time_animation_wow' => $time_animation_wow,
             ]) ?>
         <?php } ?>
-        <?php if ($source != 'index' && !in_array($com, ['account']) && !in_array($template, ['error/404'])) {
-            $sample->getTemplate(_layouts . "breads", [
-                'str_breadcrumbs' => $str_breadcrumbs,
-                'banner_tpl' => $banner_tpl,
-                'titleContainer' => $titleContainer,
-            ], false);
-        } ?>
-        <?php
-        if (!file_exists(_template . $template . "_tpl.php")) {
-            $template = "error/404";
-        }
-        include _template . $template . "_tpl.php";
-        ?>
         <?php
         $sample->getTemplate(_layouts . "footer", [
             'chinhsach' => $chinhsach,
@@ -83,21 +70,9 @@
         <?php $sample->getTemplate(_layouts . "sectionCall", [
             'template' => $template,
             'row_tacgia' => (!empty($row_tacgia)) ? $row_tacgia : '',
-            'cart' => $cart
         ]) ?>
         <div class="scroll-indicator "></div>
     </div>
-    <?php
-    echo $sample->getTemplateLayoutsFor([
-        'name_layouts' => 'searchBlock',
-    ]);
-    echo $sample->getTemplateLayoutsFor([
-        'name_layouts' => 'searchOrder',
-    ]);
-    echo $sample->getTemplateLayoutsFor([
-        'name_layouts' => 'zoomImage',
-    ]);
-    ?>
     <?php include_once _layouts . "assets/js.php"; ?>
 </body>
 

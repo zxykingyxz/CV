@@ -1,5 +1,8 @@
 $(".form_captcha_js").captchaGenerator({
     button: '.btn_captcha_js',
+    fontSize: 16,
+    fontWeight: 400,
+    colorCaptcha: '#717070',
     codeCaptcha: '.code_captcha',
     ajax_data: function(value, _this) {
         $.ajax({

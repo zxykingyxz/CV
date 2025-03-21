@@ -1,41 +1,13 @@
-a:3:{s:8:"dataHash";s:32:"c8bd82d9d63550389a783fbe09a9221a";s:9:"timestamp";i:1742346061;s:7:"content";s:3170:"                    </div>
-                    <div class="mt-8 flex justify-center items-center">
-                        <a href="tin-tuc" title="Tin tức" class="group hover:text-[var(--html-bg-website)] inline-flex justify-center items-center gap-1 text-base font-bold font-main-700 transition-all duration-300">
-                            <span>Xem tất cả</span>
-                            <svg class="group-hover:*:stroke-[var(--html-bg-website)] transition-all duration-300" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
-                                <path d="M6.10571 17.1724L11.1057 12.1724L6.10571 7.17236" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M13.1057 17.1724L18.1057 12.1724L13.1057 7.17236" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </a>
+a:3:{s:8:"dataHash";s:32:"488195b413e70be8844d31ed75e6024a";s:9:"timestamp";i:1742520284;s:7:"content";s:1301:"ĐĂNG KÝ tư vấn NGAY </span>
+                        <span class="flex-initial text-3xl sm:text-[64px] font-bold font-main-700 text-[var(--html-bg-website)]">24/7</span>
                     </div>
+                    <div class="mt-4 text-center">
+                        <span class=" text-xs sm:text-sm font-normal font-main-400 text-[#717070]">Hãy để lại thông tin của bạn, đội ngũ của chúng tôi sẽ liên hệ bạn sớm để tư vấn cho bạn có một vườn rau sạch dùng hàng ngày...</span>
+                    </div>
+                    <div class="mt-7">
+                        <div  class='load_website ' style='width: 600px;aspect-ratio:600/95.107632093933;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='600' height='95.107632093933' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://web_langding_page.test/thumbs/600x95x2/upload/hinhanh/group-5889-3710.png' alt='ĐĂNG KÝ tư vấn NGAY ' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                    </div>
                 </div>
             </div>
         </div>
-    </section>
-
-<!-- mọi người tìm kiếm -->
-    <section class="section-people-search pb-8 sm:pb-[64px]  ">
-        <div class="grid_s wide">
-            <div class="wow fadeInDown " data-wow-duration="1.5s" data-wow-delay="0.2s">
-                <a href=" javascript:void(0)" title=" MỌI NGƯỜI CŨNG TÌM KIẾM" class=" uppercase  text-[20px] sm:text-[32px] text-black font-bold font-main-700">
-                    <span>
-                        MỌI NGƯỜI CŨNG TÌM KIẾM                    </span>
-                </a>
-            </div>
-        </div>
-        <div class="grid_s_news wide ">
-            <div class="w-full mt-7 bg-white py-8 rounded-xl sm:rounded-[32px] overflow-hidden ">
-                <div class="grid_s wide ">
-                    <div class="flex flex-wrap gap-2">
-                                                    <a href="dieu-hoa-lg" title="điều hòa lg" class="bg-[#F2F4F7] py-2 px-3 rounded-full text-xs sm:text-sm text-nowrap font-normal font-main-400 text-black hover:text-white hover:bg-[var(--html-bg-website)] transition-all duration-300">
-                                điều hòa lg                            </a>
-                                                    <a href="iphone-16" title="iphone 16" class="bg-[#F2F4F7] py-2 px-3 rounded-full text-xs sm:text-sm text-nowrap font-normal font-main-400 text-black hover:text-white hover:bg-[var(--html-bg-website)] transition-all duration-300">
-                                iphone 16                            </a>
-                                                    <a href="noi-com-dien-tiger" title="nồi cơm điện tiger" class="bg-[#F2F4F7] py-2 px-3 rounded-full text-xs sm:text-sm text-nowrap font-normal font-main-400 text-black hover:text-white hover:bg-[var(--html-bg-website)] transition-all duration-300">
-                                nồi cơm điện tiger                            </a>
-                                            </div>
-                </div>
-            </div>
-        </div>
-    </section>
-";}
+    </div>
+</section>";}

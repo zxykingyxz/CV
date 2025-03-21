@@ -1,11 +1,11 @@
 <?php
 #==============Về chúng tôi==============
 
-$nametype = 'gioi-thieu';
+$nametype = 've-chung-toi';
 
-$GLOBAL['info'][$nametype]['title_main'] = 'Giới Thiệu';
+$GLOBAL['info'][$nametype]['title_main'] = 'Về chúng tôi';
 
-$GLOBAL['info'][$nametype]['title'] = 'Quản lý Giới Thiệu';
+$GLOBAL['info'][$nametype]['title'] = 'Quản lý Về chúng tôi';
 
 $GLOBAL['info'][$nametype]['full'] = false;
 
@@ -23,7 +23,7 @@ $GLOBAL['info'][$nametype]['img-gallery'] = false;
 
 $GLOBAL['info'][$nametype]['link_type'] = false;
 
-$GLOBAL['info'][$nametype]['slogan'] = false;
+$GLOBAL['info'][$nametype]['slogan'] = true;
 
 $GLOBAL['info'][$nametype]['text'] = false;
 
@@ -43,11 +43,9 @@ $GLOBAL['info'][$nametype]['noidung'] = true;
 
 $GLOBAL['info'][$nametype]['noidung-ckeditor'] = true;
 
-$GLOBAL['info'][$nametype]['seo'] = true;
-
 $GLOBAL['info'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF|.webp';
 
-$GLOBAL['info'][$nametype]['img-gallery'] = false;
+$GLOBAL['info'][$nametype]['img-gallery'] = true;
 
 $GLOBAL['info'][$nametype]['multi-gallery-arr'] = array(
 

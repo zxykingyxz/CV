@@ -1,6 +1,6 @@
 <?php
 $class_label = "text-sm font-semibold text-slate-600";
-$class_text = "px-3 py-2 text-xs font-normal font-main-400 rounded-md ";
+$class_text = "px-3 py-2 text-sm font-normal font-main-400 rounded-md ";
 ?>
 <?php if ($form !== false) { ?>
     <div class="<?= $class_form ?>">

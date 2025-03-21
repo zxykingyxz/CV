@@ -2,6 +2,7 @@
     <div class="w-full flex-1 min-h-6 <?= $class_close_form_js ?>">
     </div>
     <?php
+
     /*
     <div class="<?= $class_close_form_js ?> absolute inline-flex justify-center items-center h-7 aspect-[1/1] top-3 right-3 rounded-md bg-slate-300 cursor-pointer hover:bg-red-600 hover:text-white transition-all text-base z-10">
         <span>
@@ -14,28 +15,12 @@
         <div class="w-full relative <?= $class_form ?> max-h-full overflow-x-hidden overflow-y-auto scroll-design-one shadow-md shadow-gray-300 border border-gray-100 rounded-lg ">
             <?php
             switch ($check_form) {
-                case 'view_info_product':
-                    echo $sample->getTemplateLayoutsFor([
-                        'name_layouts' => 'form_view_info_product',
+                case 'view_info_introduce':
+                case 'view_baiviet':
+                    echo $this->getTemplateLayoutsFor([
+                        'name_layouts' => 'form_view_info',
                         'close_popup' => $class_close_form_js,
                         'data' => $data,
-                        'global' => ['cache'],
-                    ]);
-                    break;
-                case 'view_info_pay':
-                    echo $sample->getTemplateLayoutsFor([
-                        'name_layouts' => 'form_view_info_pay',
-                        'close_popup' => $class_close_form_js,
-                        'data' => $data,
-                        'global' => ['cache'],
-                    ]);
-                    break;
-                case 'view_product_detail':
-                    echo $sample->getTemplateLayoutsFor([
-                        'name_layouts' => 'form_view_product_detail',
-                        'close_popup' => $class_close_form_js,
-                        'data' => $data,
-                        'active' => $active,
                         'global' => ['cache'],
                     ]);
                     break;

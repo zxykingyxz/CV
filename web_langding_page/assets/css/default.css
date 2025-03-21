@@ -1,13 +1,3 @@
-/* ============code cần=============== */
-
-
-/* body */
-
-.body_load {
-    opacity: 0;
-}
-
-
 /* -------------- sao  ----------------*/
 
 .color-star:before {
@@ -675,15 +665,6 @@ ol#breadcrumb li+li:before {
 
 
 /* --------------- form all ------------*/
-
-
-/* bg all */
-
-.bg_form_all {
-    border-radius: 8px;
-    padding: clamp(10px, 2vw, 15px);
-    background: #fff;
-}
 
 
 /* title h1 danh sách */

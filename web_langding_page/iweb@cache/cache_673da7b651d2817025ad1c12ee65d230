@@ -1,0 +1,618 @@
+a:3:{s:8:"dataHash";s:32:"74144967b0e38bc21c69b42df4ed530d";s:9:"timestamp";i:1742481948;s:7:"content";s:82551:"<div class="h-8 sm:h-12 "></div>
+<!-- giới thiệu -->
+    <section class="section-introduce pb-8 sm:pb-12 ">
+        <div class="grid_s wide ">
+            <div class="bg_form_all form_opacity_1">
+                <div class="w-full flex flex-wrap items-center justify-center gap-5 md:gap-[35px] pb-6">
+                    <div class="flex-1">
+                        <div class="flex items-center title_gsap_1 text-base font-medium font-main-500 text-black  gap-2 ">
+                            <div class="flex-[0_0_auto] w-4 h-0 border-t border-[var(--html-sc-website)]"></div>
+                            <span class="flex-initial">
+                                Về Chúng Tôi                             </span>
+                            <div class=" flex-[0_0_auto] w-4 h-0 border-t border-[var(--html-sc-website)]"></div>
+                        </div>
+                        <div class="text-xl sm:text-2xl font-bold font-main-700 text-[var(--html-bg-website)] uppercase   title_gsap_1 mt-2 ">
+                            <span>
+                                RAU SẠCH TUỔI TEEN                            </span>
+                        </div>
+                        <div class="mt-2 text-sm leading-[1.8] font-normal font-main-400">
+                            <span class="text-[#494949] line-clamp-6 gsap_text_1">
+                                <p><span style="white-space-collapse: preserve;">Được thành lập vào năm 2021, với mong muốn mỗi nhà đều có một vườn rau sạch để dùng hàng ngày cũng như để các con trẻ tương tác nhiều với cây xanh qua đó sẽ giúp các con trẻ thích được ăn rau hơn bởi đó là thành quả do các con chăm sóc. Sau hơn 2 năm nghiên cứu với hàng chục giải pháp khác nhau, với tiêu chí trên chúng tôi đã đã chọn vùng trồng tại khu vực Suối Nho - Đồng Nai với diện tích farm gần 20,000m2.</span></p>
+                            </span>
+                        </div>
+                        <div class="mt-7 ">
+                            <button title="Tìm hiểu thêm " class="views_introduce_info capitalize outline-none border-none inline-flex justify-center items-center leading-none h-10 rounded-full px-8 bg-[var(--html-bg-website)] text-white text-base font-medium font-main-500 text-center hover:bg-[var(--html-sc-website)] gap-2 transition-all duration-300" data-value="1" data-form="view_info_introduce">
+                                <span>Tìm hiểu thêm</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <g clip-path="url(#clip0_1_59)">
+                                        <path d="M6.5625 13.209V16.6875C6.5625 16.9305 6.7185 17.1457 6.9495 17.2222C7.00725 17.241 7.0665 17.25 7.125 17.25C7.3005 17.25 7.47 17.1675 7.578 17.0205L9.61275 14.2515L6.5625 13.209Z" fill="currentColor" />
+                                        <path d="M17.7638 0.104316C17.5913 -0.0179335 17.3648 -0.0344335 17.1773 0.0638165L0.302283 8.87632C0.102783 8.98057 -0.0149666 9.19357 0.00153336 9.41782C0.0187834 9.64282 0.168033 9.83482 0.380283 9.90757L5.07153 11.5111L15.0623 2.96857L7.33128 12.2828L15.1935 14.9701C15.252 14.9896 15.3135 15.0001 15.375 15.0001C15.477 15.0001 15.5783 14.9723 15.6675 14.9183C15.81 14.8313 15.9068 14.6851 15.9315 14.5208L17.994 0.645816C18.0248 0.435816 17.9363 0.227316 17.7638 0.104316Z" fill="currentColor" />
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-[52%] image_fade_scale_1 ">
+                        <div class="swiper introduce_main">
+                            <div class="swiper-wrapper">
+                                                                    <div class="swiper-slide transition-all duration-300">
+                                        <div class="w-full rounded-lg sm:rounded-3xl overflow-hidden leading-none">
+                                            <div  class='load_website ' style='width: 1100px;aspect-ratio:1100/934.40860215054;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='1100' height='934.40860215054' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/1100x934x1/upload/hinhanh/image-5-7467.png' alt='Về Chúng Tôi' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></div>                                        </div>
+                                    </div>
+                                                                    <div class="swiper-slide transition-all duration-300">
+                                        <div class="w-full rounded-lg sm:rounded-3xl overflow-hidden leading-none">
+                                            <div  class='load_website ' style='width: 1100px;aspect-ratio:1100/934.40860215054;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='1100' height='934.40860215054' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/1100x934x1/upload/hinhanh/image-6-2466.png' alt='Về Chúng Tôi' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></div>                                        </div>
+                                    </div>
+                                                                    <div class="swiper-slide transition-all duration-300">
+                                        <div class="w-full rounded-lg sm:rounded-3xl overflow-hidden leading-none">
+                                            <div  class='load_website ' style='width: 1100px;aspect-ratio:1100/934.40860215054;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='1100' height='934.40860215054' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/1100x934x1/upload/hinhanh/image-1-9772.png' alt='Về Chúng Tôi' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></div>                                        </div>
+                                    </div>
+                                                                    <div class="swiper-slide transition-all duration-300">
+                                        <div class="w-full rounded-lg sm:rounded-3xl overflow-hidden leading-none">
+                                            <div  class='load_website ' style='width: 1100px;aspect-ratio:1100/934.40860215054;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='1100' height='934.40860215054' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/1100x934x1/upload/hinhanh/image-2-9399.png' alt='Về Chúng Tôi' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></div>                                        </div>
+                                    </div>
+                                                                    <div class="swiper-slide transition-all duration-300">
+                                        <div class="w-full rounded-lg sm:rounded-3xl overflow-hidden leading-none">
+                                            <div  class='load_website ' style='width: 1100px;aspect-ratio:1100/934.40860215054;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='1100' height='934.40860215054' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/1100x934x1/upload/hinhanh/image-3-9886.png' alt='Về Chúng Tôi' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></div>                                        </div>
+                                    </div>
+                                                            </div>
+                            <div class="w-full mt-5 flex items-center justify-center gap-3 ">
+                                <button class="swiper_button_design_prev w-[37px] aspect-[1/1] bg-[#DFDDDD] rounded-full text-[#444343] hover:bg-[var(--html-bg-website)] hover:text-white flex justify-center items-center transition-all duration-300 ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="8" viewBox="0 0 16 8" fill="none">
+                                        <path d="M0.772627 3.38717C0.577365 3.58243 0.577365 3.89901 0.772627 4.09427L3.95461 7.27626C4.14987 7.47152 4.46645 7.47152 4.66171 7.27626C4.85698 7.08099 4.85698 6.76441 4.66171 6.56915L1.83329 3.74072L4.66171 0.912295C4.85698 0.717032 4.85698 0.40045 4.66171 0.205188C4.46645 0.0099256 4.14987 0.00992557 3.95461 0.205188L0.772627 3.38717ZM15.4573 3.24072L1.12618 3.24072L1.12618 4.24072L15.4573 4.24072L15.4573 3.24072Z" fill="currentColor" />
+                                    </svg>
+                                </button>
+                                <button class="swiper_button_design_next w-[37px] aspect-[1/1] bg-[#DFDDDD] rounded-full text-[#444343] hover:bg-[var(--html-bg-website)] hover:text-white flex justify-center items-center transition-all duration-300 ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="8" viewBox="0 0 16 8" fill="none">
+                                        <path d="M15.2265 4.09428C15.4218 3.89902 15.4218 3.58243 15.2265 3.38717L12.0445 0.20519C11.8493 0.00992759 11.5327 0.00992757 11.3374 0.20519C11.1422 0.400452 11.1422 0.717034 11.3374 0.912296L14.1659 3.74072L11.3374 6.56915C11.1422 6.76441 11.1422 7.081 11.3374 7.27626C11.5327 7.47152 11.8493 7.47152 12.0445 7.27626L15.2265 4.09428ZM0.541809 4.24072L14.873 4.24072L14.873 3.24072L0.541809 3.24072L0.541809 4.24072Z" fill="currentColor" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- lý do -->
+    <section class="section-why pb-8 sm:pb-12 ">
+        <div class="grid_s wide ">
+            <div class="bg_form_all form_opacity_2">
+                <div class="w-full text-center flex flex-wrap justify-center">
+                    <div class="w-full flex items-center justify-center title_gsap_2 text-base font-medium font-main-500 text-black  gap-2 ">
+                        <div class="flex-[0_0_auto] w-4 h-0 border-t border-[var(--html-sc-website)]"></div>
+                        <span class="flex-initial">
+                            Lý do chọn                         </span>
+                        <div class="flex-[0_0_auto] w-4 h-0 border-t border-[var(--html-sc-website)]"></div>
+                    </div>
+                    <div class="text-xl sm:text-2xl font-bold font-main-700 text-[var(--html-bg-website)] uppercase   title_gsap_2 mt-2  w-full">
+                        <span>
+                            TẠI SAO NÊN CHỌN - RAU SẠCH TUỔI TEEN                        </span>
+                    </div>
+                    <div class="mt-2 text-sm text-[#757575]  leading-[1.8] font-normal font-main-400 gsap_text_2">
+                        <span class="line-clamp-6 ">
+                            Chúng tôi sẽ cung ứng từ 72 - 120 chậu rau trưởng thành hàng tháng với hơn 60 loại rau khác nhau được đặt vào trong một khung kệ chỉ chiếm diện tích 1m2.
+Rau được trồng tại farm hoàn toàn hữu cơ và được thay đổi mỗi 10 ngày trong tháng.                         </span>
+                    </div>
+                </div>
+                                    <div class="w-full flex justify-center mt-7">
+                        <div class="w-full lg:w-[70%] grid grid-cols-1 gap-[30px] relative">
+                                                            <div class="group/why  w-full relative [&.right]:flex-row-reverse flex items-center z-10 left form_left_1">
+                                    <div class="w-[calc(50%+35px)] rounded-full group-[&.right]/why:flex-row-reverse flex  items-center " style="background: var(--color-linear-sc);">
+                                        <div class="flex-1 group-[&.left]/why:text-end  text-white font-normal text-base font-main-400 px-2 ">
+                                            <span class="line-clamp-2">
+                                                Không hóa chất, không chất kích thích, không thuốc tăng trưởng, không thuốc trừ sâu .                                            </span>
+                                        </div>
+                                        <div class="w-[70px] aspect-[1/1] flex justify-center items-center">
+                                            <div class="w-[56%] h-[56%] overflow-hidden aspect-[1/1] rounded-full bg-white border-[3px] border-[#d9d9d99d] shadow-[0px_0px_0px_3px_#ffffff7e]">
+                                                <div class="w-full p-1">
+                                                    <div  class='load_website ' style='width: 200px;aspect-ratio:200/200;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='200' height='200' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/200x200x2/upload/hinhanh/group-5901-3167.png' alt='Không hóa chất, không chất kích thích, không thuốc tăng trưởng, không thuốc trừ sâu .' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="absolute z-[-1] top-1/2 group-[&.left]/why:left-1/2 group-[&.right]/why:right-1/2 w-1/2  group-[&.right]/why:flex-row-reverse h-auto -translate-y-1/2 flex items-center">
+                                        <div class="w-[80px] h-[40px]  group-[&.right]/why:rotate-180 " style="clip-path: polygon(0 0 ,80% 0%,100% 50%,80% 100%,0 100% );background: var(--color-linear-sc);">
+                                            <div class="w-full h-full relative">
+                                                <div class="absolute right-[20%] w-[16px] rounded-full bg-white h-[16px] top-1/2 -translate-y-1/2 "></div>
+                                                <div class="absolute right-[20%] w-[80%]  bg-white h-[3px] top-1/2 -translate-y-1/2 "></div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-1 text-[70px] font-bold font-main-700 stroke-1 px-3 text-center " style="-webkit-text-stroke-width: 1px;-webkit-text-stroke-color: var(--html-bg-website); color: transparent;">
+                                            <span style="font-family: sans-serif;">
+                                                01                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="group/why  w-full relative [&.right]:flex-row-reverse flex items-center z-10 right form_right_2">
+                                    <div class="w-[calc(50%+35px)] rounded-full group-[&.right]/why:flex-row-reverse flex  items-center " style="background: var(--color-linear-sc);">
+                                        <div class="flex-1 group-[&.left]/why:text-end  text-white font-normal text-base font-main-400 px-2 ">
+                                            <span class="line-clamp-2">
+                                                Giữ nguyên hương vị, bản chất của rau                                             </span>
+                                        </div>
+                                        <div class="w-[70px] aspect-[1/1] flex justify-center items-center">
+                                            <div class="w-[56%] h-[56%] overflow-hidden aspect-[1/1] rounded-full bg-white border-[3px] border-[#d9d9d99d] shadow-[0px_0px_0px_3px_#ffffff7e]">
+                                                <div class="w-full p-1">
+                                                    <div  class='load_website ' style='width: 200px;aspect-ratio:200/200;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='200' height='200' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/200x200x2/upload/hinhanh/handholdingastalksvgrepocom-1-1227.png' alt='Giữ nguyên hương vị, bản chất của rau ' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="absolute z-[-1] top-1/2 group-[&.left]/why:left-1/2 group-[&.right]/why:right-1/2 w-1/2  group-[&.right]/why:flex-row-reverse h-auto -translate-y-1/2 flex items-center">
+                                        <div class="w-[80px] h-[40px]  group-[&.right]/why:rotate-180 " style="clip-path: polygon(0 0 ,80% 0%,100% 50%,80% 100%,0 100% );background: var(--color-linear-sc);">
+                                            <div class="w-full h-full relative">
+                                                <div class="absolute right-[20%] w-[16px] rounded-full bg-white h-[16px] top-1/2 -translate-y-1/2 "></div>
+                                                <div class="absolute right-[20%] w-[80%]  bg-white h-[3px] top-1/2 -translate-y-1/2 "></div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-1 text-[70px] font-bold font-main-700 stroke-1 px-3 text-center " style="-webkit-text-stroke-width: 1px;-webkit-text-stroke-color: var(--html-bg-website); color: transparent;">
+                                            <span style="font-family: sans-serif;">
+                                                02                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="group/why  w-full relative [&.right]:flex-row-reverse flex items-center z-10 left form_left_3">
+                                    <div class="w-[calc(50%+35px)] rounded-full group-[&.right]/why:flex-row-reverse flex  items-center " style="background: var(--color-linear-sc);">
+                                        <div class="flex-1 group-[&.left]/why:text-end  text-white font-normal text-base font-main-400 px-2 ">
+                                            <span class="line-clamp-2">
+                                                Tăng thời gian bảo quản thực phẩm mà không cần dùng tủ lạnh.                                            </span>
+                                        </div>
+                                        <div class="w-[70px] aspect-[1/1] flex justify-center items-center">
+                                            <div class="w-[56%] h-[56%] overflow-hidden aspect-[1/1] rounded-full bg-white border-[3px] border-[#d9d9d99d] shadow-[0px_0px_0px_3px_#ffffff7e]">
+                                                <div class="w-full p-1">
+                                                    <div  class='load_website ' style='width: 200px;aspect-ratio:200/200;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='200' height='200' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/200x200x2/upload/hinhanh/vegetablefoodbroccolisvgrepocom-1-4429.png' alt='Tăng thời gian bảo quản thực phẩm mà không cần dùng tủ lạnh.' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="absolute z-[-1] top-1/2 group-[&.left]/why:left-1/2 group-[&.right]/why:right-1/2 w-1/2  group-[&.right]/why:flex-row-reverse h-auto -translate-y-1/2 flex items-center">
+                                        <div class="w-[80px] h-[40px]  group-[&.right]/why:rotate-180 " style="clip-path: polygon(0 0 ,80% 0%,100% 50%,80% 100%,0 100% );background: var(--color-linear-sc);">
+                                            <div class="w-full h-full relative">
+                                                <div class="absolute right-[20%] w-[16px] rounded-full bg-white h-[16px] top-1/2 -translate-y-1/2 "></div>
+                                                <div class="absolute right-[20%] w-[80%]  bg-white h-[3px] top-1/2 -translate-y-1/2 "></div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-1 text-[70px] font-bold font-main-700 stroke-1 px-3 text-center " style="-webkit-text-stroke-width: 1px;-webkit-text-stroke-color: var(--html-bg-website); color: transparent;">
+                                            <span style="font-family: sans-serif;">
+                                                03                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="group/why  w-full relative [&.right]:flex-row-reverse flex items-center z-10 right form_right_4">
+                                    <div class="w-[calc(50%+35px)] rounded-full group-[&.right]/why:flex-row-reverse flex  items-center " style="background: var(--color-linear-sc);">
+                                        <div class="flex-1 group-[&.left]/why:text-end  text-white font-normal text-base font-main-400 px-2 ">
+                                            <span class="line-clamp-2">
+                                                Giữ nguyên vẹn dinh dưỡng của rau khi được trồng hoàn toàn bằng đất hữu cơ                                            </span>
+                                        </div>
+                                        <div class="w-[70px] aspect-[1/1] flex justify-center items-center">
+                                            <div class="w-[56%] h-[56%] overflow-hidden aspect-[1/1] rounded-full bg-white border-[3px] border-[#d9d9d99d] shadow-[0px_0px_0px_3px_#ffffff7e]">
+                                                <div class="w-full p-1">
+                                                    <div  class='load_website ' style='width: 200px;aspect-ratio:200/200;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='200' height='200' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/200x200x2/upload/hinhanh/group-5903-2085.png' alt='Giữ nguyên vẹn dinh dưỡng của rau khi được trồng hoàn toàn bằng đất hữu cơ' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="absolute z-[-1] top-1/2 group-[&.left]/why:left-1/2 group-[&.right]/why:right-1/2 w-1/2  group-[&.right]/why:flex-row-reverse h-auto -translate-y-1/2 flex items-center">
+                                        <div class="w-[80px] h-[40px]  group-[&.right]/why:rotate-180 " style="clip-path: polygon(0 0 ,80% 0%,100% 50%,80% 100%,0 100% );background: var(--color-linear-sc);">
+                                            <div class="w-full h-full relative">
+                                                <div class="absolute right-[20%] w-[16px] rounded-full bg-white h-[16px] top-1/2 -translate-y-1/2 "></div>
+                                                <div class="absolute right-[20%] w-[80%]  bg-white h-[3px] top-1/2 -translate-y-1/2 "></div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-1 text-[70px] font-bold font-main-700 stroke-1 px-3 text-center " style="-webkit-text-stroke-width: 1px;-webkit-text-stroke-color: var(--html-bg-website); color: transparent;">
+                                            <span style="font-family: sans-serif;">
+                                                04                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="group/why  w-full relative [&.right]:flex-row-reverse flex items-center z-10 left form_left_5">
+                                    <div class="w-[calc(50%+35px)] rounded-full group-[&.right]/why:flex-row-reverse flex  items-center " style="background: var(--color-linear-sc);">
+                                        <div class="flex-1 group-[&.left]/why:text-end  text-white font-normal text-base font-main-400 px-2 ">
+                                            <span class="line-clamp-2">
+                                                Tăng lượng rau dùng hàng ngày cho gia đình, không mất thời gian chăm sóc                                            </span>
+                                        </div>
+                                        <div class="w-[70px] aspect-[1/1] flex justify-center items-center">
+                                            <div class="w-[56%] h-[56%] overflow-hidden aspect-[1/1] rounded-full bg-white border-[3px] border-[#d9d9d99d] shadow-[0px_0px_0px_3px_#ffffff7e]">
+                                                <div class="w-full p-1">
+                                                    <div  class='load_website ' style='width: 200px;aspect-ratio:200/200;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='200' height='200' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/200x200x2/upload/hinhanh/familychildloverelationshipssvgrepocom-1-240.png' alt='Tăng lượng rau dùng hàng ngày cho gia đình, không mất thời gian chăm sóc' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="absolute z-[-1] top-1/2 group-[&.left]/why:left-1/2 group-[&.right]/why:right-1/2 w-1/2  group-[&.right]/why:flex-row-reverse h-auto -translate-y-1/2 flex items-center">
+                                        <div class="w-[80px] h-[40px]  group-[&.right]/why:rotate-180 " style="clip-path: polygon(0 0 ,80% 0%,100% 50%,80% 100%,0 100% );background: var(--color-linear-sc);">
+                                            <div class="w-full h-full relative">
+                                                <div class="absolute right-[20%] w-[16px] rounded-full bg-white h-[16px] top-1/2 -translate-y-1/2 "></div>
+                                                <div class="absolute right-[20%] w-[80%]  bg-white h-[3px] top-1/2 -translate-y-1/2 "></div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-1 text-[70px] font-bold font-main-700 stroke-1 px-3 text-center " style="-webkit-text-stroke-width: 1px;-webkit-text-stroke-color: var(--html-bg-website); color: transparent;">
+                                            <span style="font-family: sans-serif;">
+                                                05                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                        <div class="absolute top-0 left-1/2 -translate-x-1/2 h-full w-[2px]" style="background: var(--color-linear-sc);"></div>
+                        </div>
+                    </div>
+                            </div>
+        </div>
+    </section>
+
+<!-- lợi ích  -->
+    <section class="section-benerfit pb-8 sm:pb-12 ">
+        <div class="grid_s wide ">
+            <div class="form_opacity_3 rounded-lg sm:rounded-[32px] px-[clamp(10px,3vw,32px)] py-[40px] "  style="background: url(upload/hinhanh/group-5927-7759.png) no-repeat center/cover ;" >
+                <div class="w-full text-center flex flex-wrap items-center justify-center gap-0 sm:gap-[70px]">
+                    <div class="w-full lg:w-auto">
+                        <div class="w-full flex justify-center items-center title_gsap_3 text-base font-medium font-main-500 text-black  gap-2 ">
+                            <div class="flex-[0_0_auto] w-4 h-0 border-t border-white"></div>
+                            <span class="flex-initial text-white">
+                                Bạn có biết                             </span>
+                            <div class="flex-[0_0_auto] w-4 h-0 border-t border-white "></div>
+                        </div>
+                        <div class="text-xl sm:text-2xl font-bold font-main-700 text-[var(--html-bg-website)] uppercase   title_gsap_3 mt-2  w-full">
+                            <span class=" text-white">
+                                LỢI ÍCH TỪ RAU NON                            </span>
+                        </div>
+                        <div class="mt-2 text-sm text-[#757575]  leading-[1.8] font-normal font-main-400 gsap_text_3">
+                            <span class="line-clamp-6 text-white">
+                                                            </span>
+                        </div>
+                    </div>
+                                            <div class="form_circle relative load_website opacity_animaiton rounded-full overflow-hidden h-[620px] text-center w-[620px] text-white" data-items="9">
+                                                            <div class="items_circle relative z-10 ">
+                                    <div class="relative">
+                                        <div class="  px-7 pt-[60px] absolute bottom-0 left-1/2 -translate-x-1/2 h-[200px] w-[250px] text-green-500 font-normal font-main-400 text-sm bg-white z-[-1] " style="clip-path: polygon(0 0,100% 0,50% 100%);">
+                                            <div class="swivel_part w-[80px]">
+                                                <span class=" line-clamp-3">
+                                                    Kéo dài tuổi thọ                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="  bg-green-500 rounded-full border-[13px] border-white  h-[63px] w-[63px] p-1 flex justify-center items-center ">
+                                            <span class="swivel_part w-full h-full ">
+                                                <div  class='load_website ' style='width: 200px;aspect-ratio:200/200;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='200' height='200' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/200x200x2/upload/hinhanh/group-4857.png' alt='Kéo dài tuổi thọ' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="items_circle relative z-10 ">
+                                    <div class="relative">
+                                        <div class="  px-7 pt-[60px] absolute bottom-0 left-1/2 -translate-x-1/2 h-[200px] w-[250px] text-green-500 font-normal font-main-400 text-sm bg-white z-[-1] " style="clip-path: polygon(0 0,100% 0,50% 100%);">
+                                            <div class="swivel_part w-[80px]">
+                                                <span class=" line-clamp-3">
+                                                    Giảm  nguy cơ  ung thư                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="  bg-green-500 rounded-full border-[13px] border-white  h-[63px] w-[63px] p-1 flex justify-center items-center ">
+                                            <span class="swivel_part w-full h-full ">
+                                                <div  class='load_website ' style='width: 200px;aspect-ratio:200/200;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='200' height='200' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/200x200x2/upload/hinhanh/group-5849-2326.png' alt='Giảm  nguy cơ  ung thư' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="items_circle relative z-10 ">
+                                    <div class="relative">
+                                        <div class="  px-7 pt-[60px] absolute bottom-0 left-1/2 -translate-x-1/2 h-[200px] w-[250px] text-green-500 font-normal font-main-400 text-sm bg-white z-[-1] " style="clip-path: polygon(0 0,100% 0,50% 100%);">
+                                            <div class="swivel_part w-[80px]">
+                                                <span class=" line-clamp-3">
+                                                    Giúp tim khỏe mạnh                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="  bg-green-500 rounded-full border-[13px] border-white  h-[63px] w-[63px] p-1 flex justify-center items-center ">
+                                            <span class="swivel_part w-full h-full ">
+                                                <div  class='load_website ' style='width: 200px;aspect-ratio:200/200;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='200' height='200' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/200x200x2/upload/hinhanh/healthhealthcaremedicalsvgrepocom-1-9943.png' alt='Giúp tim khỏe mạnh' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="items_circle relative z-10 ">
+                                    <div class="relative">
+                                        <div class="  px-7 pt-[60px] absolute bottom-0 left-1/2 -translate-x-1/2 h-[200px] w-[250px] text-green-500 font-normal font-main-400 text-sm bg-white z-[-1] " style="clip-path: polygon(0 0,100% 0,50% 100%);">
+                                            <div class="swivel_part w-[80px]">
+                                                <span class=" line-clamp-3">
+                                                    Giảm nguy cơ béo phì                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="  bg-green-500 rounded-full border-[13px] border-white  h-[63px] w-[63px] p-1 flex justify-center items-center ">
+                                            <span class="swivel_part w-full h-full ">
+                                                <div  class='load_website ' style='width: 200px;aspect-ratio:200/200;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='200' height='200' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/200x200x2/upload/hinhanh/scaleweightsvgrepocom-1-3623.png' alt='Giảm nguy cơ béo phì' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="items_circle relative z-10 ">
+                                    <div class="relative">
+                                        <div class="  px-7 pt-[60px] absolute bottom-0 left-1/2 -translate-x-1/2 h-[200px] w-[250px] text-green-500 font-normal font-main-400 text-sm bg-white z-[-1] " style="clip-path: polygon(0 0,100% 0,50% 100%);">
+                                            <div class="swivel_part w-[80px]">
+                                                <span class=" line-clamp-3">
+                                                    Cải thiện sức khỏe đường  ruột                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="  bg-green-500 rounded-full border-[13px] border-white  h-[63px] w-[63px] p-1 flex justify-center items-center ">
+                                            <span class="swivel_part w-full h-full ">
+                                                <div  class='load_website ' style='width: 200px;aspect-ratio:200/200;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='200' height='200' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/200x200x2/upload/hinhanh/bowelcolondigestionsvgrepocom-1-3580.png' alt='Cải thiện sức khỏe đường  ruột' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="items_circle relative z-10 ">
+                                    <div class="relative">
+                                        <div class="  px-7 pt-[60px] absolute bottom-0 left-1/2 -translate-x-1/2 h-[200px] w-[250px] text-green-500 font-normal font-main-400 text-sm bg-white z-[-1] " style="clip-path: polygon(0 0,100% 0,50% 100%);">
+                                            <div class="swivel_part w-[80px]">
+                                                <span class=" line-clamp-3">
+                                                    Tốt cho sự tăng trưởng phát triển của trẻ nhỏ                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="  bg-green-500 rounded-full border-[13px] border-white  h-[63px] w-[63px] p-1 flex justify-center items-center ">
+                                            <span class="swivel_part w-full h-full ">
+                                                <div  class='load_website ' style='width: 200px;aspect-ratio:200/200;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='200' height='200' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/200x200x2/upload/hinhanh/healthymentalitystronghealthwellnesshappyhealthcaresvgrepocom-1-5897.png' alt='Tốt cho sự tăng trưởng phát triển của trẻ nhỏ' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="items_circle relative z-10 ">
+                                    <div class="relative">
+                                        <div class="  px-7 pt-[60px] absolute bottom-0 left-1/2 -translate-x-1/2 h-[200px] w-[250px] text-green-500 font-normal font-main-400 text-sm bg-white z-[-1] " style="clip-path: polygon(0 0,100% 0,50% 100%);">
+                                            <div class="swivel_part w-[80px]">
+                                                <span class=" line-clamp-3">
+                                                    Cải thiện khả  năng miễn dịch                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="  bg-green-500 rounded-full border-[13px] border-white  h-[63px] w-[63px] p-1 flex justify-center items-center ">
+                                            <span class="swivel_part w-full h-full ">
+                                                <div  class='load_website ' style='width: 200px;aspect-ratio:200/200;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='200' height='200' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/200x200x2/upload/hinhanh/carecovidgoodhealthhealthcarehealthysvgrepocom-1-9610.png' alt='Cải thiện khả  năng miễn dịch' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="items_circle relative z-10 ">
+                                    <div class="relative">
+                                        <div class="  px-7 pt-[60px] absolute bottom-0 left-1/2 -translate-x-1/2 h-[200px] w-[250px] text-green-500 font-normal font-main-400 text-sm bg-white z-[-1] " style="clip-path: polygon(0 0,100% 0,50% 100%);">
+                                            <div class="swivel_part w-[80px]">
+                                                <span class=" line-clamp-3">
+                                                    Giảm nguy cơ tiểu đường                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="  bg-green-500 rounded-full border-[13px] border-white  h-[63px] w-[63px] p-1 flex justify-center items-center ">
+                                            <span class="swivel_part w-full h-full ">
+                                                <div  class='load_website ' style='width: 200px;aspect-ratio:200/200;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='200' height='200' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/200x200x2/upload/hinhanh/medicinemedicalhealthhealthcarevitaminpillpharmacysvgrepocom-1-1983.png' alt='Giảm nguy cơ tiểu đường' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="items_circle relative z-10 ">
+                                    <div class="relative">
+                                        <div class="  px-7 pt-[60px] absolute bottom-0 left-1/2 -translate-x-1/2 h-[200px] w-[250px] text-green-500 font-normal font-main-400 text-sm bg-white z-[-1] " style="clip-path: polygon(0 0,100% 0,50% 100%);">
+                                            <div class="swivel_part w-[80px]">
+                                                <span class=" line-clamp-3">
+                                                    Sức khỏe tinh thần tốt hơn                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="  bg-green-500 rounded-full border-[13px] border-white  h-[63px] w-[63px] p-1 flex justify-center items-center ">
+                                            <span class="swivel_part w-full h-full ">
+                                                <div  class='load_website ' style='width: 200px;aspect-ratio:200/200;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='200' height='200' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/200x200x2/upload/hinhanh/healthemojismileysvgrepocom-1-2244.png' alt='Sức khỏe tinh thần tốt hơn' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[339px] h-[339px] rounded-full shadow-[0px_0px_0px_22px_#FFFFFF4D] overflow-hidden border-[24px] border-[var(--html-bg-website)]"  style="background: url(upload/hinhanh/image-1-1569.png) no-repeat center/cover ;" ></div>
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] border border-white border-dashed rounded-full "></div>
+                        </div>
+                                    </div>
+            </div>
+        </div>
+    </section>
+
+<!-- sản phẩm -->
+    <section class="section-product pb-8 sm:pb-12 ">
+        <div class="grid_s wide ">
+            <div class="bg_form_all form_opacity_4">
+                <div class="w-full text-center flex flex-wrap justify-center">
+                    <div class="title_gsap_4 w-full flex items-center justify-center text-base font-medium font-main-500 text-black  gap-2 ">
+                        <div class="flex-[0_0_auto] w-4 h-0 border-t border-[var(--html-sc-website)]"></div>
+                        <span class="flex-initial">
+                            Bảng danh sách                         </span>
+                        <div class="flex-[0_0_auto] w-4 h-0 border-t border-[var(--html-sc-website)]"></div>
+                    </div>
+                    <div class="text-xl sm:text-2xl font-bold font-main-700 text-[var(--html-bg-website)] uppercase   title_gsap_4 mt-2  w-full">
+                        <span>
+                            CÁC LOẠI RAU ĐANG TRỒNG TẠI FARM                        </span>
+                    </div>
+                    <div class="mt-2 text-sm text-[#757575]  leading-[1.8] font-normal font-main-400">
+                        <span class="line-clamp-6">
+                                                    </span>
+                    </div>
+                </div>
+                <div class="w-full grid grid-cols-1 gap-5 mt-7">
+                                                                    <div class="form_product_2 w-full rounded-lg sm:rounded-2xl overflow-hidden bg-white" id="sanpham_dmc1_2">
+                                <div class="w-full flex items-center justify-center h-[50px] text-white text-base font-semibold font-main-600 uppercase  bg-[var(--html-bg-website)] gap-3 py-2 px-3">
+                                    <div class="h-[34px] max-w-[34px]">
+                                        <div  class='load_website ' style='width: 300px;aspect-ratio:300/300;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='300' height='300' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/300x300x2/upload/baiviet/chinesecabbage2svgrepocom-1-8570.png' alt='Các loại XÀ LÁCH' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                    </div>
+                                    <span>
+                                        Các loại XÀ LÁCH                                    </span>
+                                </div>
+                                <div class="w-full scroll-design-one overflow-y-auto overflow-x-hidden max-h-[520px] my-[2px] ">
+                                    <div class="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-[2px]">
+                                                                                    <div class="w-full min-h-[50px] flex items-center text-center bg-[rgba(213,_243,_171,_0.76)] px-4 py-2">
+                                                <span class="text-[#040404] text-sm font-normal font-main-400">
+                                                    Xà lách Mỹ đỏ                                                </span>
+                                            </div>
+                                                                                    <div class="w-full min-h-[50px] flex items-center text-center bg-[rgba(213,_243,_171,_0.76)] px-4 py-2">
+                                                <span class="text-[#040404] text-sm font-normal font-main-400">
+                                                    Xà lách Oakleaf tím (sồi tím)                                                </span>
+                                            </div>
+                                                                                    <div class="w-full min-h-[50px] flex items-center text-center bg-[rgba(213,_243,_171,_0.76)] px-4 py-2">
+                                                <span class="text-[#040404] text-sm font-normal font-main-400">
+                                                    Xà lách Prize Head Cánh lửa                                                </span>
+                                            </div>
+                                                                                    <div class="w-full min-h-[50px] flex items-center text-center bg-[rgba(213,_243,_171,_0.76)] px-4 py-2">
+                                                <span class="text-[#040404] text-sm font-normal font-main-400">
+                                                    Xà lách Prize Head Cánh lửa                                                </span>
+                                            </div>
+                                                                                    <div class="w-full min-h-[50px] flex items-center text-center bg-[rgba(213,_243,_171,_0.76)] px-4 py-2">
+                                                <span class="text-[#040404] text-sm font-normal font-main-400">
+                                                    Xà lách Prize Head Cánh lửa                                                </span>
+                                            </div>
+                                                                                    <div class="w-full min-h-[50px] flex items-center text-center bg-[rgba(213,_243,_171,_0.76)] px-4 py-2">
+                                                <span class="text-[#040404] text-sm font-normal font-main-400">
+                                                    Xà lách Prize Head Cánh lửa                                                </span>
+                                            </div>
+                                                                                    <div class="w-full min-h-[50px] flex items-center text-center bg-[rgba(213,_243,_171,_0.76)] px-4 py-2">
+                                                <span class="text-[#040404] text-sm font-normal font-main-400">
+                                                    Xà lách Oakleaf tím (sồi tím)                                                </span>
+                                            </div>
+                                                                                    <div class="w-full min-h-[50px] flex items-center text-center bg-[rgba(213,_243,_171,_0.76)] px-4 py-2">
+                                                <span class="text-[#040404] text-sm font-normal font-main-400">
+                                                    Xà lách Mỹ đỏ                                                </span>
+                                            </div>
+                                                                                    <div class="w-full min-h-[50px] flex items-center text-center bg-[rgba(213,_243,_171,_0.76)] px-4 py-2">
+                                                <span class="text-[#040404] text-sm font-normal font-main-400">
+                                                    Xà lách Prize Head Cánh lửa                                                </span>
+                                            </div>
+                                                                                    <div class="w-full min-h-[50px] flex items-center text-center bg-[rgba(213,_243,_171,_0.76)] px-4 py-2">
+                                                <span class="text-[#040404] text-sm font-normal font-main-400">
+                                                    Xà lách Mỹ đỏ                                                </span>
+                                            </div>
+                                                                                    <div class="w-full min-h-[50px] flex items-center text-center bg-[rgba(213,_243,_171,_0.76)] px-4 py-2">
+                                                <span class="text-[#040404] text-sm font-normal font-main-400">
+                                                    Xà lách Mỹ đỏ                                                </span>
+                                            </div>
+                                                                                    <div class="w-full min-h-[50px] flex items-center text-center bg-[rgba(213,_243,_171,_0.76)] px-4 py-2">
+                                                <span class="text-[#040404] text-sm font-normal font-main-400">
+                                                    Xà lách Oakleaf tím (sồi tím)                                                </span>
+                                            </div>
+                                                                                    <div class="w-full min-h-[50px] flex items-center text-center bg-[rgba(213,_243,_171,_0.76)] px-4 py-2">
+                                                <span class="text-[#040404] text-sm font-normal font-main-400">
+                                                    Xà lách Prize Head Cánh lửa                                                </span>
+                                            </div>
+                                                                                    <div class="w-full min-h-[50px] flex items-center text-center bg-[rgba(213,_243,_171,_0.76)] px-4 py-2">
+                                                <span class="text-[#040404] text-sm font-normal font-main-400">
+                                                                                                    </span>
+                                            </div>
+                                                                                    <div class="w-full min-h-[50px] flex items-center text-center bg-[rgba(213,_243,_171,_0.76)] px-4 py-2">
+                                                <span class="text-[#040404] text-sm font-normal font-main-400">
+                                                                                                    </span>
+                                            </div>
+                                                                            </div>
+                                </div>
+                                <div class="h-[22px] bg-[rgba(213,_243,_171,_0.76)]"></div>
+                            </div>
+                                                                        <div class="form_product_3 w-full rounded-lg sm:rounded-2xl overflow-hidden bg-white" id="sanpham_dmc1_3">
+                                <div class="w-full flex items-center justify-center h-[50px] text-white text-base font-semibold font-main-600 uppercase  bg-[var(--html-bg-website)] gap-3 py-2 px-3">
+                                    <div class="h-[34px] max-w-[34px]">
+                                        <div  class='load_website ' style='width: 300px;aspect-ratio:300/300;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='300' height='300' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/300x300x2/upload/baiviet/sproutsvgrepocom-1-3393.png' alt='Các loại RAU THƠM' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                    </div>
+                                    <span>
+                                        Các loại RAU THƠM                                    </span>
+                                </div>
+                                <div class="w-full scroll-design-one overflow-y-auto overflow-x-hidden max-h-[520px] my-[2px] ">
+                                    <div class="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-[2px]">
+                                                                                    <div class="w-full min-h-[50px] flex items-center text-center bg-[rgba(213,_243,_171,_0.76)] px-4 py-2">
+                                                <span class="text-[#040404] text-sm font-normal font-main-400">
+                                                    Cải thảo                                                </span>
+                                            </div>
+                                                                                    <div class="w-full min-h-[50px] flex items-center text-center bg-[rgba(213,_243,_171,_0.76)] px-4 py-2">
+                                                <span class="text-[#040404] text-sm font-normal font-main-400">
+                                                    Cải bẹ xanh mào gà                                                </span>
+                                            </div>
+                                                                                    <div class="w-full min-h-[50px] flex items-center text-center bg-[rgba(213,_243,_171,_0.76)] px-4 py-2">
+                                                <span class="text-[#040404] text-sm font-normal font-main-400">
+                                                    Cải bẹ tím                                                </span>
+                                            </div>
+                                                                                    <div class="w-full min-h-[50px] flex items-center text-center bg-[rgba(213,_243,_171,_0.76)] px-4 py-2">
+                                                <span class="text-[#040404] text-sm font-normal font-main-400">
+                                                    Cải bẹ tím                                                </span>
+                                            </div>
+                                                                                    <div class="w-full min-h-[50px] flex items-center text-center bg-[rgba(213,_243,_171,_0.76)] px-4 py-2">
+                                                <span class="text-[#040404] text-sm font-normal font-main-400">
+                                                    Cải bẹ tím                                                </span>
+                                            </div>
+                                                                                    <div class="w-full min-h-[50px] flex items-center text-center bg-[rgba(213,_243,_171,_0.76)] px-4 py-2">
+                                                <span class="text-[#040404] text-sm font-normal font-main-400">
+                                                    Cải bẹ xanh mào gà                                                </span>
+                                            </div>
+                                                                                    <div class="w-full min-h-[50px] flex items-center text-center bg-[rgba(213,_243,_171,_0.76)] px-4 py-2">
+                                                <span class="text-[#040404] text-sm font-normal font-main-400">
+                                                    Cải thảo                                                </span>
+                                            </div>
+                                                                                    <div class="w-full min-h-[50px] flex items-center text-center bg-[rgba(213,_243,_171,_0.76)] px-4 py-2">
+                                                <span class="text-[#040404] text-sm font-normal font-main-400">
+                                                    Cải bẹ tím                                                </span>
+                                            </div>
+                                                                                    <div class="w-full min-h-[50px] flex items-center text-center bg-[rgba(213,_243,_171,_0.76)] px-4 py-2">
+                                                <span class="text-[#040404] text-sm font-normal font-main-400">
+                                                    Cải bẹ tím                                                </span>
+                                            </div>
+                                                                                    <div class="w-full min-h-[50px] flex items-center text-center bg-[rgba(213,_243,_171,_0.76)] px-4 py-2">
+                                                <span class="text-[#040404] text-sm font-normal font-main-400">
+                                                    Cải bẹ xanh mào gà                                                </span>
+                                            </div>
+                                                                                    <div class="w-full min-h-[50px] flex items-center text-center bg-[rgba(213,_243,_171,_0.76)] px-4 py-2">
+                                                <span class="text-[#040404] text-sm font-normal font-main-400">
+                                                    Cải bẹ xanh mào gà                                                </span>
+                                            </div>
+                                                                                    <div class="w-full min-h-[50px] flex items-center text-center bg-[rgba(213,_243,_171,_0.76)] px-4 py-2">
+                                                <span class="text-[#040404] text-sm font-normal font-main-400">
+                                                    Cải thảo                                                </span>
+                                            </div>
+                                                                                    <div class="w-full min-h-[50px] flex items-center text-center bg-[rgba(213,_243,_171,_0.76)] px-4 py-2">
+                                                <span class="text-[#040404] text-sm font-normal font-main-400">
+                                                                                                    </span>
+                                            </div>
+                                                                                    <div class="w-full min-h-[50px] flex items-center text-center bg-[rgba(213,_243,_171,_0.76)] px-4 py-2">
+                                                <span class="text-[#040404] text-sm font-normal font-main-400">
+                                                                                                    </span>
+                                            </div>
+                                                                                    <div class="w-full min-h-[50px] flex items-center text-center bg-[rgba(213,_243,_171,_0.76)] px-4 py-2">
+                                                <span class="text-[#040404] text-sm font-normal font-main-400">
+                                                                                                    </span>
+                                            </div>
+                                                                            </div>
+                                </div>
+                                <div class="h-[22px] bg-[rgba(213,_243,_171,_0.76)]"></div>
+                            </div>
+                                                            </div>
+            </div>
+        </div>
+    </section>
+
+<!-- hình ảnh -->
+    <section class="section-images pb-8 sm:pb-12 ">
+        <div class="grid_s wide ">
+            <div class="w-full text-center flex flex-wrap justify-center form_opacity_5">
+                <div class="form_opacity_5 w-full flex items-center justify-center text-base font-medium font-main-500 text-black  gap-2 ">
+                    <div class="flex-[0_0_auto] w-4 h-0 border-t border-[var(--html-sc-website)]"></div>
+                    <span class="flex-initial">
+                        Các loại rau đang trồng                    </span>
+                    <div class=" flex-[0_0_auto] w-4 h-0 border-t border-[var(--html-sc-website)]"></div>
+                </div>
+                <div class="form_opacity_5 text-xl sm:text-2xl font-bold font-main-700 text-[var(--html-bg-website)] uppercase   mt-2  w-full">
+                    <span>
+                        HÌNH ẢNH THỰC TẾ tại farm                    </span>
+                </div>
+                <div class="mt-2 text-sm text-[#757575]  leading-[1.8] font-normal font-main-400">
+                    <span class="line-clamp-6">
+                                            </span>
+                </div>
+            </div>
+            <div class="form_opacity_6 w-full grid grid-cols-2 md:grid-cols-3  lg:grid-cols-4 gap-5 mt-7">
+                    <div class="group/templateImages_One load_website  overflow-hidden transition-all duration-300    ">
+        <div class='relative rounded overflow-hidden'>
+            <div class="w-full aspect-[400/400] bg-white transition-all duration-300 leading-[0] ">
+                <a href='upload/hinhanh/image-1-8751.png' class='load_website w-full'  role='link' rel='dofollow' title='album 1' data-fancybox="collection_images13"  style='width: 500px;aspect-ratio:500/500;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='500' height='500' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/500x500x1/upload/hinhanh/image-1-8751.png' alt='album 1' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>                                    <div class="hidden">
+                                                    <a href='upload/hinhanh/image-1-1226.png' class='load_website w-full'  role='link' rel='dofollow' title='album 1' data-fancybox="collection_images13"  style='width: 400px;aspect-ratio:400/400;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='400' height='400' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/400x400x1/upload/hinhanh/image-1-1226.png' alt='album 1' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>                                                    <a href='upload/hinhanh/image-2-6302.png' class='load_website w-full'  role='link' rel='dofollow' title='album 1' data-fancybox="collection_images13"  style='width: 400px;aspect-ratio:400/400;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='400' height='400' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/400x400x1/upload/hinhanh/image-2-6302.png' alt='album 1' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>                                            </div>
+                            </div>
+        </div>
+    </div>
+    <div class="group/templateImages_One load_website  overflow-hidden transition-all duration-300    ">
+        <div class='relative rounded overflow-hidden'>
+            <div class="w-full aspect-[400/400] bg-white transition-all duration-300 leading-[0] ">
+                <a href='upload/hinhanh/image-5-4206.png' class='load_website w-full'  role='link' rel='dofollow' title='album' data-fancybox="collection_images14"  style='width: 500px;aspect-ratio:500/500;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='500' height='500' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/500x500x1/upload/hinhanh/image-5-4206.png' alt='album' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>                                    <div class="hidden">
+                                                    <a href='upload/hinhanh/image-4-8104.png' class='load_website w-full'  role='link' rel='dofollow' title='album' data-fancybox="collection_images14"  style='width: 400px;aspect-ratio:400/400;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='400' height='400' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/400x400x1/upload/hinhanh/image-4-8104.png' alt='album' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>                                                    <a href='upload/hinhanh/image-5-7499.png' class='load_website w-full'  role='link' rel='dofollow' title='album' data-fancybox="collection_images14"  style='width: 400px;aspect-ratio:400/400;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='400' height='400' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/400x400x1/upload/hinhanh/image-5-7499.png' alt='album' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>                                                    <a href='upload/hinhanh/image-6-163.png' class='load_website w-full'  role='link' rel='dofollow' title='album' data-fancybox="collection_images14"  style='width: 400px;aspect-ratio:400/400;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='400' height='400' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/400x400x1/upload/hinhanh/image-6-163.png' alt='album' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>                                            </div>
+                            </div>
+        </div>
+    </div>
+    <div class="group/templateImages_One load_website  overflow-hidden transition-all duration-300    ">
+        <div class='relative rounded overflow-hidden'>
+            <div class="w-full aspect-[400/400] bg-white transition-all duration-300 leading-[0] ">
+                <a href='upload/hinhanh/image-3-3264.png' class='load_website w-full'  role='link' rel='dofollow' title='album' data-fancybox="collection_images15"  style='width: 500px;aspect-ratio:500/500;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='500' height='500' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/500x500x1/upload/hinhanh/image-3-3264.png' alt='album' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>                                    <div class="hidden">
+                                                    <a href='upload/hinhanh/image-1-2743.png' class='load_website w-full'  role='link' rel='dofollow' title='album' data-fancybox="collection_images15"  style='width: 400px;aspect-ratio:400/400;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='400' height='400' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/400x400x1/upload/hinhanh/image-1-2743.png' alt='album' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>                                                    <a href='upload/hinhanh/image-2-3606.png' class='load_website w-full'  role='link' rel='dofollow' title='album' data-fancybox="collection_images15"  style='width: 400px;aspect-ratio:400/400;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='400' height='400' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/400x400x1/upload/hinhanh/image-2-3606.png' alt='album' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>                                                    <a href='upload/hinhanh/image-3-6852.png' class='load_website w-full'  role='link' rel='dofollow' title='album' data-fancybox="collection_images15"  style='width: 400px;aspect-ratio:400/400;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='400' height='400' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/400x400x1/upload/hinhanh/image-3-6852.png' alt='album' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>                                            </div>
+                            </div>
+        </div>
+    </div>
+    <div class="group/templateImages_One load_website  overflow-hidden transition-all duration-300    ">
+        <div class='relative rounded overflow-hidden'>
+            <div class="w-full aspect-[400/400] bg-white transition-all duration-300 leading-[0] ">
+                <a href='upload/hinhanh/image-4-6099.png' class='load_website w-full'  role='link' rel='dofollow' title='album' data-fancybox="collection_images16"  style='width: 500px;aspect-ratio:500/500;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='500' height='500' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/500x500x1/upload/hinhanh/image-4-6099.png' alt='album' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>                                    <div class="hidden">
+                                                    <a href='upload/hinhanh/image-4-7242.png' class='load_website w-full'  role='link' rel='dofollow' title='album' data-fancybox="collection_images16"  style='width: 400px;aspect-ratio:400/400;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='400' height='400' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/400x400x1/upload/hinhanh/image-4-7242.png' alt='album' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>                                                    <a href='upload/hinhanh/image-5-6869.png' class='load_website w-full'  role='link' rel='dofollow' title='album' data-fancybox="collection_images16"  style='width: 400px;aspect-ratio:400/400;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='400' height='400' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/400x400x1/upload/hinhanh/image-5-6869.png' alt='album' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>                                                    <a href='upload/hinhanh/image-6-9578.png' class='load_website w-full'  role='link' rel='dofollow' title='album' data-fancybox="collection_images16"  style='width: 400px;aspect-ratio:400/400;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='400' height='400' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://nhuhanh_020325w.test/thumbs/400x400x1/upload/hinhanh/image-6-9578.png' alt='album' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>                                            </div>
+                            </div>
+        </div>
+    </div>
+";}

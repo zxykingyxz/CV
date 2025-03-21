@@ -9,6 +9,7 @@ if (!empty($_POST)) {
     if (isset($_POST['submit-resgister-client'])) {
         $check_send_mail = true;
         $type = 'client';
+        $name_captcha = 'news_captcha';
     }
 
     // kiểm tra dữ liệu

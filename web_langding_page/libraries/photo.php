@@ -221,7 +221,7 @@ class photo
 
             if ($filephu['error'] == 0) {
 
-                $photo = $this->_func->uploadImg(0, "photo2", "thumb_" . $k, $filephu, $folder, $this->_com, $table['img-width-bg'], $table['img-height-bg'], $table['img-ratio'], $table['img-b']);
+                $photo = $this->_func->uploadImg(0, "photo2", "thumb", $filephu, $folder, $this->_com, $table['img-width'], $table['img-height'], $table['img-ratio'], $table['img-b']);
 
                 $send['photo2'] = $photo['photo2'];
             }
