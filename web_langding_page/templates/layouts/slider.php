@@ -13,7 +13,7 @@ if ($deviceType != 'phone') {
     $h_images = 500;
 } else {
     $type_slider = 'slider-mobile';
-    $h_images = 900;
+    $h_images = 700;
 }
 
 $slider = $db->rawQuery("select ten_$lang as ten,photo,link,mota_$lang as mota,slogan_$lang as slogan from #_photo where hienthi=1 and type=? order by stt asc,id desc", array($type_slider));

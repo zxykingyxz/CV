@@ -371,7 +371,7 @@
 /* các phần cần thiết của nội dung */
 
 .content li::marker {
-    color: var(--html-bg-website);
+    color: initial;
 }
 
 .content blockquote:before {

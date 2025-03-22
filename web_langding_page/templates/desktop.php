@@ -36,9 +36,9 @@
             include_once _layouts . "pc/header.php";
             ?>
         <?php } else { ?>
-            <?php $sample->getTemplate(_layouts . "mobile/top", [
+            <?php /* $sample->getTemplate(_layouts . "mobile/top", [
                 'logo' => $logo,
-            ]) ?>
+            ]) */ ?>
             <?php $sample->getTemplate(_layouts . "mobile/menu_ds2", [
                 'authArrs' => $authArrs,
                 'logo' => $logo,

@@ -15,17 +15,19 @@ $(".form_hotline").btnNoneBlockPlugin({
     close: true,
 });
 // ========= slider trang chủ ========
-const effects = ["slide", "fade", "coverflow", "flip"];
-new Swiper(".form_slider_main", {
+const swiper = new Swiper(".form_slider_main", {
     effect: "fade",
     slidesPerView: "auto",
     loop: true,
+    autoplay: {
+        delay: time_slider,
+        disableOnInteraction: false,
+    },
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
 });
-
 
 // ============= load submit ===========
 $('.submit_load').on('submit', function(e) {

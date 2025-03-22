@@ -13,65 +13,7 @@ $day = date('d', $date);
 $month = date('m', $date);
 $year = date('Y', $date);
 
-$array_select_month = [
-    [
-        "title" => "Tháng 1",
-        "value" => "01"
-    ],
-    [
-        "title" => "Tháng 2",
-        "value" => "02"
-    ],
-    [
-        "title" => "Tháng 3",
-        "value" => "03"
-    ],
-    [
-        "title" => "Tháng 4",
-        "value" => "04"
-    ],
-    [
-        "title" => "Tháng 5",
-        "value" => "05"
-    ],
-    [
-        "title" => "Tháng 6",
-        "value" => "06"
-    ],
-    [
-        "title" => "Tháng 7",
-        "value" => "07"
-    ],
-    [
-        "title" => "Tháng 8",
-        "value" => "08"
-    ],
-    [
-        "title" => "Tháng 9",
-        "value" => "09"
-    ],
-    [
-        "title" => "Tháng 10",
-        "value" => "10"
-    ],
-    [
-        "title" => "Tháng 11",
-        "value" => "11"
-    ],
-    [
-        "title" => "Tháng 12",
-        "value" => "12"
-    ],
-];
 
-$array_select_year = [];
-
-for ($y = date('Y'); $y >= 2000; $y--) {
-    array_push($array_select_year, [
-        "title" => "Năm " . $y,
-        "value" => $y
-    ]);
-}
 switch ($view_dashboard) {
     case 'ngay':
         $start_date = strtotime("$year-$month-01 00:00:00");

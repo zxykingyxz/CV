@@ -1,5 +1,5 @@
 <?php
-$class_label = "text-xs font-semibold text-slate-600";
+$class_label = "text-sm font-medium text-black";
 $class_text = "text-xs font-normal font-main-400";
 $class_form_layouts = "px-3 h-[32px] border shadow-sm border-[#D9D9D9] placeholder-slate-400 rounded-r-sm";
 $class_url = "inline-block px-3 py-2 border ltr:border-r-0 rtl:border-l-0 border-slate-200 bg-slate-100 dark:border-zink-500 dark:bg-zink-600 ltr:rounded-l-md rtl:rounded-r-md";

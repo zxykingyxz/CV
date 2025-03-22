@@ -154,34 +154,70 @@ FRAMEWORK = {
         }
         // chọn giá
         $('.input_price').formatInputPlugin({});
+        // tìm kiếm giá
+        $(document).ready(function() {
+            var $priceRange = $(".price_range");
+
+            // Khởi tạo ionRangeSlider
+            $priceRange.ionRangeSlider({
+                skin: "big",
+                type: "double",
+                min: 0,
+                max: 10000000,
+                from: 0,
+                to: 10000000,
+                step: 10000,
+                prettify: function(num) {
+                    if (num >= 1000000) {
+                        return (num / 1000000) + "M";
+                    } else if (num >= 1000) {
+                        return (num / 1000) + "k";
+                    }
+                    return num;
+                },
+                onStart: function(data) {
+                    // Đảm bảo lấy đúng slider sau khi khởi tạo
+                    priceSlider = $priceRange.data("ionRangeSlider");
+                },
+                onChange: function(data) {
+                    $("input.input_range_price[name='min_price']").val(data.from).trigger('input');
+                    $("input.input_range_price[name='max_price']").val(data.to).trigger('input');
+                }
+            });
+
+            var priceSlider = $priceRange.data("ionRangeSlider"); // Đảm bảo slider đã sẵn sàng
+
+            // Kiểm tra và sử dụng plugin formatInputPlugin nếu có
+            if ($.fn.formatInputPlugin) {
+                $('.input_range_price').formatInputPlugin({
+                    max: 10000000,
+                    min: 0,
+                    unit: "đ"
+                });
+            }
+
+            var timeInput;
+            $("input.input_range_price").on("input", function() {
+                clearTimeout(timeInput);
+                timeInput = setTimeout(function() {
+                    var minPrice = parseInt($("input[name='min_price']").val().replace(/\D/g, "")) || 0;
+                    var maxPrice = parseInt($("input[name='max_price']").val().replace(/\D/g, "")) || 10000000;
+
+                    // Đảm bảo minPrice không lớn hơn maxPrice
+                    minPrice = Math.min(minPrice, maxPrice);
+                    maxPrice = Math.max(minPrice, maxPrice);
+
+                    // Cập nhật slider
+                    priceSlider.update({
+                        from: minPrice,
+                        to: maxPrice
+                    });
+                }, 500);
+            });
+        });
+
     },
     handleTable: function() {
-        $(".price_range").ionRangeSlider({
-            skin: "big",
-            type: "double",
-            min: 0,
-            max: 10000000,
-            from: 0,
-            to: 10000000,
-            step: 10000,
-            prettify: function(num) {
-                if (num >= 1000 && num < 1000000) {
-                    return (num / 1000) + "k";
-                } else if (num >= 1000000) {
-                    return (num / 1000000) + "M";
-                }
-                return num;
-            },
-            onStart: function(data) {},
-            onChange: function(data) {
-                // Cập nhật giá trị khi thay đổi
-                var $minInput = $("body").find("input[name='min_price']");
-                var $maxInput = $("body").find("input[name='max_price']");
-
-                $minInput.val(data.from).trigger('input');
-                $maxInput.val(data.to).trigger('input');
-            }
-        });
         //======= tìm kiếm ==========
         $('.form_table_detal').updateUrlParams({
             classItems: 'param_table_detail',

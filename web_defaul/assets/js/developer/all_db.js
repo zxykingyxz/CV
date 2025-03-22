@@ -178,20 +178,3 @@ function shuffleString(str) {
     }
     return array.join('');
 };
-
-// popup
-function actionPopup(class_form = null, class_close_form = null, class_view_form = null) {
-    $('body').on('click', '.' + class_view_form, function() {
-        if (!$('body .' + class_form).hasClass('active')) {
-            $('body .' + class_form).addClass('active');
-            $("body ").css('overflow', 'hidden');
-        }
-    });
-    $('body').on('click', '.' + class_close_form, function() {
-        if ($(this).closest(' .' + class_form).hasClass('active')) {
-            $(this).closest(' .' + class_form).removeClass('active');
-            $("body ").css('overflow', 'auto');
-        }
-    });
-}
-actionPopup("form_popup", "close_form_popup", "action_warehouse");

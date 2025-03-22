@@ -15,8 +15,6 @@
             <input type="hidden" name="src" class="param_table_detail" value="<?= $_SRC ?>">
             <input type="hidden" name="act" class="param_table_detail" value="<?= $_ACT ?>">
             <input type="hidden" name="type" class="param_table_detail" value="<?= $_TYPE ?>">
-            <input type="hidden" name="min_price" class="param_table_detail" value="">
-            <input type="hidden" name="max_price" class="param_table_detail" value="">
             <div class="w-full py-2 px-3">
                 <div class="w-full flex items-center">
                     <div>
@@ -97,8 +95,43 @@
                             'form' => true,
                         ]); ?>
                     </div>
-                    <div class="w-full max-w-[600px] ">
-                        <div class="price_range"></div>
+                    <div class="flex flex-wrap w-full items-end gap-9">
+                        <div class="w-full max-w-[500px] flex flex-wrap items-center gap-3 ">
+                            <div class="flex-1">
+                                <?= $sample->getTemplateLayoutsFor([
+                                    'name_layouts' => 'input_default',
+                                    'class_form' => '',
+                                    'class' => 'param_table_detail  input_range_price',
+                                    'placeholder' => 'Giá từ',
+                                    'id' => 'min_price',
+                                    'data' => 'min_price',
+                                    'value' => (!empty($array_param_value['min_price'])) ? $array_param_value['min_price'] : "",
+                                    'type' => 'text',
+                                    'function' => '',
+                                    'no_label' => true,
+                                    'form' => true,
+                                ]); ?>
+                            </div>
+                            <div class=""><span>-</span></div>
+                            <div class="flex-1">
+                                <?= $sample->getTemplateLayoutsFor([
+                                    'name_layouts' => 'input_default',
+                                    'class_form' => '',
+                                    'class' => 'param_table_detail  input_range_price',
+                                    'placeholder' => 'Giá đến',
+                                    'id' => 'max_price',
+                                    'data' => 'max_price',
+                                    'value' => (!empty($array_param_value['max_price'])) ? $array_param_value['max_price'] : "",
+                                    'type' => 'text',
+                                    'function' => '',
+                                    'no_label' => true,
+                                    'form' => true,
+                                ]); ?>
+                            </div>
+                        </div>
+                        <div class="w-full max-w-[500px] ">
+                            <div class="price_range"></div>
+                        </div>
                     </div>
                 </div>
             </div>

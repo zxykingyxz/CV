@@ -83,7 +83,7 @@ $GLOBAL['baiviet'][$nametype]['multi-gallery-arr'] = array(
 );
 
 
-$GLOBAL['baiviet'][$nametype]['mota'] = false;
+$GLOBAL['baiviet'][$nametype]['mota'] = true;
 
 $GLOBAL['baiviet'][$nametype]['mota-ckeditor'] = true;
 

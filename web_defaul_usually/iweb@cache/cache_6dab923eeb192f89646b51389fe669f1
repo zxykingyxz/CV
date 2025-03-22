@@ -1,7 +1,0 @@
-a:3:{s:8:"dataHash";s:32:"8d58fdcfdd2ad66ba1d89ecf6c4eab2e";s:9:"timestamp";i:1742184401;s:7:"content";s:1296:"    <section class=" hidden sm:block mt-3">
-        <div class="grid_s wide">
-            <div class=" w-full bg-inherit text-[var(--html-cl-website)]  pl-2 py-1">
-                <ol id="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="http://web_defaul_usually.test/"><span itemprop="name">   Trang chủ</i><span class="hidden">trang chủ</span></span></a><meta itemprop="position" content="1" /></li><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="http://web_defaul_usually.test/dien-lanh"><span itemprop="name">Điện lạnh</span></a><meta itemprop="position" content="2" /></li><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="http://web_defaul_usually.test/tu-lanh"><span itemprop="name">Tủ lạnh</span></a><meta itemprop="position" content="3" /></li><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="javascript:;"><span itemprop="name">Smart Tivi Samsung 4K 43 inch UA43AU7002 15</span></a><meta itemprop="position" content="4" /></li></ol>            </div>
-        </div>
-    </section>
-";}

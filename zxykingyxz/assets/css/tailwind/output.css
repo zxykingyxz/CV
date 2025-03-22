@@ -970,6 +970,10 @@ html {
   max-width: 400px;
 }
 
+.max-w-\[500px\] {
+  max-width: 500px;
+}
+
 .max-w-\[600px\] {
   max-width: 600px;
 }
@@ -1023,6 +1027,10 @@ html {
   align-content: center;
 }
 
+.items-end {
+  align-items: flex-end;
+}
+
 .items-center {
   align-items: center;
 }
@@ -1065,6 +1073,10 @@ html {
 
 .gap-\[4px\] {
   gap: 4px;
+}
+
+.gap-9 {
+  gap: 2.25rem;
 }
 
 .divide-y > :not([hidden]) ~ :not([hidden]) {

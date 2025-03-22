@@ -53,7 +53,7 @@ $tool = $cache->getCache("select photo,ten_$lang as ten,link from #_photo where 
             <?php } ?>
         </ul>
     </div>
-    <div class="form_tool_mobile group/toolMobile left fixed bottom-[80px] [&.left]:left-2 [&.right]:right-2 z-40 block lg:hidden">
+    <div class="form_tool_mobile group/toolMobile left fixed  [&.left]:left-2 [&.right]:right-2 z-40 block lg:hidden" style="bottom: 15px;">
         <div class="fixed  top-0 left-0 w-full h-full bg-black opacity-70 z-[-10] pointer-events-none hidden data_tool_mobile" data-nb="tool_mobile"></div>
         <div class="relative">
             <div class="group/buttonMobile cursor-pointer w-[60px] aspect-[1/1] overflow-hidden rounded-full bg-[var(--html-bg-website)] flex justify-center items-center p-[2px] btn_tool_mobile" data-nb="tool_mobile">
@@ -124,7 +124,7 @@ $tool = $cache->getCache("select photo,ten_$lang as ten,link from #_photo where 
     </div>
 <?php } ?>
 
-<div class="sticky bottom-0 py-1 bg-[var(--html-bg-website)] text-white text-xs sm:text-sm w-full z-40 shadow shadow-[var(--html-bg-website)]  block lg:hidden border-t border-gray-200">
+<div class="sticky hidden bottom-0 py-1 bg-[var(--html-bg-website)] text-white text-xs sm:text-sm w-full z-40 shadow shadow-[var(--html-bg-website)]   border-t border-gray-200">
     <ul class="flex content-end items-end">
         <li class="flex-1">
             <a id="goidien" class="flex justify-center items-center flex-col " title="Điện thoại" aria-label="Điện thoại" href="tel:<?= $func->handlePhoneNumberUrl($row_setting["dienthoai"]) ?>">

@@ -11,37 +11,39 @@
     */ ?>
     <div class="w-full flex max-h-[calc(100%-60px)]">
         <div class="flex-1 min-w-[10px] <?= $class_close_form_js ?>"></div>
-        <div class="w-full relative <?= $class_form ?> max-h-full overflow-x-hidden overflow-y-auto scroll-design-one shadow-md shadow-gray-300 border border-gray-100 rounded-lg ">
-            <?php
-            switch ($check_form) {
-                case 'view_info_product':
-                    echo $sample->getTemplateLayoutsFor([
-                        'name_layouts' => 'form_view_info_product',
-                        'close_popup' => $class_close_form_js,
-                        'data' => $data,
-                        'global' => ['cache'],
-                    ]);
-                    break;
-                case 'view_info_pay':
-                    echo $sample->getTemplateLayoutsFor([
-                        'name_layouts' => 'form_view_info_pay',
-                        'close_popup' => $class_close_form_js,
-                        'data' => $data,
-                        'global' => ['cache'],
-                    ]);
-                    break;
-                case 'view_product_detail':
-                    echo $sample->getTemplateLayoutsFor([
-                        'name_layouts' => 'form_view_product_detail',
-                        'close_popup' => $class_close_form_js,
-                        'data' => $data,
-                        'active' => $active,
-                        'global' => ['cache'],
-                    ]);
-                    break;
-                default:
-                    break;
-            } ?>
+        <div class="w-full relative <?= $class_form ?> max-h-full  shadow-md shadow-gray-300 border border-gray-100 rounded-lg ">
+            <div class="w-full h-full overflow-x-hidden overflow-y-auto scroll-design-one">
+                <?php
+                switch ($check_form) {
+                    case 'view_info_product':
+                        echo $this->getTemplateLayoutsFor([
+                            'name_layouts' => 'form_view_info_product',
+                            'close_popup' => $class_close_form_js,
+                            'data' => $data,
+                            'global' => ['cache'],
+                        ]);
+                        break;
+                    case 'view_info_pay':
+                        echo $this->getTemplateLayoutsFor([
+                            'name_layouts' => 'form_view_info_pay',
+                            'close_popup' => $class_close_form_js,
+                            'data' => $data,
+                            'global' => ['cache'],
+                        ]);
+                        break;
+                    case 'view_product_detail':
+                        echo $this->getTemplateLayoutsFor([
+                            'name_layouts' => 'form_view_product_detail',
+                            'close_popup' => $class_close_form_js,
+                            'data' => $data,
+                            'active' => $active,
+                            'global' => ['cache'],
+                        ]);
+                        break;
+                    default:
+                        break;
+                } ?>
+            </div>
         </div>
         <div class="flex-1 min-w-[10px] <?= $class_close_form_js ?>"></div>
     </div>

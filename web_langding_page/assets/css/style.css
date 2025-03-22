@@ -21,7 +21,7 @@
     margin-top: clamp(20px, 7vw, 70px) !important;
 }
 
-.introduce_mai .swiper-slide {
+.introduce_main .swiper-slide {
     transition: all 0.3s;
     z-index: 5;
 }

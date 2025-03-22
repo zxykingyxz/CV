@@ -23,3 +23,63 @@ $class_grid_column_form_view = "grid grid-cols-1 gap-4";
 // data value
 $row_setting = $db->rawQueryOne("select * from #_setting limit 0,1");
 $logo = $db->rawQueryOne("select photo from #_bannerqc where hienthi=1 and type=? limit 0,1", array('logo'));
+
+$array_select_month = [
+    [
+        "title" => "Tháng 1",
+        "value" => "01"
+    ],
+    [
+        "title" => "Tháng 2",
+        "value" => "02"
+    ],
+    [
+        "title" => "Tháng 3",
+        "value" => "03"
+    ],
+    [
+        "title" => "Tháng 4",
+        "value" => "04"
+    ],
+    [
+        "title" => "Tháng 5",
+        "value" => "05"
+    ],
+    [
+        "title" => "Tháng 6",
+        "value" => "06"
+    ],
+    [
+        "title" => "Tháng 7",
+        "value" => "07"
+    ],
+    [
+        "title" => "Tháng 8",
+        "value" => "08"
+    ],
+    [
+        "title" => "Tháng 9",
+        "value" => "09"
+    ],
+    [
+        "title" => "Tháng 10",
+        "value" => "10"
+    ],
+    [
+        "title" => "Tháng 11",
+        "value" => "11"
+    ],
+    [
+        "title" => "Tháng 12",
+        "value" => "12"
+    ],
+];
+
+$array_select_year = [];
+
+for ($y = date('Y'); $y >= 2000; $y--) {
+    array_push($array_select_year, [
+        "title" => "Năm " . $y,
+        "value" => $y
+    ]);
+}

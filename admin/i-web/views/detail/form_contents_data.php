@@ -1,9 +1,8 @@
 <?php
 global $class_button_form_info_data;
 global $jv0;
-
 ?>
-<?php if (!empty($data_setting['contents'])) { ?>
+<?php if (!empty($data_setting['contents']) && isset($data_setting['contents'])) { ?>
     <div class="mt-2 w-full form_baiviet_admin">
         <div class="w-full scroll-design-one">
             <ul class="flex text-nowrap text-center dark:border-zink-500 nav-tabs">
@@ -11,7 +10,7 @@ global $jv0;
                     <li class=" group  btn_baiviet_admin <?= ($key_content == 0) ? "active" : "" ?>" data-nb="<?= $value_content['type'] . "_" . $value_lang ?>">
                         <a href="<?= $jv0 ?>" class="<?= $class_button_form_info_data ?>">
                             <span>
-                                <?= $value_content['title'] . " [" . $value_lang . "]" ?>
+                                <?= $value_content['title'] . " (" . $value_lang . ")" ?>
                             </span>
                         </a>
                     </li>
@@ -25,7 +24,7 @@ global $jv0;
                         'name_layouts' => 'textarea_default',
                         'class_form' => '',
                         'class' => ($value_content["ckeditor"]) ? 'ClassCkEditor' : "",
-                        'label' => $value_content['title'] . ' [' . $value_lang . ']',
+                        'label' => $value_content['title'] . ' (' . $value_lang . ')',
                         'placeholder' => 'Nhập ' . $value_content['title'],
                         'id' => $value_content['type'] . "_" . $key_lang,
                         'data' => "data[text][" . $value_content['type'] . "_" . $key_lang . "]",

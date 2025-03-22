@@ -34,67 +34,105 @@ $(document).ready(function() {
     });
 
     gsap.registerPlugin(ScrollTrigger, TextPlugin);
-
-    for (i = 1; i <= 10; i++) {
-        gsap.from(".title_gsap_" + i, {
-            scrollTrigger: {
-                trigger: ".title_gsap_" + i,
-                scrub: 0.5, // Mượt hơn khi cuộn
-                start: "top 80%", // Kích hoạt sớm hơn một chút
-                end: "top 50%", // Kéo dài hiệu ứng
-            },
-            x: 0,
-            y: -80, // Giảm khoảng cách rơi xuống
-            opacity: 0,
-            duration: 1.2,
-            ease: "power2.out" // Làm chậm dần khi kết thúc
-        });
-        let $element = $('.gsap_text_' + i);
-        if ($element.length) {
-            let value = $element.text().trim();
-            gsap.to(".gsap_text_" + i, {
+    var currentWidth_all = $(window).width();
+    if (currentWidth_all > 600) {
+        for (i = 1; i <= 10; i++) {
+            gsap.from(".title_gsap_" + i, {
                 scrollTrigger: {
-                    trigger: ".gsap_text_" + i,
+                    trigger: ".title_gsap_" + i,
+                    scrub: 0.5, // Mượt hơn khi cuộn
+                    start: "top 80%", // Kích hoạt sớm hơn một chút
+                    end: "top 50%", // Kéo dài hiệu ứng
+                },
+                x: 0,
+                y: -80, // Giảm khoảng cách rơi xuống
+                opacity: 0,
+                duration: 1.2,
+                ease: "power2.out" // Làm chậm dần khi kết thúc
+            });
+            let $element = $('.gsap_text_' + i);
+            if ($element.length) {
+                let value = $element.text().trim();
+                gsap.to(".gsap_text_" + i, {
+                    scrollTrigger: {
+                        trigger: ".gsap_text_" + i,
+                        start: "top 90%",
+                        end: "top 60%",
+                        scrub: 5,
+                    },
+                    duration: 2,
+                    text: {
+                        value: value,
+                        delimiter: ""
+                    },
+                    ease: "power1.out",
+                });
+            }
+            gsap.from(".image_fade_scale_" + i, {
+                scrollTrigger: {
+                    trigger: ".image_fade_scale_" + i,
+                    start: "top 80%",
+                    end: "top 50%",
+                    scrub: 2,
+                },
+                opacity: 0,
+                scale: 0.8,
+                duration: 2,
+                ease: "power2.out",
+            });
+            gsap.from(".form_opacity_" + i, {
+                scrollTrigger: {
+                    trigger: ".form_opacity_" + i,
+                    start: "top 80%",
+                    end: "top 40%",
+                    scrub: 2,
+                },
+                opacity: 0,
+                duration: 2,
+                ease: "power2.out",
+            });
+            gsap.from(".form_left_" + i, {
+                scrollTrigger: {
+                    trigger: ".form_left_" + i,
                     start: "top 90%",
-                    end: "top 60%",
+                    end: "top 70%",
+                    scrub: 3,
+                },
+                opacity: 0,
+                x: -100,
+                duration: 5,
+                ease: "power2.out",
+            });
+            gsap.from(".form_right_" + i, {
+                scrollTrigger: {
+                    trigger: ".form_right_" + i,
+                    start: "top 90%",
+                    end: "top 70%",
+                    scrub: 3,
+                },
+                opacity: 0,
+                x: 100,
+                duration: 5,
+                ease: "power2.out",
+            });
+            gsap.from(".form_product_" + i, {
+                scrollTrigger: {
+                    trigger: ".form_product_" + i,
+                    start: "top 90%",
+                    end: "top 50%",
                     scrub: 5,
                 },
-                duration: 2,
-                text: {
-                    value: value,
-                    delimiter: ""
-                },
-                ease: "power1.out",
+                opacity: 0,
+                y: -100,
+                duration: 10,
+                ease: "power2.out",
             });
         }
-        gsap.from(".image_fade_scale_" + i, {
+        gsap.from(".form_left_client", {
             scrollTrigger: {
-                trigger: ".image_fade_scale_" + i,
-                start: "top 80%",
-                end: "top 50%",
-                scrub: 2,
-            },
-            opacity: 0,
-            scale: 0.8,
-            duration: 2,
-            ease: "power2.out",
-        });
-        gsap.from(".form_opacity_" + i, {
-            scrollTrigger: {
-                trigger: ".form_opacity_" + i,
-                start: "top 80%",
-                end: "top 40%",
-                scrub: 2,
-            },
-            opacity: 0,
-            duration: 2,
-            ease: "power2.out",
-        });
-        gsap.from(".form_left_" + i, {
-            scrollTrigger: {
-                trigger: ".form_left_" + i,
+                trigger: ".form_left_client",
                 start: "top 90%",
-                end: "top 70%",
+                end: "top 10%",
                 scrub: 3,
             },
             opacity: 0,
@@ -102,11 +140,35 @@ $(document).ready(function() {
             duration: 5,
             ease: "power2.out",
         });
-        gsap.from(".form_right_" + i, {
+        gsap.from(".form_right_client", {
             scrollTrigger: {
-                trigger: ".form_right_" + i,
+                trigger: ".form_right_client",
                 start: "top 90%",
-                end: "top 70%",
+                end: "top 40%",
+                scrub: 3,
+            },
+            opacity: 0,
+            scale: 0.6,
+            duration: 5,
+            ease: "power2.out",
+        });
+        gsap.from(".form_left_dk", {
+            scrollTrigger: {
+                trigger: ".form_left_dk",
+                start: "top 90%",
+                end: "top 50%",
+                scrub: 3,
+            },
+            opacity: 0,
+            scale: 0.6,
+            duration: 5,
+            ease: "power2.out",
+        });
+        gsap.from(".form_right_dk", {
+            scrollTrigger: {
+                trigger: ".form_right_dk",
+                start: "top 90%",
+                end: "top 50%",
                 scrub: 3,
             },
             opacity: 0,
@@ -114,65 +176,6 @@ $(document).ready(function() {
             duration: 5,
             ease: "power2.out",
         });
-        gsap.from(".form_product_" + i, {
-            scrollTrigger: {
-                trigger: ".form_product_" + i,
-                start: "top 90%",
-                end: "top 50%",
-                scrub: 5,
-            },
-            opacity: 0,
-            y: -100,
-            duration: 10,
-            ease: "power2.out",
-        });
     }
-    gsap.from(".form_left_client", {
-        scrollTrigger: {
-            trigger: ".form_left_client",
-            start: "top 90%",
-            end: "top 10%",
-            scrub: 3,
-        },
-        opacity: 0,
-        x: -100,
-        duration: 5,
-        ease: "power2.out",
-    });
-    gsap.from(".form_right_client", {
-        scrollTrigger: {
-            trigger: ".form_right_client",
-            start: "top 90%",
-            end: "top 40%",
-            scrub: 3,
-        },
-        opacity: 0,
-        scale: 0.6,
-        duration: 5,
-        ease: "power2.out",
-    });
-    gsap.from(".form_left_dk", {
-        scrollTrigger: {
-            trigger: ".form_left_dk",
-            start: "top 90%",
-            end: "top 50%",
-            scrub: 3,
-        },
-        opacity: 0,
-        scale: 0.6,
-        duration: 5,
-        ease: "power2.out",
-    });
-    gsap.from(".form_right_dk", {
-        scrollTrigger: {
-            trigger: ".form_right_dk",
-            start: "top 90%",
-            end: "top 50%",
-            scrub: 3,
-        },
-        opacity: 0,
-        x: 100,
-        duration: 5,
-        ease: "power2.out",
-    });
+
 })

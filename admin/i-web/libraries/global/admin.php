@@ -24,7 +24,16 @@ $GLOBAL['baiviet'][$nametype]['link_cano'] = true;
 
 $GLOBAL['baiviet'][$nametype]['schema'] = true;
 
-$GLOBAL['baiviet'][$nametype]['index_robots'] = true;
+$GLOBAL['baiviet'][$nametype]['index_robots'] = [
+    [
+        "title" => "noindex,nofollow",
+        "value" => "noindex,nofollow",
+    ],
+    [
+        "title" => "index,follow",
+        "value" => "index,follow",
+    ],
+];
 
 $GLOBAL['baiviet'][$nametype]['img'] = true;
 

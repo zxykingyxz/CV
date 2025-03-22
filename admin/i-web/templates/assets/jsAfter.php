@@ -4,6 +4,7 @@
 <script src="assets/plugins/sumoselect/jquery.sumoselect.min.js" type="text/javascript"></script>
 <script src="ckeditor/ckeditor.js" type="text/javascript"></script>
 <script src="assets/plugins/notiflix/notiflix.js" type="text/javascript"></script>
+<script src="assets/plugins/dropzone/dropzone-min.js" type="text/javascript"></script>
 
 <script src="assets/js/main.js" type="text/javascript"></script>
 <?php if (!empty($_GET['message']) && $_GET['message'] != NULL) {

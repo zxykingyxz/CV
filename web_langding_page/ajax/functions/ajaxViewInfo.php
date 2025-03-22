@@ -32,7 +32,6 @@ if ($func->isAjax()) {
         'class_close_form_js' => "close_form_popup",
         'save_cache' => false,
     ]);
-
     $response = array();
     $response["html"] = $html;
     echo json_encode($response);

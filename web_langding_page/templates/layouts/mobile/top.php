@@ -16,7 +16,6 @@ $socical_menu = $cache->getCache("select id,photo as photo,ten_$lang as ten,mota
                         <path d="M5 22.75H40.25" stroke="var(--html-bg-website)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
                         <path d="M5 34.5H40.25" stroke="var(--html-bg-website)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
-                    <span>Danh mục</span>
                     <div class="hidden">
                         <?php if ($source == 'index') { ?>
                             <h2>

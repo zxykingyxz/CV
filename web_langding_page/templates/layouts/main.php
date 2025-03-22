@@ -42,7 +42,6 @@ $info_client = $cache->getCache("select  ten_$lang as ten,mota_$lang as mota,slo
 $info_client_sub = $cache->getCache("select  ten_$lang as ten,mota_$lang as mota,slogan_$lang as slogan,photo from #_bannerqc where type=? and hienthi=1", array('info_client_sub'), 'fetch', _TIMECACHE);
 
 $list_about = $cache->getCache("select id,type,ten_$lang as ten,mota_$lang as mota,photo from #_photo where type=? and hienthi=1 order by stt asc,id desc ", array('list_about'), 'result', _TIMECACHE);
-
 ?>
 <div class="h-8 sm:h-12 "></div>
 <!-- giới thiệu -->
@@ -65,7 +64,7 @@ $list_about = $cache->getCache("select id,type,ten_$lang as ten,mota_$lang as mo
                             </span>
                         </div>
                         <div class="mt-2 text-sm leading-[1.8] font-normal font-main-400">
-                            <span class="text-[#494949] line-clamp-6 gsap_text_1">
+                            <span class="text-[#494949] line-clamp-6 ">
                                 <?= htmlspecialchars_decode($info["mota"]) ?>
                             </span>
                         </div>
@@ -157,7 +156,7 @@ $list_about = $cache->getCache("select id,type,ten_$lang as ten,mota_$lang as mo
                                         </div>
                                         <div class="w-[70px] aspect-[1/1] flex justify-center items-center">
                                             <div class="w-[56%] h-[56%] overflow-hidden aspect-[1/1] rounded-full bg-white border-[3px] border-[#d9d9d99d] shadow-[0px_0px_0px_3px_#ffffff7e]">
-                                                <div class="w-full p-1">
+                                                <div class="w-full p-2">
                                                     <?= $func->addHrefImg([
                                                         'classfix' => '',
                                                         'addhref' => false,
@@ -202,7 +201,7 @@ $list_about = $cache->getCache("select id,type,ten_$lang as ten,mota_$lang as mo
                                         </div>
                                         <div class="w-[70px] aspect-[1/1] flex justify-center items-center">
                                             <div class="w-[56%] h-[56%] overflow-hidden aspect-[1/1] rounded-full bg-white border-[3px] border-[#d9d9d99d] shadow-[0px_0px_0px_3px_#ffffff7e]">
-                                                <div class="w-full p-1">
+                                                <div class="w-full  p-2">
                                                     <?= $func->addHrefImg([
                                                         'classfix' => '',
                                                         'addhref' => false,
@@ -231,7 +230,7 @@ $list_about = $cache->getCache("select id,type,ten_$lang as ten,mota_$lang as mo
                                     </div>
                                 </div>
                             <?php } ?>
-                            <div class="absolute top-0 left-[40%] -translate-x-1/2 h-full w-[2px]" style="background: var(--color-linear-sc);"></div>
+                            <div class="absolute top-0 left-[40%] -translate-x-1/2 h-full w-[2px] " style="background: var(--color-linear-sc);"></div>
                         </div>
                     </div>
                 <?php } ?>
@@ -270,14 +269,14 @@ $list_about = $cache->getCache("select id,type,ten_$lang as ten,mota_$lang as mo
                             <?php foreach ($list_benerfit as $key => $value) { ?>
                                 <div class="items_circle relative z-10 ">
                                     <div class="relative">
-                                        <div class="  px-7 pt-[60px] absolute bottom-0 left-1/2 -translate-x-1/2 h-[200px] w-[250px] text-green-500 font-normal font-main-400 text-sm bg-white z-[-1] " style="clip-path: polygon(0 0,100% 0,50% 100%);">
+                                        <div class="  px-7 pt-[60px] absolute bottom-0 left-1/2  text-[var(--html-sc-website)] -translate-x-1/2 h-[200px] w-[250px]  font-normal font-main-400 text-sm bg-white z-[-1] " style="clip-path: polygon(0 0,100% 0,50% 100%);color: var(--html-sc-website);">
                                             <div class="swivel_part w-[80px]">
                                                 <span class=" line-clamp-3">
                                                     <?= $value['ten'] ?>
                                                 </span>
                                             </div>
                                         </div>
-                                        <div class="  bg-green-500 rounded-full border-[13px] border-white  h-[63px] w-[63px] p-1 flex justify-center items-center ">
+                                        <div class="   rounded-full border-[13px] border-white  h-[63px] w-[63px]  flex justify-center items-center  p-2 bg-[var(--html-sc-website)] ">
                                             <span class="swivel_part w-full h-full ">
                                                 <?= $func->addHrefImg([
                                                     'classfix' => '',
@@ -299,26 +298,40 @@ $list_about = $cache->getCache("select id,type,ten_$lang as ten,mota_$lang as mo
                     <?php } else { ?>
                         <div class="w-full mt-7 ">
                             <div class="owl-carousel form_benerfit_mb owl-theme">
-                                <?php foreach ($list_benerfit as $key => $value) { ?>
-                                    <div class="relative w-full rounded-xl bg-white pt-4 px-3 pb-[35px] mb-[35px] text-center">
-                                        <div class="h-[calc(14px*3*1.5)]">
-                                            <span class="text-green-500 font-normal font-main-400 text-sm line-clamp-3">
-                                                <?= $value['ten'] ?>
-                                            </span>
+                                <?php
+                                $list_tmp = array();
+                                foreach ($list_benerfit as $k => $v) {
+                                    if (((($k + 1) % 2 === 0) && ($k != 0)) || (count($list_benerfit) == ($k + 1))) {
+                                        array_push($list_tmp, $v);
+                                ?>
+                                        <div class="w-full grid grid-cols-1 gap-4">
+                                            <?php foreach ($list_tmp as $key => $value) { ?>
+                                                <div class="relative w-full rounded-xl bg-white pt-4 px-3 pb-[35px] mb-[35px] text-center">
+                                                    <div class="h-[calc(14px*3*1.5)]">
+                                                        <span class=" font-normal font-main-400 text-sm line-clamp-3 text-[var(--html-sc-website)]">
+                                                            <?= $value['ten'] ?>
+                                                        </span>
+                                                    </div>
+                                                    <div class="absolute top-full left-1/2 shadow-[0px_0px_0px_1px_var(--html-bg-website)] -translate-x-1/2 -translate-y-1/2 w-[63px] h-[63px] border-white  border-[13px] flex justify-center items-center rounded-full overflow-hidden p-2 bg-[var(--html-sc-website)]">
+                                                        <?= $func->addHrefImg([
+                                                            'classfix' => '',
+                                                            'addhref' => false,
+                                                            'sizes' => "100x100x2",
+                                                            'actual_width' => 200,
+                                                            'upload' => _upload_hinhanh_l,
+                                                            'image' => $value["photo"],
+                                                            'alt' =>  $value["ten"],
+                                                        ]); ?>
+                                                    </div>
+                                                </div>
+                                            <?php } ?>
                                         </div>
-                                        <div class="absolute top-full left-1/2 shadow-[0px_0px_0px_1px_var(--html-bg-website)] -translate-x-1/2 -translate-y-1/2 w-[63px] h-[63px] border-white bg-[var(--html-bg-website)] border-[13px] flex justify-center items-center rounded-full overflow-hidden p-1">
-                                            <?= $func->addHrefImg([
-                                                'classfix' => '',
-                                                'addhref' => false,
-                                                'sizes' => "100x100x2",
-                                                'actual_width' => 200,
-                                                'upload' => _upload_hinhanh_l,
-                                                'image' => $value["photo"],
-                                                'alt' =>  $value["ten"],
-                                            ]); ?>
-                                        </div>
-                                    </div>
-                                <?php } ?>
+                                <?php
+                                        $list_tmp = array();
+                                    } else {
+                                        array_push($list_tmp, $v);
+                                    }
+                                } ?>
                             </div>
                         </div>
                     <?php } ?>
@@ -396,7 +409,7 @@ $list_about = $cache->getCache("select id,type,ten_$lang as ten,mota_$lang as mo
                                 <div class="w-full scroll-design-one overflow-y-auto overflow-x-hidden max-h-[520px] my-[2px] ">
                                     <div class="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-[2px]">
                                         <?php foreach ($list_procuct  as $key => $value) { ?>
-                                            <div class="w-full min-h-[50px] flex items-center text-center bg-[rgba(213,_243,_171,_0.76)] px-4 py-2">
+                                            <div class="w-full min-h-[50px] flex items-center  bg-[rgba(213,_243,_171,_0.76)] px-4 py-2 cursor-pointer views_introduce_info" data-value="<?= $value['id'] ?? null ?>" data-form="view_baiviet">
                                                 <span class="text-[#040404] text-sm font-normal font-main-400">
                                                     <?= (!empty($value['ten'])) ? $value['ten'] : "" ?>
                                                 </span>

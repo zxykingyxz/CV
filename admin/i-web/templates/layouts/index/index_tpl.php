@@ -30,20 +30,42 @@
                     <form method="GET" class="w-full flex flex-wrap items-center gap-2">
                         <input type="hidden" name="com" value="index">
                         <div class="w-[150px]">
-                            <select name="month" id="" class="sumoselect_one" data-placeholder="Chọn tháng">
-                                <option value="" disabled selected></option>
-                                <?php foreach ($array_select_month as $k_select => $v_select) { ?>
-                                    <option value="<?= $v_select['value'] ?>" <?= ($month == $v_select['value']) ? "selected" : "" ?>><?= $v_select['title'] ?></option>
-                                <?php } ?>
-                            </select>
+                            <?= $sample->getTemplateLayoutsFor([
+                                'name_layouts' => 'sumoselect',
+                                'class_form' => '',
+                                'class' => 'sumoselect_one',
+                                'label' => 'Chọn tháng',
+                                'placeholder' => 'Chọn tháng',
+                                'id' => 'month',
+                                'data' => 'month',
+                                'data_option' => $array_select_month,
+                                'name_col_view' => 'title',
+                                'name_col_value' => 'value',
+                                'value' => (isset($month)) ? htmlspecialchars_decode($month) : "",
+                                'required' => true,
+                                'readonly' => false,
+                                'function' => '',
+                                'form' => false,
+                            ]); ?>
                         </div>
                         <div class="w-[150px]">
-                            <select name="year" id="" class="sumoselect_one" data-placeholder="Chọn Năm">
-                                <option value="" disabled selected></option>
-                                <?php foreach ($array_select_year as $k_select => $v_select) { ?>
-                                    <option value="<?= $v_select['value'] ?>" <?= ($year == $v_select['value']) ? "selected" : "" ?>><?= $v_select['title'] ?></option>
-                                <?php } ?>
-                            </select>
+                            <?= $sample->getTemplateLayoutsFor([
+                                'name_layouts' => 'sumoselect',
+                                'class_form' => '',
+                                'class' => 'sumoselect_one',
+                                'label' => 'Chọn Năm',
+                                'placeholder' => 'Chọn Năm',
+                                'id' => 'year',
+                                'data' => 'year',
+                                'data_option' => $array_select_year,
+                                'name_col_view' => 'title',
+                                'name_col_value' => 'value',
+                                'value' => (isset($year)) ? htmlspecialchars_decode($year) : "",
+                                'required' => true,
+                                'readonly' => false,
+                                'function' => '',
+                                'form' => false,
+                            ]); ?>
                         </div>
                         <div class="">
                             <button type="submit" class="w-full h-[30px] bg-blue-500 hover:brightness-90 transition-all duration-300 text-xs font-semibold text-white text-center px-7 rounded-sm flex justify-center items-center gap-3">

@@ -114,12 +114,11 @@ class functions
     }
     public function checkLeftMenu($dataCheck = array())
     {
-        global $_COM, $src, $_TYPE, $_ACT;
+        global $_COM, $_SRC, $_TYPE, $_ACT;
 
         $data_default = [
             "com" => "",
             "src" => "",
-            "act" => "",
             "type" => "",
         ];
 
@@ -127,12 +126,27 @@ class functions
 
         foreach ($infoCheck as $key => $value) {
             if (!empty($value)) {
-                if ($value != $$key) {
-                    return false;
+                switch ($key) {
+                    case 'com':
+                        if ($value != $_COM) {
+                            return false;
+                        }
+                        break;
+                    case 'src':
+                        if ($value != $_SRC) {
+                            return false;
+                        }
+                        break;
+                    case 'type':
+                        if ($value != $_TYPE) {
+                            return false;
+                        }
+                        break;
+                    default:
+                        break;
                 }
             }
         }
-
         return true;
     }
     public function getUrlParam($dataParam = array())

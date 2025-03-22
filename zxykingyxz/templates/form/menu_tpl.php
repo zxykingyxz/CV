@@ -60,7 +60,7 @@ $htmlArrowLeftMenu = ob_get_clean();
                     <div class="data_menu_admin hidden " style="<?= ($check_ngansach) ? "display: block;" : "" ?>" data-nb="ngansach_admin_<?= $value ?>">
                         <ul class=" w-full  <?= $text_color_left_menu ?> bg-inherit  transition-all duration-300">
                             <?php foreach ($data_ngansach as $key => $value) {
-                                $check_items_ngansach = $func->checkLeftMenu(["com" => $_COM_ngansach, "src" => $_COM_ngansach, "type" =>  $key, "act" =>  $check_act]);
+                                $check_items_ngansach = $func->checkLeftMenu(["com" => $_COM_ngansach, "src" => $_COM_ngansach, "type" =>  $key]);
                                 $link_ngansach = $func->getUrlParam(["com" => $_COM_ngansach, "src" =>  $_COM_ngansach, "type" =>  $key, "act" =>  "man"]);
                             ?>
                                 <li class="<?= $background_left_menu ?> <?= ($check_items_ngansach) ? "active" : "" ?> transition-all duration-300 pl-3">
@@ -95,7 +95,7 @@ $htmlArrowLeftMenu = ob_get_clean();
                     <div class="data_menu_admin hidden " style="<?= ($check_baocao) ? "display: block;" : "" ?>" data-nb="baocao_admin_<?= $value ?>">
                         <ul class=" w-full  <?= $text_color_left_menu ?> bg-inherit  transition-all duration-300">
                             <?php foreach ($data_baocao as $key => $value) {
-                                $check_items_baocao = $func->checkLeftMenu(["com" => $_COM_baocao, "src" =>  $_COM_baocao, "type" =>  $key, "act" =>  $check_act]);
+                                $check_items_baocao = $func->checkLeftMenu(["com" => $_COM_baocao, "src" =>  $_COM_baocao, "type" =>  $key]);
                                 $link_baocao = $func->getUrlParam(["com" => $_COM_baocao, "src" =>  $_COM_baocao, "type" =>  $key, "act" =>  "man"]);
                             ?>
                                 <li class="<?= $background_left_menu ?> <?= ($check_items_baocao) ? "active" : "" ?> transition-all duration-300 pl-3">
@@ -131,7 +131,7 @@ $htmlArrowLeftMenu = ob_get_clean();
                     <div class="data_menu_admin hidden " style="<?= ($check_settings) ? "display: block;" : "" ?>" data-nb="settings_admin_<?= $value ?>">
                         <ul class=" w-full  <?= $text_color_left_menu ?> bg-inherit  transition-all duration-300">
                             <?php foreach ($data_settings as $key => $value) {
-                                $check_items_settings = $func->checkLeftMenu(["com" => $_COM_settings, "src" =>  $_COM_settings, "type" =>  $key, "act" =>  $check_act]);
+                                $check_items_settings = $func->checkLeftMenu(["com" => $_COM_settings, "src" =>  $_COM_settings, "type" =>  $key]);
                                 $link_settings = $func->getUrlParam(["com" => $_COM_settings, "src" =>  $_COM_settings, "type" =>  $key, "act" =>  "man"]);
                             ?>
                                 <li class="<?= $background_left_menu ?> <?= ($check_items_settings) ? "active" : "" ?> transition-all duration-300 pl-3">
