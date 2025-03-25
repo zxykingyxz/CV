@@ -1,0 +1,8 @@
+127.0.0.1()--insert--counters(279) (15:28:13 24/03/2025)
+127.0.0.1()--query--tables(delete from table_online where time<1742804293) (15:28:13 24/03/2025)
+127.0.0.1()--insert--online(191) (15:28:13 24/03/2025)
+127.0.0.1()--query--tables(delete from table_online where time<1742804328) (15:28:48 24/03/2025)
+127.0.0.1(admin)--update--setting([]) (15:29:06 24/03/2025)
+127.0.0.1(admin)--query--tables(delete from table_seo where idmuc =  and com = 'setting' and act = 'capnhat' and type = ) (15:29:06 24/03/2025)
+127.0.0.1(admin)--insert--seo(141) (15:29:06 24/03/2025)
+127.0.0.1(admin)--query--tables(delete from table_online where time<1742804359) (15:29:19 24/03/2025)

@@ -1,36 +1,42 @@
+<?php
+
+// Title, Keywords, Description 
+$title_meta = (!empty($seo->getSeo('title'))) ? $seo->getSeo('title') : $row_setting["name_$lang"];
+$keywords_meta =  $seo->getSeo('keywords');
+$description_meta = $seo->getSeo('description');
+// <!-- Canonical -->
+$link_canonical = (!empty($row_cano)) ? $row_cano : $func->getCurrentPageUrlCano();
+// <!-- Viewport -->
+$content_viewport_meta = ($config['website']['debug-responsive']) ? "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=5" : "width=1500";
+if (!empty($row_detail["index_robots"])) {
+	$robots_meta = $row_detail["index_robots"];
+} else {
+	$robots_meta = $config['website']['robots'];
+}
+// <!-- Favicon -->
+$favicon_meta = _upload_hinhanh_l . $row_setting['bgtop']
+?>
 <!-- Basehref -->
 <base href="<?= $https_config ?>" />
 
 <!-- UTF-8 -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- Title, Keywords, Description -->
-<title><?= (!empty($seo->getSeo('title'))) ? $seo->getSeo('title') : $row_setting["name_$lang"] ?></title>
-<meta name="keywords" content="<?= $seo->getSeo('keywords') ?>" />
-<meta name="description" content="<?= $seo->getSeo('description') ?>" />
+<title><?= $title_meta ?></title>
+<meta name="keywords" content="<?= $keywords_meta ?>" />
+<meta name="description" content="<?= $description_meta ?>" />
 <!-- Canonical -->
-<link rel="canonical" href="<?= (!empty($row_cano)) ? $row_cano : $func->getCurrentPageUrlCano() ?>" />
+<link rel="canonical" href="<?= $link_canonical ?>" />
 <!-- Chống đổi màu trên IOS -->
 <meta name="format-detection" content="telephone=no">
 <!-- Viewport -->
-<?php if ($config['website']['debug-responsive']) { ?>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<?php } else { ?>
-	<meta name="viewport" content="width=1500" />
-<?php } ?>
+<meta name="viewport" content="<?= $content_viewport_meta ?>" />
 <!-- Robots -->
 
-<meta name="robots" content="<?php if ($source == 'index' || $source == 'baiviet') {
-									echo $config['website']['robots'];
-								} else {
-									if (!empty($row_detail["index_robots"])) {
-										echo $row_detail["index_robots"];
-									} else {
-										echo $config['website']['robots'];
-									}
-								} ?>" />
+<meta name="robots" content="<?= $robots_meta ?>" />
 
 <!-- Favicon -->
-<link href="<?= _upload_hinhanh_l . $row_setting['bgtop'] ?>" rel="shortcut icon" type="image/x-icon" />
+<link href="<?= $favicon_meta ?>" rel="shortcut icon" type="image/x-icon" />
 
 <?php if (count($config['arrayDomainSSL'])) { ?>
 	<!-- Security Policy -->

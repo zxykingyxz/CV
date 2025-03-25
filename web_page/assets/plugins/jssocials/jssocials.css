@@ -1,0 +1,72 @@
+.jssocials-shares * {
+    box-sizing: border-box;
+}
+
+.jssocials-share {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 6px;
+}
+
+.jssocials-share:last-child {
+    margin-right: 0;
+}
+
+.jssocials-share-logo {
+    width: 15px;
+    vertical-align: middle;
+    font-size: 15px;
+}
+
+img.jssocials-share-logo {
+    width: auto;
+    height: 15px;
+}
+
+.jssocials-share-link {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1;
+    border-radius: 4px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.14), 0 1px 4px rgba(0, 0, 0, 0.28);
+}
+.jssocials-share-link.jssocials-share-link-count {
+    padding-top: 0.2em;
+}
+.jssocials-share-link.jssocials-share-link-count .jssocials-share-count {
+    display: block;
+    font-size: 0.6em;
+    margin: 0 -0.5em -0.8em -0.5em;
+}
+.jssocials-share-link.jssocials-share-no-count {
+    padding-top: 0.5em;
+}
+.jssocials-share-link.jssocials-share-no-count .jssocials-share-count {
+    height: 1em;
+}
+
+.jssocials-share-label {
+    padding-left: 0.3em;
+    vertical-align: middle;
+}
+
+.jssocials-share-count-box {
+    display: inline-block;
+    height: 1.5em;
+    padding: 0 0.3em;
+    line-height: 1;
+    vertical-align: middle;
+    cursor: default;
+}
+.jssocials-share-count-box.jssocials-share-no-count {
+    display: none;
+}
+
+.jssocials-share-count {
+    line-height: 1.5em;
+    vertical-align: middle;
+}
+.jssocials-share:hover .jssocials-share-link {
+    transform: translateY(-4px);
+}

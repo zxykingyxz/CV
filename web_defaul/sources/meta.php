@@ -13,7 +13,7 @@
 <meta name="format-detection" content="telephone=no">
 <!-- Viewport -->
 <?php if ($config['website']['debug-responsive']) { ?>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=5" />
 <?php } else { ?>
 	<meta name="viewport" content="width=1500" />
 <?php } ?>

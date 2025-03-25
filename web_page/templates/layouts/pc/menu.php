@@ -1,0 +1,42 @@
+<div class="header-navbar__box">
+    <div class="">
+        <ul class="inline-flex flex-wrap items-center justify-center gap-[45px]">
+            <?php /*
+            <li class="group/list <?= (($type == '' && $com == 'index')) ? ' active ' : ""; ?>">
+                <?php if ($source == 'index') { ?>
+                    <h2>
+                    <?php } ?>
+                    <a href="" rel="dofollow" role="link" aria-label="Trang chủ" title="Trang chủ" class="text-[#474747] group-hover/list:text-[var(--html-cl-website)] group-[&.active]/list:text-[var(--html-cl-website)] ">
+                        <i class="fas fa-home text-lg "></i>
+                        <span class="hidden">Trang chủ</span>
+                    </a>
+                    <?php if ($source == 'index') { ?>
+                    </h2>
+                <?php } ?>
+            </li>
+            */ ?>
+            <?php foreach ($authArrs as $key => $value) {
+                if (!in_array($key, array_merge($notShowMenu, []))) {
+            ?>
+                    <?= $sample->getTemplateLayoutsFor([
+                        'name_layouts' => 'li_menu',
+                        'class_form' => '',
+                        'title' => (!empty($value['title'])) ? $value['title'] : '',
+                        'isCheck' => $value['isCheck'],
+                        'level' => $value['level'],
+                        'full' => $value['menu_full'],
+                        'type' => $key,
+                    ]) ?>
+            <?php }
+            } ?>
+            <?php if ($config['lang_check'] || $config['gg_lang']) { ?>
+                <li>
+                    <?= $sample->getTemplateLayoutsFor([
+                        'name_layouts' => 'ggLangWeb',
+                        'form' => 'dropdown',
+                    ]) ?>
+                </li>
+            <?php } ?>
+        </ul>
+    </div>
+</div>

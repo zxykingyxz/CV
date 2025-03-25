@@ -11,7 +11,7 @@
     */ ?>
     <div class="w-full flex max-h-[calc(100%-60px)]">
         <div class="flex-1 min-w-[10px] <?= $class_close_form_js ?>"></div>
-        <div class="w-full relative <?= $class_form ?> max-h-full  shadow-md shadow-gray-300 border border-gray-100 rounded-lg ">
+        <div class="w-full relative <?= $class_form ?> overflow-hidden max-h-full  shadow-md shadow-gray-300 border border-gray-100 rounded-lg ">
             <div class="w-full h-full overflow-x-hidden overflow-y-auto scroll-design-one">
                 <?php
                 switch ($check_form) {

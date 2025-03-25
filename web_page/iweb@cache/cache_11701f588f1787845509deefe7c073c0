@@ -1,0 +1,632 @@
+a:3:{s:8:"dataHash";s:32:"c8bd82d9d63550389a783fbe09a9221a";s:9:"timestamp";i:1742878807;s:7:"content";s:81924:"
+<div class="h-5 sm:h-[80px] "></div>
+
+<!-- giới thiệu -->
+    <section class="section-introduce pb-8 sm:pb-[80px] ">
+        <div class="grid_s wide ">
+            <div class=" rounded-xl sm:rounded-[32px] bg-white px-3 sm:px-12 pt-9 pb-6">
+                <div class="w-full flex flex-wrap items-center justify-center gap-5 md:gap-[30px] ">
+                    <div class="w-full lg:w-[calc(50%-30px)]">
+                        <div class="flex items-center  text-[#2F2E2E] text-sm sm:text-base font-normal font-main-400 gap-2 ">
+                            <span class="flex-initial">
+                                Về chúng tôi                             </span>
+                        </div>
+                        <div class="text-[20px] sm:text-[24px] leading-normal sm:leading-normal text-[var(--html-bg-website)] font-bold font-main-700 mt-2 ">
+                            <span>
+                                GIỚI THIỆU VỀ ĐÔNG HƯNG                            </span>
+                        </div>
+                        <div class="mt-2 text-sm leading-[1.8] font-normal font-main-400">
+                            <span class="text-[#6C6C6C] line-clamp-6 ">
+                                <p><span style="white-space-collapse: preserve;">Bồn inox công nghiệp Đông Hưng là lựa chọn hàng đầu cho các doanh nghiệp trong lĩnh vực thực phẩm, hóa chất, dược phẩm và nhiều công nghiệp chuyên ngành khác., sản phẩm đảm bảo bền vượt trội, chống ăn mòn, chịu nhiệt tốt và an toàn cho mọi ứng dụng</span></p>
+                            </span>
+                        </div>
+                        <div class="mt-7 flex flex-wrap gap-8 items-center ">
+                            <a href="gioi-thieu" title="Tìm hiểu thêm " class=" capitalize outline-none border-none inline-flex justify-center items-center leading-none h-10 rounded-full px-8 bg-[var(--html-bg-website)] text-white text-base font-medium font-main-500 text-center hover:bg-[var(--html-sc-website)] gap-2 transition-all duration-300" data-value="" data-form="view_info_introduce">
+                                <span>Tìm hiểu thêm</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
+                                    <g clip-path="url(#clip0_3_69)">
+                                        <path d="M1.329 8.61973H12.1909L10.156 10.6549C9.57144 11.2395 10.4482 12.1163 11.0327 11.5317L12.886 9.67537L14.1232 8.43614C14.363 8.19491 14.363 7.80532 14.1232 7.5641L11.0327 4.46972C10.9152 4.34889 10.7533 4.28109 10.5847 4.28249C10.0281 4.28256 9.7549 4.9606 10.156 5.34662L12.1957 7.38178H1.297C0.439746 7.42432 0.503753 8.66241 1.329 8.61973Z" fill="currentColor" />
+                                    </g>
+                                </svg>
+                            </a>
+                            <a href="tel:0865959817" title="0865 959 817" class="inline-flex items-center gap-1">
+                                <div class="w-[54px] aspect-[1/1] text-[var(--html-cl-website)] flex justify-center items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none">
+                                        <g clip-path="url(#clip0_16_54)">
+                                            <path d="M1.5832 13.2301C1.06397 11.8251 0.697462 10.3896 0.78909 8.86245C0.850176 7.91563 1.21669 7.12152 1.91917 6.44958C2.65219 5.7471 3.38522 4.98353 4.11824 4.28105C5.06507 3.33423 6.28678 3.33423 7.2336 4.28105C7.81391 4.86136 8.42476 5.47222 9.00507 6.05253C9.58538 6.63284 10.1657 7.18261 10.7155 7.76292C11.7234 8.77083 11.7234 9.96199 10.7155 10.9699C10.013 11.7029 9.27996 12.4054 8.54693 13.1079C8.36368 13.2911 8.33313 13.4439 8.42476 13.6882C8.91345 14.8488 9.58538 15.8567 10.3795 16.8341C11.9372 18.7583 13.7392 20.4687 15.8466 21.8126C16.3048 22.0874 16.7935 22.3012 17.2821 22.5456C17.5265 22.6678 17.6792 22.6372 17.893 22.4234C18.5955 21.6904 19.3285 20.9574 20.0615 20.2243C21.0084 19.2775 22.2301 19.2775 23.1769 20.2243C24.3375 21.385 25.5287 22.5456 26.6893 23.7367C27.6667 24.7141 27.6667 25.9358 26.6893 26.9132C26.0174 27.5851 25.3149 28.2265 24.704 28.929C23.7877 29.9369 22.6577 30.2729 21.3443 30.2118C19.4507 30.1202 17.6792 29.4788 15.9994 28.6541C12.2426 26.8216 9.00507 24.2865 6.31732 21.0795C4.3015 18.7277 2.65219 16.1316 1.5832 13.2301ZM30.218 13.8739C29.5209 6.99359 24.0616 1.51553 17.1899 0.789348C16.3603 0.701681 15.6328 1.33898 15.6328 2.17319V2.19986C15.6328 2.91444 16.1746 3.50823 16.8852 3.5831C22.4234 4.1666 26.8562 8.57495 27.447 14.1319C27.5232 14.8482 28.1252 15.3919 28.8455 15.384C29.6549 15.3751 30.2996 14.6792 30.218 13.8739ZM15.6328 7.44578V7.46529C15.6328 8.13124 16.0993 8.72312 16.7557 8.83555C18.1046 9.06659 19.3525 9.7111 20.3364 10.695C21.3203 11.6789 21.9648 12.9268 22.1959 14.2757C22.3083 14.9321 22.9002 15.3986 23.5661 15.3986H23.5784C24.4374 15.3986 25.1044 14.6261 24.9542 13.7804C24.2568 9.85338 21.1531 6.74878 17.2455 6.0691C16.4014 5.92229 15.6328 6.58906 15.6328 7.44578Z" fill="currentColor" />
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="grid grid-cols-1 gap-[2px]">
+                                    <div class="text-sm font-medium font-main-500">
+                                        <span>
+                                            Hotline 24/7
+                                        </span>
+                                    </div>
+                                    <div class=" text-[var(--html-bg-website)] text-2xl font-bold font-main-700 text-nowrap">
+                                        <span>
+                                            0865 959 817                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="mt-7 sm:mt-11 w-full lg:w-[90%]">
+                            <div class="owl-carousel form_criteria_main owl-theme   ">
+                                                                    <div class=" w-full py-3">
+                                        <div class="w-full flex justify-center">
+                                            <div class="w-[52px] h-[52px] rounded-full border border-white shadow-[0_0_0_4px_#EDEDED] bg-[#EDEDED] p-3 ">
+                                                <div class="w-full h-full ring_web">
+                                                    <a href='javascript:void(0)' class='load_website '  role='link' rel='dofollow' title='Tận tâm'  style='width: 100px;aspect-ratio:100/100;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='100' height='100' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='assets/images/noimage.png' alt='Tận tâm' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="w-full text-center mt-4 text-[#5C5C5C] text-sm font-medium font-main-500">
+                                            <span class="line-clamp-2">
+                                                Tận tâm                                            </span>
+                                        </div>
+                                    </div>
+                                                                    <div class=" w-full py-3">
+                                        <div class="w-full flex justify-center">
+                                            <div class="w-[52px] h-[52px] rounded-full border border-white shadow-[0_0_0_4px_#EDEDED] bg-[#EDEDED] p-3 ">
+                                                <div class="w-full h-full ring_web">
+                                                    <a href='javascript:void(0)' class='load_website '  role='link' rel='dofollow' title='Chất Lượng'  style='width: 100px;aspect-ratio:100/100;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='100' height='100' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='assets/images/noimage.png' alt='Chất Lượng' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="w-full text-center mt-4 text-[#5C5C5C] text-sm font-medium font-main-500">
+                                            <span class="line-clamp-2">
+                                                Chất Lượng                                            </span>
+                                        </div>
+                                    </div>
+                                                                    <div class=" w-full py-3">
+                                        <div class="w-full flex justify-center">
+                                            <div class="w-[52px] h-[52px] rounded-full border border-white shadow-[0_0_0_4px_#EDEDED] bg-[#EDEDED] p-3 ">
+                                                <div class="w-full h-full ring_web">
+                                                    <a href='javascript:void(0)' class='load_website '  role='link' rel='dofollow' title='An Toàn'  style='width: 100px;aspect-ratio:100/100;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='100' height='100' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='assets/images/noimage.png' alt='An Toàn' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="w-full text-center mt-4 text-[#5C5C5C] text-sm font-medium font-main-500">
+                                            <span class="line-clamp-2">
+                                                An Toàn                                            </span>
+                                        </div>
+                                    </div>
+                                                                    <div class=" w-full py-3">
+                                        <div class="w-full flex justify-center">
+                                            <div class="w-[52px] h-[52px] rounded-full border border-white shadow-[0_0_0_4px_#EDEDED] bg-[#EDEDED] p-3 ">
+                                                <div class="w-full h-full ring_web">
+                                                    <a href='javascript:void(0)' class='load_website '  role='link' rel='dofollow' title='Chuyên nghiệp'  style='width: 100px;aspect-ratio:100/100;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='100' height='100' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='assets/images/noimage.png' alt='Chuyên nghiệp' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="w-full text-center mt-4 text-[#5C5C5C] text-sm font-medium font-main-500">
+                                            <span class="line-clamp-2">
+                                                Chuyên nghiệp                                            </span>
+                                        </div>
+                                    </div>
+                                                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-[50%] relative aspect-[555/490]  ">
+                        <div class=" absolute top-0 left-0 w-[48%] h-auto overflow-hidden rounded-lg leading-[0]">
+                            <a href='javascript:void(0)' class='load_website zoom_web'  role='link' rel='dofollow' title='hình ảnh'  style='width: 700px;aspect-ratio:700/762.68656716418;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='700' height='762.68656716418' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='assets/images/noimage.png' alt='hình ảnh' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>                        </div>
+                        <div class="absolute top-1/2 right-0 -translate-y-1/2 w-[48%] h-auto overflow-hidden rounded-lg leading-[0]">
+                            <a href='javascript:void(0)' class='load_website zoom_web'  role='link' rel='dofollow' title='hình ảnh'  style='width: 700px;aspect-ratio:700/929.85074626866;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='700' height='929.85074626866' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='assets/images/noimage.png' alt='hình ảnh' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>                        </div>
+                        <div class="absolute bottom-0 left-[9%] w-[35%] h-auto overflow-hidden rounded-lg leading-[0]">
+                            <a href='javascript:void(0)' class='load_website zoom_web'  role='link' rel='dofollow' title='hình ảnh'  style='width: 700px;aspect-ratio:700/631.44329896907;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='700' height='631.44329896907' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='assets/images/noimage.png' alt='hình ảnh' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>                        </div>
+                        <div class="absolute top-[61%] left-[47%] -translate-x-1/2 -translate-y-1/2 w-[144px] h-[144px] rounded-full  bg-white border-[12px] border-white shadow-lg shadow-gray-300 z-10 ">
+                            <div class="w-full h-full rounded-full border border-[var(--html-bg-website)] flex flex-wrap justify-center items-center content-center">
+                                <div class="w-full text-center ">
+                                    <span class=" text-[var(--html-bg-website)] text-[40px] font-black font-main-900 leading-none">
+                                        +5                                    </span>
+                                </div>
+                                <div class="w-full text-center mt-1">
+                                    <span class="text-sm capitalize font-semibold font-main-600 text-[#535353]">
+                                        kinh nghiệm                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- sản phẩm -->
+    <section class="section-product pb-8 sm:pb-[80px] ">
+        <div class="grid_s wide ">
+            <div class=" ">
+                <div class="w-full text-center flex flex-wrap justify-center">
+                                            <div class="text-[20px] sm:text-[24px] leading-normal sm:leading-normal text-[var(--html-bg-website)] font-bold font-main-700   w-full">
+                            <span>
+                                SẢN PHẨM CỦA ĐÔNG HƯNG                            </span>
+                        </div>
+                                                                <div class="mt-2 text-[#3D3A3A] text-xs sm:text-sm leading-[1.78] sm:leading-[1.78] font-normal font-main-400">
+                            <span class="line-clamp-6">
+                                Bồn inox công nghiệp Đông Hưng là lựa chọn hàng đầu cho các doanh nghiệp trong lĩnh vực thực phẩm, hóa chất, dược phẩm và nhiều công nghiệp chuyên ngành khác., sản phẩm đảm bảo bền vượt trội, chống ăn mòn, chịu nhiệt tốt và an toàn cho mọi ứng dụng                            </span>
+                        </div>
+                                    </div>
+                <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-7 mt-7">
+                        <div class="group/templateNew_one load_website bg-white border-2 border-[var(--html-bg-website)] rounded-lg px-5 py-4 ">
+        <div class=" w-full aspect-[515/404] overflow-hidden rounded-lg mb-4 relative leading-[0]">
+            <a href='bon-inox-theo-yeu-cau' class='load_website w-full'  role='link' rel='dofollow' title='BỒN INOX THEO YÊU CẦU'  style='width: 800px;aspect-ratio:800/627.57281553398;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='800' height='627.57281553398' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='assets/images/noimage.png' alt='BỒN INOX THEO YÊU CẦU' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>        </div>
+        <div class=" mb-3 text-sm leading-normal h-[calc(14px*1.5*2)] line-clamp-2 font-bold font-main-700 text-[#5C5C5C] transition-all duration-300 text-center">
+            <span><a href='bon-inox-theo-yeu-cau'   rel='dofollow' role='link' aria-label='BỒN INOX THEO YÊU CẦU' title='BỒN INOX THEO YÊU CẦU'><span >BỒN INOX THEO YÊU CẦU</span></a></span>        </div>
+        <div class="flex justify-center">
+            <div class=" text-[13px] leading-normal h-[calc(13px*1.5*3)] line-clamp-3  font-normal font-main-400 text-black  w-full md:w-[80%]">
+                <span class='line-clamp-3'>
+                    Bồn inox theo yêu cầu là loại bồn được thiết kế và sản xuất dựa trên nhu cầu cụ thể của khách hàng về kích thước, dung tích, kiểu dáng và công năng sử dụng                </span>
+            </div>
+        </div>
+    </div>
+    <div class="group/templateNew_one load_website bg-white border-2 border-[var(--html-bg-website)] rounded-lg px-5 py-4 ">
+        <div class=" w-full aspect-[515/404] overflow-hidden rounded-lg mb-4 relative leading-[0]">
+            <a href='bon-inox-thuc-pham' class='load_website w-full'  role='link' rel='dofollow' title='BỒN INOX  THỰC PHẨM'  style='width: 800px;aspect-ratio:800/627.57281553398;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='800' height='627.57281553398' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='assets/images/noimage.png' alt='BỒN INOX  THỰC PHẨM' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>        </div>
+        <div class=" mb-3 text-sm leading-normal h-[calc(14px*1.5*2)] line-clamp-2 font-bold font-main-700 text-[#5C5C5C] transition-all duration-300 text-center">
+            <span><a href='bon-inox-thuc-pham'   rel='dofollow' role='link' aria-label='BỒN INOX  THỰC PHẨM' title='BỒN INOX  THỰC PHẨM'><span >BỒN INOX  THỰC PHẨM</span></a></span>        </div>
+        <div class="flex justify-center">
+            <div class=" text-[13px] leading-normal h-[calc(13px*1.5*3)] line-clamp-3  font-normal font-main-400 text-black  w-full md:w-[80%]">
+                <span class='line-clamp-3'>
+                    Bồn inox khuấy trộn là thiết bị chuyên dụng được thiết kế để trộn, hòa tan hoặc khuấy đều các loại chất lỏng, dung dịch, bột hoặc hỗn hợp khác nhau                </span>
+            </div>
+        </div>
+    </div>
+    <div class="group/templateNew_one load_website bg-white border-2 border-[var(--html-bg-website)] rounded-lg px-5 py-4 ">
+        <div class=" w-full aspect-[515/404] overflow-hidden rounded-lg mb-4 relative leading-[0]">
+            <a href='bon-inox-thuc-pham-2' class='load_website w-full'  role='link' rel='dofollow' title='BỒN INOX  THỰC PHẨM 2'  style='width: 800px;aspect-ratio:800/627.57281553398;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='800' height='627.57281553398' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='assets/images/noimage.png' alt='BỒN INOX  THỰC PHẨM 2' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>        </div>
+        <div class=" mb-3 text-sm leading-normal h-[calc(14px*1.5*2)] line-clamp-2 font-bold font-main-700 text-[#5C5C5C] transition-all duration-300 text-center">
+            <span><a href='bon-inox-thuc-pham-2'   rel='dofollow' role='link' aria-label='BỒN INOX  THỰC PHẨM 2' title='BỒN INOX  THỰC PHẨM 2'><span >BỒN INOX  THỰC PHẨM 2</span></a></span>        </div>
+        <div class="flex justify-center">
+            <div class=" text-[13px] leading-normal h-[calc(13px*1.5*3)] line-clamp-3  font-normal font-main-400 text-black  w-full md:w-[80%]">
+                <span class='line-clamp-3'>
+                    Bồn inox khuấy trộn là thiết bị chuyên dụng được thiết kế để trộn, hòa tan hoặc khuấy đều các loại chất lỏng, dung dịch, bột hoặc hỗn hợp khác nhau                </span>
+            </div>
+        </div>
+    </div>
+    <div class="group/templateNew_one load_website bg-white border-2 border-[var(--html-bg-website)] rounded-lg px-5 py-4 ">
+        <div class=" w-full aspect-[515/404] overflow-hidden rounded-lg mb-4 relative leading-[0]">
+            <a href='bon-inox-chua-chua-nuoc' class='load_website w-full'  role='link' rel='dofollow' title='BỒN INOX CHỨA CHỨA NƯỚC'  style='width: 800px;aspect-ratio:800/627.57281553398;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='800' height='627.57281553398' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='assets/images/noimage.png' alt='BỒN INOX CHỨA CHỨA NƯỚC' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>        </div>
+        <div class=" mb-3 text-sm leading-normal h-[calc(14px*1.5*2)] line-clamp-2 font-bold font-main-700 text-[#5C5C5C] transition-all duration-300 text-center">
+            <span><a href='bon-inox-chua-chua-nuoc'   rel='dofollow' role='link' aria-label='BỒN INOX CHỨA CHỨA NƯỚC' title='BỒN INOX CHỨA CHỨA NƯỚC'><span >BỒN INOX CHỨA CHỨA NƯỚC</span></a></span>        </div>
+        <div class="flex justify-center">
+            <div class=" text-[13px] leading-normal h-[calc(13px*1.5*3)] line-clamp-3  font-normal font-main-400 text-black  w-full md:w-[80%]">
+                <span class='line-clamp-3'>
+                    Bồn inox khuấy trộn là thiết bị chuyên dụng được thiết kế để trộn, hòa tan hoặc khuấy đều các loại chất lỏng, dung dịch, bột hoặc hỗn hợp khác nhau                </span>
+            </div>
+        </div>
+    </div>
+                </div>
+                <div class="w-full flex justify-center items-center mt-5 sm:mt-[70px]">
+                    <a href="san-pham" title="Xem thêm tất cả sản phẩm" class=" capitalize outline-none border-none inline-flex justify-center items-center leading-none h-10 rounded-full px-8 bg-[var(--html-bg-website)] text-white text-base font-medium font-main-500 text-center hover:bg-[var(--html-sc-website)] gap-2 transition-all duration-300" data-value="" data-form="view_info_introduce">
+                        <span>Xem thêm tất cả sản phẩm</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
+                            <g clip-path="url(#clip0_3_69)">
+                                <path d="M1.329 8.61973H12.1909L10.156 10.6549C9.57144 11.2395 10.4482 12.1163 11.0327 11.5317L12.886 9.67537L14.1232 8.43614C14.363 8.19491 14.363 7.80532 14.1232 7.5641L11.0327 4.46972C10.9152 4.34889 10.7533 4.28109 10.5847 4.28249C10.0281 4.28256 9.7549 4.9606 10.156 5.34662L12.1957 7.38178H1.297C0.439746 7.42432 0.503753 8.66241 1.329 8.61973Z" fill="currentColor" />
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- dự án -->
+    <section class="section-project pb-8 sm:pb-[50px] ">
+        <div class="grid_s wide ">
+            <div class="rounded-xl sm:rounded-[32px] bg-white px-3 sm:px-5 pt-5 pb-7 ">
+                <div class="w-full text-center flex flex-wrap justify-center">
+                                            <div class="text-[20px] sm:text-[24px] leading-normal sm:leading-normal text-[var(--html-bg-website)] font-bold font-main-700   w-full">
+                            <span>
+                                CÁC CÔNG TRÌNH TIÊU BIỂU CỦA ĐÔNG HƯNG                            </span>
+                        </div>
+                                                                <div class="mt-2 text-[#3D3A3A] text-xs sm:text-sm leading-[1.78] sm:leading-[1.78] font-normal font-main-400">
+                            <span class="line-clamp-6">
+                                Tổng hợp các dự án tiêu biểu đã được ĐÔNG HƯNG thực hiện, thể hiện năng lực và kinh nghiệm chuyên môn trong lĩnh vực chế tạo bồn inox.                            </span>
+                        </div>
+                                    </div>
+                <div class="flipster form_project_main mt-7">
+                    <ul class="">
+                                                    <li class="max-w-[80%] w-[560px]">
+                                    <div class="w-full ">
+        <div class="group/templateNew_seven w-full overflow-hidden  aspect-[548/428] relative load_website  rounded-2xl  ">
+            <div class="w-full overflow-hidden  aspect-[548/428] relative leading-[0] ">
+                <a href='lap-dat-bon-inox-tai-my-phuoc-ben-cat-7' class='load_website w-full'  role='link' rel='dofollow' title='LẮP ĐẶT BỒN INOX TẠI MỸ PHƯỚC BẾN CÁT 7'  style='width: 1000px;aspect-ratio:1000/781.02189781022;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='1000' height='781.02189781022' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='assets/images/noimage.png' alt='LẮP ĐẶT BỒN INOX TẠI MỸ PHƯỚC BẾN CÁT 7' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>            </div>
+            <div class="absolute top-0 left-0 w-full h-full z-10 pointer-events-none ">
+                <div class="flex flex-wrap flex-col w-full h-full py-5 px-7 ">
+                    <div class="flex-1"></div>
+                    <div class="w-full">
+                        <div class=" text-center  ">
+                            <h6><a href='lap-dat-bon-inox-tai-my-phuoc-ben-cat-7' class='text-sm sm:text-base leading-[1.68] sm:leading-[1.68] h-[calc(14px*1.68*2)] sm:h-[calc(16px*1.68*2)] line-clamp-2 font-semibold font-main-600 text-white group-hover/templateNew_seven:text-[var(--html-bg-website)] transition-all duration-300'  rel='dofollow' role='link' aria-label='LẮP ĐẶT BỒN INOX TẠI MỸ PHƯỚC BẾN CÁT 7' title='LẮP ĐẶT BỒN INOX TẠI MỸ PHƯỚC BẾN CÁT 7'><span >LẮP ĐẶT BỒN INOX TẠI MỸ PHƯỚC BẾN CÁT 7</span></a></h6>                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                            </li>
+                                                    <li class="max-w-[80%] w-[560px]">
+                                    <div class="w-full ">
+        <div class="group/templateNew_seven w-full overflow-hidden  aspect-[548/428] relative load_website  rounded-2xl  ">
+            <div class="w-full overflow-hidden  aspect-[548/428] relative leading-[0] ">
+                <a href='lap-dat-bon-inox-tai-my-phuoc-ben-cat-6' class='load_website w-full'  role='link' rel='dofollow' title='LẮP ĐẶT BỒN INOX TẠI MỸ PHƯỚC BẾN CÁT 6'  style='width: 1000px;aspect-ratio:1000/781.02189781022;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='1000' height='781.02189781022' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='assets/images/noimage.png' alt='LẮP ĐẶT BỒN INOX TẠI MỸ PHƯỚC BẾN CÁT 6' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>            </div>
+            <div class="absolute top-0 left-0 w-full h-full z-10 pointer-events-none ">
+                <div class="flex flex-wrap flex-col w-full h-full py-5 px-7 ">
+                    <div class="flex-1"></div>
+                    <div class="w-full">
+                        <div class=" text-center  ">
+                            <h6><a href='lap-dat-bon-inox-tai-my-phuoc-ben-cat-6' class='text-sm sm:text-base leading-[1.68] sm:leading-[1.68] h-[calc(14px*1.68*2)] sm:h-[calc(16px*1.68*2)] line-clamp-2 font-semibold font-main-600 text-white group-hover/templateNew_seven:text-[var(--html-bg-website)] transition-all duration-300'  rel='dofollow' role='link' aria-label='LẮP ĐẶT BỒN INOX TẠI MỸ PHƯỚC BẾN CÁT 6' title='LẮP ĐẶT BỒN INOX TẠI MỸ PHƯỚC BẾN CÁT 6'><span >LẮP ĐẶT BỒN INOX TẠI MỸ PHƯỚC BẾN CÁT 6</span></a></h6>                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                            </li>
+                                                    <li class="max-w-[80%] w-[560px]">
+                                    <div class="w-full ">
+        <div class="group/templateNew_seven w-full overflow-hidden  aspect-[548/428] relative load_website  rounded-2xl  ">
+            <div class="w-full overflow-hidden  aspect-[548/428] relative leading-[0] ">
+                <a href='lap-dat-bon-inox-tai-my-phuoc-ben-cat-5' class='load_website w-full'  role='link' rel='dofollow' title='LẮP ĐẶT BỒN INOX TẠI MỸ PHƯỚC BẾN CÁT 5'  style='width: 1000px;aspect-ratio:1000/781.02189781022;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='1000' height='781.02189781022' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='assets/images/noimage.png' alt='LẮP ĐẶT BỒN INOX TẠI MỸ PHƯỚC BẾN CÁT 5' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>            </div>
+            <div class="absolute top-0 left-0 w-full h-full z-10 pointer-events-none ">
+                <div class="flex flex-wrap flex-col w-full h-full py-5 px-7 ">
+                    <div class="flex-1"></div>
+                    <div class="w-full">
+                        <div class=" text-center  ">
+                            <h6><a href='lap-dat-bon-inox-tai-my-phuoc-ben-cat-5' class='text-sm sm:text-base leading-[1.68] sm:leading-[1.68] h-[calc(14px*1.68*2)] sm:h-[calc(16px*1.68*2)] line-clamp-2 font-semibold font-main-600 text-white group-hover/templateNew_seven:text-[var(--html-bg-website)] transition-all duration-300'  rel='dofollow' role='link' aria-label='LẮP ĐẶT BỒN INOX TẠI MỸ PHƯỚC BẾN CÁT 5' title='LẮP ĐẶT BỒN INOX TẠI MỸ PHƯỚC BẾN CÁT 5'><span >LẮP ĐẶT BỒN INOX TẠI MỸ PHƯỚC BẾN CÁT 5</span></a></h6>                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                            </li>
+                                                    <li class="max-w-[80%] w-[560px]">
+                                    <div class="w-full ">
+        <div class="group/templateNew_seven w-full overflow-hidden  aspect-[548/428] relative load_website  rounded-2xl  ">
+            <div class="w-full overflow-hidden  aspect-[548/428] relative leading-[0] ">
+                <a href='lap-dat-bon-inox-tai-my-phuoc-ben-cat-3' class='load_website w-full'  role='link' rel='dofollow' title='LẮP ĐẶT BỒN INOX TẠI MỸ PHƯỚC BẾN CÁT 4'  style='width: 1000px;aspect-ratio:1000/781.02189781022;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='1000' height='781.02189781022' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='assets/images/noimage.png' alt='LẮP ĐẶT BỒN INOX TẠI MỸ PHƯỚC BẾN CÁT 4' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>            </div>
+            <div class="absolute top-0 left-0 w-full h-full z-10 pointer-events-none ">
+                <div class="flex flex-wrap flex-col w-full h-full py-5 px-7 ">
+                    <div class="flex-1"></div>
+                    <div class="w-full">
+                        <div class=" text-center  ">
+                            <h6><a href='lap-dat-bon-inox-tai-my-phuoc-ben-cat-3' class='text-sm sm:text-base leading-[1.68] sm:leading-[1.68] h-[calc(14px*1.68*2)] sm:h-[calc(16px*1.68*2)] line-clamp-2 font-semibold font-main-600 text-white group-hover/templateNew_seven:text-[var(--html-bg-website)] transition-all duration-300'  rel='dofollow' role='link' aria-label='LẮP ĐẶT BỒN INOX TẠI MỸ PHƯỚC BẾN CÁT 4' title='LẮP ĐẶT BỒN INOX TẠI MỸ PHƯỚC BẾN CÁT 4'><span >LẮP ĐẶT BỒN INOX TẠI MỸ PHƯỚC BẾN CÁT 4</span></a></h6>                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                            </li>
+                                                    <li class="max-w-[80%] w-[560px]">
+                                    <div class="w-full ">
+        <div class="group/templateNew_seven w-full overflow-hidden  aspect-[548/428] relative load_website  rounded-2xl  ">
+            <div class="w-full overflow-hidden  aspect-[548/428] relative leading-[0] ">
+                <a href='lap-dat-bon-inox-tai-my-phuoc-ben-cat-2' class='load_website w-full'  role='link' rel='dofollow' title='LẮP ĐẶT BỒN INOX TẠI MỸ PHƯỚC BẾN CÁT 2'  style='width: 1000px;aspect-ratio:1000/781.02189781022;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='1000' height='781.02189781022' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='assets/images/noimage.png' alt='LẮP ĐẶT BỒN INOX TẠI MỸ PHƯỚC BẾN CÁT 2' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>            </div>
+            <div class="absolute top-0 left-0 w-full h-full z-10 pointer-events-none ">
+                <div class="flex flex-wrap flex-col w-full h-full py-5 px-7 ">
+                    <div class="flex-1"></div>
+                    <div class="w-full">
+                        <div class=" text-center  ">
+                            <h6><a href='lap-dat-bon-inox-tai-my-phuoc-ben-cat-2' class='text-sm sm:text-base leading-[1.68] sm:leading-[1.68] h-[calc(14px*1.68*2)] sm:h-[calc(16px*1.68*2)] line-clamp-2 font-semibold font-main-600 text-white group-hover/templateNew_seven:text-[var(--html-bg-website)] transition-all duration-300'  rel='dofollow' role='link' aria-label='LẮP ĐẶT BỒN INOX TẠI MỸ PHƯỚC BẾN CÁT 2' title='LẮP ĐẶT BỒN INOX TẠI MỸ PHƯỚC BẾN CÁT 2'><span >LẮP ĐẶT BỒN INOX TẠI MỸ PHƯỚC BẾN CÁT 2</span></a></h6>                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                            </li>
+                                                    <li class="max-w-[80%] w-[560px]">
+                                    <div class="w-full ">
+        <div class="group/templateNew_seven w-full overflow-hidden  aspect-[548/428] relative load_website  rounded-2xl  ">
+            <div class="w-full overflow-hidden  aspect-[548/428] relative leading-[0] ">
+                <a href='lap-dat-bon-inox-tai-my-phuoc-ben-cat' class='load_website w-full'  role='link' rel='dofollow' title='LẮP ĐẶT BỒN INOX TẠI MỸ PHƯỚC BẾN CÁT'  style='width: 1000px;aspect-ratio:1000/781.02189781022;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='1000' height='781.02189781022' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='assets/images/noimage.png' alt='LẮP ĐẶT BỒN INOX TẠI MỸ PHƯỚC BẾN CÁT' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>            </div>
+            <div class="absolute top-0 left-0 w-full h-full z-10 pointer-events-none ">
+                <div class="flex flex-wrap flex-col w-full h-full py-5 px-7 ">
+                    <div class="flex-1"></div>
+                    <div class="w-full">
+                        <div class=" text-center  ">
+                            <h6><a href='lap-dat-bon-inox-tai-my-phuoc-ben-cat' class='text-sm sm:text-base leading-[1.68] sm:leading-[1.68] h-[calc(14px*1.68*2)] sm:h-[calc(16px*1.68*2)] line-clamp-2 font-semibold font-main-600 text-white group-hover/templateNew_seven:text-[var(--html-bg-website)] transition-all duration-300'  rel='dofollow' role='link' aria-label='LẮP ĐẶT BỒN INOX TẠI MỸ PHƯỚC BẾN CÁT' title='LẮP ĐẶT BỒN INOX TẠI MỸ PHƯỚC BẾN CÁT'><span >LẮP ĐẶT BỒN INOX TẠI MỸ PHƯỚC BẾN CÁT</span></a></h6>                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                            </li>
+                                            </ul>
+                </div>
+                <div class="w-full flex justify-center items-center mt-5 sm:mt-[70px]">
+                    <a href="du-an" title="Xem thêm tất cả dự án" class=" capitalize outline-none border-none inline-flex justify-center items-center leading-none h-10 rounded-full px-8 bg-[var(--html-bg-website)] text-white text-base font-medium font-main-500 text-center hover:bg-[var(--html-sc-website)] gap-2 transition-all duration-300" data-value="" data-form="view_info_introduce">
+                        <span>Xem thêm tất cả dự án</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
+                            <g clip-path="url(#clip0_3_69)">
+                                <path d="M1.329 8.61973H12.1909L10.156 10.6549C9.57144 11.2395 10.4482 12.1163 11.0327 11.5317L12.886 9.67537L14.1232 8.43614C14.363 8.19491 14.363 7.80532 14.1232 7.5641L11.0327 4.46972C10.9152 4.34889 10.7533 4.28109 10.5847 4.28249C10.0281 4.28256 9.7549 4.9606 10.156 5.34662L12.1957 7.38178H1.297C0.439746 7.42432 0.503753 8.66241 1.329 8.61973Z" fill="currentColor" />
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- quy trình -->
+    <section class="section-process pt-5 pb-10 bg-[var(--html-bg-website)]">
+        <div class="grid_s wide">
+            <div class="w-full text-center flex flex-wrap justify-center">
+                                    <div class="text-[20px] sm:text-[24px] leading-normal sm:leading-normal text-[var(--html-bg-website)] font-bold font-main-700   w-full">
+                        <span class="text-white">
+                            QUY TRÌNH LÀM VIỆC                        </span>
+                    </div>
+                                            </div>
+                            <div class="relative z-10 flex flex-wrap gap-y-3 justify-center items-start mt-8">
+                                            <div class="group/process even flex-1 min-w-[190px] flex justify-center">
+                            <div class="w-full flex flex-wrap  group-[&.even]/process:flex-col group-[&.odd]/process:flex-col-reverse">
+                                <div class="w-full flex justify-center group-[&.odd]/process:items-start items-end h-[110px] ">
+                                    <div class="px-3 text-center flex items-center overflow-hidden text-sm text-white leading-[2] h-[calc(14px*2*2)] ">
+                                        <span class="line-clamp-2">
+                                            Khảo sát mặt bằng                                        </span>
+                                    </div>
+                                </div>
+                                <div class="flex justify-end items-center  ">
+                                    <div class="relative z-10">
+                                        <div class="h-2 w-2 rounded-full bg-[#D5D5D5]"></div>
+                                    </div>
+                                    <div class="absolute h-[1px] w-full left-0  z-[-1]  overflow-hidden" style="background: repeating-linear-gradient( to left,white 0px, white 3px, transparent 3px, transparent 7px);"></div>
+                                </div>
+                                <div class="w-full flex group-[&.even]/process:flex-col group-[&.odd]/process:flex-col-reverse items-center h-[110px] ">
+                                    <div class="w-[1px] h-[35px]" style="background: repeating-linear-gradient( to bottom,white 0px, white 3px, transparent 3px, transparent 6px);"></div>
+                                    <div class="flex justify-center">
+                                        <div class="w-[50px] ring_web">
+                                            <a href='javascript:void(0)' class='load_website '  role='link' rel='dofollow' title='Khảo sát mặt bằng'  style='width: 200px;aspect-ratio:200/200;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='200' height='200' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='assets/images/noimage.png' alt='Khảo sát mặt bằng' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></a>                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="group/process odd flex-1 min-w-[190px] flex justify-center">
+                            <div class="w-full flex flex-wrap  group-[&.even]/process:flex-col group-[&.odd]/process:flex-col-reverse">
+                                <div class="w-full flex justify-center group-[&.odd]/process:items-start items-end h-[110px] ">
+                                    <div class="px-3 text-center flex items-center overflow-hidden text-sm text-white leading-[2] h-[calc(14px*2*2)] ">
+                                        <span class="line-clamp-2">
+                                            Tư vấn cách thức lắp đặt                                         </span>
+                                    </div>
+                                </div>
+                                <div class="flex justify-end items-center  ">
+                                    <div class="relative z-10">
+                                        <div class="h-2 w-2 rounded-full bg-[#D5D5D5]"></div>
+                                    </div>
+                                    <div class="absolute h-[1px] w-full left-0  z-[-1]  overflow-hidden" style="background: repeating-linear-gradient( to left,white 0px, white 3px, transparent 3px, transparent 7px);"></div>
+                                </div>
+                                <div class="w-full flex group-[&.even]/process:flex-col group-[&.odd]/process:flex-col-reverse items-center h-[110px] ">
+                                    <div class="w-[1px] h-[35px]" style="background: repeating-linear-gradient( to bottom,white 0px, white 3px, transparent 3px, transparent 6px);"></div>
+                                    <div class="flex justify-center">
+                                        <div class="w-[50px] ring_web">
+                                            <a href='javascript:void(0)' class='load_website '  role='link' rel='dofollow' title='Tư vấn cách thức lắp đặt '  style='width: 200px;aspect-ratio:200/200;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='200' height='200' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='assets/images/noimage.png' alt='Tư vấn cách thức lắp đặt ' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></a>                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="group/process even flex-1 min-w-[190px] flex justify-center">
+                            <div class="w-full flex flex-wrap  group-[&.even]/process:flex-col group-[&.odd]/process:flex-col-reverse">
+                                <div class="w-full flex justify-center group-[&.odd]/process:items-start items-end h-[110px] ">
+                                    <div class="px-3 text-center flex items-center overflow-hidden text-sm text-white leading-[2] h-[calc(14px*2*2)] ">
+                                        <span class="line-clamp-2">
+                                            Đề xuất báo giá                                        </span>
+                                    </div>
+                                </div>
+                                <div class="flex justify-end items-center  ">
+                                    <div class="relative z-10">
+                                        <div class="h-2 w-2 rounded-full bg-[#D5D5D5]"></div>
+                                    </div>
+                                    <div class="absolute h-[1px] w-full left-0  z-[-1]  overflow-hidden" style="background: repeating-linear-gradient( to left,white 0px, white 3px, transparent 3px, transparent 7px);"></div>
+                                </div>
+                                <div class="w-full flex group-[&.even]/process:flex-col group-[&.odd]/process:flex-col-reverse items-center h-[110px] ">
+                                    <div class="w-[1px] h-[35px]" style="background: repeating-linear-gradient( to bottom,white 0px, white 3px, transparent 3px, transparent 6px);"></div>
+                                    <div class="flex justify-center">
+                                        <div class="w-[50px] ring_web">
+                                            <a href='javascript:void(0)' class='load_website '  role='link' rel='dofollow' title='Đề xuất báo giá'  style='width: 200px;aspect-ratio:200/200;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='200' height='200' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='assets/images/noimage.png' alt='Đề xuất báo giá' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></a>                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="group/process odd flex-1 min-w-[190px] flex justify-center">
+                            <div class="w-full flex flex-wrap  group-[&.even]/process:flex-col group-[&.odd]/process:flex-col-reverse">
+                                <div class="w-full flex justify-center group-[&.odd]/process:items-start items-end h-[110px] ">
+                                    <div class="px-3 text-center flex items-center overflow-hidden text-sm text-white leading-[2] h-[calc(14px*2*2)] ">
+                                        <span class="line-clamp-2">
+                                            Kí hợp đồng thi công                                        </span>
+                                    </div>
+                                </div>
+                                <div class="flex justify-end items-center  ">
+                                    <div class="relative z-10">
+                                        <div class="h-2 w-2 rounded-full bg-[#D5D5D5]"></div>
+                                    </div>
+                                    <div class="absolute h-[1px] w-full left-0  z-[-1]  overflow-hidden" style="background: repeating-linear-gradient( to left,white 0px, white 3px, transparent 3px, transparent 7px);"></div>
+                                </div>
+                                <div class="w-full flex group-[&.even]/process:flex-col group-[&.odd]/process:flex-col-reverse items-center h-[110px] ">
+                                    <div class="w-[1px] h-[35px]" style="background: repeating-linear-gradient( to bottom,white 0px, white 3px, transparent 3px, transparent 6px);"></div>
+                                    <div class="flex justify-center">
+                                        <div class="w-[50px] ring_web">
+                                            <a href='javascript:void(0)' class='load_website '  role='link' rel='dofollow' title='Kí hợp đồng thi công'  style='width: 200px;aspect-ratio:200/200;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='200' height='200' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='assets/images/noimage.png' alt='Kí hợp đồng thi công' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></a>                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="group/process even flex-1 min-w-[190px] flex justify-center">
+                            <div class="w-full flex flex-wrap  group-[&.even]/process:flex-col group-[&.odd]/process:flex-col-reverse">
+                                <div class="w-full flex justify-center group-[&.odd]/process:items-start items-end h-[110px] ">
+                                    <div class="px-3 text-center flex items-center overflow-hidden text-sm text-white leading-[2] h-[calc(14px*2*2)] ">
+                                        <span class="line-clamp-2">
+                                            Thi công                                        </span>
+                                    </div>
+                                </div>
+                                <div class="flex justify-end items-center  ">
+                                    <div class="relative z-10">
+                                        <div class="h-2 w-2 rounded-full bg-[#D5D5D5]"></div>
+                                    </div>
+                                    <div class="absolute h-[1px] w-full left-0  z-[-1]  overflow-hidden" style="background: repeating-linear-gradient( to left,white 0px, white 3px, transparent 3px, transparent 7px);"></div>
+                                </div>
+                                <div class="w-full flex group-[&.even]/process:flex-col group-[&.odd]/process:flex-col-reverse items-center h-[110px] ">
+                                    <div class="w-[1px] h-[35px]" style="background: repeating-linear-gradient( to bottom,white 0px, white 3px, transparent 3px, transparent 6px);"></div>
+                                    <div class="flex justify-center">
+                                        <div class="w-[50px] ring_web">
+                                            <a href='javascript:void(0)' class='load_website '  role='link' rel='dofollow' title='Thi công'  style='width: 200px;aspect-ratio:200/200;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='200' height='200' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='assets/images/noimage.png' alt='Thi công' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></a>                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="group/process odd flex-1 min-w-[190px] flex justify-center">
+                            <div class="w-full flex flex-wrap  group-[&.even]/process:flex-col group-[&.odd]/process:flex-col-reverse">
+                                <div class="w-full flex justify-center group-[&.odd]/process:items-start items-end h-[110px] ">
+                                    <div class="px-3 text-center flex items-center overflow-hidden text-sm text-white leading-[2] h-[calc(14px*2*2)] ">
+                                        <span class="line-clamp-2">
+                                            Nghiệm thu &amp; Bàn giao                                        </span>
+                                    </div>
+                                </div>
+                                <div class="flex justify-end items-center  ">
+                                    <div class="relative z-10">
+                                        <div class="h-2 w-2 rounded-full bg-[#D5D5D5]"></div>
+                                    </div>
+                                    <div class="absolute h-[1px] w-full left-0  z-[-1]  overflow-hidden" style="background: repeating-linear-gradient( to left,white 0px, white 3px, transparent 3px, transparent 7px);"></div>
+                                </div>
+                                <div class="w-full flex group-[&.even]/process:flex-col group-[&.odd]/process:flex-col-reverse items-center h-[110px] ">
+                                    <div class="w-[1px] h-[35px]" style="background: repeating-linear-gradient( to bottom,white 0px, white 3px, transparent 3px, transparent 6px);"></div>
+                                    <div class="flex justify-center">
+                                        <div class="w-[50px] ring_web">
+                                            <a href='javascript:void(0)' class='load_website '  role='link' rel='dofollow' title='Nghiệm thu &amp; Bàn giao'  style='width: 200px;aspect-ratio:200/200;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='200' height='200' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='assets/images/noimage.png' alt='Nghiệm thu &amp; Bàn giao' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></a>                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                    </div>
+                    </div>
+    </section>
+
+<div class="h-5 sm:h-[50px] "></div>
+
+<!-- tin tức -->
+    <section class="section-blogs  pb-8 sm:pb-[50px] ">
+        <div class="grid_s wide ">
+            <div class="rounded-xl sm:rounded-[32px] bg-white px-3 sm:px-5 pt-6 pb-11 ">
+                <div class="w-full text-center flex flex-wrap justify-center">
+                                            <div class="text-[20px] sm:text-[24px] leading-normal sm:leading-normal text-[var(--html-bg-website)] font-bold font-main-700   w-full">
+                            <span>
+                                TIN TỨC                            </span>
+                        </div>
+                                                        </div>
+                <div class="owl-carousel form_blogs_main owl-theme mt-7">
+                        <div class="group/templateNew_nine load_website h-full overflow-hidden bg-white border border-[#E4E2E2] hover:border-[var(--html-bg-website)] px-4 pt-4 pb-4 rounded-2xl flex flex-wrap flex-col transition-all duration-300  ">
+        <div class="overflow-hidden w-full rounded-md sm:rounded-lg mb-5 relative leading-[0]">
+            <a href='uu-nhuoc-diem-cua-bon-loc-ap-luc' class='load_website w-full'  role='link' rel='dofollow' title='Ưu nhược điểm của bồn lọc áp lực'  style='width: 400px;aspect-ratio:400/400;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='400' height='400' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='assets/images/noimage.png' alt='Ưu nhược điểm của bồn lọc áp lực' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>        </div>
+        <div class="mb-2 flex w-full items-center gap-[6px] text-[#8F8C8C] text-sm font-normal font-main-400 group-hover/templateNew_nine:text-[var(--html-bg-website)]">
+            <div class="transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21" fill="none">
+                    <path d="M3.37708 16.9537C3.37708 17.5891 3.91849 18.1059 4.58379 18.1059H18.2205C18.8862 18.1059 19.4276 17.5891 19.4276 16.9537V7.82178H3.37708V16.9537ZM14.1676 14.1887C14.1676 14.7767 13.6665 15.2551 13.0507 15.2551H9.75412C9.1383 15.2551 8.63727 14.7767 8.63727 14.1887V12.9164C8.63727 12.6898 8.82954 12.5063 9.06682 12.5063C9.30411 12.5063 9.49638 12.6898 9.49638 12.9164V14.1887C9.49638 14.3221 9.61442 14.4348 9.75412 14.4348H13.0509C13.1906 14.4348 13.3086 14.3221 13.3086 14.1887V11.7135C13.3086 11.4869 13.5009 11.3033 13.7382 11.3033C13.9755 11.3033 14.1677 11.4869 14.1677 11.7135L14.1676 14.1887ZM7.97077 10.2091C8.14053 10.0507 8.41235 10.054 8.57816 10.2161L8.82215 10.455C9.02232 10.1661 9.36511 9.97493 9.75394 9.97493H13.0409L14.2009 8.6165C14.3507 8.44111 14.6213 8.41486 14.8054 8.55793C14.9892 8.70099 15.0167 8.95939 14.8667 9.1351L11.2584 13.3604C11.1811 13.4509 11.0668 13.5057 10.9447 13.5108C10.9383 13.5111 10.932 13.5113 10.9256 13.5113C10.8101 13.5113 10.6991 13.4668 10.618 13.3876L7.96321 10.789C7.79774 10.6268 7.801 10.367 7.97077 10.2091Z" fill="currentColor" />
+                    <path d="M12.3406 10.7952H9.75416C9.61447 10.7952 9.49642 10.9079 9.49642 11.0413C9.49642 11.0641 9.49316 11.0859 9.48938 11.1075L10.8971 12.4853L12.3406 10.7952Z" fill="currentColor" />
+                    <path d="M18.835 4.66272C18.5755 5.49566 17.7673 6.10548 16.8116 6.10548C16.5743 6.10548 16.382 5.9219 16.382 5.69533C16.382 5.46876 16.5743 5.28517 16.8116 5.28517C17.5021 5.28517 18.064 4.74885 18.064 4.08981C18.064 3.43044 17.5021 2.89429 16.8116 2.89429C16.2721 2.89429 15.8126 3.22208 15.6366 3.67965H16.9877C17.225 3.67965 17.4173 3.86324 17.4173 4.08981C17.4173 4.31638 17.225 4.49997 16.9877 4.49997H13.4694C13.2703 5.41527 12.4193 6.10548 11.4024 6.10548C11.1651 6.10548 10.9729 5.9219 10.9729 5.69533C10.9729 5.46876 11.1651 5.28517 11.4024 5.28517C12.0928 5.28517 12.6545 4.74885 12.6545 4.08981C12.6545 3.43044 12.0928 2.89429 11.4024 2.89429C10.8629 2.89429 10.4034 3.22208 10.2275 3.67965H11.5785C11.8158 3.67965 12.0081 3.86324 12.0081 4.08981C12.0081 4.31638 11.8158 4.49997 11.5785 4.49997H8.06046C7.86131 5.41527 7.0101 6.10548 5.99308 6.10548C5.75579 6.10548 5.56352 5.9219 5.56352 5.69533C5.56352 5.46876 5.75579 5.28517 5.99308 5.28517C6.68364 5.28517 7.2455 4.74885 7.2455 4.08981C7.2455 3.43044 6.68364 2.89429 5.99308 2.89429C5.45373 2.89429 4.99427 3.22208 4.8185 3.67965H6.16954C6.40683 3.67965 6.5991 3.86324 6.5991 4.08981C6.5991 4.31638 6.40683 4.49997 6.16954 4.49997H4.58379C3.91832 4.49997 3.37708 5.01693 3.37708 5.65251V7.00143H19.4278V5.65251C19.4278 5.23907 19.1927 4.86665 18.835 4.66272Z" fill="currentColor" />
+                </svg>
+            </div>
+            <div class=" leading-none pt-[2px]">
+                <span>22/03/2025</span>
+            </div>
+        </div>
+        <div class=" mb-2 flex items-start gap-2 text-sm sm:text-base leading-normal h-[calc(14px*1.5*2)] sm:h-[calc(16px*1.5*2)] line-clamp-2 font-normal font-main-400 text-black transition-all duration-300">
+            <div class="flex-1">
+                <h6><a href='uu-nhuoc-diem-cua-bon-loc-ap-luc' class='line-clamp-2'  rel='dofollow' role='link' aria-label='Ưu nhược điểm của bồn lọc áp lực' title='Ưu nhược điểm của bồn lọc áp lực'><span >Ưu nhược điểm của bồn lọc áp lực</span></a></h6>            </div>
+            <div class="flex-initial group-hover/templateNew_nine:text-[var(--html-bg-website)] transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" viewBox="0 0 29 28" fill="none">
+                    <path d="M3.77051 3H26V23.5408" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="round" />
+                    <path d="M3 24.2766L25.2295 3.73584" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+        <div class=" text-xs sm:text-sm leading-[1.78] text-[#565656] sm:leading-[1.78] h-[calc(12px*1.78*2)] sm:h-[calc(14px*1.78*2)]  font-normal font-main-400  ">
+            <span class='line-clamp-2'>
+                Bài viết phân tích các xu hướng xây dựng nhà xưởng thân thiện với môi            </span>
+        </div>
+    </div>
+    <div class="group/templateNew_nine load_website h-full overflow-hidden bg-white border border-[#E4E2E2] hover:border-[var(--html-bg-website)] px-4 pt-4 pb-4 rounded-2xl flex flex-wrap flex-col transition-all duration-300  ">
+        <div class="overflow-hidden w-full rounded-md sm:rounded-lg mb-5 relative leading-[0]">
+            <a href='gia-cong-bon-cong-nghiep-gia-tot' class='load_website w-full'  role='link' rel='dofollow' title='Gia Công Bồn Công Nghiệp Giá Tốt'  style='width: 400px;aspect-ratio:400/400;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='400' height='400' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='assets/images/noimage.png' alt='Gia Công Bồn Công Nghiệp Giá Tốt' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>        </div>
+        <div class="mb-2 flex w-full items-center gap-[6px] text-[#8F8C8C] text-sm font-normal font-main-400 group-hover/templateNew_nine:text-[var(--html-bg-website)]">
+            <div class="transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21" fill="none">
+                    <path d="M3.37708 16.9537C3.37708 17.5891 3.91849 18.1059 4.58379 18.1059H18.2205C18.8862 18.1059 19.4276 17.5891 19.4276 16.9537V7.82178H3.37708V16.9537ZM14.1676 14.1887C14.1676 14.7767 13.6665 15.2551 13.0507 15.2551H9.75412C9.1383 15.2551 8.63727 14.7767 8.63727 14.1887V12.9164C8.63727 12.6898 8.82954 12.5063 9.06682 12.5063C9.30411 12.5063 9.49638 12.6898 9.49638 12.9164V14.1887C9.49638 14.3221 9.61442 14.4348 9.75412 14.4348H13.0509C13.1906 14.4348 13.3086 14.3221 13.3086 14.1887V11.7135C13.3086 11.4869 13.5009 11.3033 13.7382 11.3033C13.9755 11.3033 14.1677 11.4869 14.1677 11.7135L14.1676 14.1887ZM7.97077 10.2091C8.14053 10.0507 8.41235 10.054 8.57816 10.2161L8.82215 10.455C9.02232 10.1661 9.36511 9.97493 9.75394 9.97493H13.0409L14.2009 8.6165C14.3507 8.44111 14.6213 8.41486 14.8054 8.55793C14.9892 8.70099 15.0167 8.95939 14.8667 9.1351L11.2584 13.3604C11.1811 13.4509 11.0668 13.5057 10.9447 13.5108C10.9383 13.5111 10.932 13.5113 10.9256 13.5113C10.8101 13.5113 10.6991 13.4668 10.618 13.3876L7.96321 10.789C7.79774 10.6268 7.801 10.367 7.97077 10.2091Z" fill="currentColor" />
+                    <path d="M12.3406 10.7952H9.75416C9.61447 10.7952 9.49642 10.9079 9.49642 11.0413C9.49642 11.0641 9.49316 11.0859 9.48938 11.1075L10.8971 12.4853L12.3406 10.7952Z" fill="currentColor" />
+                    <path d="M18.835 4.66272C18.5755 5.49566 17.7673 6.10548 16.8116 6.10548C16.5743 6.10548 16.382 5.9219 16.382 5.69533C16.382 5.46876 16.5743 5.28517 16.8116 5.28517C17.5021 5.28517 18.064 4.74885 18.064 4.08981C18.064 3.43044 17.5021 2.89429 16.8116 2.89429C16.2721 2.89429 15.8126 3.22208 15.6366 3.67965H16.9877C17.225 3.67965 17.4173 3.86324 17.4173 4.08981C17.4173 4.31638 17.225 4.49997 16.9877 4.49997H13.4694C13.2703 5.41527 12.4193 6.10548 11.4024 6.10548C11.1651 6.10548 10.9729 5.9219 10.9729 5.69533C10.9729 5.46876 11.1651 5.28517 11.4024 5.28517C12.0928 5.28517 12.6545 4.74885 12.6545 4.08981C12.6545 3.43044 12.0928 2.89429 11.4024 2.89429C10.8629 2.89429 10.4034 3.22208 10.2275 3.67965H11.5785C11.8158 3.67965 12.0081 3.86324 12.0081 4.08981C12.0081 4.31638 11.8158 4.49997 11.5785 4.49997H8.06046C7.86131 5.41527 7.0101 6.10548 5.99308 6.10548C5.75579 6.10548 5.56352 5.9219 5.56352 5.69533C5.56352 5.46876 5.75579 5.28517 5.99308 5.28517C6.68364 5.28517 7.2455 4.74885 7.2455 4.08981C7.2455 3.43044 6.68364 2.89429 5.99308 2.89429C5.45373 2.89429 4.99427 3.22208 4.8185 3.67965H6.16954C6.40683 3.67965 6.5991 3.86324 6.5991 4.08981C6.5991 4.31638 6.40683 4.49997 6.16954 4.49997H4.58379C3.91832 4.49997 3.37708 5.01693 3.37708 5.65251V7.00143H19.4278V5.65251C19.4278 5.23907 19.1927 4.86665 18.835 4.66272Z" fill="currentColor" />
+                </svg>
+            </div>
+            <div class=" leading-none pt-[2px]">
+                <span>22/03/2025</span>
+            </div>
+        </div>
+        <div class=" mb-2 flex items-start gap-2 text-sm sm:text-base leading-normal h-[calc(14px*1.5*2)] sm:h-[calc(16px*1.5*2)] line-clamp-2 font-normal font-main-400 text-black transition-all duration-300">
+            <div class="flex-1">
+                <h6><a href='gia-cong-bon-cong-nghiep-gia-tot' class='line-clamp-2'  rel='dofollow' role='link' aria-label='Gia Công Bồn Công Nghiệp Giá Tốt' title='Gia Công Bồn Công Nghiệp Giá Tốt'><span >Gia Công Bồn Công Nghiệp Giá Tốt</span></a></h6>            </div>
+            <div class="flex-initial group-hover/templateNew_nine:text-[var(--html-bg-website)] transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" viewBox="0 0 29 28" fill="none">
+                    <path d="M3.77051 3H26V23.5408" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="round" />
+                    <path d="M3 24.2766L25.2295 3.73584" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+        <div class=" text-xs sm:text-sm leading-[1.78] text-[#565656] sm:leading-[1.78] h-[calc(12px*1.78*2)] sm:h-[calc(14px*1.78*2)]  font-normal font-main-400  ">
+            <span class='line-clamp-2'>
+                Bài viết phân tích các xu hướng xây dựng nhà xưởng thân thiện với môi            </span>
+        </div>
+    </div>
+    <div class="group/templateNew_nine load_website h-full overflow-hidden bg-white border border-[#E4E2E2] hover:border-[var(--html-bg-website)] px-4 pt-4 pb-4 rounded-2xl flex flex-wrap flex-col transition-all duration-300  ">
+        <div class="overflow-hidden w-full rounded-md sm:rounded-lg mb-5 relative leading-[0]">
+            <a href='tim-hieu-ve-be-loc-ap-luc-trong-xu-ly-nuoc-thai' class='load_website w-full'  role='link' rel='dofollow' title='Tìm hiểu về bể lọc áp lực trong xử lý nước thải'  style='width: 400px;aspect-ratio:400/400;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='400' height='400' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='assets/images/noimage.png' alt='Tìm hiểu về bể lọc áp lực trong xử lý nước thải' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>        </div>
+        <div class="mb-2 flex w-full items-center gap-[6px] text-[#8F8C8C] text-sm font-normal font-main-400 group-hover/templateNew_nine:text-[var(--html-bg-website)]">
+            <div class="transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21" fill="none">
+                    <path d="M3.37708 16.9537C3.37708 17.5891 3.91849 18.1059 4.58379 18.1059H18.2205C18.8862 18.1059 19.4276 17.5891 19.4276 16.9537V7.82178H3.37708V16.9537ZM14.1676 14.1887C14.1676 14.7767 13.6665 15.2551 13.0507 15.2551H9.75412C9.1383 15.2551 8.63727 14.7767 8.63727 14.1887V12.9164C8.63727 12.6898 8.82954 12.5063 9.06682 12.5063C9.30411 12.5063 9.49638 12.6898 9.49638 12.9164V14.1887C9.49638 14.3221 9.61442 14.4348 9.75412 14.4348H13.0509C13.1906 14.4348 13.3086 14.3221 13.3086 14.1887V11.7135C13.3086 11.4869 13.5009 11.3033 13.7382 11.3033C13.9755 11.3033 14.1677 11.4869 14.1677 11.7135L14.1676 14.1887ZM7.97077 10.2091C8.14053 10.0507 8.41235 10.054 8.57816 10.2161L8.82215 10.455C9.02232 10.1661 9.36511 9.97493 9.75394 9.97493H13.0409L14.2009 8.6165C14.3507 8.44111 14.6213 8.41486 14.8054 8.55793C14.9892 8.70099 15.0167 8.95939 14.8667 9.1351L11.2584 13.3604C11.1811 13.4509 11.0668 13.5057 10.9447 13.5108C10.9383 13.5111 10.932 13.5113 10.9256 13.5113C10.8101 13.5113 10.6991 13.4668 10.618 13.3876L7.96321 10.789C7.79774 10.6268 7.801 10.367 7.97077 10.2091Z" fill="currentColor" />
+                    <path d="M12.3406 10.7952H9.75416C9.61447 10.7952 9.49642 10.9079 9.49642 11.0413C9.49642 11.0641 9.49316 11.0859 9.48938 11.1075L10.8971 12.4853L12.3406 10.7952Z" fill="currentColor" />
+                    <path d="M18.835 4.66272C18.5755 5.49566 17.7673 6.10548 16.8116 6.10548C16.5743 6.10548 16.382 5.9219 16.382 5.69533C16.382 5.46876 16.5743 5.28517 16.8116 5.28517C17.5021 5.28517 18.064 4.74885 18.064 4.08981C18.064 3.43044 17.5021 2.89429 16.8116 2.89429C16.2721 2.89429 15.8126 3.22208 15.6366 3.67965H16.9877C17.225 3.67965 17.4173 3.86324 17.4173 4.08981C17.4173 4.31638 17.225 4.49997 16.9877 4.49997H13.4694C13.2703 5.41527 12.4193 6.10548 11.4024 6.10548C11.1651 6.10548 10.9729 5.9219 10.9729 5.69533C10.9729 5.46876 11.1651 5.28517 11.4024 5.28517C12.0928 5.28517 12.6545 4.74885 12.6545 4.08981C12.6545 3.43044 12.0928 2.89429 11.4024 2.89429C10.8629 2.89429 10.4034 3.22208 10.2275 3.67965H11.5785C11.8158 3.67965 12.0081 3.86324 12.0081 4.08981C12.0081 4.31638 11.8158 4.49997 11.5785 4.49997H8.06046C7.86131 5.41527 7.0101 6.10548 5.99308 6.10548C5.75579 6.10548 5.56352 5.9219 5.56352 5.69533C5.56352 5.46876 5.75579 5.28517 5.99308 5.28517C6.68364 5.28517 7.2455 4.74885 7.2455 4.08981C7.2455 3.43044 6.68364 2.89429 5.99308 2.89429C5.45373 2.89429 4.99427 3.22208 4.8185 3.67965H6.16954C6.40683 3.67965 6.5991 3.86324 6.5991 4.08981C6.5991 4.31638 6.40683 4.49997 6.16954 4.49997H4.58379C3.91832 4.49997 3.37708 5.01693 3.37708 5.65251V7.00143H19.4278V5.65251C19.4278 5.23907 19.1927 4.86665 18.835 4.66272Z" fill="currentColor" />
+                </svg>
+            </div>
+            <div class=" leading-none pt-[2px]">
+                <span>22/03/2025</span>
+            </div>
+        </div>
+        <div class=" mb-2 flex items-start gap-2 text-sm sm:text-base leading-normal h-[calc(14px*1.5*2)] sm:h-[calc(16px*1.5*2)] line-clamp-2 font-normal font-main-400 text-black transition-all duration-300">
+            <div class="flex-1">
+                <h6><a href='tim-hieu-ve-be-loc-ap-luc-trong-xu-ly-nuoc-thai' class='line-clamp-2'  rel='dofollow' role='link' aria-label='Tìm hiểu về bể lọc áp lực trong xử lý nước thải' title='Tìm hiểu về bể lọc áp lực trong xử lý nước thải'><span >Tìm hiểu về bể lọc áp lực trong xử lý nước thải</span></a></h6>            </div>
+            <div class="flex-initial group-hover/templateNew_nine:text-[var(--html-bg-website)] transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" viewBox="0 0 29 28" fill="none">
+                    <path d="M3.77051 3H26V23.5408" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="round" />
+                    <path d="M3 24.2766L25.2295 3.73584" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+        <div class=" text-xs sm:text-sm leading-[1.78] text-[#565656] sm:leading-[1.78] h-[calc(12px*1.78*2)] sm:h-[calc(14px*1.78*2)]  font-normal font-main-400  ">
+            <span class='line-clamp-2'>
+                Bài viết phân tích các xu hướng xây dựng nhà xưởng thân thiện với môi            </span>
+        </div>
+    </div>
+    <div class="group/templateNew_nine load_website h-full overflow-hidden bg-white border border-[#E4E2E2] hover:border-[var(--html-bg-website)] px-4 pt-4 pb-4 rounded-2xl flex flex-wrap flex-col transition-all duration-300  ">
+        <div class="overflow-hidden w-full rounded-md sm:rounded-lg mb-5 relative leading-[0]">
+            <a href='xu-huong-che-tao-bon-inox-cong-nghiep' class='load_website w-full'  role='link' rel='dofollow' title='Xu hướng Chế tạo bồn inox Công Nghiệp'  style='width: 400px;aspect-ratio:400/400;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='400' height='400' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='assets/images/noimage.png' alt='Xu hướng Chế tạo bồn inox Công Nghiệp' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:cover ;'/></a>        </div>
+        <div class="mb-2 flex w-full items-center gap-[6px] text-[#8F8C8C] text-sm font-normal font-main-400 group-hover/templateNew_nine:text-[var(--html-bg-website)]">
+            <div class="transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21" fill="none">
+                    <path d="M3.37708 16.9537C3.37708 17.5891 3.91849 18.1059 4.58379 18.1059H18.2205C18.8862 18.1059 19.4276 17.5891 19.4276 16.9537V7.82178H3.37708V16.9537ZM14.1676 14.1887C14.1676 14.7767 13.6665 15.2551 13.0507 15.2551H9.75412C9.1383 15.2551 8.63727 14.7767 8.63727 14.1887V12.9164C8.63727 12.6898 8.82954 12.5063 9.06682 12.5063C9.30411 12.5063 9.49638 12.6898 9.49638 12.9164V14.1887C9.49638 14.3221 9.61442 14.4348 9.75412 14.4348H13.0509C13.1906 14.4348 13.3086 14.3221 13.3086 14.1887V11.7135C13.3086 11.4869 13.5009 11.3033 13.7382 11.3033C13.9755 11.3033 14.1677 11.4869 14.1677 11.7135L14.1676 14.1887ZM7.97077 10.2091C8.14053 10.0507 8.41235 10.054 8.57816 10.2161L8.82215 10.455C9.02232 10.1661 9.36511 9.97493 9.75394 9.97493H13.0409L14.2009 8.6165C14.3507 8.44111 14.6213 8.41486 14.8054 8.55793C14.9892 8.70099 15.0167 8.95939 14.8667 9.1351L11.2584 13.3604C11.1811 13.4509 11.0668 13.5057 10.9447 13.5108C10.9383 13.5111 10.932 13.5113 10.9256 13.5113C10.8101 13.5113 10.6991 13.4668 10.618 13.3876L7.96321 10.789C7.79774 10.6268 7.801 10.367 7.97077 10.2091Z" fill="currentColor" />
+                    <path d="M12.3406 10.7952H9.75416C9.61447 10.7952 9.49642 10.9079 9.49642 11.0413C9.49642 11.0641 9.49316 11.0859 9.48938 11.1075L10.8971 12.4853L12.3406 10.7952Z" fill="currentColor" />
+                    <path d="M18.835 4.66272C18.5755 5.49566 17.7673 6.10548 16.8116 6.10548C16.5743 6.10548 16.382 5.9219 16.382 5.69533C16.382 5.46876 16.5743 5.28517 16.8116 5.28517C17.5021 5.28517 18.064 4.74885 18.064 4.08981C18.064 3.43044 17.5021 2.89429 16.8116 2.89429C16.2721 2.89429 15.8126 3.22208 15.6366 3.67965H16.9877C17.225 3.67965 17.4173 3.86324 17.4173 4.08981C17.4173 4.31638 17.225 4.49997 16.9877 4.49997H13.4694C13.2703 5.41527 12.4193 6.10548 11.4024 6.10548C11.1651 6.10548 10.9729 5.9219 10.9729 5.69533C10.9729 5.46876 11.1651 5.28517 11.4024 5.28517C12.0928 5.28517 12.6545 4.74885 12.6545 4.08981C12.6545 3.43044 12.0928 2.89429 11.4024 2.89429C10.8629 2.89429 10.4034 3.22208 10.2275 3.67965H11.5785C11.8158 3.67965 12.0081 3.86324 12.0081 4.08981C12.0081 4.31638 11.8158 4.49997 11.5785 4.49997H8.06046C7.86131 5.41527 7.0101 6.10548 5.99308 6.10548C5.75579 6.10548 5.56352 5.9219 5.56352 5.69533C5.56352 5.46876 5.75579 5.28517 5.99308 5.28517C6.68364 5.28517 7.2455 4.74885 7.2455 4.08981C7.2455 3.43044 6.68364 2.89429 5.99308 2.89429C5.45373 2.89429 4.99427 3.22208 4.8185 3.67965H6.16954C6.40683 3.67965 6.5991 3.86324 6.5991 4.08981C6.5991 4.31638 6.40683 4.49997 6.16954 4.49997H4.58379C3.91832 4.49997 3.37708 5.01693 3.37708 5.65251V7.00143H19.4278V5.65251C19.4278 5.23907 19.1927 4.86665 18.835 4.66272Z" fill="currentColor" />
+                </svg>
+            </div>
+            <div class=" leading-none pt-[2px]">
+                <span>22/03/2025</span>
+            </div>
+        </div>
+        <div class=" mb-2 flex items-start gap-2 text-sm sm:text-base leading-normal h-[calc(14px*1.5*2)] sm:h-[calc(16px*1.5*2)] line-clamp-2 font-normal font-main-400 text-black transition-all duration-300">
+            <div class="flex-1">
+                <h6><a href='xu-huong-che-tao-bon-inox-cong-nghiep' class='line-clamp-2'  rel='dofollow' role='link' aria-label='Xu hướng Chế tạo bồn inox Công Nghiệp' title='Xu hướng Chế tạo bồn inox Công Nghiệp'><span >Xu hướng Chế tạo bồn inox Công Nghiệp</span></a></h6>            </div>
+            <div class="flex-initial group-hover/templateNew_nine:text-[var(--html-bg-website)] transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" viewBox="0 0 29 28" fill="none">
+                    <path d="M3.77051 3H26V23.5408" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="round" />
+                    <path d="M3 24.2766L25.2295 3.73584" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+        <div class=" text-xs sm:text-sm leading-[1.78] text-[#565656] sm:leading-[1.78] h-[calc(12px*1.78*2)] sm:h-[calc(14px*1.78*2)]  font-normal font-main-400  ">
+            <span class='line-clamp-2'>
+                Bài viết phân tích các xu hướng xây dựng nhà xưởng thân thiện với môi            </span>
+        </div>
+    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+";}

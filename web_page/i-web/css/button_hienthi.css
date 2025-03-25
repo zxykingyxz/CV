@@ -1,0 +1,52 @@
+/*button show*/
+/*on-off*/
+.diamondToggle{
+	background: #D33331;
+    padding: 1px;
+    display: inline-block;
+    width: 45px;
+    height: 17px;
+    position: relative;
+    cursor: pointer;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.diamondToggle:before{
+	content: 'OFF';
+    position: absolute;
+    top:24%;
+    right: 5%;
+    color: #FFF;
+    font-size: 9px;
+}
+.diamondToggle:after{
+	content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    cursor: pointer;
+    background-color: #DDD;
+    transition: all 0.1s ease-in .1s;
+    left: 0px;
+    top: 0px;
+}
+.diamondToggle.diamondToggleOff{
+	background-color:#3672A0;
+}
+.diamondToggle.diamondToggleOff:before{
+    content: 'ON';
+    position: absolute;
+    color: #FFF;
+    top: 24%;
+    left: 14%;
+    font-size: 9px;
+    text-shadow: 0 1px rgba(255,255,255,0.5);
+    text-align: left;
+}
+.diamondToggle.diamondToggleOff:after{
+	left:27px;
+}
+/*end on-off*/
+/*button show*/

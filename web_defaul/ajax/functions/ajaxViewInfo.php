@@ -6,8 +6,9 @@ if ($func->isAjax()) {
     @$value = htmlspecialchars($_POST['value']);
     @$form = htmlspecialchars($_POST['form']);
     @$active = htmlspecialchars($_POST['active']);
-    $max_width = "";
-
+    $max_width = " max-w-[500px] ";
+    $info_product = [];
+    $sql = "";
     switch ($form) {
         case 'view_info_product':
             $sql = "select id,type,video,link,giaban,giacu,ten_$lang as ten,photo,tenkhongdau_$lang as tenkhongdau,thongsokythuat_$lang as thongsokythuat from #_baiviet where id=$value order by stt asc ";
@@ -25,7 +26,9 @@ if ($func->isAjax()) {
             break;
     }
 
-    $info_product = $db->rawQueryOne($sql, array());
+    if (!empty($sql)) {
+        $info_product = $db->rawQueryOne($sql, array());
+    }
     $html = $sample->getTemplateLayoutsFor([
         'name_layouts' => 'form_popup',
         'data' => $info_product,

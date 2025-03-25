@@ -1,0 +1,2 @@
+127.0.0.1(admin)--query--tables(delete from table_online where time<1742878203) (12:00:03 25/03/2025)
+127.0.0.1(admin)--query--tables(delete from table_online where time<1742878211) (12:00:11 25/03/2025)

@@ -1,1 +1,190 @@
-a:3:{s:8:"dataHash";s:32:"092dc3e38996afc443c7da173c1b029d";s:9:"timestamp";i:1742617401;s:7:"content";b:0;}
+a:3:{s:8:"dataHash";s:32:"092dc3e38996afc443c7da173c1b029d";s:9:"timestamp";i:1742877055;s:7:"content";s:24311:"
+
+<footer class="section-footer  footer overflow-hidden relative bg-white" >
+    <div class="grid_s wide">
+        <div class=" pt-8 sm:pt-[45px] pb-8 relative z-30">
+            <div class="row justify-between gap-5 sm:gap-2">
+                <!-- thông tin liên hệ -->
+                <div class="col flex-1 relative overflow-hidden">
+                    <div class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                        <div class=" font-main-600 font-semibold text-base text-[#343434] capitalize ">
+                            <span>Thông tin công ty</span>
+                        </div>
+                        <div class=" mb-4  mt-6 text-[#343434] text-[13px] font-medium font-main-500 leading-normal ">
+                            <p><span style="font-size:16px;"><span style="color: rgb(255, 0, 0);"><strong><span style="white-space-collapse: preserve;">ĐIỆN MÁY MIDTOWN </span></strong></span></span></p>
+
+<p><span style="white-space-collapse: preserve;">Địa chỉ: 46 M8 Midtown, phường Phú Mỹ Hưng, Quận 7, Tp.hcm</span></p>
+
+<p><span style="white-space-collapse: preserve;">Số điện thoại: 0886 021 177</span></p>
+
+<p><span style="white-space-collapse: preserve;">Mã số thuế: 0303781761</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col overflow-hidden basis-full  md:basis-6/12 lg:basis-[20%] flex justify-start lg:justify-center">
+                    <div class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.6s">
+                        <div class=" font-main-600 font-semibold text-base text-[#343434] capitalize ">
+                            <span>chính sách & quy định</span>
+                        </div>
+                        <div class=" mt-6 ">
+                            <ul class="grid grid-cols-1 gap-3">
+                                <li class="group transition-all duration-300 ">
+                                    <a href="gioi-thieu" title="Giới thiệu" class="flex items-center gap-2 group-hover:translate-x-3 transition-all duration-300 ">
+                                        <div class="text-[#343434] text-[13px] font-medium font-main-500 leading-normal   flex-1   transition-all duration-300 group-hover:text-[var(--html-bg-website)] ">
+                                            Giới thiệu  Điện Máy Midtown                                        </div>
+                                    </a>
+                                </li>
+                                <li class="group transition-all duration-300 ">
+                                    <a href="tin-tuc" title="Tin tức" class="flex items-center gap-2 group-hover:translate-x-3 transition-all duration-300">
+                                        <div class="text-[#343434] text-[13px] font-medium font-main-500 leading-normal   flex-1   transition-all duration-300 group-hover:text-[var(--html-bg-website)] ">
+                                            Tin tức  Điện Máy Midtown                                        </div>
+                                    </a>
+                                </li>
+                                <li class="group transition-all duration-300 ">
+                                    <a href="lien-he" title="Liên hệ" class="flex items-center gap-2 group-hover:translate-x-3 transition-all duration-300">
+                                        <div class="text-[#343434] text-[13px] font-medium font-main-500 leading-normal   flex-1   transition-all duration-300 group-hover:text-[var(--html-bg-website)] ">
+                                            Liên hệ  Điện Máy Midtown                                        </div>
+                                    </a>
+                                </li>
+                                                                    <li class="group transition-all duration-300 ">
+                                        <a href="chinh-sach-giao-hang-and-lap-dat" title="Chính sách giao hàng &amp; lắp đặt" class="flex items-center gap-2 group-hover:translate-x-3 transition-all duration-300">
+                                            <div class="text-[#343434] text-[13px] font-medium font-main-500 leading-normal   flex-1   transition-all duration-300 group-hover:text-[var(--html-bg-website)] ">
+                                                Chính sách giao hàng &amp; lắp đặt                                            </div>
+                                        </a>
+                                    </li>
+                                                                    <li class="group transition-all duration-300 ">
+                                        <a href="chinh-sach-doi-tra-and-bao-hanh" title="Chính sách đổi trả &amp; bảo hành" class="flex items-center gap-2 group-hover:translate-x-3 transition-all duration-300">
+                                            <div class="text-[#343434] text-[13px] font-medium font-main-500 leading-normal   flex-1   transition-all duration-300 group-hover:text-[var(--html-bg-website)] ">
+                                                Chính sách đổi trả &amp; bảo hành                                            </div>
+                                        </a>
+                                    </li>
+                                                                    <li class="group transition-all duration-300 ">
+                                        <a href="danh-gia-and-phan-hoi" title="Đánh giá &amp; phản hồi" class="flex items-center gap-2 group-hover:translate-x-3 transition-all duration-300">
+                                            <div class="text-[#343434] text-[13px] font-medium font-main-500 leading-normal   flex-1   transition-all duration-300 group-hover:text-[var(--html-bg-website)] ">
+                                                Đánh giá &amp; phản hồi                                            </div>
+                                        </a>
+                                    </li>
+                                                            </ul>
+                        </div>
+                        <div class="w-[177px] mt-4">
+                            <a href='javascript:void(0)' class='load_website '  role='link' rel='dofollow' title='Bộ Công Thương'  style='width: 500px;aspect-ratio:500/184.93150684932;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='500' height='184.93150684932' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://web_defaul.test/thumbs/500x184x2/upload/hinhanh/link-logobocongthuong742-6109.png' alt='Bộ Công Thương' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></a>                        </div>
+                    </div>
+                </div>
+                <!-- Các danh mục footer -->
+                <div class="col overflow-hidden basis-full  md:basis-6/12 lg:basis-[27%] flex justify-start lg:justify-center">
+                    <div class=" wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="1s">
+                        <div class=" font-main-600 font-semibold text-base text-[#343434] capitalize ">
+                            <span>Kết nối với  Điện Máy Midtown</span>
+                        </div>
+                        <div class="mt-3  mt-6  ">
+                            <div class="flex items-center gap-1 ">
+                                                                    <a href="javascript:void(0)" title="facebook" target="_top" class="group/mxh leading-[0] inline-flex justify-center items-center h-9 rounded-full bg-white hover:bg-[var(--html-bg-website)] transition-all duration-300 overflow-hidden aspect-[1/1]">
+                                        <div class="w-[17px] aspect-[1/1] group-hover/mxh:brightness-0  group-hover/mxh:invert transition-all duration-300">
+                                            <div  class='load_website ' style='width: 500px;aspect-ratio:500/500;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='500' height='500' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://web_defaul.test/thumbs/500x500x2/upload/hinhanh/icons8facebookf-11-7718.png' alt='facebook' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                        </div>
+                                    </a>
+                                                                    <a href="javascript:void(0)" title="instagram" target="_top" class="group/mxh leading-[0] inline-flex justify-center items-center h-9 rounded-full bg-white hover:bg-[var(--html-bg-website)] transition-all duration-300 overflow-hidden aspect-[1/1]">
+                                        <div class="w-[17px] aspect-[1/1] group-hover/mxh:brightness-0  group-hover/mxh:invert transition-all duration-300">
+                                            <div  class='load_website ' style='width: 500px;aspect-ratio:500/500;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='500' height='500' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://web_defaul.test/thumbs/500x500x2/upload/hinhanh/instagram-2-4-183.png' alt='instagram' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                        </div>
+                                    </a>
+                                                                    <a href="javascript:void(0)" title="tik-tok" target="_top" class="group/mxh leading-[0] inline-flex justify-center items-center h-9 rounded-full bg-white hover:bg-[var(--html-bg-website)] transition-all duration-300 overflow-hidden aspect-[1/1]">
+                                        <div class="w-[17px] aspect-[1/1] group-hover/mxh:brightness-0  group-hover/mxh:invert transition-all duration-300">
+                                            <div  class='load_website ' style='width: 500px;aspect-ratio:500/500;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='500' height='500' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://web_defaul.test/thumbs/500x500x2/upload/hinhanh/tiktok-3-1-7336.png' alt='tik-tok' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                        </div>
+                                    </a>
+                                                                    <a href="javascript:void(0)" title="youtube" target="_top" class="group/mxh leading-[0] inline-flex justify-center items-center h-9 rounded-full bg-white hover:bg-[var(--html-bg-website)] transition-all duration-300 overflow-hidden aspect-[1/1]">
+                                        <div class="w-[17px] aspect-[1/1] group-hover/mxh:brightness-0  group-hover/mxh:invert transition-all duration-300">
+                                            <div  class='load_website ' style='width: 500px;aspect-ratio:500/500;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='500' height='500' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://web_defaul.test/thumbs/500x500x2/upload/hinhanh/youtube-2-4-8880.png' alt='youtube' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                        </div>
+                                    </a>
+                                                            </div>
+                        </div>
+                        <div class=" font-main-600 font-semibold text-base text-[#343434] capitalize   mt-6 ">
+                            <span>Phương thức thanh toán</span>
+                        </div>
+                        <div class=" mt-6  grid grid-cols-4 gap-1 w-[64%]">
+                                                            <div class="views_pay_info cursor-pointer w-full aspect-[33/21] inline-flex justify-center items-center bg-white border border-gray-200 rounded-sm" data-value="16">
+                                    <div  class='load_website ' style='width: 33px;aspect-ratio:33/21;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='33' height='21' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://web_defaul.test/thumbs/33x21x2/upload/hinhanh/rectangle-116591-350.png' alt='Thanh toán' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                </div>
+                                                            <div class="views_pay_info cursor-pointer w-full aspect-[33/21] inline-flex justify-center items-center bg-white border border-gray-200 rounded-sm" data-value="17">
+                                    <div  class='load_website ' style='width: 33px;aspect-ratio:33/21;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='33' height='21' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://web_defaul.test/thumbs/33x21x2/upload/hinhanh/rectangle-11659-2529.png' alt='Thanh toán' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                </div>
+                                                            <div class="views_pay_info cursor-pointer w-full aspect-[33/21] inline-flex justify-center items-center bg-white border border-gray-200 rounded-sm" data-value="18">
+                                    <div  class='load_website ' style='width: 33px;aspect-ratio:33/21;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='33' height='21' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://web_defaul.test/thumbs/33x21x2/upload/hinhanh/rectangle-116582-4381.png' alt='Thanh toán' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                </div>
+                                                            <div class="views_pay_info cursor-pointer w-full aspect-[33/21] inline-flex justify-center items-center bg-white border border-gray-200 rounded-sm" data-value="19">
+                                    <div  class='load_website ' style='width: 33px;aspect-ratio:33/21;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='33' height='21' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://web_defaul.test/thumbs/33x21x2/upload/hinhanh/rectangle-116582-4838.png' alt='Thanh toán' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                </div>
+                                                    </div>
+                    </div>
+                </div>
+
+                <!-- mạng xã hội -->
+                <div class="col overflow-hidden flex-1 flex justify-start lg:justify-center">
+                    <div class=" w-full wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="1.4s">
+                        <div class=" font-main-600 font-semibold text-base text-[#343434] capitalize ">
+                            <span>Tổng đài hỗ trợ</span>
+                        </div>
+                        <div class="  mt-6 text-[#343434] text-[13px] font-medium font-main-500 leading-normal ">
+                            <p><span style="white-space-collapse: preserve;">Gọi mua hàng: <span style="color:#FF0000;">1800 2097</span> (07:30 - 22:00)</span></p>
+
+<p><span style="white-space-collapse: preserve;">Tư vấn sản phẩm: <span style="color:#FF0000;">1800 2097</span> (07:30 - 22:00)</span></p>
+                        </div>
+                        <div class=" font-main-600 font-semibold text-base text-[#343434] capitalize   mt-6 ">
+                            <span>Đăng ký tin nhận khuyến mãi</span>
+                        </div>
+                        <div class=" mt-6  w-[80%]">
+                            <div class="col overflow-hidden flex-1 flex justify-start lg:justify-center">
+                                <div class=" w-full wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="1.4s">
+                                    <div class=" font-main-600 font-semibold text-base text-[#343434] capitalize ">
+                                        <span>ĐẶT HẸN NGAY</span>
+                                    </div>
+                                    <div class=" mt-6 "></div>
+                                    <form action="" method="POST" name="form_client" class="form_client w-full flex flex-wrap items-start gap-3 " enctype="multipart/form-data">
+                                        <div class=" flex-1  grid grid-cols-1 gap-3  ">
+                                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                                            <input type="text" name="data[fullname]" id="fullname" class=" text-xs font-normal font-main-400  px-3 h-[40px] border shadow-sm border-[#D9D9D9] placeholder-slate-400 rounded bg-white  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 focus:outline-none focus:border-[var(--html-cl-website)] focus:ring-[var(--html-cl-website)] block w-full  focus:ring-1  disabled:shadow-none" required  value="" placeholder="Họ Và Tên" >
+                                                                        <input type="number" name="data[phone]" id="phone" class=" text-xs font-normal font-main-400  px-3 h-[40px] border shadow-sm border-[#D9D9D9] placeholder-slate-400 rounded bg-white  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 focus:outline-none focus:border-[var(--html-cl-website)] focus:ring-[var(--html-cl-website)] block w-full  focus:ring-1  disabled:shadow-none" required  value="" placeholder="Số Điện Thoại" >
+                                                                        <input type="text" name="data[captcha]" id="captcha" class=" text-xs font-normal font-main-400  px-3 h-[40px] border shadow-sm border-[#D9D9D9] placeholder-slate-400 rounded bg-white  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 focus:outline-none focus:border-[var(--html-cl-website)] focus:ring-[var(--html-cl-website)] block w-full  focus:ring-1  disabled:shadow-none" required  value="" placeholder="Nhập Mã Xác Nhận" >
+                                                            <div class="">
+                                                    <div class="form_captcha_js flex justify-center items-center w-full h-[40px] rounded-md bg-white">
+                                                        <div class="flex-initial code_captcha rounded "></div>
+                                                        <div class="flex-1"></div>
+                                                        <div class="h-[28px] inline-flex justify-center items-center rounded-[50%] overflow-hidden cursor-pointer aspect-[1/1] btn_captcha_js [&.on]:animate-load-captcha" data-name="captcha_price_quote" data-size="80x18">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 17 18" fill="none">
+                                                                <path d="M8.5 2.2C10.7019 2.2 12.6598 3.24595 13.9037 4.87133L11.9 6.875H17V1.775L15.1142 3.66084C13.557 1.7342 11.1727 0.5 8.5 0.5C3.80558 0.5 0 4.30558 0 9H1.7C1.7 5.24446 4.74446 2.2 8.5 2.2ZM15.3 9C15.3 12.7556 12.2556 15.8 8.5 15.8C6.29808 15.8 4.34014 14.7541 3.09633 13.1287L5.1 11.125H0V16.225L1.88584 14.3392C3.44303 16.2658 5.82723 17.5 8.5 17.5C13.1944 17.5 17 13.6944 17 9H15.3Z" fill="black" />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                        <textarea name="data[notes]" id="notes" rows="4" class=" px-3 py-2 text-xs font-normal font-main-400 rounded-md  resize-none bg-white border shadow-sm border-[var(--html-sc-website)] placeholder-slate-400 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 focus:outline-none focus:border-[var(--html-cl-website)] focus:ring-[var(--html-cl-website)] block w-full focus:ring-1  disabled:shadow-none"   placeholder="Nội Dung" ></textarea>
+                                                        <div class="w-full flex items-center justify-center">
+                                                <button type="submit" name="submit-resgister-client" class="w-full uppercase h-[40px] bg-[var(--html-bg-website)] hover:brightness-110 transition-all text-xs font-semibold text-white text-center px-7 rounded-lg flex justify-center items-center gap-3">
+                                                    <span>gửi thông tin ngay</span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 15 13" fill="none">
+                                                        <g clip-path="url(#clip0_1_493)">
+                                                            <path d="M13.2439 6.5V11.7H2.04392V1.3H7.64392V0H0.643921V13H14.6439V6.5H13.2439Z" fill="white" />
+                                                            <path d="M9.04958 0L11.0656 1.872L7.09705 5.55707L8.66505 7.01307L12.6336 3.328L14.6496 5.2V0H9.04958Z" fill="white" />
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_1_493">
+                                                                <rect width="14" height="13" fill="white" transform="translate(0.651733)" />
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="section-copy ">
+    <div class="grid_s wide ">
+        <div class="py-3 flex flex-wrap items-center justify-center">
+            <div class="text-[#343434] text-[13px] font-medium font-main-500 leading-relaxed tracking-[0.101px] text-center">Copyright &copy; 2024 - <span class="uppercase"> Điện Máy Midtown</span>
+                . All rights reserved. <a href="https://i-web.vn/" class="" target="_blank" title="">Design by i-web.vn</a>
+            </div>
+        </div>
+    </div>
+</div>";}
