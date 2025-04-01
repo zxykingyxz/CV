@@ -23,7 +23,7 @@ $tool = $cache->getCache("select photo,ten_$lang as ten,link from #_photo where 
                                 <path d="m450.429 320.118 61-210c1.289-4.526.381-9.39-2.446-13.154-2.842-3.75-7.28-5.962-11.982-5.962h-196.001v240h135c6.7 0 12.589-4.443 14.429-10.884z" fill="#4895ff" />
                             </g>
                         </svg>
-                        <div class="  absolute inline-flex items-center justify-center bg-red-500 top-[0%] right-[0%] h-[18px] min-w-[18px] px-[3px]  translate-x-[25%] translate-y-[-25%] rounded-full bg-main text-white text-xs leading-[0]">
+                        <div class="  absolute inline-flex items-center justify-center bg-red-500 top-[0%] right-[0%] h-[18px] min-w-[18px] px-[3px] pt-[3px]  translate-x-[25%] translate-y-[-25%] rounded-full bg-main text-white text-xs leading-[0]">
                             <span class="view-cart leading-none">
                                 <?= $cart->getTotalQuality() ?>
                             </span>

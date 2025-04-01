@@ -223,15 +223,6 @@ $khoahocs = $db->rawQuery("select * from #_baiviet where hienthi=1 and type in('
         <div style="display:flex; align-items:center">
             <input style="margin-right:10px" type="text" name="madonhang" id="madonhang" class="order-input"
                 placeholder="Mã đơn hàng" value="<?= (isset($_GET['code'])) ? $_GET['code'] : "" ?>" />
-            <?php /* <input style="margin-right:10px" type="text" name="tendonhang" id="tendonhang" class="order-input"
-                placeholder="Tên khóa học hoặc combo"
-                value="<?= (isset($_GET['tendonhang']))? $_GET['tendonhang'] : ""?>" />
-            <select name="date_order" style="margin-right:10px;width:150px" id="date_order" class="main_select select-w order-input">
-                <option value="0">Lọc đơn hàng</option>
-                <option value="1" <?= (isset($_GET['type_order']) & $_GET['type_order'] == 1 )? "selected" : ""?>>Theo ngày đặt đơn</option>
-                <option value="2" <?= (isset($_GET['type_order']) & $_GET['type_order'] == 2 )? "selected" : ""?>>Theo ngày xác nhận đơn</option>
-            </select>
-             */ ?>
             <select name="tinhtrangdon" id="tinhtrangdon" class="main_select select-w order-input">
                 <option value="0">Tình trạng</option>
                 <?php foreach ($config['order-status'] as $key => $value) { ?>
@@ -273,9 +264,6 @@ $khoahocs = $db->rawQuery("select * from #_baiviet where hienthi=1 and type in('
                 <a class="btn btn-sm bg-gradient-excel text-white" id="exportall">
                     <i class="fas fa-file-excel mr-2"></i>Xuất tất cả
                 </a>
-                <?php /* <a class="btn btn-sm bg-gradient-excel text-white" id="export__search">
-                    <i class="fas fa-file-excel mr-2"></i>Xuất file tìm kiếm
-                </a> */ ?>
             </div>
             <div class="box__sortby">
                 <select name="sortby" id="sortby" class="main_select sortby__select" style="min-width:150px"

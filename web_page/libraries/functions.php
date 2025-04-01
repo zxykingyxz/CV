@@ -3582,7 +3582,7 @@ class functions
             'classfix' => '',
             'id' => '',
             'isLazy' => true,
-            'create_thumbs' => true,
+            'create_thumbs' => false,
             'thumbs' => _thumbs,
             'isWatermark' => false,
             'watermark' => (defined('_watermark')) ? _watermark : '',
@@ -4875,7 +4875,17 @@ class functions
 
         return $result;
     }
+    public function imagesNameAll($nameImg)
+    {
 
+        $rand = rand(10, 9999);
+
+        $img = explode(".", $nameImg);
+
+        $result = $this->changeTitle($img[0]) . "-" . $rand . "." . $img[1];
+
+        return $result;
+    }
     public function limitWord($chuoi, $gioihan)
     {
 
@@ -5982,7 +5992,14 @@ class functions
             }
         }
         $sql = ("select GROUP_CONCAT(DISTINCT product_type) as listproducttype,GROUP_CONCAT(DISTINCT technology) as listtechnology,GROUP_CONCAT(DISTINCT weight) as listweight,GROUP_CONCAT(DISTINCT size) as listsize,GROUP_CONCAT(DISTINCT capacity) as listcapacity,GROUP_CONCAT(DISTINCT power) as listpower,GROUP_CONCAT(DISTINCT door) as listdoor,GROUP_CONCAT(DISTINCT id_thuonghieu) as listbrand from #_baiviet $where");
+        $start_time = microtime(true);
+
         $array_param = $this->_d->rawQueryOne($sql, array());
+        $end_time = microtime(true);
+        $query_time = $end_time - $start_time;
+
+        var_dump($query_time);
+        die;
 
         $list_param = new stdClass();
         $list_param->url = $url;
@@ -6043,6 +6060,85 @@ class functions
         } else {
             var_dump("dữ liệu backup chưa được khai báo đủ");
             die;
+        }
+
+        return true;
+    }
+    public function returnUnsignedName($name)
+    {
+        global $lang;
+
+        $name = $this->convert_vn2latin($name);
+
+        $name = str_replace([' ', ',', '.', '?', '!'], '-', $name);
+
+        $name = strtolower($name);
+
+        return $name;
+    }
+    public function convert_vn2latin($str)
+    {
+        // Mảng các ký tự tiếng việt không dấu theo mã unicode tổ hợp
+        $tv_unicode_tohop  =
+            ["à", "á", "ạ", "ả", "ã", "â", "ầ", "ấ", "ậ", "ẩ", "ẫ", "ă", "ằ", "ắ", "ặ", "ẳ", "ẵ", "è", "é", "ẹ", "ẻ", "ẽ", "ê", "ề", "ế", "ệ", "ể", "ễ", "ì", "í", "ị", "ỉ", "ĩ", "ò", "ó", "ọ", "ỏ", "õ", "ô", "ồ", "ố", "ộ", "ổ", "ỗ", "ơ", "ò", "ớ", "ợ", "ở", "õ", "ù", "ú", "ụ", "ủ", "ũ", "ư", "ừ", "ứ", "ự", "ử", "ữ", "ỳ", "ý", "ỵ", "ỷ", "ỹ", "đ", "À", "À", "Ạ", "Ả", "Ã", "Â", "Ầ", "Ấ", "Ậ", "Ẩ", "Ẫ", "Ă", "Ằ", "Ắ", "Ặ", "Ẳ", "Ẵ", "È", "É", "Ẹ", "Ẻ", "Ẽ", "Ê", "Ề", "Ế", "Ệ", "Ể", "Ễ", "Ì", "Í", "Ị", "Ỉ", "Ĩ", "Ò", "Ó", "Ọ", "Ỏ", "Õ", "Ô", "Ồ", "Ố", "Ộ", "Ổ", "Ỗ", "Ơ", "Ờ", "Ớ", "Ợ", "Ở", "Ỡ", "Ù", "Ú", "Ụ", "Ủ", "Ũ", "Ư", "Ừ", "Ứ", "Ự", "Ử", "Ữ", "Ỳ", "Ý", "Ỵ", "Ỷ", "Ỹ", "Đ"];
+        // Mảng các ký tự tiếng việt không dấu theo mã unicode dựng sẵn   
+        $tv_unicode_dungsan  =
+            ["à", "á", "ạ", "ả", "ã", "â", "ầ", "ấ", "ậ", "ẩ", "ẫ", "ă", "ằ", "ắ", "ặ", "ẳ", "ẵ", "è", "é", "ẹ", "ẻ", "ẽ", "ê", "ề", "ế", "ệ", "ể", "ễ", "ì", "í", "ị", "ỉ", "ĩ", "ò", "ó", "ọ", "ỏ", "õ", "ô", "ồ", "ố", "ộ", "ổ", "ỗ", "ơ", "ờ", "ớ", "ợ", "ở", "ỡ", "ù", "ú", "ụ", "ủ", "ũ", "ư", "ừ", "ứ", "ự", "ử", "ữ", "ỳ", "ý", "ỵ", "ỷ", "ỹ", "đ", "À", "Á", "Ạ", "Ả", "Ã", "Â", "Ầ", "Ấ", "Ậ", "Ẩ", "Ẫ", "Ă", "Ằ", "Ắ", "Ặ", "Ẳ", "Ẵ", "È", "É", "Ẹ", "Ẻ", "Ẽ", "Ê", "Ề", "Ế", "Ệ", "Ể", "Ễ", "Ì", "Í", "Ị", "Ỉ", "Ĩ", "Ò", "Ó", "Ọ", "Ỏ", "Õ", "Ô", "Ồ", "Ố", "Ộ", "Ổ", "Ỗ", "Ơ", "Ờ", "Ớ", "Ợ", "Ở", "Ỡ", "Ù", "Ú", "Ụ", "Ủ", "Ũ", "Ư", "Ừ", "Ứ", "Ự", "Ử", "Ữ", "Ỳ", "Ý", "Ỵ", "Ỷ", "Ỹ", "Đ"];
+        // Mảng các ký không dấu sẽ thay thế cho ký tự có dấu
+        $tv_khongdau =
+            ["a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "i", "i", "i", "i", "i", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "u", "u", "u", "u", "u", "u", "u", "u", "u", "u", "u", "y", "y", "y", "y", "y", "d", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "E", "E", "E", "E", "E", "E", "E", "E", "E", "E", "E", "I", "I", "I", "I", "I", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "Y", "Y", "Y", "Y", "Y", "D"];
+
+        $str = str_replace($tv_unicode_dungsan, $tv_khongdau, $str);
+        $str = str_replace($tv_unicode_tohop,   $tv_khongdau, $str);
+        return $str;
+    }
+    public function addAttribute($data, $id, $type)
+    {
+        global $lang;
+
+        foreach ($data["data"]["ten_$lang"] as $key => $value) {
+
+            if (!empty($data["data"]["ten_$lang"][$key])) {
+                foreach ($data["data"] as $k => $v) {
+                    $data_send = $data["data"][$k][$key];
+                    if (!empty($data_send)) {
+                        switch ($k) {
+                            case 'giaban':
+                            case 'giacu':
+                            case 'giabansale':
+                                $send_attribute[$k] = str_replace(',', '', $data_send);
+                                break;
+                            default:
+                                $send_attribute[$k] = htmlspecialchars($data_send);
+                                break;
+                        }
+                    }
+                }
+                $data_send_photo = $data["photo"];
+
+                if (!empty($data_send_photo)) {
+                    foreach ($data_send_photo as $key_photo => $value_photo) {
+                        $photo[$key_photo] = $data_send_photo[$key_photo]["photo"][$key];
+                    }
+
+                    $data_upload = $this->uploadImg($id, "photo", "thumb", $photo, _upload_baiviet, "baiviet", 500, 500, 1);
+
+                    $send_attribute["photo"] = htmlspecialchars($data_upload['photo']);
+
+                    $send_attribute["thumb"] = htmlspecialchars($data_upload['thumb']);
+                }
+                $send_attribute['id_product'] =  $id;
+
+                $send_attribute['stt'] =  1;
+
+                $send_attribute['hienthi'] =  1;
+
+                $send_attribute['ngaytao'] = time();
+
+                $send_attribute['type'] = $type;
+
+                $this->_d->insert('attribute', $send_attribute);
+            }
         }
 
         return true;

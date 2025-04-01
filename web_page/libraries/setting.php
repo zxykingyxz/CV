@@ -14,11 +14,9 @@ $CART = [];
 
 // =======================seo page======================
 $array_option_setting = [
-	'gioi-thieu' => 'Giới thiệu',
 	'san-pham' => 'Sản phẩm',
-	'dich-vu' => 'Dịch vụ',
-	'du-an' => 'Dự án',
 	'tin-tuc' => 'Tin Tức',
+	'bo-suu-tap' => 'Bộ sưu tập',
 	'tim-kiem' => 'Tìm Kiếm',
 ];
 foreach ($array_option_setting as $key_option_setting => $value_option_setting) {
@@ -27,6 +25,7 @@ foreach ($array_option_setting as $key_option_setting => $value_option_setting) 
 	}
 	$setting['paging'][$key_option_setting] = "Phân Trang " . $value_option_setting;
 }
+$setting['paging']["index"] = "Phân Trang trang chủ";
 
 $setting['seopage']['mota'] = true;
 $setting['seopage']['mota-ckeditor'] = true;

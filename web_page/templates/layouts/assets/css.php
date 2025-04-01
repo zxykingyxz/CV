@@ -20,10 +20,12 @@ $css->setCss("assets/plugins/jquery-confirm/jquery-confirm.css");
 $css->setCss("assets/plugins/jssocials/jssocials.css");
 $css->setCss("assets/plugins/jssocials/jssocials-theme-flat.css");
 $css->setCss("assets/plugins/swiper/swiper-bundle.css");
+$css->setCss("assets/plugins/slick/slick.css");
+$css->setCss("assets/plugins/slick/slick-theme.css");
 $css->setCss("assets/plugins/toc/toc.css");
 $css->setCss("assets/plugins/owlcarousel/owl.carousel.min.css");
 $css->setCss("assets/plugins/owlcarousel/owl.theme.default.css");
-$css->setCss("assets/plugins/Flipster/jquery.flipster.min.css");
+$css->setCss("assets/plugins/Notiflix/notiflix.css");
 
 // có thể chỉnh sửa
 $css->setCss("assets/plugins/flatpickr/flatpickr.min.css");

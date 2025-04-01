@@ -3,7 +3,7 @@
         <a href="<?= $link ?>" title="<?= $name ?>" class="text-sm font-medium font-main"><?= $name ?></a>
     </div>
     <?php
-    if ($config['attribute']['view_update'] == false) {
+    if ($config['cart']['price_attribute']['view_update'] == false) {
         $name_attribute = "";
         $number_text = 0;
         if (!empty($attribute)) {
@@ -11,7 +11,7 @@
                 $items = $db->rawQueryOne("select ten_$lang as ten,type from #_attribute where id_product=? and id=? and type=? ", array($pid, $v, $k));
                 if (!empty($options['attribute'])) {
                     foreach ($options['attribute'] as $v_t) {
-                        if ($func->returnUnsignedName($v_t) == $items['type']) {
+                        if ($this->returnUnsignedName($v_t) == $items['type']) {
                             if ($number_text != 0) {
                                 $name_attribute .= ', ';
                             }

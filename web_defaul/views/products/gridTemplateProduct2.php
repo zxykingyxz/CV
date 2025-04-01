@@ -6,7 +6,7 @@ foreach ($data as $key => $value) {
     <div class="h-full ">
         <div class="group/templateProduct_Two load_website h-full overflow-hidden bg-white border border-[#E1DEDE] hover:border-[var(--html-bg-website)] p-3 rounded-lg transition-all duration-500   <?= $class ?> ">
             <div class='relative z-10 w-full aspect-[510/510] '>
-                <div class=" w-full absolute top-0 left-0 w-full h-full bg-white z-20 group-hover/templateProduct_Two:z-10 transition-all duration-300 ">
+                <div class="  absolute top-0 left-0 w-full h-full bg-white z-20 group-hover/templateProduct_Two:z-10 transition-all duration-300 ">
                     <?= $func->addHrefImg([
                         'classfix' => 'w-full',
                         'addhref' => true,
@@ -20,7 +20,7 @@ foreach ($data as $key => $value) {
                     ]); ?>
                 </div>
                 <?php if (!empty($value["photo2"])) { ?>
-                    <div class=" w-full absolute top-0 left-0 w-full h-full bg-white z-10 group-hover/templateProduct_Two:z-20 transition-all duration-300">
+                    <div class="  absolute top-0 left-0 w-full h-full bg-white z-10 group-hover/templateProduct_Two:z-20 transition-all duration-300">
                         <?= $func->addHrefImg([
                             'classfix' => 'w-full',
                             'addhref' => true,

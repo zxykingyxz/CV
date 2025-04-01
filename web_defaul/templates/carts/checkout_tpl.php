@@ -27,6 +27,7 @@ if (!empty($id_city)) {
         <?php if (count($cart->checkArrayChecked($_SESSION['cart'])) == 0) { ?>
             <?= $cart->getTemplateLayoutsFor([
                 'name_layouts' => 'no_data',
+                'message' => _khongcosanphamnaotronggio,
             ], true); ?>
         <?php } else { ?>
             <div class=" w-full text-red-500 ">
@@ -65,7 +66,7 @@ if (!empty($id_city)) {
                                         <?= $cart->getTemplateLayoutsFor([
                                             'name_layouts' => 'input_cart',
                                             'class_form' => 'w-full',
-                                            'lable' => "Họ và tên",
+                                            'label' => "Họ và tên",
                                             'placeholder' => "Nhập Họ và tên*",
                                             'id' => 'fullname',
                                             'data' => 'fullname',
@@ -74,13 +75,13 @@ if (!empty($id_city)) {
                                             'save_cache' => false,
                                             'required' => true,
                                             'readonly' => false,
-                                            'no_lable' => true,
+                                            'no_label' => true,
                                             'function' => '',
                                         ]); ?>
                                         <?= $cart->getTemplateLayoutsFor([
                                             'name_layouts' => 'input_cart',
                                             'class_form' => 'w-full',
-                                            'lable' => "Email",
+                                            'label' => "Email",
                                             'placeholder' => "Nhập Email",
                                             'id' => 'email',
                                             'data' => 'email',
@@ -89,13 +90,13 @@ if (!empty($id_city)) {
                                             'save_cache' => false,
                                             'required' => false,
                                             'readonly' => false,
-                                            'no_lable' => true,
+                                            'no_label' => true,
                                             'function' => '',
                                         ]); ?>
                                         <?= $cart->getTemplateLayoutsFor([
                                             'name_layouts' => 'input_cart',
                                             'class_form' => 'w-full',
-                                            'lable' => "Số điện thoại",
+                                            'label' => "Số điện thoại",
                                             'placeholder' => "Nhập Số điện thoại*",
                                             'id' => 'phone',
                                             'data' => 'phone',
@@ -104,13 +105,13 @@ if (!empty($id_city)) {
                                             'save_cache' => false,
                                             'required' => true,
                                             'readonly' => false,
-                                            'no_lable' => true,
+                                            'no_label' => true,
                                             'function' => '',
                                         ]); ?>
                                         <?= $cart->getTemplateLayoutsFor([
                                             'name_layouts' => 'input_cart',
                                             'class_form' => 'w-full',
-                                            'lable' => "Địa chỉ",
+                                            'label' => "Địa chỉ",
                                             'placeholder' => "Nhập Địa chỉ",
                                             'id' => 'address',
                                             'data' => 'address',
@@ -119,13 +120,13 @@ if (!empty($id_city)) {
                                             'save_cache' => false,
                                             'required' => false,
                                             'readonly' => false,
-                                            'no_lable' => true,
+                                            'no_label' => true,
                                             'function' => '',
                                         ]); ?>
                                         <?= $cart->getTemplateLayoutsFor([
                                             'name_layouts' => 'select_cart',
                                             'class_form' => 'w-full',
-                                            'lable' => "Tỉnh Thành",
+                                            'label' => "Tỉnh Thành",
                                             'placeholder' => "Chọn Tỉnh Thành",
                                             'id' => 'id_city',
                                             'data' => 'id_city',
@@ -135,14 +136,14 @@ if (!empty($id_city)) {
                                             'name_col_value' => 'id',
                                             'save_cache' => false,
                                             'required' => true,
-                                            'no_lable' => true,
+                                            'no_label' => true,
                                             'function' => '',
                                         ]); ?>
                                         <div class="w-full form_dist">
                                             <?= $cart->getTemplateLayoutsFor([
                                                 'name_layouts' => 'select_cart',
                                                 'class_form' => 'w-full',
-                                                'lable' => "Quận Huyện",
+                                                'label' => "Quận Huyện",
                                                 'placeholder' => "Chọn Quận Huyện",
                                                 'id' => 'id_dist',
                                                 'data' => 'id_dist',
@@ -152,7 +153,7 @@ if (!empty($id_city)) {
                                                 'name_col_value' => 'id',
                                                 'save_cache' => false,
                                                 'required' => true,
-                                                'no_lable' => true,
+                                                'no_label' => true,
                                                 'function' => '',
                                             ]); ?>
                                         </div>
@@ -160,7 +161,7 @@ if (!empty($id_city)) {
                                             'name_layouts' => 'textarea_cart',
                                             'class_form' => 'w-full',
                                             'class' => "",
-                                            'lable' => "Ghi Chú",
+                                            'label' => "Ghi Chú",
                                             'placeholder' => "Nhập Ghi Chú",
                                             'id' => "notes",
                                             'data' => "notes",
@@ -169,7 +170,7 @@ if (!empty($id_city)) {
                                             'save_cache' => false,
                                             'required' => false,
                                             'readonly' => false,
-                                            'no_lable' => true,
+                                            'no_label' => true,
                                             'function' => '',
                                         ]); ?>
                                     </div>

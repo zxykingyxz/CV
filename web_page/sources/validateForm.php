@@ -9,6 +9,7 @@ if (!empty($_POST)) {
     if (isset($_POST['submit-resgister-client'])) {
         $check_send_mail = true;
         $type = 'client';
+        $name_captcha = 'news_captcha';
     }
 
     // kiểm tra dữ liệu
@@ -120,8 +121,5 @@ if (!empty($_POST)) {
             $func->transfer('Đăng ký nhận tin thành công!', $_SERVER['HTTP_REFERER']);
             exit;
         }
-    } else {
-        $func->transfer('Form submit chưa được cấu hình!', $_SERVER['HTTP_REFERER']);
-        exit;
     }
 }

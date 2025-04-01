@@ -320,6 +320,7 @@ if ($source != "") include _source . $source . ".php";
         <script type="text/javascript" src="plugin/moment/moment.js"></script>
         <script type="text/javascript" src="plugin/daterangepicker/daterangepicker.js"></script>
         <script type="text/javascript" src="plugin/daterangepicker/daterangepicker.active.js"></script>
+        <script type="text/javascript" src="plugin/Custom/btnNoneBlockPlugin.js"></script>
         <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
         <script type="text/javascript" src="js/speakingurl.min.js"></script>
         <script type="text/javascript" src="assets/js/custom.js"></script>

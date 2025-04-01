@@ -199,6 +199,75 @@ $decode_ext = json_decode($item['options'], true);
 
                 <?php } ?>
 
+                <?php if ((($config['cart']['price_attribute']['attribute_one_for_all'] == true) && ($config['cart']['price_attribute']['client_edit_attribute'] == true))) { ?>
+                    <div class="formRow lang_hidden lang_<?= $k ?> <?= ($k == 'vi') ? 'active' : '' ?>">
+                        <label><?= "Thuộc tính sản phẩm" ?> </label>
+                        <div class="d-flex flex-wrap form_attribute_product" data-id-product="<?= @$item['id'] ?>" style="width: 100%;grid-gap: 10px;">
+                            <?php $array_options = json_decode($item['options'], true);
+                            foreach ($array_options['attribute'] as $k_tt => $v_tt) {
+                                if (!empty($v_tt)) {
+                            ?>
+                                    <div class="form_items_attribute_all" style="width: 100%;">
+                                        <div class="form_title_attribute_all">
+                                            <div class=" ">
+                                                <div class="" style="grid-gap: 5px;display: flex;align-items: center;">
+                                                    <div class="" style="flex: 1;">
+                                                        <input type="text" name="options[attribute][]" title="<?= "Nhập thuộc tính sản phẩm" ?>" class="tipS w100" value="<?= $v_tt ?>" readonly />
+                                                    </div>
+                                                    <div class=" btn_attribute_product btn_query_attribute_product  justify-content-center align-items-center " style=" display: inline-flex;border-radius: 0px;" data-form="delete_all">
+                                                        <div>
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </div>
+                                                        <div class="icons_load" style="display: none; padding: 5px;">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" style="width: 100%; height: 100%; fill: #fff;">
+                                                                <circle r="80" cx="500" cy="90" style="fill: #fff;"></circle>
+                                                                <circle r="80" cx="500" cy="910" style="fill: #fff;"></circle>
+                                                                <circle r="80" cx="90" cy="500" style="fill: #fff;"></circle>
+                                                                <circle r="80" cx="910" cy="500" style="fill: #fff;"></circle>
+                                                                <circle r="80" cx="212" cy="212" style="fill: #fff;"></circle>
+                                                                <circle r="80" cx="788" cy="212" style="fill: #fff;"></circle>
+                                                                <circle r="80" cx="212" cy="788" style="fill: #fff;"></circle>
+                                                                <circle r="80" cx="788" cy="788" style="fill: #fff;"></circle>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+                            <?php }
+                            } ?>
+                        </div>
+                        <div class=" btn_attribute_product btn_query_attribute_product bg-gradient-primary  justify-content-center align-items-center " style=" display: inline-flex;margin-top: 5px;" data-form="attribute">
+                            <div>
+                                <i class="fas fa-plus"></i>
+                            </div>
+                            <div class="icons_load" style="display: none; padding: 5px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" style="width: 100%; height: 100%; fill: #fff;">
+                                    <circle r="80" cx="500" cy="90" style="fill: #fff;"></circle>
+                                    <circle r="80" cx="500" cy="910" style="fill: #fff;"></circle>
+                                    <circle r="80" cx="90" cy="500" style="fill: #fff;"></circle>
+                                    <circle r="80" cx="910" cy="500" style="fill: #fff;"></circle>
+                                    <circle r="80" cx="212" cy="212" style="fill: #fff;"></circle>
+                                    <circle r="80" cx="788" cy="212" style="fill: #fff;"></circle>
+                                    <circle r="80" cx="212" cy="788" style="fill: #fff;"></circle>
+                                    <circle r="80" cx="788" cy="788" style="fill: #fff;"></circle>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                <?php } else { ?>
+                    <?php if ((($config['cart']['price_attribute']['attribute_one_for_all'] == true) && ($config['cart']['price_attribute']['client_edit_attribute'] == false))) { ?>
+                        <?php $array_options = json_decode($item['options'], true);
+                        foreach ($array_options['attribute'] as $k_tt => $v_tt) {
+                            if (!empty($v_tt)) {
+                        ?>
+                                <input type="hidden" name="options[attribute][]" title="<?= "Nhập thuộc tính sản phẩm" ?>" class="tipS w100" value="<?= $v_tt ?>" readonly />
+                        <?php }
+                        } ?>
+                    <?php } ?>
+                <?php } ?>
 
                 <?php if ($GLOBAL[$com]['diachi'] == true) { ?>
 

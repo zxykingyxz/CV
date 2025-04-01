@@ -61,6 +61,8 @@ if (empty($id) && empty($idl) && empty($idc) && empty($idi) && empty($ids)) {
 
 switch ($com) {
     case 'hinh-anh':
+    case 'bo-suu-tap':
+
         $rowc['type'] = 'photo';
         break;
     default:

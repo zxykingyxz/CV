@@ -1,6 +1,6 @@
 
 <?php
-if ($func->isAjax()) {
+if ($cart->isAjax()) {
 	$src = isset($_POST['src']) ? addslashes($_POST['src']) : '';
 	switch ($src) {
 		case 'addCart':
@@ -60,6 +60,75 @@ if ($func->isAjax()) {
 			}
 			echo json_encode($result);
 			break;
+		case 'attributeDetail':
+			@$id = htmlspecialchars($_POST['id']);
+			@$type = htmlspecialchars($_POST['type']);
+			@$id_product = htmlspecialchars($_POST['id_product']);
+			$row_detail = $db->rawQueryOne("select * from #_attribute where id=? and type=? limit 0,1", array($id, $type));
+
+			if (!empty($row_detail)) {
+				$product = $db->rawQueryOne("select * from #_baiviet where id=? limit 0,1", array($id_product));
+				if (empty($row_detail['photo'])) {
+					$photos = $db->rawQuery("select * from #_baiviet_photo where id_baiviet=? order by stt asc, id desc", array($id_product));
+					$data_photo = $product;
+					$data_photos = $photos;
+				} else {
+					$photos = $db->rawQuery("select * from #_baiviet_photo where id_attribute=? order by stt asc, id desc", array($id));
+					$data_photo = $row_detail;
+					$data_photos = $photos;
+				}
+
+				$response['photo'] =  $cart->getTemplateLayoutsFor([
+					'name_layouts' => 'templateImagesDetail',
+					'data' => $data_photo,
+					'photos' => $data_photos,
+					'watermark' => false,
+				]);
+
+				$_SESSION['attribute'][$id_product][$type] = $id;
+				if ($config['cart']['price_attribute']['total_price'] == true) {
+
+					$old_price = $product["giacu"];
+					$buy_price = $product["giaban"];
+					$buy_price_sale = $product["giabansale"];
+
+					foreach ($_SESSION['attribute'][$id_product] as $k => $v) {
+						$row_detail_price = $db->rawQueryOne("select * from #_attribute where id=? and type=? limit 0,1", array($v, $k));
+						if (!empty($row_detail_price)) {
+							$old_price += $row_detail_price["giacu"];
+							$buy_price += $row_detail_price["giaban"];
+							$buy_price_sale += $row_detail_price["giabansale"];
+						}
+					}
+				} else {
+					$data_options = json_decode($product['options'], true)['attribute'];
+					foreach ($data_options as $v_t) {
+						$type_price_tmp = $cart->returnUnsignedName($v_t);
+						if (!empty($_SESSION['attribute'][$id_product][$type_price_tmp])) {
+							$type_price = $type_price_tmp;
+							$id_price = $_SESSION['attribute'][$id_product][$type_price_tmp];
+						}
+					}
+					$row_detail_price = $db->rawQueryOne("select * from #_attribute where id=? and type=? limit 0,1", array($id_price, $type_price));
+					$old_price = $row_detail_price["giacu"];
+					$buy_price = $row_detail_price["giaban"];
+					$buy_price_sale = $row_detail_price["giabansale"];
+				}
+
+				$response['price'] = $cart->getTemplateLayoutsFor([
+					'name_layouts' => 'templatePrice',
+					'product' => $product,
+					'giaban' => $buy_price,
+					'giabansale' => $buy_price_sale,
+					'giacu' => $old_price,
+				]);
+				$response['status'] = 200;
+			} else {
+				$response['status'] = 201;
+				$response['message'] = "Bạn đang chọn thuộc tính không tồn tại";
+			}
+			echo json_encode($response);
+			break;
 		case 'updateAttributeCart':
 			$code = (string)$_POST['code'];
 			$qty = (string)$_POST['qty'];
@@ -74,25 +143,19 @@ if ($func->isAjax()) {
 				$result['items-price'] = $cart->numbMoney(($cart->getPrice($pid, $attribute['session']) * 1), ' ₫');
 				$result['total-items-price'] = $cart->numbMoney(($cart->getPrice($pid, $attribute['session']) * $qty), ' ₫');
 			}
-			$result['html'] = $cart->getTemplateLayoutsFor([
-				'name_layouts' => 'getTemplateNameCart',
-				'options' => $attribute['options'],
-				'name' => $name,
-				'pid' => $pid,
-				'attribute' => $attribute['session'],
-				'code' => $code,
-			], false);
 			echo json_encode($result);
+			exit;
 			break;
 		case 'deleteCart':
 			$code = explode(',', $_POST['code']);
+			// var_dump($code);
 			foreach ($code as $k => $v) {
 				$cart->removeProduct($v);
 			}
 			$result['count-cart'] = count($_SESSION['cart']);
 			$result = $cart->getPrice_All($result);
 			$result['code'] = $code;
-			$result['url'] = 'san-pham';
+			$result['url'] = $cart->getType("carts?src=gio-hang");
 			echo json_encode($result);
 			break;
 		case 'update-dist':
@@ -101,7 +164,7 @@ if ($func->isAjax()) {
 			$html = $cart->getTemplateLayoutsFor([
 				'name_layouts' => 'select_cart',
 				'class_form' => 'w-full',
-				'lable' => "Quận Huyện",
+				'label' => "Quận Huyện",
 				'placeholder' => "Chọn Quận Huyện",
 				'id' => 'id_dist',
 				'data' => 'id_dist',
@@ -111,7 +174,7 @@ if ($func->isAjax()) {
 				'name_col_value' => 'id',
 				'save_cache' => false,
 				'required' => true,
-				'no_lable' => true,
+				'no_label' => true,
 				'function' => '',
 			]);
 			echo $html;
@@ -182,34 +245,34 @@ if ($func->isAjax()) {
 		if (isset($_POST["checkout"])) {
 
 			if (count($cart->checkArrayChecked($_SESSION['cart'])) <= 0) {
-				$func->transfer('Không có sản phẩm nào được thanh toán',  $func->getType('carts?src=gio-hang'));
+				$cart->transfer('Không có sản phẩm nào được thanh toán',  $cart->getType('carts?src=gio-hang'));
 			}
 			$dataOrder = (!empty($_POST['dataOrder'])) ? $_POST['dataOrder'] : null;
 
 			if (!empty($dataOrder)) {
-				$order_code = strtoupper($func->randString(8));
+				$order_code = strtoupper($cart->randString(8));
 				$order_date = time();
-				$fullname = (!empty($dataOrder['fullname'])) ? htmlspecialchars($func->sanitize($dataOrder['fullname'])) : '';
-				$phone = (!empty($dataOrder['phone'])) ? htmlspecialchars($func->sanitize($dataOrder['phone'])) : '';
-				$email = (!empty($dataOrder['email'])) ? htmlspecialchars($func->sanitize($dataOrder['email'])) : '';
-				$notes = (!empty($dataOrder['notes'])) ? htmlspecialchars($func->sanitize($dataOrder['notes'])) : '';
+				$fullname = (!empty($dataOrder['fullname'])) ? htmlspecialchars($cart->sanitize($dataOrder['fullname'])) : '';
+				$phone = (!empty($dataOrder['phone'])) ? htmlspecialchars($cart->sanitize($dataOrder['phone'])) : '';
+				$email = (!empty($dataOrder['email'])) ? htmlspecialchars($cart->sanitize($dataOrder['email'])) : '';
+				$notes = (!empty($dataOrder['notes'])) ? htmlspecialchars($cart->sanitize($dataOrder['notes'])) : '';
 				/**
 				 * place
 				 */
 				$city = (!empty($dataOrder['id_city'])) ? htmlspecialchars($dataOrder['id_city']) : 0;
 				$district = (!empty($dataOrder['id_dist'])) ? htmlspecialchars($dataOrder['id_dist']) : 0;
 				$ward = (!empty($dataOrder['id_ward'])) ? htmlspecialchars($dataOrder['id_ward']) : 0;
-				$city_text = $func->getInfoDetail('name_' . $lang, "place_citys", $city);
-				$district_text = $func->getInfoDetail('name_' . $lang, "place_dists", $district);
-				$ward_text = $func->getInfoDetail('name_' . $lang, "place_wards", $ward);
+				$city_text = $cart->getInfoDetail('name_' . $lang, "place_citys", $city);
+				$district_text = $cart->getInfoDetail('name_' . $lang, "place_dists", $district);
+				$ward_text = $cart->getInfoDetail('name_' . $lang, "place_wards", $ward);
 				$address = htmlspecialchars($dataOrder['address']) . ', ' . $district_text['name_' . $lang] . ', ' . $city_text['name_' . $lang];
 				/**
 				 * Payment
 				 */
 				$order_payment = (!empty($dataOrder['payment'])) ? htmlspecialchars($dataOrder['payment']) : 0;
 				$order_payship = (!empty($dataOrder['payship'])) ? htmlspecialchars($dataOrder['payship']) : 0;
-				$order_payment_text = $func->getFieldOne('ten_' . $lang, 'baiviet', $dataOrder['payment']);
-				$order_payship_text = $func->getFieldOne('ten_' . $lang, 'baiviet', $dataOrder['payship']);
+				$order_payment_text = $cart->getFieldOne('ten_' . $lang, 'baiviet', $dataOrder['payment']);
+				$order_payship_text = $cart->getFieldOne('ten_' . $lang, 'baiviet', $dataOrder['payship']);
 
 				/** 
 				 * price 
@@ -249,15 +312,12 @@ if ($func->isAjax()) {
 
 				$response['messages'][] = 'Bạn chưa nhập số điện thoại';
 			}
-			if (!$func->isPhone($phone)) {
+			if (!$cart->isPhone($phone)) {
 
 				$response['messages'][] = 'Số điện thoại không đúng định dạng';
 			}
-			if (empty($email)) {
 
-				$response['messages'][] = 'Bạn chưa nhập email';
-			}
-			if (!$func->isEmail($email)) {
+			if (!$cart->isEmail($email) && !empty($email)) {
 
 				$response['messages'][] = 'Email không đúng định dạng';
 			}
@@ -288,7 +348,7 @@ if ($func->isAjax()) {
 				$message = base64_encode(json_encode($response));
 				$flash->set("message", $message);
 				$urlpay = "carts?src=thanh-toan";
-				$func->redirect($urlpay);
+				$cart->redirect($urlpay);
 			}
 
 			/* lưu đơn hàng */
@@ -336,7 +396,7 @@ if ($func->isAjax()) {
 						$data_donhangchitiet['qty'] = $q;
 						$array_attribute = ['attribute' => []];
 						foreach ($options_product['attribute'] as  $v_t) {
-							$type = $func->returnUnsignedName($v_t);
+							$type = $cart->returnUnsignedName($v_t);
 							if (!empty($type)) {
 								$option_check = $db->rawQueryOne("select id, ten_$lang as ten, type from #_attribute where id_product=? and id=? and type=?", array($pid, $attribute[$type], $type));
 								if (!empty($option_check)) {
@@ -350,13 +410,14 @@ if ($func->isAjax()) {
 						$db->insert('order_detail', $data_donhangchitiet);
 
 						// email đơn hàng chi tiết
+						$title_product = $proinfo['ten_' . $lang];
 						if (!empty($proinfo['masp'])) {
 							$text_attr = 'Mã sp: <b>' . $proinfo['masp'] . '</b><br>';
 						} else {
 							$text_attr = 'Mã sp: <b> Đang được cập nhật</b><br>';
 						}
 						foreach ($options_product['attribute'] as  $v_t) {
-							$type = $func->returnUnsignedName($v_t);
+							$type = $cart->returnUnsignedName($v_t);
 							$option_check = $db->rawQueryOne("select id, ten_$lang as ten,type from #_attribute where id_product=? and id=? and type=? ", array($pid, $attribute[$type], $type));
 							if (!empty($option_check)) $text_attr .=  "<span style='text-transform: capitalize;'>" . $v_t . ': ' . $option_check['ten'] .  "</span> - ";
 						}
@@ -376,13 +437,13 @@ if ($func->isAjax()) {
 
 						/* Values detail order */
 						$orderDetailVals = array(
-							$_name,
+							$title_product,
 							$text_attr,
-							$func->changeMoney($_price, $lang),
-							$func->changeMoney($old_price, $lang),
+							$cart->changeMoney($_price, $lang),
+							$cart->changeMoney($old_price, $lang),
 							$q,
-							$func->changeMoney($_price * $q, $lang),
-							$func->changeMoney($old_price * $q, $lang)
+							$cart->changeMoney($_price * $q, $lang),
+							$cart->changeMoney($old_price * $q, $lang)
 						);
 
 						/* Get order details */
@@ -400,9 +461,9 @@ if ($func->isAjax()) {
 
 			/* Values total order */
 			$orderTotalVals = array(
-				$func->changeMoney($temp_price, $lang),
-				$func->changeMoney($ship_price, $lang),
-				$func->changeMoney($total_price, $lang)
+				$cart->changeMoney($temp_price, $lang),
+				$cart->changeMoney($ship_price, $lang),
+				$cart->changeMoney($total_price, $lang)
 			);
 
 			/* Get total order */
@@ -448,17 +509,19 @@ if ($func->isAjax()) {
 			$file = '';
 			$classEmail->sendEmail("admin", $arrayEmail, $subject, $message, $file);
 
-			/* Send email customer */
-			$arrayEmail = array(
-				"dataEmail" => array(
-					"name" => $fullname,
-					"email" => $email
-				)
-			);
-			$subject = "Đơn hàng từ " . $row_setting['website'];
-			$message = str_replace($emailVars, $emailVals, $classEmail->markdown('order/customer', ['shipPrice' => $ship_price, 'coupons_content' => $coupons_content]));
-			$file = '';
-			$classEmail->sendEmail("customer", $arrayEmail, $subject, $message, $file);
+			if (!empty($email)) {
+				/* Send email customer */
+				$arrayEmail = array(
+					"dataEmail" => array(
+						"name" => $fullname,
+						"email" => $email
+					)
+				);
+				$subject = "Đơn hàng từ " . $row_setting['website'];
+				$message = str_replace($emailVars, $emailVals, $classEmail->markdown('order/customer', ['shipPrice' => $ship_price, 'coupons_content' => $coupons_content]));
+				$file = '';
+				$classEmail->sendEmail("customer", $arrayEmail, $subject, $message, $file);
+			}
 
 			// Giảm số lượng coupons
 			if (!empty($_SESSION['coupons']) && (($config['cart']['coupon_cart']) == true)) {
@@ -482,12 +545,12 @@ if ($func->isAjax()) {
 			if (!empty($_SESSION['cart'])) {
 				$_SESSION['cart'] = array_values($_SESSION['cart']);
 			}
-			$func->_unsetCookie('_CART_');
+			$cart->_unsetCookie('_CART_');
 			if ($id_insert) {
-				$func->transfer("Thông tin đơn hàng đã được gửi thành công. vui lòng kiểm tra hòm thư để biết thông tin tài khoản", $type);
+				$cart->transfer("Thông tin đơn hàng đã được gửi thành công. vui lòng kiểm tra hòm thư để biết thông tin tài khoản", "");
 			} else {
 
-				$func->transfer("Thông tin đơn hàng đã được gửi không thành công.", $type);
+				$cart->transfer("Thông tin đơn hàng đã được gửi không thành công.", "");
 			}
 		}
 	}

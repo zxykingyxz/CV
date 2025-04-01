@@ -221,7 +221,7 @@ if (!empty($seoDB['description_' . $lang])) $seo->setSeo('description', $seoDB['
 if (!empty($seoDB['schema'])) $seo->setSeo('schema', $seoDB['schema']);
 
 $array_options = json_decode($rowc['data']['options'], true);
-$img_json_bar = (isset($array_options['p']) && !empty($array_options['p'])) ? $array_options['p'] : null;
+$img_json_bar['p'] = (isset($array_options['p']) && !empty($array_options['p'])) ? $array_options['p'] : null;
 
 if ($img_json_bar == null || ($img_json_bar['p'] != $array_options['p'])) {
     $img_json_bar = $func->getImgSize($rowc['data']['photo'], $rowc['data']['folder'] . $rowc['data']['photo']);

@@ -403,7 +403,7 @@ function get_main_list()
 
                                     <div <?php if ($GLOBAL_LEVEL1['baiviet']['san-pham']['mota-ckeditor'] == true) echo 'class="ck_editor"'; ?>>
 
-                                        <textarea title="Nhập mô tả . " data-height="400" id="mota_<?= $k ?>" <?= ($GLOBAL_LEVEL1[$com][$type]['mota-ckeditor'] == true) ? 'class="ck_editors"' : 'rows="8"' ?> name="data[mota_<?= $k ?>]"><?= @$item['mota_' . $k] ?></textarea>
+                                        <textarea title="Nhập mô tả . " data-height="400" id="mota_<?= $k ?>" <?= ($GLOBAL_LEVEL1[$com][$type]['mota-ckeditor'] == true) ? 'class="ck_editors"' : 'rows="8"' ?> name="data[mota_<?= $k ?>]"><?= htmlspecialchars_decode($item['mota_' . $k]) ?></textarea>
 
                                     </div>
 
@@ -425,7 +425,7 @@ function get_main_list()
 
                                     <div <?php if ($GLOBAL_LEVEL1['baiviet']['san-pham']['noidung-ckeditor'] == true) echo 'class="ck_editor"'; ?>>
 
-                                        <textarea title="Nhập mô tả . " data-height="400" id="noidung_<?= $k ?>" <?= ($GLOBAL_LEVEL1[$com][$type]['noidung-ckeditor'] == true) ? 'class="ck_editors"' : 'rows="8"' ?> name="data[noidung_<?= $k ?>]"><?= @$item['noidung_' . $k] ?></textarea>
+                                        <textarea title="Nhập mô tả . " data-height="400" id="noidung_<?= $k ?>" <?= ($GLOBAL_LEVEL1[$com][$type]['noidung-ckeditor'] == true) ? 'class="ck_editors"' : 'rows="8"' ?> name="data[noidung_<?= $k ?>]"><?= htmlspecialchars_decode($item['noidung_' . $k]) ?></textarea>
 
                                     </div>
 

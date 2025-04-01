@@ -9,7 +9,7 @@ $url_c = "";
 $text_color = "text-black";
 $text_color_level = "text-black";
 $text_size_title = "text-base font-medium font-main-500";
-$text_size_form = "text-sm font-medium font-main-500";
+$text_size_form = "text-sm font-normal font-main-400";
 $padding_title = "px-2 py-2";
 $padding_title_full = "px-2 py-1";
 
@@ -32,7 +32,7 @@ if ($level) {
             <?php if (($source == 'index') && !($noSeo == true)) { ?>
                 <h<?= $heading[0] ?>>
                 <?php } ?>
-                <a href="<?= $url ?>" rel="dofollow" role="link" aria-label="<?= $title ?>" title="<?= $title ?>" class="capitalize <?= $text_size_title . " " . $text_color ?>  group-hover/list:text-[var(--html-cl-website)] group-[&.active]/list:text-[var(--html-cl-website)]  inline-flex flex-wrap items-center justify-center transition-all duration-300 gap-[7px] px-0 py-[27px]">
+                <a href="<?= $url ?>" rel="dofollow" role="link" aria-label="<?= $title ?>" title="<?= $title ?>" class="capitalize <?= $text_size_title . " " . $text_color ?>  group-hover/list:text-[var(--html-cl-website)] group-[&.active]/list:text-[var(--html-cl-website)]  inline-flex flex-wrap items-center justify-center transition-all duration-300 gap-[7px] px-1 py-3">
                     <span>
                         <?= $title ?>
                     </span>
@@ -40,7 +40,6 @@ if ($level) {
                         <i class="fas fa-chevron-down text-[11px] block h-1 font-medium leading-[0.5]"></i>
                     <?php } ?>
                 </a>
-                <div class="absolute bg-[var(--html-cl-website)] bottom-0 left-1/2 -translate-x-1/2 w-0 h-[3px] group-[&.active]/list:w-full rounded-full transition-all duration-300 "></div>
                 <?php if (($source == 'index') && !($noSeo == true)) { ?>
                 </h<?= $heading[0] ?>>
             <?php } ?>

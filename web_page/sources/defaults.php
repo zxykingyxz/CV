@@ -17,6 +17,8 @@ $dmca = $cache->getCache("select photo,link,hienthi from #_bannerqc where hienth
 
 $logo = $cache->getCache("select photo from #_bannerqc where hienthi=1 and type=? limit 0,1", array('logo'), 'fetch', _TIMECACHE);
 
+$logo_footer = $cache->getCache("select photo from #_bannerqc where hienthi=1 and type=? limit 0,1", array('logo_footer'), 'fetch', _TIMECACHE);
+
 $seoPage = $cache->getCache("select photo,options from #_bannerqc where hienthi=1 and type=? limit 0,1", array('hinhdaidien'), 'fetch', _TIMECACHE);
 
 $socical = $cache->getCache("select id,photo as photo,ten_$lang as ten,mota_$lang as mota,link from #_photo where hienthi=1 and type=?", array('mangxahoi'), 'result', _TIMECACHE);

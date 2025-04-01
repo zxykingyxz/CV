@@ -4,9 +4,8 @@ $type_slider = '';
 
 $max_h_video = 700;
 
-$min_h_video = 200;
+$min_h_video = 500;
 
-$h_images = 529;
 
 $w_images = 1440;
 switch ($com) {
@@ -43,8 +42,10 @@ switch ($com) {
     default:
         if ($deviceType != 'phone') {
             $type_slider = 'slider';
+            $h_images = 500;
         } else {
             $type_slider = 'slider-mobile';
+            $h_images = 800;
         }
         break;
 }

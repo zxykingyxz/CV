@@ -99,13 +99,36 @@
                             style="color: #999;"><?= @$item['address'] ?></span></label>
                     <div class="clear"></div>
                 </div>
-
                 <div class="formRow">
-                    <label style="white-space: initial;"><?= _yeucauthem ?>: <span
-                            style="color: #999;"><?= @$item['notes'] ?></span></label>
+                    <label style="white-space: initial;"><?= "Hình Thức Thanh Toán" ?>:
+                        <span style="color: #999;">
+                            <?= $func->getFieldOne('ten_' . $lang, 'baiviet', $item['payment']) ?>
+                        </span>
+                    </label>
                     <div class="clear"></div>
                 </div>
-
+                <div class="formRow">
+                    <label style="white-space: initial;"><?= "Phương Thức Giao Hàng" ?>:
+                        <span style="color: #999;">
+                            <?= $func->getFieldOne('ten_' . $lang, 'baiviet', $item['payship']) ?>
+                        </span>
+                    </label>
+                    <div class="clear"></div>
+                </div>
+                <?php if (!empty($item['coupons'])) { ?>
+                    <div class="formRow">
+                        <label style="white-space: initial;"><?= _magiamgiadaduocapdung ?>: <span style="color: #999;"><?= @$item['coupons'] ?></span></label>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="formRow">
+                        <label style="white-space: initial;"><?= _giamgiasanpham ?>: <span style="color: #999;"> - <?= $func->changeMoney(@$item['total_price_tmp'] - @$item['total_price'], $lang) ?></span></label>
+                        <div class="clear"></div>
+                    </div>
+                <?php } ?>
+                <div class="formRow">
+                    <label style="white-space: initial;"><?= _yeucauthem ?>: <span style="color: #999;"><?= @$item['notes'] ?></span></label>
+                    <div class="clear"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -117,7 +140,8 @@
                         <tr>
                             <td class="tb_data_small"><a href="#" class="tipS" style="margin: 5px;"><?= _stt ?></a></td>
                             <td class="sortCol">
-                                <div><?= _tensanpham ?><span></span></div>
+                                <div><?= _tensanpham ?><span></span>
+                                </div>
                             </td>
                             <!-- <td>Loại</td> -->
                             <td width="150" align="center" style="text-align: center !important;"><?= _hinhanh ?></td>
@@ -138,7 +162,38 @@
                         ?>
                             <tr id="productct<?= $cartOrder[$i]['id'] ?>">
                                 <td><?= $i + 1 ?></td>
-                                <td><?= $rowOrder['ten_' . $lang] ?></td>
+                                <td class=" ">
+                                    <div class="">
+                                        <?= $rowOrder['ten_' . $lang] ?>
+                                    </div>
+                                    <div class="" style=" margin-top: 5px;">
+                                        <?php
+                                        $text_attribute = "";
+                                        if (!empty($cartOrder[$i]['options'])) {
+                                            $array_attribute = (json_decode($cartOrder[$i]['options'], true));
+                                            $array_attribute = $array_attribute['attribute'];
+
+                                            if (!empty($array_attribute)) {
+                                                $max_attribute = count($array_attribute);
+                                                $total_attribute = 1;
+                                                foreach ($array_attribute as $k => $v) {
+                                                    $attribute = $db->rawQueryOne("select ten_$lang as ten,photo from #_attribute where hienthi=1 and type=? and id=?", array($v['type'], $v['id']));
+                                                    $text_attribute .= $k . ': ' . $attribute['ten'] . ' - ';
+                                                    if ($total_attribute == $max_attribute) {
+                                                        $img_attribute = $attribute['photo'];
+                                                        $total_attribute = 1;
+                                                    }
+                                                    $total_attribute++;
+                                                }
+                                                $text_attribute = trim($text_attribute, ' - ');
+                                            }
+                                        }
+                                        ?>
+                                        <span style="font-weight: 600; text-transform: capitalize;">
+                                            <?= $text_attribute ?>
+                                        </span>
+                                    </div>
+                                </td>
                                 <td align="center">
 
                                     <?php if ($cartOrder[$i]['color'] != 0) {

@@ -2,7 +2,9 @@ _FRAMEWORK = {
     init: function () {
         _FRAMEWORK.Counter();
 
-        _FRAMEWORK.thumbsGallery();
+        _FRAMEWORK.thumbsGalleryProduct();
+
+        _FRAMEWORK.thumbsGalleryService();
 
         _FRAMEWORK.tocList();
 
@@ -73,7 +75,7 @@ _FRAMEWORK = {
                 });
             });
     },
-    thumbsGallery: function () {
+    thumbsGalleryProduct: function () {
         // Chi tiết sản phẩm
         let thumbsSlider = null;
         if ($("body .button_images_thumbs_gallery").length > 0) {
@@ -95,7 +97,8 @@ _FRAMEWORK = {
                 swiper: thumbsSlider, // Kết nối với thumbs slider
             },
         });
-
+    },
+    thumbsGalleryService: function () {
         // Chi tiết dự án
         let thumbsSliderProject = null; // Khởi tạo với null để tránh lỗi
 
@@ -412,41 +415,73 @@ _FRAMEWORK = {
             status: "success",
         }
     ) {
-        if (typeof window.stackTopLeft === "undefined") {
-            window.stackTopLeft = new PNotify.Stack({
-                dir1: "down",
-                dir2: "left",
-                firstpos1: 15,
-                firstpos2: 15,
-                push: "top",
-                maxStrategy: "close",
-            });
-        }
+        // Khởi tạo cấu hình Notiflix để hỗ trợ HTML
+        Notiflix.Notify.init({
+            useIcon: true, // Hiển thị icon
+            messageMaxLength: 300, // Độ dài tối đa của thông báo
+            plainText: false, // Cho phép nội dung HTML
+        });
+        let style_title = "font-size: 16px; font-weight: bold;";
+        // Xử lý trạng thái và hiển thị thông báo
         switch (data.status) {
             case "success":
-                PNotify.success({
-                    title: data.title,
-                    text: data.message,
-                    stack: window.stackTopLeft,
-                });
+                Notiflix.Notify.success(
+                    `<div style="${style_title}}">${data.title}</div>
+                     <div>${data.message}</div>`
+                );
                 break;
             case "error":
-                PNotify.error({
-                    title: data.title,
-                    text: data.message,
-                    stack: window.stackTopLeft,
-                });
+                Notiflix.Notify.failure(
+                    `<div style="${style_title}}">${data.title}</div>
+                     <div>${data.message}</div>`
+                );
                 break;
             case "info":
-                PNotify.info({
-                    title: data.title,
-                    text: data.message,
-                    stack: window.stackTopLeft,
-                });
+                Notiflix.Notify.info(
+                    `<div style="${style_title}}">${data.title}</div>
+                     <div>${data.message}</div>`
+                );
                 break;
             default:
+                Notiflix.Notify.warning(
+                    `<div style="${style_title}}">Trạng thái không xác định!</div>
+                     <div>Vui lòng kiểm tra lại.</div>`
+                );
                 break;
         }
+    },
+    showConfirm: function (
+        data = {
+            title: null,
+            message: null,
+            confirmText: "Đồng ý",
+            cancelText: "Hủy bỏ",
+            onConfirm: null,
+            onCancel: null,
+        }
+    ) {
+        // Khởi tạo cấu hình Notiflix Confirm
+        Notiflix.Confirm.init({});
+
+        let style_title = "font-size: 16px; font-weight: bold;";
+
+        // Hiển thị hộp thoại xác nhận
+        Notiflix.Confirm.show(
+            data.title || "Xác nhận hành động",
+            `<div style="${style_title}">${data.message || "Bạn có chắc chắn muốn tiếp tục không?"}</div>`,
+            data.confirmText || "Đồng ý",
+            data.cancelText || "Hủy bỏ",
+            function () {
+                if (typeof data.onConfirm === "function") {
+                    data.onConfirm();
+                }
+            },
+            function () {
+                if (typeof data.onCancel === "function") {
+                    data.onCancel();
+                }
+            }
+        );
     },
     tocList: function () {
         if (_TOC == 1 || _LIST_TOC == 1) {

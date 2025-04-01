@@ -13,7 +13,7 @@ if (!empty($_SESSION['attribute'])) {
                 <div class="w-full sm:w-8/12 lg:w-9/12 flex flex-col gap-3 ">
                     <div class="bg_form_all w-full flex flex-wrap gap-5">
                         <div class=" w-full sm:w-6/12 ">
-                            <div class="">
+                            <div class="form_img_product_detail">
                                 <?= $sample->getTemplateLayoutsFor([
                                     'name_layouts' => 'templateImagesDetail',
                                     'data' => $row_detail,
@@ -84,12 +84,12 @@ if (!empty($_SESSION['attribute'])) {
                                 </div>
                                 <?php if (($config['cart']['turn_on'] == true) && $deviceType == 'phone') { ?>
                                     <div class="block sm:hidden py-1 text-black text-sm font-normal font-main-400 border-b border-[#99999945]">
-                                        <?php if (($config['cart']['cart-advance'] == true)) { ?>
+                                        <?php if (($config['cart']['cart_advance'] == true)) {  ?>
                                             <?= $sample->getTemplateLayoutsFor([
                                                 'name_layouts' => 'templateAttribute',
                                                 'data_attribute' => $data_attribute,
-                                            ]);
-                                            ?>
+                                                'row_detail' => $row_detail,
+                                            ]); ?>
                                         <?php } ?>
                                         <div class="bg-blue-50 p-2 rounded  ">
                                             <?= $sample->getTemplateLayoutsFor([
@@ -165,10 +165,11 @@ if (!empty($_SESSION['attribute'])) {
                     <div class="sticky top-[var(--value-top-fixed)] left-0 grid grid-cols-1 gap-2 sm:gap-3 lg:gap-4">
                         <?php if (($config['cart']['turn_on'] == true) && $deviceType != 'phone') { ?>
                             <div class="bg_form_all hidden sm:block ">
-                                <?php if (($config['cart']['cart-advance'] == true)) { ?>
+                                <?php if (($config['cart']['cart_advance'] == true)) {  ?>
                                     <?= $sample->getTemplateLayoutsFor([
                                         'name_layouts' => 'templateAttribute',
                                         'data_attribute' => $data_attribute,
+                                        'row_detail' => $row_detail,
                                     ]);
                                     ?>
                                 <?php } ?>

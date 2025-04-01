@@ -157,7 +157,15 @@ function saveCopy()
 				$send[$column] = htmlspecialchars($value);
 			}
 		}
+		if (($config['cart']['price_attribute']['attribute_one_for_all'])) {
+			$options_setting =  $db->rawQueryOne('select options from #_setting', array());
+			$array_options = json_decode($options_setting['options'], true)['attribute'];
+			$dataOptions['attribute'] = $array_options;
+		}
 
+		if (!empty($dataOptions)) {
+			$send['options'] = json_encode($dataOptions, JSON_UNESCAPED_UNICODE);
+		}
 		if ($data['giaban']) {
 
 			$send['giaban'] = str_replace(',', '', $data['giaban']);
@@ -262,7 +270,21 @@ function saveCopy()
 		$insertID = $db->insert($com, $send);
 
 		if ($insertID) {
+			if (!empty($dataOptions['attribute'])) {
 
+				foreach ($dataOptions['attribute'] as $value) {
+
+					$value = $func->convert_vn2latin($value);
+
+					$value = str_replace([' ', ',', '.', '?', '!'], '-', $value);
+
+					$value = strtolower($value);
+
+					$data_attribute = $_POST[$value];
+
+					$func->addAttribute($data_attribute, $insertID, $value);
+				}
+			}
 			if (isset($table['seo']) && $table['seo'] == true) {
 
 				$dataSeo['idmuc'] = $insertID;

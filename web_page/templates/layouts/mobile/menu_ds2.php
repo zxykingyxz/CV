@@ -164,14 +164,6 @@ function renderMenuItems($options)
             ?>
         </div>
         <div class="w-full bg-[var(--html-bg-website)] px-1 py-3 flex items-center">
-            <?php if ($config['gg_lang'] || $config['lang_check']) { ?>
-                <div class=" flex-initial flex justify-end gap-1 items-center leading-[0]">
-                    <?= $this->getTemplateLayoutsFor([
-                        'name_layouts' => 'ggLangWeb',
-                        'form' => '',
-                    ]) ?>
-                </div>
-            <?php } ?>
         </div>
     </div>
     <div class="btn_menuMb cursor-pointer opacity-0 bg-[#000000a8] flex-1 h-full [&.active]:opacity-100 [&.active]:transition-[opacity] [&.active]:delay-300 [&.active]:duration-300"></div>

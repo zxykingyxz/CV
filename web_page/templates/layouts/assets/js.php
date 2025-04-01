@@ -43,6 +43,8 @@ $js->setJs("assets/plugins/PNotify/PNotify.js");
 $js->setJs("assets/plugins/jssocials/jssocials.js");
 $js->setJs("assets/plugins/jquery-confirm/jquery-confirm.js");
 $js->setJs("assets/plugins/swiper/swiper-bundle.js");
+$js->setJs("assets/plugins/slick/slick.min.js");
+$js->setJs("assets/plugins/owlcarousel/owl.carousel.min.js");
 $js->setJs("assets/js/lang/$lang.js");
 $js->setJs("assets/js/scrollAnimation.js");
 $js->setJs("assets/plugins/toc/toc.js");
@@ -51,6 +53,8 @@ $js->setJs("assets/plugins/owlcarousel/owl.carousel.min.js");
 $js->setJs("assets/js/functions.js");
 $js->setJs("assets/js/index.js");
 $js->setJs("assets/js/carts.js");
+$js->setJs("assets/plugins/Notiflix/notiflix.js");
+
 // có thể chỉnh sửa
 $js->setJs("assets/plugins/aos/aos.js");
 $js->setJs("assets/plugins/flatpickr/flatpickr.min.js");
@@ -63,7 +67,6 @@ $js->setJs("assets/plugins/Custom/updateUrlParams.js");
 $js->setJs("assets/plugins/Custom/showHideContents.js");
 $js->setJs("assets/plugins/Custom/captchaGenerator.js");
 $js->setJs("assets/plugins/Custom/animationCircle.js");
-$js->setJs("assets/plugins/Flipster/jquery.flipster.min.js");
 
 $js->setJs("assets/js/social-login.js");
 

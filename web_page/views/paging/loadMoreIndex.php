@@ -1,68 +1,3 @@
-<?php if ($count_product['total'] > $per_page_index) { ?>
-    <div class="" id="paging_index_<?= $value_dm_c1['id'] ?>">
-        <?= $sample->getTemplateLayoutsFor([
-            'name_layouts' => 'loadMoreIndex',
-            'formHandle' => "product",
-            'formItems' => "product_items_index_" . $value_dm_c1['id'],
-            'formPaging' => "paging_index_" . $value_dm_c1['id'],
-            'total' => $count_product['total'],
-            'numberItems' => $per_page_index,
-            'pagingCurrent' => 2,
-            'layoutsItems' => "gridTemplateProduct2",
-            'seoHeading' => "h6",
-            'type' => $value_dm_c1['type'],
-            'id_list' => $value_dm_c1['id'],
-            'id_cat' => "",
-            'id_item' => "",
-            'id_sub' => "",
-            'title' => "sản phẩm",
-        ]) ?>
-    </div>
-<?php } ?>
-<script>
-    $('body').on('click', '.view__load_index', function() {
-        let _this = $(this);
-        let page = parseInt(_this.attr('data-page'));
-        let layouts = _this.attr('data-layouts');
-        let form = _this.attr('data-form');
-        let seoheading = _this.attr('data-seoheading');
-        let items = parseInt(_this.attr('data-items'));
-        let total = parseInt(_this.attr('data-total'));
-        let sql = _this.attr('data-sql');
-        let formItems = _this.attr('data-form-items');
-        let formPaging = _this.attr('data-form-paging');
-
-        $.ajax({
-            url: "ajax/default/pagingIndex.php",
-            type: 'POST',
-            data: {
-                form: form,
-                page: page,
-                layouts: layouts,
-                seoheading: seoheading,
-                items: items,
-                total: total,
-                sql: sql,
-            },
-            dataType: 'JSON',
-            beforeSend: function() {
-                $('.rp-loader').show();
-                _this.hide();
-            },
-            success: function(data) {
-                $('#' + formItems).append(data.html.items);
-                $('#' + formPaging).html(data.html.paging);
-                $('.rp-loader').hide();
-                _this.show();
-                _FRAMEWORK.Lazys();
-                _FRAMEWORK.loadWesite();
-            },
-            error: function(data) {},
-            complete: function() {}
-        });
-
-    });
-</script>
 <?php
 if ($total > 0 && ($total > ($numberItems * ($pagingCurrent - 1)))) {
     $sql = "";
@@ -109,6 +44,7 @@ if ($total > 0 && ($total > ($numberItems * ($pagingCurrent - 1)))) {
     if (isset($seoHeading)) {
         $attr .= " data-seoheading=" . $seoHeading;
     }
+
     if (isset($numberItems)) {
         $attr .= " data-items=" . $numberItems;
     }
@@ -125,17 +61,20 @@ if ($total > 0 && ($total > ($numberItems * ($pagingCurrent - 1)))) {
         $attr .= " data-form-paging=" . $formPaging;
     }
 ?>
-    <div class="flex ">
+    <div class="flex w-full ">
         <div class=" basis-full flex justify-center mt-4 sm:mt-10 mb-3">
-            <a <?= trim($attr) ?> class=' px-8 sm:px-[52px] py-2 rounded  transition-all duration-300 text-white font-main text-sm sm:text-base font-semibold font-main-600 leading-none bg-[var(--html-bg-website)] hover:bg-[var(--html-sc-website)] cursor-pointer flex justify-center items-center gap-2 view__load_index ' title='Xem thêm'>
+            <a <?= trim($attr) ?> class=' flex-1 w-full max-w-[300px] px-8 sm:px-[25px] py-2 rounded-lg sm:rounded-xl   transition-all duration-300 text-[var(--html-bg-website)] font-main text-sm sm:text-base font-normal font-main-400 leading-none border border-[var(--html-bg-website)] hover:bg-[var(--html-sc-website)] hover:border-[var(--html-sc-website)] hover:text-white cursor-pointer flex justify-center items-center gap-2 view__load_index ' title='Xem thêm'>
                 <span>
-                    <?= "Xem thêm" ?> <span><?= $total - ($numberItems * ($pagingCurrent - 1)) ?></span> <?= $title ?>
+                    <?= "Xem thêm" ?>
                 </span>
                 <div class="">
-                    <i class='fas fa-arrow-right mr-1 '></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M1.82903 8.61973H12.6909L10.656 10.6549C10.0715 11.2395 10.9482 12.1163 11.5328 11.5317L13.3861 9.67537L14.6232 8.43614C14.863 8.19491 14.863 7.80532 14.6232 7.5641L11.5328 4.46972C11.4152 4.34889 11.2533 4.28109 11.0847 4.28249C10.5281 4.28256 10.2549 4.9606 10.656 5.34662L12.6958 7.38178H1.79703C0.939776 7.42432 1.00378 8.66241 1.82903 8.61973Z" fill="currentColor" />
+                    </svg>
                 </div>
             </a>
             <div class="rp-loader w-[40px] hidden h-[40px] m-auto p-1 animate-[rotate_2s_linear_infinite]">
+
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" style="width: 100%; height: 100%; fill: var(--html-bg-website);">
                     <circle r="80" cx="500" cy="90" style="fill: var(--html-bg-website);"></circle>
                     <circle r="80" cx="500" cy="910" style="fill: var(--html-bg-website);"></circle>

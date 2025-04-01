@@ -1,0 +1,167 @@
+a:3:{s:8:"dataHash";s:32:"3614dcd95c1f63160dcb629627d42e08";s:9:"timestamp";i:1743232745;s:7:"content";s:18889:"
+<footer class="section-footer  footer overflow-hidden relative bg-white" >
+    <div class="grid_s wide">
+        <div class=" pt-5  pb-3 relative z-30">
+            <div class="flex justify-center">
+                <div class="w-full row justify-between gap-5 sm:gap-2">
+                    <!-- thông tin liên hệ -->
+                    <div class="col flex-1 relative overflow-hidden">
+                        <div class="wow ">
+                            <div class="w-full flex justify-center sm:justify-start ">
+                                <div class="max-w-[185px] leading-[0]">
+                                    <a href='' class='load_website '  role='link' rel='dofollow' title='logo footer'  style='width: 500px;aspect-ratio:500/424.32432432432;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='500' height='424.32432432432' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://vandinh_0180325tg.test/upload/hinhanh/hanover3removebgpreview-2-8809.png' alt='logo footer' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></a>                                </div>
+                            </div>
+                            <div class=" mt-1 text-[#040404] text-[13px] font-light font-main-300 leading-normal ">
+                                <p style="text-align: justify;"><span style="font-size:14px;"><span style="line-height:1.5;"><span style="text-align: justify;">Địa chỉ: 12D đường 5C, Bình Hưng Hòa A, Bình Tân, TP.HCM</span><br style="font-size: 16px; text-align: justify;" />
+<span style="text-align: justify;">Hotline: 0918 565 623</span><br style="font-size: 16px; text-align: justify;" />
+<span style="text-align: justify;">Email: ndtpaper@gmail.com</span><br style="font-size: 16px; text-align: justify;" />
+<span style="text-align: justify;">Website: aodaiminhphat.vn</span></span></span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col overflow-hidden basis-full  md:basis-6/12 lg:basis-[20%] flex justify-start lg:justify-center">
+                        <div class="wow " data-wow-duration="1.5s" data-wow-delay="0.4s">
+                            <div class=" font-main-400 font-bold text-base text-[#040404] capitalize ">
+                                <span>Sản phẩm</span>
+                            </div>
+                            <div class=" mt-6 ">
+                                <ul class="grid grid-cols-1 gap-5">
+                                                                            <li class="group transition-all duration-300 ">
+                                            <a href="ao-dai-nam-cach-tan" title="ÁO DÀI NAM CÁCH TÂN" class="flex items-center gap-2 group-hover:translate-x-3 transition-all duration-300">
+                                                <div class="flex-initial leading-none aspect-[1/1] w-[7px] flex items-center justify-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="7" viewBox="0 0 6 7" fill="none">
+                                                        <circle cx="3" cy="3.06592" r="3" fill="var(--html-sc-website)" />
+                                                    </svg>
+                                                </div>
+                                                <div class="text-[#040404] text-[13px] font-light font-main-300 leading-normal   flex-1   transition-all duration-300 group-hover:text-[var(--html-sc-website)] ">
+                                                    ÁO DÀI NAM CÁCH TÂN                                                </div>
+                                            </a>
+                                        </li>
+                                                                            <li class="group transition-all duration-300 ">
+                                            <a href="ao-dai-truyen-thong" title="ÁO DÀI TRUYỀN THỐNG" class="flex items-center gap-2 group-hover:translate-x-3 transition-all duration-300">
+                                                <div class="flex-initial leading-none aspect-[1/1] w-[7px] flex items-center justify-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="7" viewBox="0 0 6 7" fill="none">
+                                                        <circle cx="3" cy="3.06592" r="3" fill="var(--html-sc-website)" />
+                                                    </svg>
+                                                </div>
+                                                <div class="text-[#040404] text-[13px] font-light font-main-300 leading-normal   flex-1   transition-all duration-300 group-hover:text-[var(--html-sc-website)] ">
+                                                    ÁO DÀI TRUYỀN THỐNG                                                </div>
+                                            </a>
+                                        </li>
+                                                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col overflow-hidden basis-full  md:basis-6/12 lg:basis-[25%] flex justify-start lg:justify-center">
+                        <div class="wow ">
+                            <div class=" font-main-400 font-bold text-base text-[#040404] capitalize ">
+                                <span>quy định & chính sách</span>
+                            </div>
+                            <div class=" mt-6 ">
+                                <ul class="grid grid-cols-1 gap-5">
+                                                                            <li class="group transition-all duration-300 ">
+                                            <a href="chinh-sach-va-bao-mat-thong-tin" title="Chính sách và bảo mật thông tin" class="flex items-center gap-2 group-hover:translate-x-3 transition-all duration-300">
+                                                <div class="flex-initial leading-none aspect-[1/1] w-[7px] flex items-center justify-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="7" viewBox="0 0 6 7" fill="none">
+                                                        <circle cx="3" cy="3.06592" r="3" fill="var(--html-sc-website)" />
+                                                    </svg>
+                                                </div>
+                                                <div class="text-[#040404] text-[13px] font-light font-main-300 leading-normal   flex-1   transition-all duration-300 group-hover:text-[var(--html-sc-website)] ">
+                                                    Chính sách và bảo mật thông tin                                                </div>
+                                            </a>
+                                        </li>
+                                                                            <li class="group transition-all duration-300 ">
+                                            <a href="quy-dinh-ve-thanh-toan" title="Quy định về thanh toán" class="flex items-center gap-2 group-hover:translate-x-3 transition-all duration-300">
+                                                <div class="flex-initial leading-none aspect-[1/1] w-[7px] flex items-center justify-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="7" viewBox="0 0 6 7" fill="none">
+                                                        <circle cx="3" cy="3.06592" r="3" fill="var(--html-sc-website)" />
+                                                    </svg>
+                                                </div>
+                                                <div class="text-[#040404] text-[13px] font-light font-main-300 leading-normal   flex-1   transition-all duration-300 group-hover:text-[var(--html-sc-website)] ">
+                                                    Quy định về thanh toán                                                </div>
+                                            </a>
+                                        </li>
+                                                                            <li class="group transition-all duration-300 ">
+                                            <a href="huong-dan-mua-hang" title="Hướng dẫn mua hàng" class="flex items-center gap-2 group-hover:translate-x-3 transition-all duration-300">
+                                                <div class="flex-initial leading-none aspect-[1/1] w-[7px] flex items-center justify-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="7" viewBox="0 0 6 7" fill="none">
+                                                        <circle cx="3" cy="3.06592" r="3" fill="var(--html-sc-website)" />
+                                                    </svg>
+                                                </div>
+                                                <div class="text-[#040404] text-[13px] font-light font-main-300 leading-normal   flex-1   transition-all duration-300 group-hover:text-[var(--html-sc-website)] ">
+                                                    Hướng dẫn mua hàng                                                </div>
+                                            </a>
+                                        </li>
+                                                                            <li class="group transition-all duration-300 ">
+                                            <a href="chinh-sach-doi-tra-va-hoan-tien" title="Chính sách đổi trả và hoàn tiền" class="flex items-center gap-2 group-hover:translate-x-3 transition-all duration-300">
+                                                <div class="flex-initial leading-none aspect-[1/1] w-[7px] flex items-center justify-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="7" viewBox="0 0 6 7" fill="none">
+                                                        <circle cx="3" cy="3.06592" r="3" fill="var(--html-sc-website)" />
+                                                    </svg>
+                                                </div>
+                                                <div class="text-[#040404] text-[13px] font-light font-main-300 leading-normal   flex-1   transition-all duration-300 group-hover:text-[var(--html-sc-website)] ">
+                                                    Chính sách đổi trả và hoàn tiền                                                </div>
+                                            </a>
+                                        </li>
+                                                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- mạng xã hội -->
+                    <div class="col overflow-hidden basis-full  md:basis-6/12 lg:basis-[25%] flex justify-start lg:justify-center">
+                        <div class=" w-full wow " data-wow-duration="1.5s" data-wow-delay="0.6s">
+                            <div class=" font-main-400 font-bold text-base text-[#040404] capitalize ">
+                                <span>Kết Nối Nhanh</span>
+                            </div>
+                            <div class=" mt-6 "></div>
+                            <div class="grid grid-cols-2 gap-3 mb-4 ">
+                                                                    <a href="https://www.facebook.com/Aodaiminhphat68/" title="facebook" target="_blank" class="group/mxh py-3 px-5 text-[13px] font-medium font-main-500 flex justify-center items-center gap-2 bg-[#F4F4F4] hover:bg-[var(--html-bg-website)] hover:text-white shadow-[3px_4px_10px_0px_rgba(0,_0,_0,_0.15)] border border-gray-100 hover:border-[var(--html-bg-website)] rounded-lg transition-all duration-300 ">
+                                        <div class="w-5 aspect-[1/1] overflow-hidden group-hover/mxh:brightness-0  group-hover/mxh:invert transition-all duration-300 leading-[0]">
+                                            <div  class='load_website ' style='width: 500px;aspect-ratio:500/500;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='500' height='500' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://vandinh_0180325tg.test/upload/hinhanh/z-2-4-5540.png' alt='facebook' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                        </div>
+                                        <div class="flex-1">
+                                            <span>
+                                                facebook                                            </span>
+                                        </div>
+                                    </a>
+                                                                    <a href="https://zalo.me/0918565623" title="zalo" target="_blank" class="group/mxh py-3 px-5 text-[13px] font-medium font-main-500 flex justify-center items-center gap-2 bg-[#F4F4F4] hover:bg-[var(--html-bg-website)] hover:text-white shadow-[3px_4px_10px_0px_rgba(0,_0,_0,_0.15)] border border-gray-100 hover:border-[var(--html-bg-website)] rounded-lg transition-all duration-300 ">
+                                        <div class="w-5 aspect-[1/1] overflow-hidden group-hover/mxh:brightness-0  group-hover/mxh:invert transition-all duration-300 leading-[0]">
+                                            <div  class='load_website ' style='width: 500px;aspect-ratio:500/500;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='500' height='500' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://vandinh_0180325tg.test/upload/hinhanh/zalo-4287.png' alt='zalo' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                        </div>
+                                        <div class="flex-1">
+                                            <span>
+                                                zalo                                            </span>
+                                        </div>
+                                    </a>
+                                                                    <a href="https://www.tiktok.com/@aodaiminhphat68" title="Tiktok" target="_blank" class="group/mxh py-3 px-5 text-[13px] font-medium font-main-500 flex justify-center items-center gap-2 bg-[#F4F4F4] hover:bg-[var(--html-bg-website)] hover:text-white shadow-[3px_4px_10px_0px_rgba(0,_0,_0,_0.15)] border border-gray-100 hover:border-[var(--html-bg-website)] rounded-lg transition-all duration-300 ">
+                                        <div class="w-5 aspect-[1/1] overflow-hidden group-hover/mxh:brightness-0  group-hover/mxh:invert transition-all duration-300 leading-[0]">
+                                            <div  class='load_website ' style='width: 500px;aspect-ratio:500/500;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='500' height='500' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://vandinh_0180325tg.test/upload/hinhanh/z-2-1-380.png' alt='Tiktok' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                        </div>
+                                        <div class="flex-1">
+                                            <span>
+                                                Tiktok                                            </span>
+                                        </div>
+                                    </a>
+                                                                    <a href="javascript:void(0)" title="Youtube" target="_top" class="group/mxh py-3 px-5 text-[13px] font-medium font-main-500 flex justify-center items-center gap-2 bg-[#F4F4F4] hover:bg-[var(--html-bg-website)] hover:text-white shadow-[3px_4px_10px_0px_rgba(0,_0,_0,_0.15)] border border-gray-100 hover:border-[var(--html-bg-website)] rounded-lg transition-all duration-300 ">
+                                        <div class="w-5 aspect-[1/1] overflow-hidden group-hover/mxh:brightness-0  group-hover/mxh:invert transition-all duration-300 leading-[0]">
+                                            <div  class='load_website ' style='width: 500px;aspect-ratio:500/500;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='500' height='500' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://vandinh_0180325tg.test/upload/hinhanh/z-2-2-8246.png' alt='Youtube' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>                                        </div>
+                                        <div class="flex-1">
+                                            <span>
+                                                Youtube                                            </span>
+                                        </div>
+                                    </a>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-copy border-t border-[#DBDBDB] ">
+    <div class="grid_s wide ">
+        <div class="py-3 flex flex-wrap items-center justify-center">
+            <div class="text-[#040404] text-[14px] font-normal font-main-400 leading-relaxed tracking-[0.101px] text-center">Copyright &copy; 2024 - <span class="uppercase">Áo Dài Minh Phát</span>
+                . All rights reserved. <a href="https://i-web.vn/" class="" target="_blank" title="">Design by i-web.vn</a>
+            </div>
+        </div>
+    </div>
+</div>    </div>
+</footer>";}

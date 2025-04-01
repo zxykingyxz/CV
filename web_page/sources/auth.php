@@ -1,6 +1,6 @@
 <?php
-$class_forms_defaul = 'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4  gap-3 ';
-$layouts_defaul = "gridTemplatePosts4";
+$class_forms_defaul = 'grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-3 ';
+$layouts_defaul = "gridTemplateProduct2";
 $textButton_defaul = "sản Phẩm";
 
 $authArrs = array(
@@ -9,12 +9,6 @@ $authArrs = array(
   ],
   'gioi-thieu' => [
     'title' => "Giới Thiệu",
-    'level' => true,
-    'isCheck' => true,
-    'type' => 'POST',
-    'class_form_new' => 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2',
-    'layouts' => "gridTemplateNews9",
-    'textButton' => "bài viết",
   ],
   'san-pham' => [
     'title' => "Sản Phẩm",
@@ -25,32 +19,23 @@ $authArrs = array(
     'layouts' => $layouts_defaul,
     'textButton' => $textButton_defaul,
   ],
-  'dich-vu' => [
-    'title' => "Dịch Vụ",
-    'level' => true,
-    'isCheck' => false,
-    'type' => 'POST',
-    'class_form_new' => 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2',
-    'layouts' => "gridTemplateNews9",
-    'textButton' => "bài viết",
-  ],
-  'du-an' => [
-    'title' => "Dự Án",
-    'level' => true,
-    'isCheck' => false,
-    'type' => 'POST',
-    'class_form_new' => 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2',
-    'layouts' => "gridTemplateNews9",
-    'textButton' => "bài viết",
-  ],
   'tin-tuc' => [
     'title' => "Tin Tức",
-    'level' => true,
+    'level' => false,
+    'isCheck' => false,
+    'type' => 'POST',
+    'class_form_new' => 'grid grid-cols-1 md:grid-cols-2  gap-2',
+    'layouts' => "gridTemplateNews6",
+    'textButton' => "bài viết",
+  ],
+  'bo-suu-tap' => [
+    'title' => "Bộ Sưu tập",
+    'level' => false,
     'isCheck' => false,
     'type' => 'POST',
     'class_form_new' => 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2',
-    'layouts' => "gridTemplateNews9",
-    'textButton' => "bài viết",
+    'layouts' => "gridTemplateImages2",
+    'textButton' => "bộ",
   ],
   'lien-he' => [
     'title' => "Liên Hệ",

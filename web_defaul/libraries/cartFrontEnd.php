@@ -117,6 +117,31 @@ class cartFrontEnd
         }
         return false;
     }
+    public function isPhone($number)
+    {
+        $number = trim($number);
+        if (preg_match_all('/^(0|84)(2(0[3-9]|1[0-6|8|9]|2[0-2|5-9]|3[2-9]|4[0-9]|5[1|2|4-9]|6[0-3|9]|7[0-7]|8[0-9]|9[0-4|6|7|9])|3[2-9]|5[5|6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])([0-9]{7})$/m', $number, $matches, PREG_SET_ORDER, 0)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public function transfer($msg, $page = "index.html")
+
+    {
+        $showtext = $msg;
+
+        $page_transfer = $page;
+
+        include(_template . "transfer_tpl.php");
+
+        exit();
+    }
+
+    public function isAjax()
+    {
+        return (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && (strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest'));
+    }
     public function getAttribute($pid = null, $field = null)
     {
         $sql = "select $field from #_" . $this->table_properties . " where id='" . $pid . "'";
@@ -191,6 +216,25 @@ class cartFrontEnd
 
         return $name;
     }
+    public function changeMoney($money, $lang = null)
+    {
+        global $row_setting;
+        switch ($lang) {
+            case 'en':
+                return round($money / $row_setting['dola'], 1) . ' $';
+                break;
+            case 'jp':
+                return round(($money * 100) / $row_setting['yen'], 1) . ' ¥';
+                break;
+            default:
+                return $this->money($money, ' đ');
+                break;
+        }
+    }
+    public function money($dola, $currency = '')
+    {
+        return number_format($dola, 0, ',', '.') . $currency;
+    }
     public function arrangeAttributeCart($code = null)
     {
         global $func;
@@ -236,6 +280,7 @@ class cartFrontEnd
             }
         }
         $_SESSION[$this->name] = array_values($_SESSION[$this->name]);
+        $this->updateCartCookie();
     }
     public function getTotalQuality()
     {
@@ -290,7 +335,7 @@ class cartFrontEnd
             $total_price = 0;
             foreach ($attribute as $k => $v) {
 
-                if ($config['attribute']['total_price']) {
+                if ($config['cart']['price_attribute']['total_price']) {
                     $sql_attribute = "select $name_price from #_attribute where id='" .  $v . "'";
                     $row_attribute = $this->d->rawQueryOne($sql_attribute);
                     $total_price +=  $row_attribute[$name_price];
@@ -305,12 +350,12 @@ class cartFrontEnd
                 $total_tmp++;
             }
         } else {
-            if (!($config['attribute']['total_price'])) {
+            if (!($config['cart']['price_attribute']['total_price'])) {
                 $sql = "select $name_price from #_" . $this->table . " where id='" . $pid . "'";
             }
         }
 
-        if ($config['attribute']['total_price']) {
+        if ($config['cart']['price_attribute']['total_price']) {
             $sql = "select $name_price from #_" . $this->table . " where id='" . $pid . "'";
             $row = $this->d->rawQueryOne($sql);
             $total_price +=  $row[$name_price];
@@ -336,6 +381,122 @@ class cartFrontEnd
         global $config, $lang, $translate;
         $result = ($config['lang_check']) ? $lang . '/' . $translate[$lang][$type] : $type;
         return $result;
+    }
+    public function randString($sokytu)
+    {
+
+        $chuoi = "ABCDEFGHIJKLMNOPQRSTUVWXYZW0123456789";
+
+        $giatri = "";
+        for ($i = 0; $i < $sokytu; $i++) {
+
+            $vitri = mt_rand(0, strlen($chuoi));
+
+            $giatri = $giatri . substr($chuoi, $vitri, 1);
+        }
+
+        return $giatri;
+    }
+    public function sanitize($input = '', $type = '')
+    {
+        if (is_array($input)) {
+            foreach ($input as $var => $val) {
+                $output[$var] = $this->sanitize($val, $type);
+            }
+        } else {
+            $output  = $this->cleanInput($input, $type);
+        }
+
+        return $output;
+    }
+    public function getInfoDetail($cols = '', $table = '', $id = 0)
+    {
+        $row = array();
+        if (!empty($cols) && !empty($table) && !empty($id)) {
+            $row = $this->d->rawQueryOne("select $cols from #_$table where id = ? limit 0,1", array($id));
+        }
+        return $row;
+    }
+    public function getFieldOne($field, $table, $id)
+    {
+
+        $row = $this->d->rawQueryOne("select $field from #_$table where id=?", array($id));
+
+        return $row[$field];
+    }
+    public function isEmail($email)
+    {
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public function redirect($url = '')
+    {
+
+        echo '<script language="javascript">window.location = "' . $url . '" </script>';
+
+        exit();
+    }
+    /* Kiểm tra dữ liệu nhập vào */
+    public function cleanInput($input = '', $type = '')
+    {
+        $output = '';
+
+        if ($input != '') {
+            /*
+                        // Loại bỏ HTML tags
+                        '@<[\/\!]*?[^<>]*?>@si',
+                    */
+
+            $search = array(
+                'script' => '@<script[^>]*?>.*?</script>@si',
+                'style' => '@<style[^>]*?>.*?</style>@siU',
+                'blank' => '@<![\s\S]*?--[ \t\n\r]*>@',
+                'iframe' => '/<iframe(.*?)<\/iframe>/is',
+                'title' => '/<title(.*?)<\/title>/is',
+                'pre' => '/<pre(.*?)<\/pre>/is',
+                'frame' => '/<frame(.*?)<\/frame>/is',
+                'frameset' => '/<frameset(.*?)<\/frameset>/is',
+                'object' => '/<object(.*?)<\/object>/is',
+                'embed' => '/<embed(.*?)<\/embed>/is',
+                'applet' => '/<applet(.*?)<\/applet>/is',
+                'meta' => '/<meta(.*?)<\/meta>/is',
+                'doctype' => '/<!doctype(.*?)>/is',
+                'link' => '/<link(.*?)>/is',
+                'body' => '/<body(.*?)<\/body>/is',
+                'html' => '/<html(.*?)<\/html>/is',
+                'head' => '/<head(.*?)<\/head>/is',
+                'onclick' => '/onclick="(.*?)"/is',
+                'ondbclick' => '/ondbclick="(.*?)"/is',
+                'onchange' => '/onchange="(.*?)"/is',
+                'onmouseover' => '/onmouseover="(.*?)"/is',
+                'onmouseout' => '/onmouseout="(.*?)"/is',
+                'onmouseenter' => '/onmouseenter="(.*?)"/is',
+                'onmouseleave' => '/onmouseleave="(.*?)"/is',
+                'onmousemove' => '/onmousemove="(.*?)"/is',
+                'onkeydown' => '/onkeydown="(.*?)"/is',
+                'onload' => '/onload="(.*?)"/is',
+                'onunload' => '/onunload="(.*?)"/is',
+                'onkeyup' => '/onkeyup="(.*?)"/is',
+                'onkeypress' => '/onkeypress="(.*?)"/is',
+                'onblur' => '/onblur="(.*?)"/is',
+                'oncopy' => '/oncopy="(.*?)"/is',
+                'oncut' => '/oncut="(.*?)"/is',
+                'onpaste' => '/onpaste="(.*?)"/is',
+                'php-tag' => '/<(\?|\%)\=?(php)?/',
+                'php-short-tag' => '/(\%|\?)>/'
+            );
+
+            if (!empty($type)) {
+                unset($search[$type]);
+            }
+
+            $output = preg_replace($search, '', $input);
+        }
+
+        return $output;
     }
     public function getTotalOrder_tmp()
     {
@@ -770,31 +931,20 @@ class cartFrontEnd
     {
         return _basename . 'iweb@cache' . '/cache_' . md5($key);
     }
-    public function getTemplateContent($templateName, $data = [], $isCache = true)
+    public function getTemplateContent($templateName, $data = [])
     {
-        global $config, $com, $lang, $db, $jv0;
-
-        $cacheFile = $this->getCacheFilePath($templateName);
-        $cacheData = file_exists($cacheFile) ? unserialize(file_get_contents($cacheFile)) : null;
-        $dataHash = md5(json_encode($data));
-        if (
-            $isCache && $config['website']['isCache'] && $cacheData !== null && isset($cacheData['dataHash']) && $cacheData['dataHash'] === $dataHash &&
-            time() - $cacheData['timestamp'] < $this->cacheTime
-        ) {
-            return $cacheData['content'];
-        }
+        global $config;
+        global $com;
+        global $lang;
+        global $db;
+        global $jv0;
+        global $func;
 
         if ($data !== null) extract($data);
         ob_start();
         include $templateName . ".php";
         $htmlContent = ob_get_clean();
-        $cacheData = array(
-            'dataHash' => $dataHash,
-            'timestamp' => time(),
-            'content' => $htmlContent
-        );
 
-        file_put_contents($cacheFile, serialize($cacheData));
         return $htmlContent;
     }
     public function getValueCart($value)

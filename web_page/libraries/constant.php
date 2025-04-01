@@ -5,13 +5,13 @@ $upload_const = 'upload';
 $array_const = array('album', 'baiviet', 'user', 'temp', 'files', 'hinhanh', 'images', 'logs', 'seopage', 'video', 'tailwindcss');
 
 /* Define - Create folders upload */
-if (!file_exists($_SERVER['DOCUMENT_ROOT'] . '/' . $upload_const) && $check_file) {
-	mkdir($_SERVER['DOCUMENT_ROOT'] . '/' . $upload_const, 0777, true);
-	chmod($_SERVER['DOCUMENT_ROOT'] . '/' . $upload_const, 0777);
+if (!file_exists($_SERVER['DOCUMENT_ROOT'] . $config['website']['url'] . $upload_const) && $check_file) {
+	mkdir($_SERVER['DOCUMENT_ROOT'] . $config['website']['url'] . $upload_const, 0777, true);
+	chmod($_SERVER['DOCUMENT_ROOT'] . $config['website']['url'] . $upload_const, 0777);
 }
 /* Define - Create folders childs */
 if (!empty($array_const)) {
-	$path_htaccess = $_SERVER['DOCUMENT_ROOT'] . '/' . $upload_const . '/.htaccess';
+	$path_htaccess = $_SERVER['DOCUMENT_ROOT'] . $config['website']['url'] . $upload_const . '/.htaccess';
 	if (!file_exists($path_htaccess)) {
 		if (is_writable(dirname($path_htaccess))) {
 			$content_htaccess = '';
@@ -41,9 +41,9 @@ if (!empty($array_const)) {
 		if (!defined($define_lower_upload . '_' . $define_lower_const) && !defined($define_lower_upload . '_' . $define_lower_const . '_l')) {
 			define('_' . $define_lower_upload . '_' . $define_lower_const, $define_in);
 			define('_' . $define_lower_upload . '_' . $define_lower_const . '_l', $define_out);
-			if (!file_exists($_SERVER['DOCUMENT_ROOT'] . '/' . $upload_const . '/' . $define_lower_const)) {
-				mkdir($_SERVER['DOCUMENT_ROOT'] . '/' . $upload_const, 0755, true);
-				chmod($_SERVER['DOCUMENT_ROOT'] . '/' . $upload_const, 0755);
+			if (!file_exists($_SERVER['DOCUMENT_ROOT'] . $config['website']['url'] . $upload_const . '/' . $define_lower_const)) {
+				mkdir($_SERVER['DOCUMENT_ROOT'] . $config['website']['url'] . $upload_const, 0755, true);
+				chmod($_SERVER['DOCUMENT_ROOT'] . $config['website']['url'] . $upload_const, 0755);
 			}
 		}
 	}

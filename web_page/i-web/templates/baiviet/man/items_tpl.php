@@ -244,7 +244,7 @@
         <div class="oneOne">
 
             <div class="widget mtop0">
-                <div class="table-responsive">
+                <div class="table-responsive form_attribute_option">
                     <table cellpadding="0" cellspacing="0" width="100%" class="sTable withCheck mTable" id="checkAll">
 
                         <thead>
@@ -306,7 +306,13 @@
                                     </td>
 
                                 <?php } ?>
+                                <?php if ($GLOBAL[$com][$type]['attribute'] == true) { ?>
+                                    <td class="sortCol">
 
+                                        <div>Thuộc tính</div>
+
+                                    </td>
+                                <?php } ?>
                                 <?php if ($GLOBAL[$com][$type]['user'] == true) { ?>
 
                                     <td>Người đăng</td>
@@ -551,11 +557,45 @@
                                         </td>
                                     <?php } ?>
 
+                                    <?php
+                                    if ($GLOBAL[$com][$type]['attribute'] == true) {
+                                        $data_attribute = array();
+                                        if (!empty($items[$i]['options']) && isset($items[$i]['options'])) {
+                                            $data_attribute = json_decode($items[$i]['options'], true)['attribute'];
+                                        }
+                                    ?>
+                                        <td>
+                                            <?php if ((!empty($data_attribute))) { ?>
+                                                <div class="d-flex " style="position: relative;">
+                                                    <div class="title_link_attributes justify-content-between align-items-center btn_attribute_option " data-nb="data_attribute<?= $items[$i]['id'] ?>">
+                                                        <div class="" style="flex: 1;white-space: nowrap;">
+                                                            Thuộc tính
+                                                        </div>
+                                                        <div class="icons_link_attributes">
+                                                            <i class="fas fa-angle-down">
+                                                            </i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_link_attributes p-absolute data_attribute_option " style="display: none;" data-nb="data_attribute<?= $items[$i]['id'] ?>">
+                                                        <?php foreach ($data_attribute as $value) {
+                                                            $type_attribute = $func->returnUnsignedName($value);
+                                                            $count_attribute = $db->rawQueryOne('select COUNT(id) as sum from #_attribute where id_product=? and type=?', array($items[$i]['id'], $type_attribute));
 
+                                                        ?>
+                                                            <div class="">
 
+                                                                <a style="" href="index.html?com=attribute&act=man&type=<?= $type_attribute ?>&id_product=<?= $items[$i]['id'] ?>&page=1" class="tipS  items_link_attributes">
 
+                                                                    <?= $value . " (" . $count_attribute['sum'] . ")" ?>
 
-
+                                                                </a>
+                                                            </div>
+                                                        <?php  } ?>
+                                                    </div>
+                                                </div>
+                                            <?php } ?>
+                                        </td>
+                                    <?php  } ?>
 
                                     <?php if ($GLOBAL[$com][$type]['daytin'] == true) { ?>
 

@@ -138,7 +138,7 @@ function get_main_item()
 							<div class="formRow lang_hidden lang_<?= $k ?> <?= ($k == 'vi') ? 'active' : '' ?>">
 								<label><?= _mota ?> [<?= $v ?>]</label>
 								<div class="ck_editor">
-									<textarea title="Nhập mô tả . " id="mota_<?= $k ?>" class="ck_editors" name="data[mota_<?= $k ?>]"><?= @$item['mota_' . $k] ?></textarea>
+									<textarea title="Nhập mô tả . " id="mota_<?= $k ?>" class="ck_editors" name="data[mota_<?= $k ?>]"><?= htmlspecialchars_decode($item['mota_' . $k]) ?></textarea>
 								</div>
 								<div class="clear"></div>
 							</div>

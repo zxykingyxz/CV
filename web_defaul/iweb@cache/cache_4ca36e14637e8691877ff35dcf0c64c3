@@ -1,4 +1,4 @@
-a:3:{s:8:"dataHash";s:32:"0fed7df9821ba0709cee9a4c45d4d119";s:9:"timestamp";i:1742355887;s:7:"content";s:1562:"<div class="w-full flex flex-wrap justify-center items-center gap-2">
+a:3:{s:8:"dataHash";s:32:"904876149b1f37eba20fae359ec5ae68";s:9:"timestamp";i:1742979591;s:7:"content";s:1562:"<div class="w-full flex flex-wrap justify-center items-center gap-2">
     <div class="w-full  flex items-center gap-2">
         <div class="flex items-center w-full">
             <div class="mr-1">Số lượng: </div>
@@ -13,6 +13,6 @@ a:3:{s:8:"dataHash";s:32:"0fed7df9821ba0709cee9a4c45d4d119";s:9:"timestamp";i:17
             </div>
         </div>
     </div>
-    <button type="button" data-el="#product-detail-26" class="btn-buynow w-full bg-[var(--html-bg-website)] px-3 text-sm h-10 font-bold font-main border-none text-white rounded  hover:brightness-110 transition-all duration-300 cursor-pointer ">Mua ngay</button>
-    <button type="button" data-el="#product-detail-26" class="btn-addcart w-full bg-[var(--html-bg-website)] px-3 text-sm h-10 font-bold font-main border-none text-white rounded  hover:brightness-110 transition-all duration-300  cursor-pointer" data-qty="1" data-id="26">Thêm vào giỏ</button>
+    <button type="button" data-el="#product-detail-28" class="btn-buynow w-full bg-[var(--html-bg-website)] px-3 text-sm h-10 font-bold font-main border-none text-white rounded  hover:brightness-110 transition-all duration-300 cursor-pointer ">Mua ngay</button>
+    <button type="button" data-el="#product-detail-28" class="btn-addcart w-full bg-[var(--html-bg-website)] px-3 text-sm h-10 font-bold font-main border-none text-white rounded  hover:brightness-110 transition-all duration-300  cursor-pointer" data-qty="1" data-id="28">Thêm vào giỏ</button>
 </div>";}

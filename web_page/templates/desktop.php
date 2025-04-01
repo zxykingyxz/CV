@@ -17,7 +17,7 @@
     <script type="text/javascript" src="./assets/js/jquery.min.js"></script>
 </head>
 
-<body id="body_main" itemscope itemtype="https://schema.org/WebPage" class="bg-gray-100 <?= ($config['layouts']['load_all']) ? 'body_load' : '' ?> ">
+<body id="body_main" itemscope itemtype="https://schema.org/WebPage" class="bg-[#F7F3F3] <?= ($config['layouts']['load_all']) ? 'body_load' : '' ?> ">
     <?php if (in_array($com, ['index', " ", "lien-he", "contact"])) { ?>
         <div class="title_seo hidden">
             <h1>
@@ -77,6 +77,7 @@
             'socical' => $socical,
             'bct' => $bct,
             'dmca' => $dmca,
+            'logo_footer' => $logo_footer,
             'template' => $template,
             'time_animation_wow' => $time_animation_wow,
         ]) ?>

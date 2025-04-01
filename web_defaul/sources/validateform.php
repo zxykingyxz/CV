@@ -120,8 +120,5 @@ if (!empty($_POST)) {
             $func->transfer('Đăng ký nhận tin thành công!', $_SERVER['HTTP_REFERER']);
             exit;
         }
-    } else {
-        $func->transfer('Form submit chưa được cấu hình!', $_SERVER['HTTP_REFERER']);
-        exit;
     }
 }

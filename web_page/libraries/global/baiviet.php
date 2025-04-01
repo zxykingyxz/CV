@@ -2,9 +2,9 @@
 
 // #==============Tin tức==============
 
-$nametype = 'gioi-thieu';
+$nametype = 'tin-tuc';
 
-$GLOBAL['baiviet'][$nametype]['title_main'] = 'Giới thiệu';
+$GLOBAL['baiviet'][$nametype]['title_main'] = 'Tin tức';
 
 $GLOBAL['baiviet'][$nametype]['title'] = 'danh sách';
 
@@ -15,6 +15,8 @@ $GLOBAL['baiviet'][$nametype]['full'] = false;
 $GLOBAL['baiviet'][$nametype]['check'] = array(
 
     "mucluc" => "Mục lục",
+
+    "noibat" => "Nổi Bật",
 
     "hienthi" => "Hiển thị"
 

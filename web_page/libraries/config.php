@@ -27,7 +27,7 @@ $config['website'] = array(
 );
 // -------- giao diện -----------
 $config['layouts'] = array(
-	'load_all' => false,
+	'load_all' => true,
 	'paging' => false,
 	'tap_list' => true,
 	'allow_search' => true,
@@ -43,13 +43,13 @@ $config['database'] = array(
 	'charset' => 'utf8mb4'
 );
 if ((strpos($_SERVER['DOCUMENT_ROOT'], 'laragon')) || (strpos($_SERVER['DOCUMENT_ROOT'], 'xampp'))) {
-	$config['database']['dbname'] = "db_1_defaul_page";
+	$config['database']['dbname'] = "db_vandinh_0180325tg";
 	$config['database']['username'] = "root";
 	$config['database']['password'] = "";
 } else {
-	$config['database']['dbname'] = "iwebvietna_mautp_one";
-	$config['database']['username'] = "iwebvietna_mautp_one";
-	$config['database']['password'] = "5s94TnSnmeUd7drz8wfZ";
+	$config['database']['dbname'] = "iwebvietna_vandinh_0180325tg";
+	$config['database']['username'] = "iwebvietna_vandinh_0180325tg";
+	$config['database']['password'] = "nTQ3vNRk79DqZPDs59zf";
 }
 
 
@@ -104,7 +104,21 @@ $config['change_img_contents'] = array(
 $config['cache'] = array(
 	'save_cache_temple' => false,
 );
-
+# GG Dịch
+$config['gg_lang'] = true;
+# Giỏ Hàng
+$config['cart'] = array(
+	'turn_on' => true,
+	'cart_advance' => true,
+	'cart_qty' => true,
+	'price_attribute' => array(
+		'attribute_one_for_all' => true,
+		'client_edit_attribute' => false,
+		'total_price' => true,
+		'view_update' => true,
+		'required_attribute' => true,
+	),
+);
 // -------- ID Fanpage --------
 $config['faceid'] = "582534979152027";
 $config['facebook-id'] = "";

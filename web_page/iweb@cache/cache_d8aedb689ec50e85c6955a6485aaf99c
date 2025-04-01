@@ -1,0 +1,26 @@
+a:3:{s:8:"dataHash";s:32:"3404ef1275d7f740764382c37d9fdc11";s:9:"timestamp";i:1743218185;s:7:"content";s:994:"<div>
+    <div class="flex items-center gap-3">
+        <span>
+            <span class="text-sm text-black">
+                Giá:
+            </span>
+            &ensp;
+            <span class="text-lg font-semibold font-main-600 text-red-600">
+                570.000 Vnđ            </span>
+        </span>
+                    <span class="inline-flex items-center justify-center h-5 px-2 rounded bg-red-200 text-red-600 text-xs font-medium font-main-600 arrow ml20">
+                <span>
+                    -2%                </span>
+            </span>
+            </div>
+            <div class="flex items-center gap-1 mt-1">
+            <div>
+                <span class="text-sm text-black">
+                    Giá thị trường:
+                </span>
+                &ensp;
+                <del class="text-sm font-medium font-main-500 text-gray-400">
+                    580.000 Vnđ                </del>
+            </div>
+        </div>
+    </div>";}

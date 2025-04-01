@@ -12,18 +12,6 @@
             "text" => _tienganh,
             "images" => "assets/images/lang/flag_en.svg"
         ],
-        "zh" => [
-            "value" => "zh-CN",
-            "title" => "CN",
-            "text" => "Tiếng Trung",
-            "images" => "assets/images/lang/flag_cn.svg"
-        ],
-        "ko" => [
-            "value" => "ko",
-            "title" => "KO",
-            "text" => "Tiếng Hàn",
-            "images" => "assets/images/lang/flag_ko.svg"
-        ],
     ];
     $title_gglangweb = "text-white font-main font-thin text-xs";
     $title_gglangweb_option = "font-main font-thin text-xs";

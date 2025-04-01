@@ -365,9 +365,6 @@
             </a>
 
             <ul aria-expanded="<?= (($com == 'contact' || $com == 'booking' || $com == 'newsletter') && $act == 'man') ? "true" : "false" ?>" class="collapse <?= (($com == 'contact' || $com == 'booking' || $com == 'newsletter') && $act == 'man') ? "in" : "" ?>">
-                <li <?php if ($com == 'contact' && $act == 'man' && $_GET["type"] ==  'contact') echo ' class="this"' ?>>
-                    <a href="index.php?com=contact&act=man&type=contact" title="">Danh sách liên hệ</a>
-                </li>
 
                 <?php foreach ($GLOBAL['booking'] as $k => $v) { ?>
 

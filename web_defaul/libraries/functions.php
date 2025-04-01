@@ -5940,7 +5940,7 @@ class functions
                     $array_value_destination[$backup] = $value;
                 } else {
                     var_dump($data_column . " không đúng định dạng!");
-                    var_dump("(Khai báo phải theo kiểu column|type không khoản cách không viết dấu)");
+                    var_dump("(Khai báo phải theo kiểu data_backup|data_destination không khoản cách không viết dấu)");
                     die;
                 }
             }
@@ -5951,9 +5951,9 @@ class functions
 
                 foreach ($array_name_column_backup as $value_column_backup) {
                     if (!is_null($array_value_destination[$value_column_backup])) {
-                        $sql_value[] = htmlspecialchars($array_value_destination[$value_column_backup]);
+                        $sql_value[] = $array_value_destination[$value_column_backup];
                     } else {
-                        $sql_value[] = !empty($value_data[$value_column_backup]) ? htmlspecialchars($value_data[$value_column_backup]) : '';
+                        $sql_value[] = !empty($value_data[$value_column_backup]) ? $value_data[$value_column_backup] : '';
                     }
                 }
 

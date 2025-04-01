@@ -43,11 +43,11 @@
                                 <?php foreach ($data as $k => $v) { ?>
                                     <div class=" ">
                                         <div class="bg-white shadow-md shadow-gray-300  border border-gray-200 hover:shadow-[var(--html-bg-website)] hover:border-[var(--html-bg-website)] rounded-md p-2 sm:p-3 transition-all duration-300">
-                                            <div class="overflow-hidden relative aspect-[300/250] rounded leading-[0]">
+                                            <div class="overflow-hidden relative aspect-[235/273] rounded leading-[0]">
                                                 <?= $func->addHrefImg([
                                                     'addhref' => true,
                                                     'href' =>  $func->getUrl($v),
-                                                    'sizes' => '300x250x1',
+                                                    'sizes' => "235x273x1",
                                                     'actual_width' => 500,
                                                     'upload' => _upload_baiviet_l,
                                                     'image' => ((isset($v["photo_$lang"])) ? $v["photo_$lang"] : $v["photo"]),

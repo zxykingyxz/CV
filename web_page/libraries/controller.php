@@ -82,45 +82,23 @@ if ($config['lang_check']) {
 $seolang = $lang;
 
 $attr_com = array(
-	array("tbl" => "baiviet", "field" => "id", "source" => "products", "com" => "gioi-thieu", "type" => "gioi-thieu", 'sitemap' => true),
+	array("tbl" => "info", "field" => "id", "source" => "info", "com" => "gioi-thieu", "type" => "gioi-thieu", 'sitemap' => true),
 
 	array("tbl" => "baiviet", "field" => "id", "source" => "products", "com" => "san-pham", "type" => "san-pham", 'sitemap' => true),
-
-	array("tbl" => "baiviet_item", "field" => "idi", "source" => "products", "com" => "san-pham", "type" => "san-pham", 'sitemap' => true),
 
 	array("tbl" => "baiviet_cat", "field" => "idc", "source" => "products", "com" => "san-pham", "type" => "san-pham", 'sitemap' => true),
 
 	array("tbl" => "baiviet_list", "field" => "idl", "source" => "products", "com" => "san-pham", "type" => "san-pham", 'sitemap' => true),
 
-	array("tbl" => "baiviet", "field" => "id", "source" => "products", "com" => "dich-vu", "type" => "dich-vu", 'sitemap' => true),
-
-	array("tbl" => "baiviet_item", "field" => "idi", "source" => "products", "com" => "dich-vu", "type" => "dich-vu", 'sitemap' => true),
-
-	array("tbl" => "baiviet_cat", "field" => "idc", "source" => "products", "com" => "dich-vu", "type" => "dich-vu", 'sitemap' => true),
-
-	array("tbl" => "baiviet_list", "field" => "idl", "source" => "products", "com" => "dich-vu", "type" => "dich-vu", 'sitemap' => true),
-
-	array("tbl" => "baiviet", "field" => "id", "source" => "products", "com" => "du-an", "type" => "du-an", 'sitemap' => true),
-
-	array("tbl" => "baiviet_item", "field" => "idi", "source" => "products", "com" => "du-an", "type" => "du-an", 'sitemap' => true),
-
-	array("tbl" => "baiviet_cat", "field" => "idc", "source" => "products", "com" => "du-an", "type" => "du-an", 'sitemap' => true),
-
-	array("tbl" => "baiviet_list", "field" => "idl", "source" => "products", "com" => "du-an", "type" => "du-an", 'sitemap' => true),
-
 	array("tbl" => "baiviet", "field" => "id", "source" => "products", "com" => "tin-tuc", "type" => "tin-tuc", 'sitemap' => true),
-
-	array("tbl" => "baiviet_item", "field" => "idi", "source" => "products", "com" => "tin-tuc", "type" => "tin-tuc", 'sitemap' => true),
-
-	array("tbl" => "baiviet_cat", "field" => "idc", "source" => "products", "com" => "tin-tuc", "type" => "tin-tuc", 'sitemap' => true),
-
-	array("tbl" => "baiviet_list", "field" => "idl", "source" => "products", "com" => "tin-tuc", "type" => "tin-tuc", 'sitemap' => true),
 
 	array("tbl" => "baiviet", "field" => "id", "source" => "products", "com" => "chinh-sach", "type" => "chinh-sach", 'sitemap' => true),
 
 	array("tbl" => "baiviet", "field" => "id", "source" => "products", "com" => "tac-gia", "type" => "tac-gia", 'sitemap' => false),
 
 	array("tbl" => "contact", "field" => "id", "source" => "contact", "com" => "lien-he", "type" => "lien-he", 'sitemap' => true),
+
+	array("tbl" => "photo", "field" => "id", "source" => "products", "com" => "bo-suu-tap", "type" => "bo-suu-tap", 'sitemap' => true),
 
 );
 if (!empty($com)) {
@@ -173,11 +151,11 @@ switch ($com) {
 
 		$type = "gioi-thieu";
 
-		$seo->setSeo('type', isset($_GET['id']) ? "article" : "object");
+		$seo->setSeo('type', 'article');
 
-		$source = "products";
+		$source = "baiviet";
 
-		$template = isset($_GET['id']) ? "pages_detail/news_detail" : "pages/default";
+		$template = "pages/baiviet";
 
 		break;
 	case 'san-pham':
@@ -193,30 +171,17 @@ switch ($com) {
 		$template = isset($_GET['id']) ? "pages_detail/product_detail" : "pages/default";
 
 		break;
-	case 'dich-vu':
+	case 'bo-suu-tap':
 
 		$title_seo = $authArrs[$com]['title'];
 
-		$type = "dich-vu";
+		$type = "bo-suu-tap";
 
 		$seo->setSeo('type', isset($_GET['id']) ? "article" : "object");
 
 		$source = "products";
 
 		$template = isset($_GET['id']) ? "pages_detail/news_detail" : "pages/default";
-
-		break;
-	case 'du-an':
-
-		$title_seo = $authArrs[$com]['title'];
-
-		$type = "du-an";
-
-		$seo->setSeo('type', isset($_GET['id']) ? "article" : "object");
-
-		$source = "products";
-
-		$template = isset($_GET['id']) ? "pages_detail/project_detail" : "pages/default";
 
 		break;
 	case 'tin-tuc':
@@ -325,6 +290,12 @@ switch ($com) {
 					break;
 
 				case 'thanh-toan':
+
+					if ($config['cart']['price_attribute']['required_attribute']) {
+						if ($cart->checkRequiredAttribute() == false) {
+							$cart->transfer("Bạn có sản phẩm thanh toán chưa được chọn thuộc tính!", $cart->getType("carts?src=gio-hang"));
+						}
+					}
 
 					$title_seo = _thanhtoan;
 

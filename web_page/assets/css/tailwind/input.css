@@ -3,11 +3,11 @@
 @tailwind utilities;
 @layer base {
     .scroll-design-one::-webkit-scrollbar {
-        width: 5px;
-        height: 5px;
+        width: 3px;
+        height: 3px;
     }
     .scroll-design-one::-webkit-scrollbar-thumb {
-        background-color: #999999;
+        background-color: var(--html-bg-website);
         border-radius: 10px;
     }
     .scroll-design-one::-webkit-scrollbar-track {

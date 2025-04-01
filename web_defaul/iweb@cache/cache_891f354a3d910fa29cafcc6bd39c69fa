@@ -1,4 +1,5 @@
-a:3:{s:8:"dataHash";s:32:"f7479e2ce3f17f1081fe4dc836946056";s:9:"timestamp";i:1742877055;s:7:"content";s:34951:"<script>
+a:3:{s:8:"dataHash";s:32:"f7479e2ce3f17f1081fe4dc836946056";s:9:"timestamp";i:1743062104;s:7:"content";s:35387:"string(421) "select GROUP_CONCAT(DISTINCT product_type) as listproducttype,GROUP_CONCAT(DISTINCT technology) as listtechnology,GROUP_CONCAT(DISTINCT weight) as listweight,GROUP_CONCAT(DISTINCT size) as listsize,GROUP_CONCAT(DISTINCT capacity) as listcapacity,GROUP_CONCAT(DISTINCT power) as listpower,GROUP_CONCAT(DISTINCT door) as listdoor,GROUP_CONCAT(DISTINCT id_thuonghieu) as listbrand from #_baiviet  where 1  and id_list=    5 "
+<script>
     $('.form_filter_price').updateUrlParams({
         button: 'button_filter_price',
         callback: function(value, _this) {

@@ -460,6 +460,194 @@ if ($table['seo'] == true) { ?>
                                 <div class="clear"></div>
                             </div>
                         <?php } ?>
+                        <?php if (($kiemtra == 1 & $func->checkPermissions('attribute', 'capnhat', '')) || $kiemtra != 1) {  ?>
+                            <?php if (($table['attribute'] == true)) { ?>
+                                <div class="formRow ">
+                                    <label><?= "Thuộc tính sản phẩm" ?> </label>
+                                    <div class="d-flex flex-wrap form_attribute_product" data-id-product="<?= ($act != 'copy') ? (@$item['id']) : '' ?>" style="width: 100%;grid-gap: 20px;">
+                                        <?php
+                                        if (($config['cart']['price_attribute']['attribute_one_for_all'])) {
+                                            $options_setting = $db->rawQueryOne('select options from #_setting', array());
+                                            $array_options = json_decode($options_setting['options'], true);
+                                        } else {
+                                            $array_options = json_decode($item['options'], true);
+                                        }
+                                        foreach ($array_options['attribute'] as $k_tt => $v_tt) {
+                                            if (!empty($v_tt)) {
+                                        ?>
+                                                <div class="form_items_attribute_all" style="width: 100%;">
+                                                    <div class="form_title_attribute_all">
+                                                        <div class=" ">
+                                                            <div class="d-flex justify-content-center align-items-center" style="grid-gap: 5px;">
+                                                                <div class="f1  ">
+                                                                    <label class="title_items_attribute_all">
+                                                                        <?= $v_tt ?>
+                                                                    </label>
+                                                                    <input type="hidden" name="options[attribute][]" title="<?= "Nhập thuộc tính sản phẩm" ?>" class="tipS w100" value="<?= $v_tt ?>" readonly style="border-radius: .25rem;" />
+                                                                </div>
+                                                                <?php if ($config['cart']['price_attribute']['attribute_one_for_all'] == false) { ?>
+                                                                    <div class=" btn_attribute_product btn_query_attribute_product justify-content-center align-items-center " style=" display: inline-flex;" data-form="delete_all">
+                                                                        <div>
+                                                                            <i class="fas fa-trash-alt"></i>
+                                                                        </div>
+                                                                        <div class="icons_load" style="display: none; padding: 5px;">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" style="width: 100%; height: 100%; fill: #fff;">
+                                                                                <circle r="80" cx="500" cy="90" style="fill: #fff;"></circle>
+                                                                                <circle r="80" cx="500" cy="910" style="fill: #fff;"></circle>
+                                                                                <circle r="80" cx="90" cy="500" style="fill: #fff;"></circle>
+                                                                                <circle r="80" cx="910" cy="500" style="fill: #fff;"></circle>
+                                                                                <circle r="80" cx="212" cy="212" style="fill: #fff;"></circle>
+                                                                                <circle r="80" cx="788" cy="212" style="fill: #fff;"></circle>
+                                                                                <circle r="80" cx="212" cy="788" style="fill: #fff;"></circle>
+                                                                                <circle r="80" cx="788" cy="788" style="fill: #fff;"></circle>
+                                                                            </svg>
+                                                                        </div>
+                                                                    </div>
+                                                                <?php } ?>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                    <div class="form_footer_attribute_all">
+                                                        <?php
+                                                        $type_attribute = $func->returnUnsignedName($v_tt);
+
+                                                        $items_ds_attribute = $db->rawQuery("SELECT * from #_attribute where type=? and id_product=? order by stt asc, id desc", array($type_attribute, $id));
+                                                        if (!empty($items_ds_attribute) && $act != 'copy') {
+                                                        ?>
+                                                            <div class="table_attribute_product_scroll">
+                                                                <table border="1" cel class="w100 table_attribute_product">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th style="width: 10px;">STT</th>
+                                                                            <th style="width: 50px;min-width:50px ;">Hình ảnh</th>
+                                                                            <th style="width: 400px;min-width:200px ;text-align: start;">Tiêu đề[<?= $lang ?>]</th>
+                                                                            <?php if ($GLOBAL['attribute']['thuoc-tinh']['gia'] == true) { ?>
+                                                                                <th style="min-width: 80px;">Giá Bán</th>
+                                                                            <?php } ?>
+                                                                            <?php if ($GLOBAL['attribute']['thuoc-tinh']['giacu'] == true) { ?>
+                                                                                <th style="min-width: 80px;">Giá Cũ</th>
+                                                                            <?php } ?>
+                                                                            <?php if ($GLOBAL['attribute']['thuoc-tinh']['giabansale'] == true) { ?>
+                                                                                <th style="min-width: 80px;">Giá Bán Sale</th>
+                                                                            <?php } ?>
+                                                                            <?php if (($GLOBAL['attribute']['thuoc-tinh']['color'] == true) && (in_array($type_attribute, ['color', 'mau-sac']))) { ?>
+                                                                                <th style="min-width: 80px;">Màu sắc</th>
+                                                                            <?php } ?>
+                                                                            <th class="table_sticky_column" style="width: 50px;">Thao tác</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <?php foreach ($items_ds_attribute as $key => $value) { ?>
+                                                                            <tr class="items_attribute">
+                                                                                <td class="t-center"><?= $value["stt"] ?></td>
+                                                                                <td class="t-center">
+                                                                                    <div style="position: relative;width: 50px;height: 50px;overflow: hidden;">
+                                                                                        <img src="<?= _upload_baiviet . $value["photo"] ?>" alt="<?= $value["ten_$lang"] ?>" style="position: absolute ;top: 0;left: 0;width: 100%;height: 100%;object-fit: contain;">
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td class="">
+                                                                                    <a href="index.html?com=attribute&act=edit&id_product=<?= $id ?>&id=<?= $value['id'] ?>&type=<?= $value['type'] ?>&page=1" title="<?= $value["ten_$lang"] ?>">
+                                                                                        <?= $value["ten_$lang"] ?>
+                                                                                    </a>
+                                                                                </td>
+                                                                                <?php if ($GLOBAL['attribute']['thuoc-tinh']['gia'] == true) { ?>
+                                                                                    <td class="t-center"><?= $func->changeMoney($value["giaban"], $lang); ?></td>
+                                                                                <?php } ?>
+                                                                                <?php if ($GLOBAL['attribute']['thuoc-tinh']['giacu'] == true) { ?>
+                                                                                    <td class="t-center"><?= $func->changeMoney($value["giacu"], $lang); ?></td>
+                                                                                <?php } ?>
+                                                                                <?php if ($GLOBAL['attribute']['thuoc-tinh']['giabansale'] == true) { ?>
+                                                                                    <td class="t-center"><?= $func->changeMoney($value["giabansale"], $lang); ?></td>
+                                                                                <?php } ?>
+                                                                                <?php if (($GLOBAL['attribute']['thuoc-tinh']['color'] == true) && (in_array($type_attribute, ['color', 'mau-sac']))) { ?>
+                                                                                    <td class="t-center">
+                                                                                        <div style="height: 20px; width: 20px ; border-radius: 50%; background: <?= $value["color"] ?>;margin: auto;">
+
+                                                                                        </div>
+                                                                                    </td>
+                                                                                <?php } ?>
+                                                                                <td class="t-center table_sticky_column">
+                                                                                    <div class=" btn_items_attribute_product btn_query_attribute_product justify-content-center align-items-center " style=" display: inline-flex;width: 12px;height: 12px;" data-form="delete_items" data-id-attribute="<?= $value['id'] ?>">
+                                                                                        <div>
+                                                                                            <i class="fas fa-trash-alt" style="color: rgb(237, 0, 0);"></i>
+                                                                                        </div>
+                                                                                        <div class="icons_load" style="display: none; ">
+                                                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" style="width: 100%; height: 100%; fill: #000;">
+                                                                                                <circle r="80" cx="500" cy="90" style="fill: #000;"></circle>
+                                                                                                <circle r="80" cx="500" cy="910" style="fill: #000;"></circle>
+                                                                                                <circle r="80" cx="90" cy="500" style="fill: #000;"></circle>
+                                                                                                <circle r="80" cx="910" cy="500" style="fill: #000;"></circle>
+                                                                                                <circle r="80" cx="212" cy="212" style="fill: #000;"></circle>
+                                                                                                <circle r="80" cx="788" cy="212" style="fill: #000;"></circle>
+                                                                                                <circle r="80" cx="212" cy="788" style="fill: #000;"></circle>
+                                                                                                <circle r="80" cx="788" cy="788" style="fill: #000;"></circle>
+                                                                                            </svg>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </td>
+                                                                            </tr>
+                                                                        <?php } ?>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        <?php } ?>
+                                                        <div class="" style=" margin-top: 15px;">
+                                                            <label class="title_items_attribute_all">
+                                                                Thêm <?= $v_tt ?>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="" style=" margin-top: 5px;">
+                                                            <div class="form_items_attribute" style="padding: 5px;">
+                                                                <div class=" d-flex flex-wrap form-add-ct " style="width: 100%;grid-gap: 5px;">
+                                                                </div>
+                                                                <div class=" btn_attribute_product btn_query_attribute_product bg-gradient-primary justify-content-center align-items-center " style=" display: inline-flex;" data-form="items_attribute">
+                                                                    <div>
+                                                                        <i class="fas fa-plus"></i>
+                                                                    </div>
+                                                                    <div class="icons_load" style="display: none; padding: 5px;">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" style="width: 100%; height: 100%; fill: #fff;">
+                                                                            <circle r="80" cx="500" cy="90" style="fill: #fff;"></circle>
+                                                                            <circle r="80" cx="500" cy="910" style="fill: #fff;"></circle>
+                                                                            <circle r="80" cx="90" cy="500" style="fill: #fff;"></circle>
+                                                                            <circle r="80" cx="910" cy="500" style="fill: #fff;"></circle>
+                                                                            <circle r="80" cx="212" cy="212" style="fill: #fff;"></circle>
+                                                                            <circle r="80" cx="788" cy="212" style="fill: #fff;"></circle>
+                                                                            <circle r="80" cx="212" cy="788" style="fill: #fff;"></circle>
+                                                                            <circle r="80" cx="788" cy="788" style="fill: #fff;"></circle>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        <?php }
+                                        } ?>
+                                    </div>
+                                    <?php if ($config['cart']['price_attribute']['attribute_one_for_all'] == false) { ?>
+                                        <div class=" btn_attribute_product bg-gradient-primary btn_query_attribute_product   justify-content-center align-items-center " style=" display: inline-flex;margin-top: 10px;" data-form="attribute">
+                                            <div>
+                                                <i class="fas fa-plus"></i>
+                                            </div>
+                                            <div class="icons_load" style="display: none; padding: 5px;">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" style="width: 100%; height: 100%; fill: #fff;">
+                                                    <circle r="80" cx="500" cy="90" style="fill: #fff;"></circle>
+                                                    <circle r="80" cx="500" cy="910" style="fill: #fff;"></circle>
+                                                    <circle r="80" cx="90" cy="500" style="fill: #fff;"></circle>
+                                                    <circle r="80" cx="910" cy="500" style="fill: #fff;"></circle>
+                                                    <circle r="80" cx="212" cy="212" style="fill: #fff;"></circle>
+                                                    <circle r="80" cx="788" cy="212" style="fill: #fff;"></circle>
+                                                    <circle r="80" cx="212" cy="788" style="fill: #fff;"></circle>
+                                                    <circle r="80" cx="788" cy="788" style="fill: #fff;"></circle>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    <?php } ?>
+                                </div>
+                            <?php } ?>
+                        <?php } ?>
 
                         <?php if ($table['mota'] == true) { ?>
 
@@ -469,7 +657,7 @@ if ($table['seo'] == true) { ?>
 
                                 <div class="ck_editor">
 
-                                    <textarea title="Nhập mô tả [<?= $v ?>]. " data-height="400" id="mota_<?= $k ?>" <?= ($table['mota-ckeditor'] == true) ? 'class="ck_editors"' : 'rows="8"' ?> name="data[mota_<?= $k ?>]"><?= @$item['mota_' . $k] ?></textarea>
+                                    <textarea title="Nhập mô tả [<?= $v ?>]. " data-height="400" id="mota_<?= $k ?>" <?= ($table['mota-ckeditor'] == true) ? 'class="ck_editors"' : 'rows="8"' ?> name="data[mota_<?= $k ?>]"><?= htmlspecialchars_decode($item['mota_' . $k]) ?></textarea>
 
                                 </div>
 
@@ -488,7 +676,7 @@ if ($table['seo'] == true) { ?>
 
                                 <div class="ck_editor">
 
-                                    <textarea data-validation="required" data-validation-error-msg="Không được để trống" title="Nhập nội dung [<?= $v ?>]. " data-height="400" id="noidung_<?= $k ?>" <?= ($table['noidung-ckeditor'] == true) ? 'class="ck_editors"' : 'rows="8"' ?> name="data[noidung_<?= $k ?>]"><?= @$item['noidung_' . $k] ?></textarea>
+                                    <textarea data-validation="required" data-validation-error-msg="Không được để trống" title="Nhập nội dung [<?= $v ?>]. " data-height="400" id="noidung_<?= $k ?>" <?= ($table['noidung-ckeditor'] == true) ? 'class="ck_editors"' : 'rows="8"' ?> name="data[noidung_<?= $k ?>]"><?= htmlspecialchars_decode($item['noidung_' . $k]) ?></textarea>
 
                                 </div>
 

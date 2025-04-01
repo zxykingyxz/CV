@@ -61,6 +61,14 @@
     padding: 0px;
 }
 
+.form_dm_product_index .owl-nav button {
+    background: unset !important;
+    box-shadow: unset !important;
+    color: black !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+}
+
 
 /* ========zoom====== */
 

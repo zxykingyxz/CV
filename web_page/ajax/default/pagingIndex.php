@@ -8,6 +8,8 @@ if ($func->isAjax()) {
     @$items = htmlspecialchars($_POST['items']);
     @$total = htmlspecialchars($_POST['total']);
     @$sql = htmlspecialchars($_POST['sql']);
+    @$select = htmlspecialchars($_POST['select']);
+    @$where = htmlspecialchars($_POST['where']);
 
     $sql = explode("|", $sql);
 
@@ -19,25 +21,25 @@ if ($func->isAjax()) {
             foreach ($sql as $key => $value) {
                 switch ($key) {
                     case 0:
-                        $where_sql = "and type=" . $sql[0] . "";
+                        $where_sql .= " and type='" . $sql[0] . "'";
                         break;
                     case 1:
-                        $where_sql = "and id_list=" . $sql[1] . "";
+                        $where_sql .= " and id_list=" . $sql[1] . "";
                         break;
                     case 2:
-                        $where_sql = "and id_cat=" . $sql[2] . "";
+                        $where_sql .= " and id_cat=" . $sql[2] . "";
                         break;
                     case 3:
-                        $where_sql = "and id_item=" . $sql[3] . "";
+                        $where_sql .= " and id_item=" . $sql[3] . "";
                         break;
                     case 4:
-                        $where_sql = "and id_sub=" . $sql[4] . "";
+                        $where_sql .= " and id_sub=" . $sql[4] . "";
                         break;
                     default:
                         break;
                 }
             }
-            $data = $db->rawQuery("select id,type, ten_$lang as ten ,hot, tenkhongdau_$lang as tenkhongdau,photo2,photo,masp,giaban,giacu from #_baiviet where noibat=1 and $where_sql and hienthi=1 $orderbyForProduct limit $item_start,$items", array());
+            $data = $db->rawQuery("select id,type, ten_$lang as ten , tenkhongdau_$lang as tenkhongdau,photo,photo2,giaban,masp,banchay from #_baiviet where ((banchay IS NULL) or (banchay <> 1)) and noibat=1 and $where_sql and hienthi=1 order by stt asc,id desc limit $item_start,$items", array());
             $form_items = "product_items_index_" . $sql[1];
             $form_paging = "paging_index_" . $sql[1];
             $title = "sản phẩm";

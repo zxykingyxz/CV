@@ -223,24 +223,16 @@ function isMobileDevice() {
 }
 
 function loadApplication(check = true) {
+    Notiflix.Loading.init({
+        svgColor: "#32c682",
+        messageFontSize: "14px",
+        messageMaxLength: 200,
+    });
     if (check) {
-        $("body").append(`
-        <div id="loader">
-            <div class="loader">
-                <div class="icon_loader">
-                    <div class="inner one"></div>
-                    <div class="inner two"></div>
-                    <div class="inner three"></div>
-                </div>
-                <span>
-                    Loading...
-                </span>
-            </div>
-        </div>
-        `);
+        Notiflix.Loading.standard("Đang xử lý...");
     } else {
         setTimeout(function () {
-            $("body #loader").remove();
+            Notiflix.Loading.remove();
         }, 200);
     }
 }

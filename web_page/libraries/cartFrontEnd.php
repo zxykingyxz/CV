@@ -36,21 +36,15 @@ class cartFrontEnd
         if (is_array($_SESSION[$this->name])) {
             if ($this->productExists($code, $q)) return;
             $max = count($_SESSION[$this->name]);
-            $_SESSION[$this->name][$max]['productid'] = $pid;
-            $_SESSION[$this->name][$max]['qty'] = $q;
-            $_SESSION[$this->name][$max]['attribute'] = (!empty($attribute)) ? $attribute : null;
-            $_SESSION[$this->name][$max]['code'] = $code;
-            $_SESSION[$this->name][$max]['checked'] = 1;
-            return count($_SESSION[$this->name]);
         } else {
-            $_SESSION[$this->name] = array();
-            $_SESSION[$this->name][0]['productid'] = $pid;
-            $_SESSION[$this->name][0]['qty'] = $q;
-            $_SESSION[$this->name][0]['attribute'] = (!empty($attribute)) ? $attribute : null;
-            $_SESSION[$this->name][0]['code'] = $code;
-            $_SESSION[$this->name][0]['checked'] = 1;
-            return count($_SESSION[$this->name]);
+            $max = 0;
         }
+        $_SESSION[$this->name][$max]['productid'] = $pid;
+        $_SESSION[$this->name][$max]['qty'] = $q;
+        $_SESSION[$this->name][$max]['attribute'] = (!empty($attribute)) ? $attribute : null;
+        $_SESSION[$this->name][$max]['code'] = $code;
+        $_SESSION[$this->name][$max]['checked'] = 1;
+        return count($_SESSION[$this->name]);
     }
     public function updateCartCookie()
     {
@@ -116,6 +110,31 @@ class cartFrontEnd
             return true;
         }
         return false;
+    }
+    public function isPhone($number)
+    {
+        $number = trim($number);
+        if (preg_match_all('/^(0|84)(2(0[3-9]|1[0-6|8|9]|2[0-2|5-9]|3[2-9]|4[0-9]|5[1|2|4-9]|6[0-3|9]|7[0-7]|8[0-9]|9[0-4|6|7|9])|3[2-9]|5[5|6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])([0-9]{7})$/m', $number, $matches, PREG_SET_ORDER, 0)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public function transfer($msg, $page = "index.html")
+
+    {
+        $showtext = $msg;
+
+        $page_transfer = $page;
+
+        include(_template . "transfer_tpl.php");
+
+        exit();
+    }
+
+    public function isAjax()
+    {
+        return (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && (strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest'));
     }
     public function getAttribute($pid = null, $field = null)
     {
@@ -191,6 +210,25 @@ class cartFrontEnd
 
         return $name;
     }
+    public function changeMoney($money, $lang = null)
+    {
+        global $row_setting;
+        switch ($lang) {
+            case 'en':
+                return round($money / $row_setting['dola'], 1) . ' $';
+                break;
+            case 'jp':
+                return round(($money * 100) / $row_setting['yen'], 1) . ' ¥';
+                break;
+            default:
+                return $this->money($money, ' đ');
+                break;
+        }
+    }
+    public function money($dola, $currency = '')
+    {
+        return number_format($dola, 0, ',', '.') . $currency;
+    }
     public function arrangeAttributeCart($code = null)
     {
         global $func;
@@ -210,7 +248,7 @@ class cartFrontEnd
                 foreach ($options_product['attribute'] as  $v_t) {
                     $type = $this->returnUnsignedName($v_t);
                     if (!empty($type) && (array_key_exists($type, $_SESSION[$this->name][$i]['attribute']))) {
-                        array_push($array_arrange[$type], 0);
+                        $array_arrange[$type] = 0;
                     };
                 };
 
@@ -231,11 +269,13 @@ class cartFrontEnd
         $max = count($_SESSION[$this->name]);
         for ($i = 0; $i < $max; $i++) {
             if ($code == $_SESSION[$this->name][$i]['code']) {
+                // var_dump($_SESSION[$this->name][$i]);
                 unset($_SESSION[$this->name][$i]);
                 break;
             }
         }
         $_SESSION[$this->name] = array_values($_SESSION[$this->name]);
+        $this->updateCartCookie();
     }
     public function getTotalQuality()
     {
@@ -290,7 +330,7 @@ class cartFrontEnd
             $total_price = 0;
             foreach ($attribute as $k => $v) {
 
-                if ($config['attribute']['total_price']) {
+                if ($config['cart']['price_attribute']['total_price']) {
                     $sql_attribute = "select $name_price from #_attribute where id='" .  $v . "'";
                     $row_attribute = $this->d->rawQueryOne($sql_attribute);
                     $total_price +=  $row_attribute[$name_price];
@@ -305,12 +345,12 @@ class cartFrontEnd
                 $total_tmp++;
             }
         } else {
-            if (!($config['attribute']['total_price'])) {
+            if (!($config['cart']['price_attribute']['total_price'])) {
                 $sql = "select $name_price from #_" . $this->table . " where id='" . $pid . "'";
             }
         }
 
-        if ($config['attribute']['total_price']) {
+        if ($config['cart']['price_attribute']['total_price']) {
             $sql = "select $name_price from #_" . $this->table . " where id='" . $pid . "'";
             $row = $this->d->rawQueryOne($sql);
             $total_price +=  $row[$name_price];
@@ -336,6 +376,122 @@ class cartFrontEnd
         global $config, $lang, $translate;
         $result = ($config['lang_check']) ? $lang . '/' . $translate[$lang][$type] : $type;
         return $result;
+    }
+    public function randString($sokytu)
+    {
+
+        $chuoi = "ABCDEFGHIJKLMNOPQRSTUVWXYZW0123456789";
+
+        $giatri = "";
+        for ($i = 0; $i < $sokytu; $i++) {
+
+            $vitri = mt_rand(0, strlen($chuoi));
+
+            $giatri = $giatri . substr($chuoi, $vitri, 1);
+        }
+
+        return $giatri;
+    }
+    public function sanitize($input = '', $type = '')
+    {
+        if (is_array($input)) {
+            foreach ($input as $var => $val) {
+                $output[$var] = $this->sanitize($val, $type);
+            }
+        } else {
+            $output  = $this->cleanInput($input, $type);
+        }
+
+        return $output;
+    }
+    public function getInfoDetail($cols = '', $table = '', $id = 0)
+    {
+        $row = array();
+        if (!empty($cols) && !empty($table) && !empty($id)) {
+            $row = $this->d->rawQueryOne("select $cols from #_$table where id = ? limit 0,1", array($id));
+        }
+        return $row;
+    }
+    public function getFieldOne($field, $table, $id)
+    {
+
+        $row = $this->d->rawQueryOne("select $field from #_$table where id=?", array($id));
+
+        return $row[$field];
+    }
+    public function isEmail($email)
+    {
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public function redirect($url = '')
+    {
+
+        echo '<script language="javascript">window.location = "' . $url . '" </script>';
+
+        exit();
+    }
+    /* Kiểm tra dữ liệu nhập vào */
+    public function cleanInput($input = '', $type = '')
+    {
+        $output = '';
+
+        if ($input != '') {
+            /*
+                        // Loại bỏ HTML tags
+                        '@<[\/\!]*?[^<>]*?>@si',
+                    */
+
+            $search = array(
+                'script' => '@<script[^>]*?>.*?</script>@si',
+                'style' => '@<style[^>]*?>.*?</style>@siU',
+                'blank' => '@<![\s\S]*?--[ \t\n\r]*>@',
+                'iframe' => '/<iframe(.*?)<\/iframe>/is',
+                'title' => '/<title(.*?)<\/title>/is',
+                'pre' => '/<pre(.*?)<\/pre>/is',
+                'frame' => '/<frame(.*?)<\/frame>/is',
+                'frameset' => '/<frameset(.*?)<\/frameset>/is',
+                'object' => '/<object(.*?)<\/object>/is',
+                'embed' => '/<embed(.*?)<\/embed>/is',
+                'applet' => '/<applet(.*?)<\/applet>/is',
+                'meta' => '/<meta(.*?)<\/meta>/is',
+                'doctype' => '/<!doctype(.*?)>/is',
+                'link' => '/<link(.*?)>/is',
+                'body' => '/<body(.*?)<\/body>/is',
+                'html' => '/<html(.*?)<\/html>/is',
+                'head' => '/<head(.*?)<\/head>/is',
+                'onclick' => '/onclick="(.*?)"/is',
+                'ondbclick' => '/ondbclick="(.*?)"/is',
+                'onchange' => '/onchange="(.*?)"/is',
+                'onmouseover' => '/onmouseover="(.*?)"/is',
+                'onmouseout' => '/onmouseout="(.*?)"/is',
+                'onmouseenter' => '/onmouseenter="(.*?)"/is',
+                'onmouseleave' => '/onmouseleave="(.*?)"/is',
+                'onmousemove' => '/onmousemove="(.*?)"/is',
+                'onkeydown' => '/onkeydown="(.*?)"/is',
+                'onload' => '/onload="(.*?)"/is',
+                'onunload' => '/onunload="(.*?)"/is',
+                'onkeyup' => '/onkeyup="(.*?)"/is',
+                'onkeypress' => '/onkeypress="(.*?)"/is',
+                'onblur' => '/onblur="(.*?)"/is',
+                'oncopy' => '/oncopy="(.*?)"/is',
+                'oncut' => '/oncut="(.*?)"/is',
+                'onpaste' => '/onpaste="(.*?)"/is',
+                'php-tag' => '/<(\?|\%)\=?(php)?/',
+                'php-short-tag' => '/(\%|\?)>/'
+            );
+
+            if (!empty($type)) {
+                unset($search[$type]);
+            }
+
+            $output = preg_replace($search, '', $input);
+        }
+
+        return $output;
     }
     public function getTotalOrder_tmp()
     {
@@ -619,6 +775,26 @@ class cartFrontEnd
         }
         return $output_data;
     }
+    public function checkRequiredAttribute()
+    {
+        foreach ($_SESSION[$this->name] as $key => $value) {
+            if ($value["checked"] == 1) {
+                $list_data_attribute = $this->d->rawQueryOne("select GROUP_CONCAT(DISTINCT type) as listtype from #_attribute where id_product=?", array($value['productid']));
+
+
+                if (!empty($list_data_attribute['listtype'])) {
+                    $list_data_attribute = explode(",", $list_data_attribute['listtype']);
+                    foreach ($list_data_attribute as $value_check) {
+                        if (empty($value['attribute'][$value_check])) {
+                            return false;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        return true;
+    }
     public function numbMoney($val, $car = 'đ')
     {
         return number_format($val, 0, ',', '.') . '' . $car;
@@ -770,31 +946,20 @@ class cartFrontEnd
     {
         return _basename . 'iweb@cache' . '/cache_' . md5($key);
     }
-    public function getTemplateContent($templateName, $data = [], $isCache = true)
+    public function getTemplateContent($templateName, $data = [])
     {
-        global $config, $com, $lang, $db, $jv0;
-
-        $cacheFile = $this->getCacheFilePath($templateName);
-        $cacheData = file_exists($cacheFile) ? unserialize(file_get_contents($cacheFile)) : null;
-        $dataHash = md5(json_encode($data));
-        if (
-            $isCache && $config['website']['isCache'] && $cacheData !== null && isset($cacheData['dataHash']) && $cacheData['dataHash'] === $dataHash &&
-            time() - $cacheData['timestamp'] < $this->cacheTime
-        ) {
-            return $cacheData['content'];
-        }
+        global $config;
+        global $com;
+        global $lang;
+        global $db;
+        global $jv0;
+        global $func;
 
         if ($data !== null) extract($data);
         ob_start();
         include $templateName . ".php";
         $htmlContent = ob_get_clean();
-        $cacheData = array(
-            'dataHash' => $dataHash,
-            'timestamp' => time(),
-            'content' => $htmlContent
-        );
 
-        file_put_contents($cacheFile, serialize($cacheData));
         return $htmlContent;
     }
     public function getValueCart($value)

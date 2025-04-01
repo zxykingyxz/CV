@@ -18,6 +18,8 @@ include_once _source1 . "lang_$lang.php";
 
 include_once _lib . 'autoload.php';
 
+include_once _lib . "setting.php";
+
 new autoload();
 
 $db = new PDODb($config['database']);

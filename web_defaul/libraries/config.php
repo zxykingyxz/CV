@@ -115,6 +115,12 @@ $config['cart'] = array(
 	'coupons' => true,
 	'cart_advance' => false,
 	'cart_qty' => true,
+	'price_attribute' => array(
+		'attribute_one_for_all' => true,
+		'client_edit_attribute' => false,
+		'total_price' => true,
+		'view_update' => false,
+	),
 );
 # Thay đổi đường link khi up web
 $config['change_img_contents'] = array(

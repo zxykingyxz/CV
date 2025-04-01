@@ -14,9 +14,9 @@
 // });
 
 // cuộn ngang tự động
-$(document).ready(function() {
-    if ($('#scroll-container').length > 0) {
-        var $scrollContainer = $('#scroll-container');
+$(document).ready(function () {
+    if ($("#scroll-container").length > 0) {
+        var $scrollContainer = $("#scroll-container");
         var scrollWidth = $scrollContainer[0].scrollWidth;
         var containerWidth = $scrollContainer.width();
         var scrollAmount = 2; // Tốc độ cuộn tự động px
@@ -27,31 +27,31 @@ $(document).ready(function() {
         var scrollLeft;
 
         // Bắt sự kiện khi chuột được nhấn xuống trên khung chứa
-        $scrollContainer.on('mousedown', function(e) {
+        $scrollContainer.on("mousedown", function (e) {
             isDown = true;
             startX = e.pageX - $(this).offset().left;
             scrollLeft = $(this).scrollLeft();
-            $(this).css('cursor', 'grabbing'); // Thay đổi con trỏ khi kéo
+            $(this).css("cursor", "grabbing"); // Thay đổi con trỏ khi kéo
         });
 
         // Bắt sự kiện khi rời khỏi vùng chứa
-        $(document).on('mouseleave', function() {
+        $(document).on("mouseleave", function () {
             if (isDown) {
                 isDown = false;
-                $scrollContainer.css('cursor', 'auto'); // Trả lại con trỏ mặc định khi rời ra ngoài
+                $scrollContainer.css("cursor", "auto"); // Trả lại con trỏ mặc định khi rời ra ngoài
             }
         });
 
         // Bắt sự kiện khi nhả chuột
-        $(document).on('mouseup', function() {
+        $(document).on("mouseup", function () {
             if (isDown) {
                 isDown = false;
-                $scrollContainer.css('cursor', 'auto'); // Trả lại con trỏ mặc định khi nhả chuột
+                $scrollContainer.css("cursor", "auto"); // Trả lại con trỏ mặc định khi nhả chuột
             }
         });
 
         // Bắt sự kiện khi di chuyển chuột trên khung chứa
-        $scrollContainer.on('mousemove', function(e) {
+        $scrollContainer.on("mousemove", function (e) {
             if (isDown) {
                 e.preventDefault();
                 var x = e.pageX - $(this).offset().left;
@@ -67,10 +67,9 @@ $(document).ready(function() {
                 scrollAmount = -scrollAmount; // Đổi hướng khi đạt biên
             }
             if (timescroll > 1000) {
-                $scrollContainer.stop().animate({ scrollLeft: newScrollLeft }, 500, 'swing');
+                $scrollContainer.stop().animate({ scrollLeft: newScrollLeft }, 500, "swing");
             } else {
                 $scrollContainer.scrollLeft(newScrollLeft);
-
             }
         }
 
@@ -82,85 +81,20 @@ $(document).ready(function() {
             clearInterval(autoScrollInterval);
         }
 
-        $scrollContainer.on('mouseenter', stopAutoScroll);
-        $scrollContainer.on('mouseleave', startAutoScroll);
+        $scrollContainer.on("mouseenter", stopAutoScroll);
+        $scrollContainer.on("mouseleave", startAutoScroll);
         // Bắt đầu cuộn tự động mặc định
         autoScrollInterval = setInterval(autoScroll, timescroll);
     }
 });
 
-// bố trí items hình tròn tự động
-$(document).ready(function() {
-
-    // bố trí items hình tròn
-    var form = $('.form_value'); // Chắc chắn rằng selector là đúng
-    var items = form.find('.items_value'); // Chắc chắn rằng selector là đúng
-    var numberOfItems = 12; // số lượng items
-    var padding = 20; // độ lệch vào trong (px)
-    var angleStep = 360 / numberOfItems;
-    var radius = (form.outerWidth()) / 2; // bán kính của vòng tròn theo phần trăm
-    var direction_start = 'top'; // hướng bắt đầu
-    var location_start = -2; // vị trí xuất phát
-    var direction_click = 'top'; // hướng click
-    var location_click = 0; // vị trí xuất phát click
-    var animation = false;
-
-    function arrangeItemsInCircle(direction = 'top', location = 0, reduce_rotate = 0) {
-        let direction_css;
-        items.each(function(index) {
-            $(this).css({
-                position: 'absolute',
-                left: '50%',
-                top: '50%',
-                transform: 'translate(-50%, -50%)',
-                transition: 'all ' + animation / 1000 + 's',
-            });
-        });
-        let width_items = items.width() / 2;
-        switch (direction) {
-            case 'top':
-                direction_css = 'translateY(' + -(radius - width_items - padding) + 'px)';
-                break;
-            case 'left':
-                direction_css = 'translateX(' + -(radius - width_items - padding) + 'px)';
-                break;
-            case 'bottom':
-                direction_css = 'translateY(' + (radius - width_items - padding) + 'px)';
-                break;
-            case 'right':
-                direction_css = 'translateX(' + (radius - width_items - padding) + 'px)';
-                break;
-            default:
-                direction_css = 'translateY(' + -(radius - width_items - padding) + 'px)';
-                break;
-        }
-        items.each(function(index) {
-            const angle = (angleStep * index) + (angleStep * location) - (reduce_rotate);
-            if (!$(this).attr('data-rotate')) {
-                $(this).attr('data-rotate', (angleStep * index));
-            }
-            $(this).css({
-                transform: 'translate(-50%, -50%) rotate(' + angle + 'deg) ' + direction_css + ' rotate(' + (-angle) + 'deg)',
-            });
-        });
-    };
-    arrangeItemsInCircle(direction_start, location_start);
-    if (animation != false) {
-        items.on('click', function() {
-            let rotate = 0;
-            rotate = $(this).data('rotate');
-            arrangeItemsInCircle(direction_click, location_click, rotate);
-        });
-    }
-});
-
 // tạo password
 function generateRandomPassword(length = 12) {
-    const lowerCaseLetters = 'abcdefghijklmnopqrstuvwxyz';
-    const upperCaseLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const lowerCaseLetters = "abcdefghijklmnopqrstuvwxyz";
+    const upperCaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const specialCharacters = '!@#$%^&*(),.?":{}|<>';
-    const allCharacters = lowerCaseLetters + upperCaseLetters + specialCharacters + '0123456789';
-    let password = '';
+    const allCharacters = lowerCaseLetters + upperCaseLetters + specialCharacters + "0123456789";
+    let password = "";
     password += lowerCaseLetters[Math.floor(Math.random() * lowerCaseLetters.length)];
     password += upperCaseLetters[Math.floor(Math.random() * upperCaseLetters.length)];
     password += specialCharacters[Math.floor(Math.random() * specialCharacters.length)];
@@ -168,13 +102,13 @@ function generateRandomPassword(length = 12) {
         password += allCharacters[Math.floor(Math.random() * allCharacters.length)];
     }
     return shuffleString(password);
-};
+}
 
 function shuffleString(str) {
-    const array = str.split('');
+    const array = str.split("");
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
     }
-    return array.join('');
-};
+    return array.join("");
+}

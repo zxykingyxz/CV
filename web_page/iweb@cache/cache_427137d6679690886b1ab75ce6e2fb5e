@@ -1,0 +1,32 @@
+a:3:{s:8:"dataHash";s:32:"4069cfed286f495a08e8cd1d3587e142";s:9:"timestamp";i:1743218185;s:7:"content";s:5189:"<style>
+    .button_images_thumbs_gallery .swiper-slide-thumb-active {
+        border: 1px solid var(--html-bg-website);
+    }
+</style>
+<!-- Slider chính -->
+<div class="swiper view_images_thumbs_gallery">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide bg-gray-100 overflow-hidden w-full aspect-[1/1] leading-[0]" data-caption="Áo Dài Nam Cách Tân Chất Vải Tuyết Mưa Vintec Họa Tiết Thêu Con Rồng" data-thumb="upload/baiviet/ao-dai-cach-tan-nam-vai-tuyet-mua-2386.png">
+            <a href='upload/baiviet/ao-dai-cach-tan-nam-vai-tuyet-mua-2386.png' class='load_website '  role='link' rel='dofollow' title='Áo Dài Nam Cách Tân Chất Vải Tuyết Mưa Vintec Họa Tiết Thêu Con Rồng' data-fancybox="images_detail"  style='width: 600px;aspect-ratio:600/600;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='600' height='600' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://vandinh_0180325tg.test/upload/baiviet/ao-dai-cach-tan-nam-vai-tuyet-mua-2386.png' alt='Áo Dài Nam Cách Tân Chất Vải Tuyết Mưa Vintec Họa Tiết Thêu Con Rồng' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></a>        </div>
+                                    <div class="swiper-slide bg-gray-100 overflow-hidden  w-full aspect-[1/1] leading-[0]" data-caption="Áo Dài Nam Cách Tân Chất Vải Tuyết Mưa Vintec Họa Tiết Thêu Con Rồng" data-thumb="upload/baiviet/ao-dai-cach-tan-nam-vai-tuyet-mua-1-9795.png">
+                <a href='upload/baiviet/ao-dai-cach-tan-nam-vai-tuyet-mua-1-9795.png' class='load_website '  role='link' rel='dofollow' title='Áo Dài Nam Cách Tân Chất Vải Tuyết Mưa Vintec Họa Tiết Thêu Con Rồng' data-fancybox="images_detail" style='width: 600px;aspect-ratio:600/600;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='600' height='600' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://vandinh_0180325tg.test/upload/baiviet/ao-dai-cach-tan-nam-vai-tuyet-mua-1-9795.png' alt='Áo Dài Nam Cách Tân Chất Vải Tuyết Mưa Vintec Họa Tiết Thêu Con Rồng' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></a>            </div>
+            </div>
+    <div class="button_next_images_thumbs_gallery absolute top-1/2 -translate-y-1/2 right-0 rounded-l h-10 w-7 bg-gray-600 opacity-20 hover:opacity-100 [&.swiper-button-disabled]:opacity-0  [&.swiper-button-disabled]:pointer-events-none  inline-flex justify-center items-center leading-[0] z-10 transition-all duration-300 ">
+        <i class="fas fa-angle-right text-xl text-white "></i>
+    </div>
+    <div class="button_prev_images_thumbs_gallery absolute top-1/2 -translate-y-1/2 left-0 rounded-r h-10 w-7 bg-gray-600 opacity-20 hover:opacity-100 [&.swiper-button-disabled]:opacity-0  [&.swiper-button-disabled]:pointer-events-none inline-flex justify-center items-center leading-[0] z-10 transition-all duration-300">
+        <i class="fas fa-angle-left text-xl text-white"></i>
+    </div>
+</div>
+
+<!-- Thumbnails slider -->
+    <div class="swiper button_images_thumbs_gallery mt-2">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide bg-gray-100 overflow-hidden  w-full aspect-[1/1]  leading-[0]">
+                <div  class='load_website ' style='width: 600px;aspect-ratio:600/600;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='600' height='600' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://vandinh_0180325tg.test/upload/baiviet/ao-dai-cach-tan-nam-vai-tuyet-mua-2386.png' alt='Áo Dài Nam Cách Tân Chất Vải Tuyết Mưa Vintec Họa Tiết Thêu Con Rồng' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></div>            </div>
+            
+                                        <div class="swiper-slide bg-gray-100 overflow-hidden  w-full aspect-[1/1] leading-[0]">
+                    <a href='javascript:void(0)' class='load_website '  role='link' rel='dofollow' title='Áo Dài Nam Cách Tân Chất Vải Tuyết Mưa Vintec Họa Tiết Thêu Con Rồng'  style='width: 600px;aspect-ratio:600/600;max-width:100%;display: inline-flex;justify-items: center;align-items: center;line-height: 0;position: relative;' > <img width='600' height='600' class=' lazy '  onerror="this.src=assets/images/noimage.png" data-src='http://vandinh_0180325tg.test/upload/baiviet/ao-dai-cach-tan-nam-vai-tuyet-mua-1-9795.png' alt='Áo Dài Nam Cách Tân Chất Vải Tuyết Mưa Vintec Họa Tiết Thêu Con Rồng' style='position: absolute;  top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;object-fit:contain ;'/></a>                </div>
+                    </div>
+    </div>
+";}

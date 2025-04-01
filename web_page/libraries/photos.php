@@ -113,7 +113,7 @@ class photos
 
             foreach ($data as $k => $v) {
                 if (!in_array($k, ['number'])) {
-                    $send[$k] = htmlspecialchars($this->_func->magicQuote($v));
+                    $send[$k] = htmlspecialchars($v);
                 }
             }
         }

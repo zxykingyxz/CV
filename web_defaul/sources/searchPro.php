@@ -53,7 +53,7 @@ if (!empty($array_param_value)) {
                 case 'brand':
                     $arr_option = array_map('intval', explode(',', $value_param)); // Chuyển tất cả các phần tử thành số nguyên
                     $param_sql .= "(" . implode(' OR ', array_map(function ($value) {
-                        "FIND_IN_SET($value, id_thuonghieu)";
+                        return "FIND_IN_SET($value, id_thuonghieu)";
                     }, $arr_option)) . ")";
                     $i_param++;
                     break;

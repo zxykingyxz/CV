@@ -397,40 +397,29 @@ class product
     public function saveMan()
     {
 
-
-
         global $config, $url_path, $folder, $type, $GLOBAL, $table;
-
-
 
         $com = isset($_GET["com"]) ? $_GET["com"] : '';
 
-
-
         $act = isset($_GET["act"]) ? $_GET["act"] : '';
-
-
 
         $tbl = isset($_GET["tbl"]) ? '_' . $_GET["tbl"] : '';
 
-
-
         $tbl_alias = isset($_GET["tbl"]) ? $_GET["tbl"] : '';
-
-
 
         $file_name = $this->_func->imagesName($_FILES['file']['name']);
 
-
-
-        $table = $GLOBAL[$com][$type];
-
-
+        if ($this->_com == 'attribute') {
+            $table = $GLOBAL[$com]['thuoc-tinh'];
+        } else {
+            $table = $GLOBAL[$com][$type];
+        }
 
         $id = (int)$_GET['id'];
 
-
         $data = $_POST['data'];
+
+        $dataOptions = $_POST['options'];
 
         if ($_POST) {
 
@@ -464,7 +453,6 @@ class product
         if (!empty($file)) {
 
             if ($id) {
-
                 if ($file['error'] == 0) {
                     $photo = $this->_func->uploadImg($id, "photo", "thumb", $file, $folder, $this->_com, $table['img-width'], $table['img-height'], $table['img-ratio'], $table['img-b']);
                     $send['photo'] = $photo['photo'];
@@ -472,20 +460,9 @@ class product
                 }
             } else {
 
-
-
                 if ($file['error'] == 0) {
-
-
-
                     $photo = $this->_func->uploadImg(0, "photo", "thumb", $file, $folder, $this->_com, $table['img-width'], $table['img-height'], $table['img-ratio'], $table['img-b']);
-
-
-
                     $send['photo'] = $photo['photo'];
-
-
-
                     $send['thumb'] = $photo['thumb'];
                 }
             }
@@ -651,6 +628,14 @@ class product
                 }
             }
         }
+        if (($config['cart']['price_attribute']['attribute_one_for_all'])) {
+            $options_setting =  $this->_d->rawQueryOne('select options from #_setting', array());
+            $array_options = json_decode($options_setting['options'], true)['attribute'];
+            $dataOptions['attribute'] = $array_options;
+        }
+        if (!empty($dataOptions)) {
+            $send['options'] = json_encode($dataOptions, JSON_UNESCAPED_UNICODE);
+        }
 
         if ($com == 'attribute') {
 
@@ -767,6 +752,26 @@ class product
 
             if ($updateData) {
 
+                if (!empty($dataOptions)) {
+
+                    foreach ($dataOptions['attribute'] as $value) {
+
+                        if (!empty($value)) {
+                            $value = $this->_func->convert_vn2latin($value);
+
+                            $value = str_replace([' ', ',', '.', '?', '!'], '-', $value);
+
+                            $value = strtolower($value);
+
+                            $data_attribute["data"] =  $_POST[$value];
+                            $data_attribute["photo"] = $_FILES[$value];
+
+                            $this->_func->addAttribute($data_attribute, $id, $value);
+                        }
+                    }
+                }
+
+
                 if (isset($table['seo']) && $table['seo'] == true) {
 
                     $this->_d->rawQuery("delete from #_seo where idmuc = ? and com = ? and act = ? and type = ?", array($id, $com, 'man' . $tbl, $type));
@@ -816,8 +821,21 @@ class product
 
                                 $file_name = $this->_func->imagesName($_FILES['files']['name'][$i]);
 
-                                $photo = $this->_func->uploadPhoto($file, $table['multi-gallery-arr'][$type]['img_type_photo'], $folder, $file_name);
+                                switch ($this->_com) {
+                                    case 'attribute':
+                                        $sendx['id_product'] = (int)$_GET['id_product'];
 
+                                        $sendx['id_attribute'] = $id;
+
+                                        $photo = $this->_func->uploadPhoto($file, $table['multi-gallery-arr']['thuoc-tinh']['img_type_photo'], $folder, $file_name);
+                                        break;
+                                    case 'baiviet':
+                                        $sendx['id_baiviet'] = $id;
+
+                                        $photo = $this->_func->uploadPhoto($file, $table['multi-gallery-arr'][$type]['img_type_photo'], $folder, $file_name);
+                                        break;
+                                    default:
+                                }
                                 $sendx['photo'] = $photo;
 
                                 $sendx['stt'] = (int)$_POST['stthinh'][$i];
@@ -830,12 +848,14 @@ class product
                                 }
                                 $sendx['hienthi'] = 1;
 
-
-
-                                if ($this->_com == 'attribute') {
-                                    $this->_d->insert('baiviet_photo', $sendx);
-                                } else {
-                                    $this->_d->insert($this->_temp_table, $sendx);
+                                switch ($this->_com) {
+                                    case 'attribute':
+                                        $this->_d->insert('baiviet_photo', $sendx);
+                                        break;
+                                    case 'baiviet':
+                                        $this->_d->insert($this->_temp_table, $sendx);
+                                        break;
+                                    default:
                                 }
                             }
                         }
@@ -875,6 +895,25 @@ class product
 
             if ($insertID) {
 
+                if (!empty($dataOptions)) {
+
+                    foreach ($dataOptions['attribute'] as $value) {
+
+                        if (!empty($value)) {
+                            $value = $this->_func->convert_vn2latin($value);
+
+                            $value = str_replace([' ', ',', '.', '?', '!'], '-', $value);
+
+                            $value = strtolower($value);
+
+                            $data_attribute["data"] =  $_POST[$value];
+                            $data_attribute["photo"] = $_FILES[$value];
+
+                            $this->_func->addAttribute($data_attribute, $insertID, $value);
+                        }
+                    }
+                }
+
                 if (isset($table['seo']) && $table['seo'] == true) {
 
                     $dataSeo['idmuc'] = $insertID;
@@ -899,9 +938,8 @@ class product
                     $dataAlias['type'] = $type;
 
                     foreach ($config['lang'] as $k => $v) {
-                        if (!empty($data['tenkhongdau_' . $k])) {
-                            $dataAlias['tenkhongdau_' . $k] = $data['tenkhongdau_' . $k];
-                        }
+
+                        $dataAlias['tenkhongdau_' . $k] = $data['tenkhongdau_' . $k];
                     }
 
                     $dataAlias['ngaytao'] = time();
@@ -929,19 +967,36 @@ class product
 
                                 $file_name = $this->_func->imagesName($_FILES['files']['name'][$i]);
 
-                                $photo = $this->_func->uploadPhoto($file, $table['multi-gallery-arr'][$type]['img_type_photo'], $folder, $file_name);
+                                switch ($this->_com) {
+                                    case 'attribute':
+                                        $sendx['id_attribute'] = $insertID;
 
+                                        $photo = $this->_func->uploadPhoto($file, $table['multi-gallery-arr']['thuoc-tinh']['img_type_photo'], $folder, $file_name);
+                                        break;
+                                    case 'baiviet':
+                                        $sendx['id_baiviet'] = $insertID;
+
+                                        $photo = $this->_func->uploadPhoto($file, $table['multi-gallery-arr'][$type]['img_type_photo'], $folder, $file_name);
+                                        break;
+                                    default:
+                                }
                                 $sendx['photo'] = $photo;
 
                                 $sendx['stt'] = (int)$_POST['stthinh'][$i];
 
                                 $sendx['type'] = $type;
 
-                                $sendx['id_baiviet'] = $insertID;
-
                                 $sendx['hienthi'] = 1;
 
-                                $this->_d->insert($this->_temp_table, $sendx);
+                                switch ($this->_com) {
+                                    case 'attribute':
+                                        $this->_d->insert('baiviet_photo', $sendx);
+                                        break;
+                                    case 'baiviet':
+                                        $this->_d->insert($this->_temp_table, $sendx);
+                                        break;
+                                    default:
+                                }
                             }
                         }
                     }
@@ -953,7 +1008,7 @@ class product
 
                 $message = base64_encode(json_encode($response));
 
-                if ($savehere) $this->_func->redirect("index.html?com={$this->_com}&act=edit&id={$insertID}{$url_path}&message={$message}");
+                if ($savehere) $this->_func->redirect("index.html?com={$this->_com}&act=edit{$url_path}&id={$insertID}{$url_path}&message={$message}");
 
                 else $this->_func->redirect("index.html?com={$this->_com}&act=man{$url_path}&message={$message}");
             } else {
@@ -1003,7 +1058,15 @@ class product
 
                 if (!in_array($this->_com, $this->_allowed)) {
 
-                    $photo_lq = $this->_d->rawQuery("select * from #_{$this->_temp_table} where id_baiviet=?", array($id));
+                    switch ($this->_com) {
+                        case 'attribute':
+                            $photo_lq = $this->_d->rawQuery("select * from #_baiviet_photo where id_attribute=?", array($id));
+                            break;
+                        case 'baiviet':
+                            $photo_lq = $this->_d->rawQuery("select * from #_{$this->_temp_table} where id_baiviet=?", array($id));
+                            break;
+                        default:
+                    }
 
                     if (count($photo_lq) > 0) {
 
@@ -1015,7 +1078,15 @@ class product
 
                             $this->_d->where('id', $v['id']);
 
-                            $this->_d->delete($this->_temp_table);
+                            switch ($this->_com) {
+                                case 'attribute':
+                                    $this->_d->delete('baiviet_photo');
+                                    break;
+                                case 'baiviet':
+                                    $this->_d->delete($this->_temp_table);
+                                    break;
+                                default:
+                            }
                         }
                     }
                 }
@@ -1064,7 +1135,6 @@ class product
 
                     $alias = $this->_d->rawQueryOne("select id, id_parent from #_alias where id_parent=?", array($id));
 
-
                     if ($id == $alias['id_parent']) {
 
                         $this->_d->rawQueryOne("delete from #_alias where id_parent=? and act=? and type=?", array($id, $_GET['tbl'], $_GET['type']));
@@ -1074,8 +1144,14 @@ class product
 
                         if (!in_array($this->_com, $this->_allowed)) {
 
-                            $photo_lq = $this->_d->rawQuery("select id,photo,thumb from #_{$this->_temp_table} where id_baiviet=?", array($id));
-
+                            switch ($this->_com) {
+                                case 'attribute':
+                                    $photo_lq = $this->_d->rawQuery("select * from #_baiviet_photo where id_attribute=?", array($id));
+                                    break;
+                                default:
+                                    $photo_lq = $this->_d->rawQuery("select * from #_{$this->_temp_table} where id_baiviet=?", array($id));
+                                    break;
+                            }
                             if (count($photo_lq) > 0) {
 
                                 foreach ($photo_lq as $k1 => $v1) {
