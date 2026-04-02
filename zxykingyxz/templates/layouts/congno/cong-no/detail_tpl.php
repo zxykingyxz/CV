@@ -1,6 +1,3 @@
-<?php
-
-?>
 <form method="POST" action="<?= $func->getUrlParam(['com' => $_COM, 'src' => $_SRC, 'type' => $_TYPE, 'act' => "save", "id" => (int)htmlspecialchars($_GET['id']), "page" => $array_param_value['page']]) ?>" name="form-detail" class="w-full flex-1 flex flex-wrap flex-col" enctype="multipart/form-data" autocomplete="off" accept-charset="utf-8">
     <div class="py-4 px-3 sm:px-5 w-full h-[inherit] flex-1">
         <div class="w-full flex flex-wrap gap-3">
@@ -36,8 +33,8 @@
                             'name_layouts' => 'select_default',
                             'class_form' => '',
                             'class' => '',
-                            'label' => 'Loại thu nhập',
-                            'placeholder' => 'Nhập Loại Thu Nhập',
+                            'label' => 'Loại Công Nợ',
+                            'placeholder' => 'Nhập Loại Công Nợ',
                             'id' => 'loai',
                             'data' => 'data[number][loai]',
                             'data_option' => $config['data'][$_TYPE],
@@ -54,7 +51,7 @@
                             'class_form' => '',
                             'class' => 'input_date',
                             'label' => 'Ngày',
-                            'placeholder' => 'Nhập Ngày Nhận',
+                            'placeholder' => 'Nhập Ngày Tạo',
                             'id' => 'date',
                             'data' => 'data[date][date]',
                             'value' => (isset($data_detail['date'])) ? date("d/m/Y", htmlspecialchars_decode($data_detail['date'])) : date("d/m/Y", time()),
@@ -68,17 +65,31 @@
                             'name_layouts' => 'input_default',
                             'class_form' => '',
                             'class' => 'input_price',
-                            'label' => 'Giá tiền',
-                            'placeholder' => 'Nhập Giá tiền ',
-                            'id' => 'price',
-                            'data' => 'data[number][price]',
-                            'value' => (isset($data_detail['price'])) ? htmlspecialchars_decode($data_detail['price']) : "",
+                            'label' => 'Giá Công Nợ(đ)',
+                            'placeholder' => 'Nhập Giá Công Nợ',
+                            'id' => '',
+                            'data' => 'data[number][debt_price]',
+                            'value' => (isset($data_detail['debt_price'])) ? htmlspecialchars_decode($data_detail['debt_price']) : 0,
                             'type' => 'text',
                             'required' => true,
                             'readonly' => false,
                             'function' => '',
                             'form' => true,
                         ]); ?>
+                    </div>
+                    <div class="w-full">
+                        <div class="text-base font-semibold text-gray-600  ">
+                            <span>Lần thanh toán</span>
+                        </div>
+                        <div class="form_all_items w-full  grid grid-cols-1 mt-2 border-t border-gray-200">
+                            <?= $html_body_detail ?>
+                        </div>
+                        <div class="mt-2">
+                            <div class="button_add_items_congno cursor-pointer h-[35px] bg-blue-500 hover:brightness-90 transition-all duration-300 text-sm font-normal text-white text-center px-4 rounded-sm inline-flex justify-center items-center gap-2 text-nowrap">
+                                <i class="fas fa-plus"></i>
+                                <span>Thêm thanh toán</span>
+                            </div>
+                        </div>
                     </div>
                     <?= $sample->getTemplateLayoutsFor([
                         'name_layouts' => 'textarea_default',

@@ -35,6 +35,7 @@ switch ($_COM) {
     case 'ngansach':
     case 'baocao':
     case 'settings':
+    case 'congno':
         $template = "form/default";
         $source = $_SRC;
         break;

@@ -75,6 +75,41 @@ $htmlArrowLeftMenu = ob_get_clean();
                 </li>
             <?php } ?>
             <?php
+            // ----------------- Công Nợ -------------------
+            $name_items_congno = 'Quản lý Công Nợ';
+            $_COM_congno = 'congno';
+            $check_congno =  ($_COM == $_COM_congno) ? true : false;
+            $data_congno =  $GLOBAL['congno'];
+            if (!empty($data_congno)) {
+            ?>
+                <li class=" ">
+                    <div class="btn_menu_admin group peer  flex  w-full <?= $text_color_left_menu ?>  <?= ($check_congno) ? "on" : "" ?> " data-nb="congno_admin_<?= $value ?>">
+                        <a class="flex-1 flex items-center <?= $class_items_left_menu ?> " href="<?= $jv0 ?>" title="<?= $name_items_congno ?>">
+                            <div class=" <?= $class_form_icons_left_menu ?>">
+                                <i class="fas fa-coins <?= $class_icons_left_menu ?>"></i>
+                            </div>
+                            <span><?= $name_items_congno ?></span>
+                        </a>
+                        <?= $htmlArrowLeftMenu ?>
+                    </div>
+                    <div class="data_menu_admin hidden " style="<?= ($check_congno) ? "display: block;" : "" ?>" data-nb="congno_admin_<?= $value ?>">
+                        <ul class=" w-full  <?= $text_color_left_menu ?> bg-inherit  transition-all duration-300">
+                            <?php foreach ($data_congno as $key => $value) {
+                                $check_items_congno = $func->checkLeftMenu(["com" => $_COM_congno, "src" =>  $_COM_congno, "type" =>  $key]);
+                                $link_congno = $func->getUrlParam(["com" => $_COM_congno, "src" =>  $_COM_congno, "type" =>  $key, "act" =>  "man"]);
+                            ?>
+                                <li class="<?= $background_left_menu ?> <?= ($check_items_congno) ? "active" : "" ?> transition-all duration-300 pl-3">
+                                    <a class="flex items-center <?= $class_option_left_menu ?>" href="<?= $link_congno ?>" title="<?= $value['title_main'] ?>">
+                                        <i class=" fas fa-angle-right text-base "></i>
+                                        <span><?= $value['title_main'] ?></span>
+                                    </a>
+                                </li>
+                            <?php } ?>
+                        </ul>
+                    </div>
+                </li>
+            <?php } ?>
+            <?php
             // ----------------- báo cáo -------------------
             $name_items_baocao = 'Quản lý báo cáo';
             $_COM_baocao = 'baocao';

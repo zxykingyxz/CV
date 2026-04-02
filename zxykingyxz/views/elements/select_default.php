@@ -1,6 +1,6 @@
 <?php
 $class_label = "text-sm font-semibold text-slate-600";
-$class_form_seclect = "w-full rounded pr-4";
+$class_form_seclect = "w-full rounded pr-3";
 $class_text = " px-3 h-[35px] text-sm font-normal font-main-400 ";
 
 ?>
@@ -11,7 +11,7 @@ $class_text = " px-3 h-[35px] text-sm font-normal font-main-400 ";
             <div class="mt-2">
             <?php } ?>
         <?php } ?>
-        <div class="bg-white border shadow-sm border-slate-300 placeholder-slate-400 has-[:disabled]:bg-slate-50 has-[:disabled]:text-slate-500 has-[:disabled]:border-slate-200 has-[:focus]:outline-none has-[:focus]:border-border-blue-300 has-[:focus]:ring-border-blue-300 block  has-[:focus]:ring-1  has-[:disabled]:shadow-none overflow-hidden  <?= $class_form_seclect ?>">
+        <div class="bg-white border shadow-sm border-slate-300 placeholder-slate-400 has-[:disabled]:text-slate-500 has-[:disabled]:border-slate-200 has-[:focus]:outline-none has-[:focus]:border-border-blue-300 has-[:focus]:ring-border-blue-300 block  has-[:focus]:ring-1  has-[:disabled]:shadow-none overflow-hidden  <?= $class_form_seclect ?>">
             <select name="<?= $data ?>" id="<?= $id ?>" class=" w-full  <?= $class . " " . $class_text ?> " <?= ($required) ? "required" : "" ?> <?= $function ?>>
                 <option value="" disabled selected>-- <?= $placeholder ?> --</option>
                 <?php foreach ($data_option as $k_select => $v_select) { ?>

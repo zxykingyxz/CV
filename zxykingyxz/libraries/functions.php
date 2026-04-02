@@ -269,6 +269,42 @@ class functions
         }
         return $send;
     }
+    public function handleArrayDataSaveDefault($data)
+    {
+        $send = [];
+        if (!empty($data['text'])) {
+            foreach ($data['text'] as $key => $value) {
+                foreach ($value as $key_array => $value_array) {
+                    $send[$key][] = htmlspecialchars($value_array);
+                }
+            }
+        }
+
+        if (!empty($data['content'])) {
+            foreach ($data['content'] as $key => $value) {
+                foreach ($value as $key_array => $value_array) {
+                    $send[$key][] = htmlspecialchars($value_array);
+                }
+            }
+        }
+
+        if (!empty($data['date'])) {
+            foreach ($data['date'] as $key => $value) {
+                foreach ($value as $key_array => $value_array) {
+                    $send[$key][] = strtotime(str_replace('/', '-', $value_array));
+                }
+            }
+        }
+
+        if (!empty($data['number'])) {
+            foreach ($data['number'] as $key => $value) {
+                foreach ($value as $key_array => $value_array) {
+                    $send[$key][] = $this->getDataNumber(htmlspecialchars($value_array));
+                }
+            }
+        }
+        return $send;
+    }
     public function saveDataDefault()
     {
         global $_COM;
@@ -296,6 +332,35 @@ class functions
                         $info_save = array_merge($info_save, $this->handleDataSaveDefault($value_array));
                         $send[$key_array] = json_encode($info_save);
                     }
+                }
+
+                if (!empty($data['array_list'])) {
+                    foreach ($data['array_list'] as $key_array_list => $value_array_list) {
+                        $info_save = [];
+                        $info_save = array_merge($info_save, $this->handleArrayDataSaveDefault($value_array_list));
+                        $send[$key_array_list] = json_encode($info_save);
+                    }
+                }
+
+                switch ($_COM) {
+                    case 'congno':
+                        $dataHandlePrice = json_decode($send["items"], true);
+                        $total_price = (int)$send["debt_price"];
+                        foreach ($dataHandlePrice["loai"] as $key_congno => $value_congno) {
+                            $price = floatval(str_replace('.', '', $dataHandlePrice["price"][$key_congno]));
+                            switch ($value_congno) {
+                                case 1: // cộng nợ
+                                    $total_price += $price;
+                                    break;
+                                case 2: // trừ nợ
+                                    $total_price -= $price;
+                                    break;
+                            }
+                        }
+                        $send["total_price"] = ($total_price >= 0) ? $total_price : 0;
+                        break;
+                    default:
+                        break;
                 }
             }
             if (!empty($id)) {
@@ -459,6 +524,7 @@ class functions
         switch ($_COM) {
             case 'baocao':
             case 'ngansach':
+            case 'congno':
                 $id = isset($_GET['id']) ? (int)htmlspecialchars($_GET['id']) : "";
 
                 if (!empty($id)) {

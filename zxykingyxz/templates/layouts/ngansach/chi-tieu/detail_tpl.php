@@ -12,7 +12,7 @@
                     </span>
                 </div>
                 <div class="mt-4 grid grid-cols-1 gap-3">
-                    <div class=" w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    <div class=" w-full grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <input type="hidden" name="data[text][type]" value="<?= $_TYPE ?>">
                         <?= $sample->getTemplateLayoutsFor([
                             'name_layouts' => 'input_default',

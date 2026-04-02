@@ -65,6 +65,10 @@ $config['data'] = [
             "value" => 8,
         ],
         [
+            "title" => "Chi tiêu giải trí",
+            "value" => 9,
+        ],
+        [
             "title" => "Chi tiêu khác",
             "value" => 99,
         ],
@@ -90,6 +94,26 @@ $config['data'] = [
             "title" => "Thu nhập khác",
             "value" => 99,
         ],
+    ],
+    "cong-no" => [
+        [
+            "title" => "Công nợ phải thu",
+            "value" => 1,
+        ],
+        [
+            "title" => "Công nợ phải trả",
+            "value" => 2,
+        ]
+    ],
+    "cong-no-items" => [
+        [
+            "title" => "Thêm công nợ",
+            "value" => 1,
+        ],
+        [
+            "title" => "Trả công nợ",
+            "value" => 2,
+        ]
     ]
 ];
 $config['data']['month'] = [

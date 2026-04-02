@@ -4,7 +4,7 @@ $data_setting = $GLOBAL[$_COM][$_TYPE];
 $link_man = $func->getUrlParam([
     "com" => $_COM,
     "src" => $_SRC,
-    "src" => $_TYPE,
+    "type" => $_TYPE,
     "act" => "man",
 ]);
 

@@ -5,7 +5,7 @@ switch ($_TYPE) {
         $link_man = $func->getUrlParam([
             "com" => $_COM,
             "src" => $_SRC,
-            "src" => $_TYPE,
+            "type" => $_TYPE,
             "act" => "man",
         ]);
         switch ($_ACT) {
