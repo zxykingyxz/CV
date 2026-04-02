@@ -1,7 +1,0 @@
-a:3:{s:8:"dataHash";s:32:"768813b579ca3ab1557838f8b714b8b7";s:9:"timestamp";i:1742804955;s:7:"content";s:796:"    <section class=" hidden sm:block mt-3">
-        <div class="grid_s wide">
-            <div class=" w-full bg-inherit text-[var(--html-cl-website)]  pl-2 py-1">
-                <ol id="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="http://web_defaul_usually.test/"><span itemprop="name">   Trang chủ</i><span class="hidden">trang chủ</span></span></a><meta itemprop="position" content="1" /></li><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="javascript:;"><span itemprop="name">Điện lạnh</span></a><meta itemprop="position" content="2" /></li></ol>            </div>
-        </div>
-    </section>
-";}

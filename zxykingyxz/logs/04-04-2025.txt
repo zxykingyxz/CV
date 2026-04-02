@@ -1,4 +1,0 @@
-127.0.0.1()--query--tables(delete from table_ngansach where id in (293) ) (07:58:36 04/04/2025)
-127.0.0.1()--insert--ngansach(294) (07:58:53 04/04/2025)
-127.0.0.1()--insert--ngansach(295) (20:49:44 04/04/2025)
-127.0.0.1()--insert--ngansach(296) (20:50:17 04/04/2025)
