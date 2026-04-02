@@ -1,0 +1,17 @@
+#RewriteEngine on
+Options -Indexes
+DirectoryIndex index.php
+#RewriteCond %{HTTP_HOST} ^www.domain.vn
+#RewriteRule (.*) https://domain.vn/$1 [R=301,L]
+#RewriteCond %{HTTP_HOST} !^domain.vn$ [NC]
+#RewriteRule ^ http://domain.vn%{REQUEST_URI} [R=301,L]
+#RewriteCond %{HTTPS} off
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^index\.php$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . index.php [L]
+</IfModule>
